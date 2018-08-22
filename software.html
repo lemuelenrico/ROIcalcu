@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ROI Calculator</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="container">
+      <nav class="navbar navbar-default nobord const navsmallmrgbot">
+        <div class="container-fluid blueb">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              <img src="images/Snowlogo.png"></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li>
+              <li><a href="#"><h class="whitfnt2">Help</p></a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+      <div class="jumbotron">
+          <h2 class="headngsprpg">Software Details</h2>
+          <div class="row">
+              <div class="col-md-6 col-sm-6">
+                  <h3 id= "applicationnametxt">Application A</h3>
+                  <br>
+              </div>
+              <div class="col-md-6 col-sm-6 rightalgn">
+                  <h3 class= "notssub"><span class="requiredclr">*</span>Required fields.</h3>
+              </div>
+          </div>
+
+          <form>
+
+            <div class="form-group row">
+              <label for="appName" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Application Name</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="appName" placeholder="(i.e. AutoCAD, Petrel)">
+              </div>
+              <label for="vendName" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Vendor Name</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="vendName" placeholder="(i.e. ANSYS, Halliburton)">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="agreeType" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Agreement Type</label>
+              <div class="col-sm-4">
+                <select class="custom-select form-control" id="agreeType">
+                  <option selected>Perpetual</option>
+                  <option value="1">Perpetual</option>
+                  <option value="2">Lease</option>
+                  <option value="3">Rent</option>
+                  <option value="4">Subscription</option>
+                  <option value="5">PPU</option>
+                  <option value="6">Other</option>
+                  <option value="7">Don't Know</option>
+                </select>
+              </div>
+              <label for="licType" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>License Type</label>
+              <div class="col-sm-4">
+                <select class="custom-select form-control" id="licType">
+                  <option selected>Concurrent - Local</option>
+                  <option value="1">Concurrent - Local</option>
+                  <option value="2">Concurrent - Global</option>
+                  <option value="3">Named User</option>
+                  <option value="4">Host Bound</option>
+                  <option value="5">Elapsed Time</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Install Location</label>
+              <div class="col-sm-1">
+                <input type="checkbox" name="firstcheckbox" id="firstcheckbox" />
+                <span class="glyphicon glyphicon-hdd glypfonts"></span></div>
+                <div class="col-sm-1">
+                <input type="checkbox" name="secondcheckbox" id="secondcheckbox" />
+                <span class="glyphicon glyphicon-th-list glypfonts"></span></div>
+                <div class="col-sm-1">
+                <input type="checkbox" name="thirdcheckbox" id="thirdcheckbox" />
+                <span class="glyphicon glyphicon-cloud glypfonts"></span></div>
+
+              <label for="renDate" class="col-sm-2 col-sm-offset-1 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Renewal Date</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="renDate" placeholder="mm/dd/yyyy">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="numLicenses" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Number of Licenses</label>
+              <div class="col-sm-4">
+                <input type="number" class="form-control" id="numLicenses" placeholder="0">
+              </div>
+              <label for="costLicense" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Cost per License</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" pattern="^\d+(?:\.\d{1,2})$" id="costLicense" placeholder="$0.00">
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-9 centertext">
+                  <label><input type="checkbox" value=""><span class="aggrchk"> I consent the collection of my data inputted to be used for the purpose of calculating ROI.
+                    By proceeding I also agree on the Terms and Conditions of the site. </span></label>
+              </div>
+              <div class="col-md-2">
+                  <p><a href="" class="btn btn-warning alignright">Show ROI Calculation</a></p>
+              </div>
+            </div>
+          </form>
+
+
+      </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <p class="dfooter">Copyright © ROI Calculator. All rights reserved.</p>
+  </body>
+</html>
