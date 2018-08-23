@@ -32,7 +32,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li>
-              <li><a href="#"><h class="whitfnt2">Help</p></a></li>
+              <li><a href="help.html"><h class="whitfnt2">Help</p></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -44,14 +44,19 @@
             <h2 class="headngsprpg">ROI for [ Company X ]</h2>
           </div>
           <div class="col-md-2 col-sm-2 middleset aligncntr">
-            <a href="" class="btn btn-warning">Download PDF</a>
+            <button onclick="nopdf()" class="btn btn-warning">Download PDF</button>
           </div>
         </div>
 
         <br><span class="">$0.00</span><br><br><br>
 
       </div>
-
+      <!--will delete this later -->
+    <script>
+      function nopdf() {
+        alert("We are working on this feature.");
+        }
+    </script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

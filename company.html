@@ -32,7 +32,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li>
-              <li><a href="#"><h class="whitfnt2">Help</p></a></li>
+              <li><a href="help.html"><h class="whitfnt2">Help</p></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -40,15 +40,38 @@
 
       <div class="jumbotron">
         <div class="row">
-          <div class="col-md-6 col-sm-6">
+          <div class="col-md-6 col-sm-6 centertext">
             <h2 class="headngsprpg">Company Details</h2>
             <br>
+            Select you Industy
             <br>
             <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            <form>
+              <!-- delete under if done -->
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option1" autocomplete="off">Engineering
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2" autocomplete="off">Oil and Gas
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off">Automotive
+                </label>
+                <br>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option1" autocomplete="off">Mechanical & Precision
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2" autocomplete="off">Government
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off">Others
+                </label>
+              </div>
+
+
+            </form>
             <br>
             <br>
             <br>
@@ -56,32 +79,31 @@
             <br>
             <br>
             <div class="rightalgn">
-              <a href="#" class="btn btn-warning">Download PDF</a>
+              <button onclick="nopdf()" class="btn btn-warning"><!--<span class="glyphicon glyphicon-download-alt">--> Download PDF</button>
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
             <div class="leftdiv">
-
               <br>
               <br>
               <br>
 
               <form>
                 <div class="form-group">
-                  <input type="text" class="form-control input-lg" placeholder="Company Name">
+                  <input type="text" class="form-control input-lg" placeholder="Company Name" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control input-lg" placeholder="Website">
+                  <input type="text" class="form-control input-lg" placeholder="Website" required>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control input-lg" placeholder="Contact Email">
+                  <input type="email" class="form-control input-lg" placeholder="Contact Email" required>
                 </div>
                 <div class="form-group">
-                  <input type="number" class="form-control input-lg" placeholder="Number of Users">
+                  <input type="number" class="form-control input-lg" placeholder="Number of Users" required>
                 </div>
                 <div class="notssub"><strong>Note:</strong> All fields are required.</div>
                 <div class="rightalgn">
-                <button type="submit" class="nextbutdes">Next &raquo</button>
+                <button type="submit" class="nextbutdes" formaction="software.html">Next &raquo</button>
                 </div>
               </form>
               <br>
@@ -90,6 +112,13 @@
         </div><!--row-->
 
       </div>
+
+      <!--will delete this later -->
+    <script>
+      function nopdf() {
+        alert("We are working on this feature.");
+        }
+    </script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

@@ -32,7 +32,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li>
-              <li><a href="#"><h class="whitfnt2">Help</p></a></li>
+              <li><a href="help.html"><h class="whitfnt2">Help</p></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -50,12 +50,12 @@
               </div>
           </div>
 
-          <form>
+          <form action="roi.html" id="softwares">
 
             <div class="form-group row">
               <label for="appName" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Application Name</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control" id="appName" placeholder="(i.e. AutoCAD, Petrel)">
+                <input type="text" class="form-control" id="appName" placeholder="(i.e. AutoCAD, Petrel)" required>
               </div>
               <label for="vendName" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Vendor Name</label>
               <div class="col-sm-4">
@@ -67,8 +67,7 @@
               <label for="agreeType" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Agreement Type</label>
               <div class="col-sm-4">
                 <select class="custom-select form-control" id="agreeType">
-                  <option selected>Perpetual</option>
-                  <option value="1">Perpetual</option>
+                  <option Selected>Perpetual</option>
                   <option value="2">Lease</option>
                   <option value="3">Rent</option>
                   <option value="4">Subscription</option>
@@ -77,11 +76,10 @@
                   <option value="7">Don't Know</option>
                 </select>
               </div>
-              <label for="licType" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>License Type</label>
+              <label for="licType" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>License Type</label>
               <div class="col-sm-4">
                 <select class="custom-select form-control" id="licType">
                   <option selected>Concurrent - Local</option>
-                  <option value="1">Concurrent - Local</option>
                   <option value="2">Concurrent - Global</option>
                   <option value="3">Named User</option>
                   <option value="4">Host Bound</option>
@@ -91,7 +89,7 @@
             </div>
 
             <div class="form-group row">
-              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Install Location</label>
+              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Install Location</label>
               <div class="col-sm-1">
                 <input type="checkbox" name="firstcheckbox" id="firstcheckbox" />
                 <span class="glyphicon glyphicon-hdd glypfonts"></span></div>
@@ -109,29 +107,40 @@
             </div>
 
             <div class="form-group row">
-              <label for="numLicenses" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Number of Licenses</label>
+              <label for="numLicenses" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Number of Licenses</label>
               <div class="col-sm-4">
-                <input type="number" class="form-control" id="numLicenses" placeholder="0">
+                <input type="number" class="form-control" id="numLicenses" placeholder="0" required>
               </div>
-              <label for="costLicense" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Cost per License</label>
+              <label for="costLicense" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Cost per License</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control" pattern="^\d+(?:\.\d{1,2})$" id="costLicense" placeholder="$0.00">
+                <input type="text" class="form-control" pattern="^\d+(?:\.\d{1,2})$" id="costLicense" placeholder="$0.00" required>
               </div>
             </div>
             <br>
             <div class="row">
               <div class="col-md-9 centertext">
-                  <label><input type="checkbox" value=""><span class="aggrchk"> I consent the collection of my data inputted to be used for the purpose of calculating ROI.
-                    By proceeding I also agree on the Terms and Conditions of the site. </span></label>
+                  <label><input type="checkbox" id="finalsubmit" value=""><span class="aggrchk"> I hereby grant permission for Snow to use the information I provided to calculate ROI.
+                  By proceeding, I also agree with the <a>Terms and Conditions</a> of the site. </span></label>
               </div>
-              <div class="col-md-2">
-                  <p><a href="" class="btn btn-warning alignright">Show ROI Calculation</a></p>
+              <div class="col-md-2 centertext">
+                  <p><input type="submit" class="btn btn-warning alignright" value="Show ROI Calculation"></p>
               </div>
             </div>
           </form>
 
 
-      </div>
+      </div><!-- jumbotron -->
+
+    <!-- will delete this later-->
+    <script>
+    document.getElementById('softwares').addEventListener('submit', function(verification){
+    if(document.getElementById('finalsubmit').checked == false){
+        verification.preventDefault();
+        alert("By clicking Show ROI Calculation, you must accept our terms and conditions!");
+        return false;
+      }
+      });
+    </script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
