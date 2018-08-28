@@ -207,11 +207,13 @@ body {
 }
 
 .middleset {
-  padding-top: 0.6rem;
+  padding-top: 1.4rem;
   padding-bottom: auto;
 }
 
 .lresult {
   text-align: center;
   font-size: 5rem;
+  padding: 0;
+
 }

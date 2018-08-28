@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+  <?php
+  include ('connection.php');
+  error_reporting(0);
+  include ('db_software.php');
+  ?>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,17 +43,19 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-      <div class="jumbotron lresult">
+      <div class="jumbotron aligncntr">
+        <div class="container-fluid rightalgn"><img src="images/pointer3.png"></div>
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <h2 class="headngsprpg">ROI for [ Company X ]</h2>
           </div>
           <div class="col-md-2 col-sm-2 middleset aligncntr">
+          <br>
             <button onclick="nopdf()" class="btn btn-warning">Download PDF</button>
           </div>
         </div>
 
-        <br><span class="">$0.00</span><br><br><br>
+        <br><br><br><br><br><br><span class="lresult">$0.00</span><br><br><br><br><br><br><br>
 
       </div>
       <!--will delete this later -->

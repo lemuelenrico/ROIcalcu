@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <?php
+        include ('connection.php');
+     ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,6 +42,7 @@
     </nav>
 
       <div class="jumbotron">
+        <div class="container-fluid rightalgn"><img src="images/pointer.png"></div>
         <div class="row">
           <div class="col-md-6 col-sm-6 centertext">
             <h2 class="headngsprpg">Company Details</h2>
@@ -88,22 +92,26 @@
               <br>
               <br>
 
-              <form>
+              <form action="software.php" method="POST">
                 <div class="form-group">
-                  <input type="text" class="form-control input-lg" placeholder="Company Name" required>
+                  <input type="text" class="form-control input-lg" placeholder="Company Name"
+                          name="comname" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control input-lg" placeholder="Website" required>
+                  <input type="text" class="form-control input-lg" placeholder="Website"
+                          name="website" required>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control input-lg" placeholder="Contact Email" required>
+                  <input type="email" class="form-control input-lg" placeholder="Contact Email"
+                          name="comemail" required>
                 </div>
                 <div class="form-group">
-                  <input type="number" class="form-control input-lg" placeholder="Number of Users" required>
+                  <input type="number" class="form-control input-lg" placeholder="Number of Users"
+                          name="numusers" required>
                 </div>
                 <div class="notssub"><strong>Note:</strong> All fields are required.</div>
                 <div class="rightalgn">
-                <button type="submit" class="nextbutdes" formaction="software.html">Next &raquo</button>
+                <input type="submit" name="submit" class="nextbutdes" value="Next &raquo">
                 </div>
               </form>
               <br>

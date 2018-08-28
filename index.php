@@ -54,7 +54,7 @@
         <p id="introc"><!--Calculate the value your organization can gain from Snow for Engineering.-->Calculate how much your organization can gain from using Snow for Engineering.</p>
         <br>
         <br>
-        <a href="/company.html" class="entbutdes">CLICK HERE TO START</a>
+        <a href="company.php" class="entbutdes">CLICK HERE TO START</a>
 
       </div>
 

@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <?php
+        include ('connection.php');
+        error_reporting(0);
+        include ('db_company.php');
+    ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,6 +44,7 @@
     </nav>
 
       <div class="jumbotron">
+        <div class="container-fluid rightalgn"><img src="images/pointer2.png"></div>
           <h2 class="headngsprpg">Software Details</h2>
           <div class="row">
               <div class="col-md-6 col-sm-6">
@@ -50,40 +56,44 @@
               </div>
           </div>
 
-          <form action="roi.html" id="softwares">
+          <form action="roi.php" id="softwares" method="POST">
 
             <div class="form-group row">
               <label for="appName" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Application Name</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control" id="appName" placeholder="(i.e. AutoCAD, Petrel)" required>
+                <input type="text" class="form-control" id="appName" placeholder="(i.e. AutoCAD, Petrel)"
+                        name="appname" required>
               </div>
               <label for="vendName" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Vendor Name</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control" id="vendName" placeholder="(i.e. ANSYS, Halliburton)">
+                <input type="text" class="form-control" id="vendName" placeholder="(i.e. ANSYS, Halliburton)"
+                        name="vendname">
               </div>
             </div>
 
             <div class="form-group row">
               <label for="agreeType" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Agreement Type</label>
               <div class="col-sm-4">
-                <select class="custom-select form-control" id="agreeType">
+                <select class="custom-select form-control" id="agreeType"
+                        name="agreetype">
                   <option Selected>Perpetual</option>
-                  <option value="2">Lease</option>
-                  <option value="3">Rent</option>
-                  <option value="4">Subscription</option>
-                  <option value="5">PPU</option>
-                  <option value="6">Other</option>
-                  <option value="7">Don't Know</option>
+                  <option value="Lease">Lease</option>
+                  <option value="Rent">Rent</option>
+                  <option value="Subscription">Subscription</option>
+                  <option value="PPU">PPU</option>
+                  <option value="Other">Other</option>
+                  <option value="Don't Know">Don't Know</option>
                 </select>
               </div>
               <label for="licType" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>License Type</label>
               <div class="col-sm-4">
-                <select class="custom-select form-control" id="licType">
+                <select class="custom-select form-control" id="licType"
+                        name="lictype">
                   <option selected>Concurrent - Local</option>
-                  <option value="2">Concurrent - Global</option>
-                  <option value="3">Named User</option>
-                  <option value="4">Host Bound</option>
-                  <option value="5">Elapsed Time</option>
+                  <option value="Concurrent - Global">Concurrent - Global</option>
+                  <option value="Named User">Named User</option>
+                  <option value="Host Bound">Host Bound</option>
+                  <option value="Elapsed Time">Elapsed Time</option>
                 </select>
               </div>
             </div>
@@ -91,29 +101,32 @@
             <div class="form-group row">
               <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Install Location</label>
               <div class="col-sm-1">
-                <input type="checkbox" name="firstcheckbox" id="firstcheckbox" />
+                <input type="checkbox" name="Lochard" id="firstcheckbox">
                 <span class="glyphicon glyphicon-hdd glypfonts"></span></div>
                 <div class="col-sm-1">
-                <input type="checkbox" name="secondcheckbox" id="secondcheckbox" />
+                <input type="checkbox" name="Locserve" id="secondcheckbox">
                 <span class="glyphicon glyphicon-th-list glypfonts"></span></div>
                 <div class="col-sm-1">
-                <input type="checkbox" name="thirdcheckbox" id="thirdcheckbox" />
+                <input type="checkbox" name="Loccloud" id="thirdcheckbox">
                 <span class="glyphicon glyphicon-cloud glypfonts"></span></div>
 
               <label for="renDate" class="col-sm-2 col-sm-offset-1 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Renewal Date</label>
               <div class="col-sm-4">
-                <input type="date" class="form-control" id="renDate" placeholder="mm/dd/yyyy">
+                <input type="date" class="form-control" id="renDate" placeholder="mm/dd/yyyy"
+                        name="rendate">
               </div>
             </div>
 
             <div class="form-group row">
               <label for="numLicenses" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Number of Licenses</label>
               <div class="col-sm-4">
-                <input type="number" class="form-control" id="numLicenses" placeholder="0" required>
+                <input type="number" class="form-control" id="numLicenses" placeholder="0"
+                        name="numlicenses" required>
               </div>
               <label for="costLicense" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Cost per License</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control" pattern="^\d+(?:\.\d{1,2})$" id="costLicense" placeholder="$0.00" required>
+                <input type="text" class="form-control" pattern="^\d+(?:\.\d{1,2})$" id="costLicense" placeholder="$0.00"
+                        name="costlicenses" required>
               </div>
             </div>
             <br>
@@ -123,7 +136,7 @@
                   By proceeding, I also agree with the <a>Terms and Conditions</a> of the site. </span></label>
               </div>
               <div class="col-md-2 centertext">
-                  <p><input type="submit" class="btn btn-warning alignright" value="Show ROI Calculation"></p>
+                  <p><input type="submit" name="submittoroi" class="btn btn-warning alignright" value="Show ROI Calculation"></p>
               </div>
             </div>
           </form>
