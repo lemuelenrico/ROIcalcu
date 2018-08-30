@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <!--  <?php
+    <?php
         include ('connection.php');
-     ?>-->
+     ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,60 +44,48 @@
       <div class="jumbotron">
         <div class="container-fluid rightalgn"><img src="images/pointer.png"></div>
         <div class="row">
-          <div class="col-md-6 col-sm-6">
+          <div class="col-md-6 col-sm-6 centertext">
             <h2 class="headngsprpg">Company Details</h2>
-
-          <b>  Select you Industry</b>
             <br>
-
+            Select you Industy
+            <br>
+            <br>
+            <form>
               <!-- delete under if done -->
-              <!--<div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn custombgopt">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary">
                   <input type="radio" name="options" id="option1" autocomplete="off">Engineering
                 </label>
                 <label class="btn btn-secondary">
                   <input type="radio" name="options" id="option2" autocomplete="off">Oil and Gas
-                </label><br><br>
+                </label>
                 <label class="btn btn-secondary">
                   <input type="radio" name="options" id="option3" autocomplete="off">Automotive
                 </label>
+                <br>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option4" autocomplete="off">Mechanical & Precision
-                </label><br><br>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option5" autocomplete="off">Government
-                  <input type="radio">
-
+                  <input type="radio" name="options" id="option1" autocomplete="off">Mechanical & Precision
                 </label>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option6" autocomplete="off">Others
+                  <input type="radio" name="options" id="option2" autocomplete="off">Government
                 </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off">Others
+                </label>
+              </div>
 
-              </div> -->
 
-              <!--<input type="radio" id="male" name="gender">
-              <label for="male">Male</label><br>
-              <input type ="radio" id="female" name="gender">
-              <label for="female">Female</label>-->
+            </form>
 
-            <!--  <label class="radiocontainer"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br><br>
-              <label class="radiocontainer"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br><br>-->
-              <form>
-              <label class="radiocontainer1"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br><br>
-              <label class="radiocontainer2"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br><br>
-              <label class="radiocontainer3"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br><br>
-              <label class="radiocontainer4"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br><br>
-              <label class="radiocontainer5"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br><br>
-              <label class="radiocontainer6"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br><br>
-              </form>
+            <label class="radiocontainer1"><input type="radio" name="radio"><span class="circle"></span>
+            </label><br><br>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <div class="rightalgn">
               <button onclick="nopdf()" class="btn btn-warning"><!--<span class="glyphicon glyphicon-download-alt">--> Download PDF</button>
             </div>
