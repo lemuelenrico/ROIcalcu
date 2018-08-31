@@ -32,14 +32,29 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li>
-              <li><a href="#"><h class="whitfnt2">Help</p></a></li>
+              <li><a href="help.html"><h class="whitfnt2">Help</p></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
 
-      <div class="jumbotron">
-
+      <div class="jumbotron jumbotronadd snowbg">
+        <h1 id="bigtkwy"> ROI Calculator</h1>
+        <br>
+          <p id="introp">
+            This ROI Calculator provides you with an approximate amount of the savings that you may get from investing in Snow for Engineering tools.
+            It will need your company and software details in order to provide an accurate estimate of your possible ROI. All information provided will be
+            processed in accordance with existing privacy and data protection rules and regulations and will be used for the sole purpose of calculating ROI.
+            <!--The increase in engineering complexity within capital intensive industries makes
+            it extremely difficult to manage information from multiple sources,
+            make that data available to stakeholders around the world and trust that it is always correct.-->
+          </p>
+        <br>
+        <br>
+        <p id="introc"><!--Calculate the value your organization can gain from Snow for Engineering.-->Calculate how much your organization can gain from using Snow for Engineering.</p>
+        <br>
+        <br>
+        <a href="company.php" class="entbutdes">CLICK HERE TO START</a>
 
       </div>
 

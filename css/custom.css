@@ -215,3 +215,509 @@ body {
   text-align: center;
   font-size: 5rem;
 }
+
+#option2 {
+  background-image: url("images/Engg_selected.png");
+}
+/*
+label input:checked ~ img.inactive,
+label:hover input:not(:checked) ~ img.inactive {
+  display:none;
+}
+
+label input:not(:checked) ~ img.active,
+label:hover input:checked ~ img.active {
+  display:none;
+}
+
+label:hover input:checked ~ img.inactive,
+label:hover input:not(:checked) ~ img.active {
+  display: block;
+}*/
+
+.custombgopt {
+  background: url("images/Gov_default.png");
+}
+
+.custombgopt:hover {
+  background-color: orange;
+}
+
+.custombgopt:toggle {
+  background-color: gray;
+}
+/*
+.radiocontainer {
+  display: inline-block;
+  position: relative;
+  margin-left: 0;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 22px;
+  user-select: none;
+  padding-left: 30px;
+}
+
+.radiocontainer input {
+  display: none;
+  padding-left: 0px;
+}
+
+.radiocontainer .circle {
+  display: inline-block;
+  font-size: 10px;
+  width: 200px;
+  height: 30px;
+  position: absolute;
+  padding-left: 0px;
+  left: 0;
+  top: 0;
+  background-color:  gainsboro;
+  //border-radius: 20%;
+}
+
+.radiocontainer:hover .circle {
+  background-color: lightgray;
+}
+
+.radiocontainer input:not(:checked) + .circle:after {
+  content: "mals";
+  color: blue;
+  font-size: 10px;
+  // height: 10px;
+//  width: 10px;
+  position: absolute;
+  border radius: 20%;
+  top: 50%;
+  left:40%;
+  transform: translate(-40%, -50%);
+}
+
+.radiocontainer input:checked + .circle:after {
+  content: "male";
+  color: blue;
+  font-size: 10px;
+//  height: 10px;
+//  width: 10px;
+  position: absolute;
+  border radius: 20%;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}*/
+
+/*takeaway*/
+
+.radiocontainer1 {
+  display: inline-block;
+  position: relative;
+  margin-left: 0;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 22px;
+  user-select: none;
+  padding-left: 00px;
+}
+
+.radiocontainer1 input {
+  display: none;
+  padding-left: 0px;
+}
+
+.radiocontainer1 .circle {
+  display: inline-block;
+  font-size: 10px;
+  width: 300px;
+  height: 30px;
+  position: absolute;
+  padding-left: 0px;
+  left: 0;
+  top: 0;
+  background-color: gainsboro;
+  //border-radius: 20%;
+}
+
+.radiocontainer1:hover .circle {
+  background-color: white;
+  border-color: #ec8c2d;
+  color: gainsboro;
+}
+
+.radiocontainer1 input:not(:checked) + .circle:after {
+  content: "Engineering";
+  color: #585858;
+  font-size: 10px;
+  // height: 10px;
+//  width: 10px;
+  position: absolute;
+//  border radius: 20%;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+.radiocontainer1 input:checked + .circle {
+  background-color: #ec8e2d;
+}
+
+.radiocontainer1 input:checked + .circle:after {
+  content: "Engineering";
+  color: White;
+  font-size: 10px;
+//  height: 10px;
+//  width: 10px;
+  position: absolute;
+//  border radius: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*----------*/
+.radiocontainer2 {
+  display: inline-block;
+  position: relative;
+  margin-left: 0;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 22px;
+  user-select: none;
+  padding-left: 30px;
+}
+
+.radiocontainer2 input {
+  display: none;
+  padding-left: 0px;
+}
+
+.radiocontainer2 .circle {
+  display: inline-block;
+  font-size: 10px;
+  width: 300px;
+  height: 30px;
+  position: absolute;
+  padding-left: 0px;
+  left: 0;
+  top: 0;
+  background-color:  gainsboro;
+  //border-radius: 20%;
+}
+
+.radiocontainer2:hover .circle {
+  background-color: white;
+  border-color: #ec8c2d;
+  color: gainsboro;
+}
+
+.radiocontainer2 input:not(:checked) + .circle:after {
+  content: "Automotive";
+  color: #585858;
+  font-size: 10px;
+  // height: 10px;
+//  width: 10px;
+  position: absolute;
+//  border radius: 20%;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+.radiocontainer2 input:checked + .circle {
+  background-color: #ec8e2d;
+}
+
+.radiocontainer2 input:checked + .circle:after {
+  content: "Automotive";
+  color: White;
+  font-size: 10px;
+//  height: 10px;
+//  width: 10px;
+  position: absolute;
+//  border radius: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*----------*/
+.radiocontainer3 {
+  display: inline-block;
+  position: relative;
+  margin-left: 0;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 22px;
+  user-select: none;
+  padding-left: 30px;
+}
+
+.radiocontainer3 input {
+  display: none;
+  padding-left: 0px;
+}
+
+.radiocontainer3 .circle {
+  display: inline-block;
+  font-size: 10px;
+  width: 300px;
+  height: 30px;
+  position: absolute;
+  padding-left: 0px;
+  left: 0;
+  top: 0;
+  background-color:  gainsboro;
+  //border-radius: 20%;
+}
+
+.radiocontainer3:hover .circle {
+  background-color: white;
+  border-color: #ec8c2d;
+  color: gainsboro;
+}
+
+.radiocontainer3 input:not(:checked) + .circle:after {
+  content: "Oil and Gas";
+  color: #585858;
+  font-size: 10px;
+  // height: 10px;
+//  width: 10px;
+  position: absolute;
+//  border radius: 20%;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+.radiocontainer3 input:checked + .circle {
+  background-color: #ec8e2d;
+}
+
+.radiocontainer3 input:checked + .circle:after {
+  content: "Oil and Gas";
+  color: White;
+  font-size: 10px;
+//  height: 10px;
+//  width: 10px;
+  position: absolute;
+//  border radius: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*----------*/
+.radiocontainer4 {
+  display: inline-block;
+  position: relative;
+  margin-left: 0;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 22px;
+  user-select: none;
+  padding-left: 30px;
+}
+
+.radiocontainer4 input {
+  display: none;
+  padding-left: 0px;
+}
+
+.radiocontainer4 .circle {
+  display: inline-block;
+  font-size: 10px;
+  width: 300px;
+  height: 30px;
+  position: absolute;
+  padding-left: 0px;
+  left: 0;
+  top: 0;
+  background-color:  gainsboro;
+  //border-radius: 20%;
+}
+
+.radiocontainer4:hover .circle {
+  background-color: white;
+  border-color: #ec8c2d;
+  color: gainsboro;
+}
+
+.radiocontainer4 input:not(:checked) + .circle:after {
+  content: "Mechanical & Precision";
+  color: #585858;
+  font-size: 10px;
+  // height: 10px;
+//  width: 10px;
+  position: absolute;
+  //border radius: 20%;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+.radiocontainer4 input:checked + .circle {
+  background-color: #ec8e2d;
+}
+
+.radiocontainer4 input:checked + .circle:after {
+  content: "Mechanical & Precision";
+  color: White;
+  font-size: 10px;
+//  height: 10px;
+//  width: 10px;
+  position: absolute;
+//  border radius: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*----------*/
+.radiocontainer5 {
+  display: inline-block;
+  position: relative;
+  margin-left: 0;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 22px;
+  user-select: none;
+  padding-left: 30px;
+}
+
+.radiocontainer5 input {
+  display: none;
+  padding-left: 0px;
+}
+
+.radiocontainer5 .circle {
+  display: inline-block;
+  font-size: 10px;
+  width: 300px;
+  height: 30px;
+  position: absolute;
+  padding-left: 0px;
+  left: 0;
+  top: 0;
+  background-color:  gainsboro;
+  //border-radius: 20%;
+}
+
+.radiocontainer5:hover .circle {
+  background-color: white;
+  border-color: #ec8c2d;
+  color: gainsboro;
+}
+
+.radiocontainer5 input:not(:checked) + .circle:after {
+  content: "Oil and Gas";
+  color: #585858;
+  font-size: 10px;
+  // height: 10px;
+//  width: 10px;
+  position: absolute;
+  border radius: 20%;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+.radiocontainer5 input:checked + .circle {
+  background-color: #ec8e2d;
+}
+
+.radiocontainer5 input:checked + .circle:after {
+  content: "Oil and Gas";
+  color: White;
+  font-size: 10px;
+//  height: 10px;
+//  width: 10px;
+  position: absolute;
+  //border radius: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*----------*/
+.radiocontainer6 {
+  display: inline-block;
+  position: relative;
+  margin-left: 0;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 22px;
+  user-select: none;
+  padding-left: 30px;
+}
+
+.radiocontainer6 input {
+  display: none;
+  padding-left: 0px;
+}
+
+.radiocontainer6 .circle {
+  display: inline-block;
+  font-size: 10px;
+  width: 300px;
+  height: 30px;
+  position: absolute;
+  padding-left: 0px;
+  left: 0;
+  top: 0;
+  background-color:  gainsboro;
+  //border-radius: 20%;
+}
+
+.radiocontainer6:hover .circle {
+  background-color: white;
+  border-color: #ec8c2d;
+  color: gainsboro;
+}
+
+.radiocontainer6 input:not(:checked) + .circle:after {
+  content: "Others";
+  color: #585858;
+  font-size: 10px;
+  // height: 10px;
+//  width: 10px;
+  position: absolute;
+  //border radius: 20%;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+.radiocontainer6 input:checked + .circle {
+  background-color: #ec8e2d;
+}
+
+.radiocontainer6 input:checked + .circle:after {
+  content: "Others";
+  color: White;
+  font-size: 10px;
+//  height: 10px;
+//  width: 10px;
+  position: absolute;
+  //border radius: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*
+input[type="radio"]{
+  opacity: 0;
+  width: 0;
+  margin: 0;
+}
+
+label[for="male"], label[for="female"]{
+  margin-buttom: 10px;
+  display: inline-block;
+  padding-left: 26px;
+  background: url(images/cust.png) ;
+  background-position: 0 0;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+input:checked + label[for="male"],
+input:checked + label[for="female"]{
+  background-position: 0 0;
+  color: #ce1010;
+}
+*/

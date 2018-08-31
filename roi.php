@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+  <?php
+  include ('connection.php');
+  error_reporting(0);
+  include ('db_software.php');
+  ?>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,25 +43,27 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-      <div class="jumbotron jumbotronadd snowbg">
-        <h1 id="bigtkwy"> ROI Calculator</h1>
-        <br>
-          <p id="introp">
-            This ROI Calculator provides you with an approximate amount of the savings that you may get from investing in Snow for Engineering tools.
-            It will need your company and software details in order to provide an accurate estimate of your possible ROI. All information provided will be
-            processed in accordance with existing privacy and data protection rules and regulations and will be used for the sole purpose of calculating ROI.
-            <!--The increase in engineering complexity within capital intensive industries makes
-            it extremely difficult to manage information from multiple sources,
-            make that data available to stakeholders around the world and trust that it is always correct.-->
-          </p>
-        <br>
-        <br>
-        <p id="introc"><!--Calculate the value your organization can gain from Snow for Engineering.-->Calculate how much your organization can gain from using Snow for Engineering.</p>
-        <br>
-        <br>
-        <a href="/company.html" class="entbutdes">CLICK HERE TO START</a>
+      <div class="jumbotron aligncntr">
+        <div class="container-fluid rightalgn"><img src="images/pointer3.png"></div>
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <h2 class="headngsprpg">ROI for [ Company X ]</h2>
+          </div>
+          <div class="col-md-2 col-sm-2 middleset aligncntr">
+          <br>
+            <button onclick="nopdf()" class="btn btn-warning">Download PDF</button>
+          </div>
+        </div>
+
+        <br><br><br><br><br><br><span class="lresult">$0.00</span><br><br><br><br><br><br><br>
 
       </div>
+      <!--will delete this later -->
+    <script>
+      function nopdf() {
+        alert("We are working on this feature.");
+        }
+    </script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

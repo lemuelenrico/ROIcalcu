@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <!--  <?php
+        include ('connection.php');
+     ?>-->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,45 +42,62 @@
     </nav>
 
       <div class="jumbotron">
+        <div class="container-fluid rightalgn"><img src="images/pointer.png"></div>
         <div class="row">
-          <div class="col-md-6 col-sm-6 centertext">
+          <div class="col-md-6 col-sm-6">
             <h2 class="headngsprpg">Company Details</h2>
+
+          <b>  Select you Industry</b>
             <br>
-            Select you Industy
-            <br>
-            <br>
-            <form>
+
               <!-- delete under if done -->
-              <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary">
+              <!--<div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn custombgopt">
                   <input type="radio" name="options" id="option1" autocomplete="off">Engineering
                 </label>
                 <label class="btn btn-secondary">
                   <input type="radio" name="options" id="option2" autocomplete="off">Oil and Gas
-                </label>
+                </label><br><br>
                 <label class="btn btn-secondary">
                   <input type="radio" name="options" id="option3" autocomplete="off">Automotive
                 </label>
-                <br>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option1" autocomplete="off">Mechanical & Precision
-                </label>
+                  <input type="radio" name="options" id="option4" autocomplete="off">Mechanical & Precision
+                </label><br><br>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option2" autocomplete="off">Government
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off">Others
-                </label>
-              </div>
+                  <input type="radio" name="options" id="option5" autocomplete="off">Government
+                  <input type="radio">
 
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option6" autocomplete="off">Others
+                </label>
 
-            </form>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+              </div> -->
+
+              <!--<input type="radio" id="male" name="gender">
+              <label for="male">Male</label><br>
+              <input type ="radio" id="female" name="gender">
+              <label for="female">Female</label>-->
+
+            <!--  <label class="radiocontainer"><input type="radio" name="radio"><span class="circle"></span>
+              </label><br><br>
+              <label class="radiocontainer"><input type="radio" name="radio"><span class="circle"></span>
+              </label><br><br>-->
+              <form>
+              <label class="radiocontainer1"><input type="radio" name="radio"><span class="circle"></span>
+              </label><br><br>
+              <label class="radiocontainer2"><input type="radio" name="radio"><span class="circle"></span>
+              </label><br><br>
+              <label class="radiocontainer3"><input type="radio" name="radio"><span class="circle"></span>
+              </label><br><br>
+              <label class="radiocontainer4"><input type="radio" name="radio"><span class="circle"></span>
+              </label><br><br>
+              <label class="radiocontainer5"><input type="radio" name="radio"><span class="circle"></span>
+              </label><br><br>
+              <label class="radiocontainer6"><input type="radio" name="radio"><span class="circle"></span>
+              </label><br><br>
+              </form>
             <div class="rightalgn">
               <button onclick="nopdf()" class="btn btn-warning"><!--<span class="glyphicon glyphicon-download-alt">--> Download PDF</button>
             </div>
@@ -88,22 +108,26 @@
               <br>
               <br>
 
-              <form>
+              <form action="software.php" method="POST">
                 <div class="form-group">
-                  <input type="text" class="form-control input-lg" placeholder="Company Name" required>
+                  <input type="text" class="form-control input-lg" placeholder="Company Name"
+                          name="comname" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control input-lg" placeholder="Website" required>
+                  <input type="text" class="form-control input-lg" placeholder="Website"
+                          name="website" required>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control input-lg" placeholder="Contact Email" required>
+                  <input type="email" class="form-control input-lg" placeholder="Contact Email"
+                          name="comemail" required>
                 </div>
                 <div class="form-group">
-                  <input type="number" class="form-control input-lg" placeholder="Number of Users" required>
+                  <input type="number" class="form-control input-lg" placeholder="Number of Users"
+                          name="numusers" required>
                 </div>
                 <div class="notssub"><strong>Note:</strong> All fields are required.</div>
                 <div class="rightalgn">
-                <button type="submit" class="nextbutdes" formaction="software.html">Next &raquo</button>
+                <input type="submit" name="submit" class="nextbutdes" value="Next &raquo">
                 </div>
               </form>
               <br>
