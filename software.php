@@ -37,7 +37,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li>
-              <li><a href="help.html"><h class="whitfnt2">Help</p></a></li>
+              <li><a href="help.html"><h class="whitfnt2">Help</h></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -133,7 +133,7 @@
             <div class="row">
               <div class="col-md-9 centertext">
                   <label><input type="checkbox" id="finalsubmit" value=""><span class="aggrchk"> I hereby grant permission for Snow to use the information I provided to calculate ROI.
-                  By proceeding, I also agree with the <a>Terms and Conditions</a> of the site. </span></label>
+                  By proceeding, I also agree with the <a href="#">Terms and Conditions</a> of the site. </span></label>
               </div>
               <div class="col-md-2 centertext">
                   <p><input type="submit" name="submittoroi" class="btn btn-warning alignright" value="Show ROI Calculation"></p>

@@ -6,14 +6,18 @@ $agreementType    = $_POST ['agreetype'];   $licenseType      = $_POST ['lictype
   $iLocCloud        = $_POST ['Loccloud'];
 $noOfLicenses     = $_POST ['numlicenses']; $costPerLicense   = $_POST ['costlicenses'];
 
+        /*the main formula is as follows*/
+
+                  $calculatedROI = ($costPerLicense*$noOfLicenses)/100;
+
 if (!$_POST['submittoroi']){
     /*echo "All fields are needed to be filled out";*/
 }
 else  {
-    $sql = "INSERT into software  ( EntryDate, ApplicationName, AgreementType, ILocHard, ILocServ, ILocCloud,
-                                  NoOfLicenses, VendorName, LicenseType, RenewalDate, CostPerLicense)
+    $sql = "INSERT into software  (EntryDate, ApplicationName, AgreementType, ILocHard, ILocServ, ILocCloud,
+                                  NoOfLicenses, VendorName, LicenseType, RenewalDate, CostPerLicense, CalculatedROI)
             values                (NOW(), '$applicationName', '$agreementType', '$iLocHard','$iLocServ','$iLocCloud',
-                                  '$noOfLicenses','$vendorName','$licenseType','$renewalDate','$costPerLicense' )";
+                                  '$noOfLicenses','$vendorName','$licenseType','$renewalDate','$costPerLicense', $calculatedROI)";
 }
 
       if (mysqli_query($conn, $sql)) {

@@ -1,6 +1,9 @@
 body {
   background-color: #47c3dc;
 }
+a:hover {
+  cursor: pointer;
+}
 
 .jumbotron {
   padding-top: 2.5rem;
@@ -68,6 +71,9 @@ body {
 }
 .rightalgn{
   text-align: right;
+}
+.leftalgn{
+  text-align: left;
 }
 .entbutdes {
   background-color: #ec8c2d;
@@ -721,3 +727,28 @@ input:checked + label[for="female"]{
   color: #ce1010;
 }
 */
+
+.entbutdes2 {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Helvetica;
+  min-height: inherit;
+  padding: 1.7rem 3rem;
+  border-radius: .5rem;
+}
+
+.roilbl {
+  font-family: sans-serif Arial;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ec8c2d;
+}
+
+.roiplch {
+  font-family: sans-serif Arial;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #417379;
+}

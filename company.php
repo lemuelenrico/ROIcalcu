@@ -47,7 +47,7 @@
           <div class="col-md-6 col-sm-6">
             <h2 class="headngsprpg">Company Details</h2>
 
-          <b>  Select you Industry</b>
+            <span class="entbutdes2"><b>Select you Industry</b></span>
             <br>
 
               <!-- delete under if done -->

@@ -47,15 +47,81 @@
         <div class="container-fluid rightalgn"><img src="images/pointer3.png"></div>
         <div class="row">
           <div class="col-md-6 col-sm-6">
-            <h2 class="headngsprpg">ROI for [ Company X ]</h2>
+            <h2 class="headngsprpg">ROI for
+              <?php
+              echo $applicationName;
+              ?>
+            </h2>
           </div>
           <div class="col-md-2 col-sm-2 middleset aligncntr">
           <br>
             <button onclick="nopdf()" class="btn btn-warning">Download PDF</button>
           </div>
+          <div class="col-md-4 col-sm-4"></div>
+        </div>
+<br><br><br><br>
+
+        <div>
+          <div class="row">
+            <div class="col-md-5 col-sm-5 rightalgn leftalgn roilbl">
+              Application Name:
+            </div>
+            <div class="col-md-7 col-sm-7">
+              <?php
+                echo $applicationName;
+              ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5 col-sm-5 rightalgn leftalgn roilbl">
+              Agreement Type:
+            </div>
+            <div class="col-md-7 col-sm-7 roiplch">
+              <?php
+                echo $agreementType;
+              ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5 col-sm-5 rightalgn leftalgn roilbl">
+              License Type:
+            </div>
+            <div class="col-md-7 col-sm-7 roiplch">
+              <?php
+                echo $licenseType;
+              ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5 col-sm-5 rightalgn leftalgn roilbl">
+              Number of Licenses:
+            </div>
+            <div class="col-md-7 col-sm-7 roiplch">
+              <?php
+                echo $noOfLicenses;
+              ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5 col-sm-5 rightalgn leftalgn roilbl">
+              Cost Per License:
+            </div>
+            <div class="col-md-7 col-sm-7 roiplch">
+              <?php
+                echo $costPerLicense;
+              ?>
+            </div>
+          </div>
         </div>
 
-        <br><br><br><br><br><br><span class="lresult">$0.00</span><br><br><br><br><br><br><br>
+
+
+
+      <span class="lresult roiplch">$
+        <?php
+          echo $calculatedROI;
+        ?>
+      </span><br><br><br><br><br><br><br><br><br>
 
       </div>
       <!--will delete this later -->
