@@ -5,6 +5,7 @@
         include ('connection.php');
         error_reporting(0);
         include ('db_company.php');
+
     ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,8 +48,14 @@
         <div class="container-fluid rightalgn"><img src="images/pointer2.png"></div>
           <h2 class="headngsprpg">Software Details</h2>
           <div class="row">
+            <form action="roi.php" id="softwares" method="POST">
               <div class="col-md-6 col-sm-6">
-                  <h3 id= "applicationnametxt">Application A</h3>
+                  <p for="transi" id= "applicationnametxt">Application A
+                      <!--<?php echo $comName ?>--></p>
+                <div class="col-sm-3">
+                  <!-- the following hidden input is functions as transitional variable from database to database visualization only-->
+                  <input type="hidden" name="transi" value="<?php echo $comName ?>">
+                </div>
                   <br>
               </div>
               <div class="col-md-6 col-sm-6 rightalgn">
@@ -101,13 +108,13 @@
             <div class="form-group row">
               <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Install Location</label>
               <div class="col-sm-1">
-                <input type="checkbox" name="Lochard" id="firstcheckbox">
+                <input type="checkbox" name="Lochard" id="firstcheckbox" value="Hard drive">
                 <span class="glyphicon glyphicon-hdd glypfonts"></span></div>
                 <div class="col-sm-1">
-                <input type="checkbox" name="Locserve" id="secondcheckbox">
+                <input type="checkbox" name="Locserve" id="secondcheckbox" value="Server">
                 <span class="glyphicon glyphicon-th-list glypfonts"></span></div>
                 <div class="col-sm-1">
-                <input type="checkbox" name="Loccloud" id="thirdcheckbox">
+                <input type="checkbox" name="Loccloud" id="thirdcheckbox" value="Cloud">
                 <span class="glyphicon glyphicon-cloud glypfonts"></span></div>
 
               <label for="renDate" class="col-sm-2 col-sm-offset-1 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Renewal Date</label>
@@ -123,9 +130,9 @@
                 <input type="number" class="form-control" id="numLicenses" placeholder="0"
                         name="numlicenses" required>
               </div>
-              <label for="costLicense" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Cost per License</label>
+              <label for="costLicense" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Cost per License ($)</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control" pattern="^\d+(?:\.\d{1,2})$" id="costLicense" placeholder="$0.00"
+                <input type="text" class="form-control" pattern="^\d+(?:\.\d{1,2})$" id="costLicense" placeholder="0.00"
                         name="costlicenses" required>
               </div>
             </div>

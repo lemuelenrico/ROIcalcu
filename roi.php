@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <?php
-  include ('connection.php');
-  error_reporting(0);
-  include ('db_software.php');
-  ?>
+      <?php
+          include ('connection.php');
+          error_reporting(0);
+          include ('db_software.php');
+      ?>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,7 +49,7 @@
           <div class="col-md-6 col-sm-6">
             <h2 class="headngsprpg">ROI for
               <?php
-              echo $applicationName;
+              echo $companyName;
               ?>
             </h2>
           </div>
@@ -59,72 +59,44 @@
           </div>
           <div class="col-md-4 col-sm-4"></div>
         </div>
-<br><br><br><br>
+
+        <br><br>
 
         <div>
           <div class="row">
-            <div class="col-md-5 col-sm-5 rightalgn leftalgn roilbl">
-              Application Name:
+            <div class="col-md-6 col-sm-6 roilbl">
+              Application Name: <span class="roiplch"><?php echo $applicationName;  ?></span></br>
+              Agreement Type: <span class="roiplch"><?php echo $agreementType;  ?></span></br>
+              License Type: <span class="roiplch"><?php echo $licenseType;  ?></span></br>
+              Number of Licenses: <span class="roiplch"><?php echo $noOfLicenses;  ?></span></br>
+              Cost Per License: <span class="roiplch"><?php echo $costPerLicense;  ?></span></br>
+              License Type: <span class="roiplch"><?php echo $licenseType;  ?></span></br>
             </div>
-            <div class="col-md-7 col-sm-7">
-              <?php
-                echo $applicationName;
-              ?>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-5 col-sm-5 rightalgn leftalgn roilbl">
-              Agreement Type:
-            </div>
-            <div class="col-md-7 col-sm-7 roiplch">
-              <?php
-                echo $agreementType;
-              ?>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-5 col-sm-5 rightalgn leftalgn roilbl">
-              License Type:
-            </div>
-            <div class="col-md-7 col-sm-7 roiplch">
-              <?php
-                echo $licenseType;
-              ?>
+            <div class="col-md-6 col-sm-6 leftdiv">
+              <span class="lresult" id="roidesign"><span id=roifnllbl> Calculated ROI: </span><br>$
+
+                <?php
+                  echo $calculatedROI;
+                ?>
+
+              </span><br><br><br><br><br>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-5 col-sm-5 rightalgn leftalgn roilbl">
-              Number of Licenses:
-            </div>
-            <div class="col-md-7 col-sm-7 roiplch">
-              <?php
-                echo $noOfLicenses;
-              ?>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-5 col-sm-5 rightalgn leftalgn roilbl">
-              Cost Per License:
-            </div>
-            <div class="col-md-7 col-sm-7 roiplch">
-              <?php
-                echo $costPerLicense;
-              ?>
-            </div>
-          </div>
+
+
         </div>
+        <br><br>
+      <!--<span class="lresult" id="roidesign"><span id=roifnllbl> Calculated ROI: </span><br>$
 
-
-
-
-      <span class="lresult roiplch">$
         <?php
           echo $calculatedROI;
         ?>
-      </span><br><br><br><br><br><br><br><br><br>
 
-      </div>
+      </span><br><br><br>-->
+      <a href="company.php" class="entbutdesagain">Click here to calculate again</a>
+    </div><!--jumbotron-->
       <!--will delete this later -->
+
     <script>
       function nopdf() {
         alert("We are working on this feature.");

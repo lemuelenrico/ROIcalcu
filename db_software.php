@@ -6,6 +6,14 @@ $agreementType    = $_POST ['agreetype'];   $licenseType      = $_POST ['lictype
   $iLocCloud        = $_POST ['Loccloud'];
 $noOfLicenses     = $_POST ['numlicenses']; $costPerLicense   = $_POST ['costlicenses'];
 
+$companyName= $_POST ['transi'];
+
+//$companyName= $comName;
+
+        /* for form to form recognition */
+
+        //$comName = $comName;
+
         /*the main formula is as follows*/
 
                   $calculatedROI = ($costPerLicense*$noOfLicenses)/100;
@@ -27,5 +35,4 @@ else  {
       /*else {
           echo "Data creation not sucessful";
       }*/
-
 ?>

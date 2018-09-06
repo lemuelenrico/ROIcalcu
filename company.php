@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <!--  <?php
-        include ('connection.php');
-     ?>-->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,8 +43,9 @@
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <h2 class="headngsprpg">Company Details</h2>
+            <br>
 
-            <span class="entbutdes2"><b>Select you Industry</b></span>
+            <span class="entbutdes2"><b>Select your Industry</b></span>
             <br>
 
               <!-- delete under if done -->
@@ -84,28 +82,31 @@
               </label><br><br>
               <label class="radiocontainer"><input type="radio" name="radio"><span class="circle"></span>
               </label><br><br>-->
+              <div class="aligncntr nospace">
               <form>
-              <label class="radiocontainer1"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br><br>
-              <label class="radiocontainer2"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br><br>
-              <label class="radiocontainer3"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br><br>
-              <label class="radiocontainer4"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br><br>
-              <label class="radiocontainer5"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br><br>
-              <label class="radiocontainer6"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br><br>
+              <label class="radiocontainer1 nospace"><input type="radio" name="radio"><span class="circle"></span>
+              </label><br>
+              <label class="radiocontainer2 nospace"><input type="radio" name="radio"><span class="circle"></span>
+              </label><br>
+              <label class="radiocontainer3 nospace"><input type="radio" name="radio"><span class="circle"></span>
+              </label><br>
+              <label class="radiocontainer4 nospace"><input type="radio" name="radio"><span class="circle"></span>
+              </label><br>
+              <label class="radiocontainer5 nospace"><input type="radio" name="radio"><span class="circle"></span>
+              </label><br>
+              <label class="radiocontainer6 nospace"><input type="radio" name="radio"><span class="circle"></span>
+              </label><br>
               </form>
+            </div>
             <div class="rightalgn">
+              
               <button onclick="nopdf()" class="btn btn-warning"><!--<span class="glyphicon glyphicon-download-alt">--> Download PDF</button>
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
             <div class="leftdiv">
               <br>
-              <br>
+              <br><br>
               <br>
 
               <form action="software.php" method="POST">
@@ -131,12 +132,12 @@
                 </div>
               </form>
               <br>
+
             </div>
           </div>
         </div><!--row-->
 
       </div>
-
       <!--will delete this later -->
     <script>
       function nopdf() {

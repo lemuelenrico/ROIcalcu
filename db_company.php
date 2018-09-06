@@ -4,12 +4,17 @@ $comWebsite = $_POST ['website'];
 $comEmail   = $_POST ['comemail'];
 $noOfUsers  = $_POST ['numusers'];
 
+/* for form to form recognition */
+
+//$companyName = $comName;
+
 if (!$_POST['submit']){
     echo "All fields are needed to be filled out";
 }
 else  {
     $sql = "INSERT into company ( Timestamp, CompanyName, Website, ContactEmail, NoOfUsers)
             values              (NOW(), '$comName', '$comWebsite', '$comEmail','$noOfUsers' )";
+    //$sql = "INSERT into software (CompanyName) values ('$comName')";
 }
 
       if (mysqli_query($conn, $sql)) {
