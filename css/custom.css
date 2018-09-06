@@ -392,7 +392,6 @@ label:hover input:not(:checked) ~ img.active {
 
 .radiocontainer1 {
   display: inline-block;
-  m
   position: relative;
   margin: 0px;
   cursor: pointer;
@@ -410,7 +409,7 @@ label:hover input:not(:checked) ~ img.active {
 
 .radiocontainer1 .circle {
   display: inline-block;
-  font-size: 10px;
+  font-size: 13px;
   width: 300px;
   height: 30px;
   position: relative;
@@ -430,9 +429,9 @@ label:hover input:not(:checked) ~ img.active {
 }
 
 .radiocontainer1 input:not(:checked) + .circle:after {
-  content: "Automotive";
+  content: "Engineering";
   color: #585858;
-  font-size: 10px;
+  font-size: 13px;
   // height: 10px;
 //  width: 10px;
   position: absolute;
@@ -446,18 +445,20 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer1 input:checked + .circle {
   background-color: #ec8e2d;
   margin: 0px;
+  width: 320px;
+  height: 34px;
 }
 
 .radiocontainer1 input:checked + .circle:after {
-  content: "Automotive";
+  content: "Engineering";
   color: White;
-  font-size: 10px;
+  font-size: 15px;
 //  height: 10px;
 //  width: 10px;
   position: absolute;
 //  border radius: 20%;
   top: 50%;
-  left: 50%;
+  left: 48%;
   transform: translate(-50%, -50%);
   margin: 0px;
 }
@@ -483,7 +484,7 @@ label:hover input:not(:checked) ~ img.active {
 
 .radiocontainer2 .circle {
   display: inline-block;
-  font-size: 10px;
+  font-size: 13px;
   width: 300px;
   height: 30px;
   position: relative;
@@ -505,7 +506,7 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer2 input:not(:checked) + .circle:after {
   content: "Automotive";
   color: #585858;
-  font-size: 10px;
+  font-size: 13px;
   // height: 10px;
 //  width: 10px;
   position: absolute;
@@ -519,18 +520,20 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer2 input:checked + .circle {
   background-color: #ec8e2d;
   margin: 0px;
+  width: 320px;
+  height: 34px;
 }
 
 .radiocontainer2 input:checked + .circle:after {
   content: "Automotive";
   color: White;
-  font-size: 10px;
+  font-size: 15px;
 //  height: 10px;
 //  width: 10px;
   position: absolute;
 //  border radius: 20%;
   top: 50%;
-  left: 50%;
+  left: 48%;
   transform: translate(-50%, -50%);
   margin: 0px;
 }
@@ -555,7 +558,7 @@ label:hover input:not(:checked) ~ img.active {
 
 .radiocontainer3 .circle {
   display: inline-block;
-  font-size: 10px;
+  font-size: 13px;
   width: 300px;
   height: 30px;
   position: relative;
@@ -577,7 +580,7 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer3 input:not(:checked) + .circle:after {
   content: "Oil and Gas";
   color: #585858;
-  font-size: 10px;
+  font-size: 13px;
   // height: 10px;
 //  width: 10px;
   position: absolute;
@@ -591,18 +594,20 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer3 input:checked + .circle {
   background-color: #ec8e2d;
   margin: 0px;
+  width: 320px;
+  height: 34px;
 }
 
 .radiocontainer3 input:checked + .circle:after {
   content: "Oil and Gas";
   color: White;
-  font-size: 10px;
+  font-size: 15px;
 //  height: 10px;
 //  width: 10px;
   position: absolute;
 //  border radius: 20%;
   top: 50%;
-  left: 50%;
+  left: 48%;
   transform: translate(-50%, -50%);
   margin: 0px;
 }
@@ -627,7 +632,7 @@ label:hover input:not(:checked) ~ img.active {
 
 .radiocontainer4 .circle {
   display: inline-block;
-  font-size: 10px;
+  font-size: 13px;
   width: 300px;
   height: 30px;
   position: relative;
@@ -649,7 +654,7 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer4 input:not(:checked) + .circle:after {
   content: "Mechanical & Precision";
   color: #585858;
-  font-size: 10px;
+  font-size: 13px;
   // height: 10px;
 //  width: 10px;
   position: absolute;
@@ -663,19 +668,22 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer4 input:checked + .circle {
   background-color: #ec8e2d;
   margin: 0px;
+  width: 320px;
+  height: 34px;
 }
 
 .radiocontainer4 input:checked + .circle:after {
   content: "Mechanical & Precision";
   color: White;
-  font-size: 10px;
+  font-size: 13.4px;
 //  height: 10px;
 //  width: 10px;
   position: absolute;
 //  border radius: 20%;
   top: 50%;
-  left: 50%;
+  left: 48%;
   transform: translate(-50%, -50%);
+  padding: 0px;
   margin: 0px;
 }
 /*----------*/
@@ -699,7 +707,7 @@ label:hover input:not(:checked) ~ img.active {
 
 .radiocontainer5 .circle {
   display: inline-block;
-  font-size: 10px;
+  font-size: 13px;
   width: 300px;
   height: 30px;
   position: relative;
@@ -719,9 +727,9 @@ label:hover input:not(:checked) ~ img.active {
 }
 
 .radiocontainer5 input:not(:checked) + .circle:after {
-  content: "Oil and Gas";
+  content: "Government";
   color: #585858;
-  font-size: 10px;
+  font-size: 13px;
   // height: 10px;
 //  width: 10px;
   position: absolute;
@@ -734,18 +742,21 @@ label:hover input:not(:checked) ~ img.active {
 
 .radiocontainer5 input:checked + .circle {
   background-color: #ec8e2d;
+  width: 320px;
+  height: 34px;
+  margin: 0px;
 }
 
 .radiocontainer5 input:checked + .circle:after {
-  content: "Oil and Gas";
+  content: "Government";
   color: White;
-  font-size: 10px;
+  font-size: 15px;
 //  height: 10px;
 //  width: 10px;
   position: absolute;
   //border radius: 20%;
   top: 50%;
-  left: 50%;
+  left: 48%;
   transform: translate(-50%, -50%);
   margin: 0px;
 }
@@ -770,7 +781,7 @@ label:hover input:not(:checked) ~ img.active {
 
 .radiocontainer6 .circle {
   display: inline-block;
-  font-size: 10px;
+  font-size: 13px;
   width: 300px;
   height: 30px;
   position: relative;
@@ -792,7 +803,7 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer6 input:not(:checked) + .circle:after {
   content: "Others";
   color: #585858;
-  font-size: 10px;
+  font-size: 13px;
   // height: 10px;
 //  width: 10px;
   position: absolute;
@@ -806,18 +817,20 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer6 input:checked + .circle {
   background-color: #ec8e2d;
   margin: 0px;
+  width: 320px;
+  height: 34px;
 }
 
 .radiocontainer6 input:checked + .circle:after {
   content: "Others";
   color: White;
-  font-size: 10px;
+  font-size: 15px;
 //  height: 10px;
 //  width: 10px;
   position: absolute;
   //border radius: 20%;
   top: 50%;
-  left: 50%;
+  left: 48%;
   transform: translate(-50%, -50%);
   margin: 0px;
 }
@@ -888,4 +901,21 @@ input:checked + label[for="female"]{
   margin: 0px;
   padding: 0px;
   border-width: 0px;
+}
+
+#cutlicdesign {
+  font-family: sans-serif Arial;
+  font-size: 3rem;
+  font-weight: normal;
+  color: #417379;
+}
+
+#cutlicfnllbl {
+  font-family: sans-serif Arial;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #ec8c2d;
+}
+.industrychanging {
+  font-size: 1.8rem;
 }

@@ -62,7 +62,7 @@
 
         <br><br>
 
-        <div>
+
           <div class="row">
             <div class="col-md-6 col-sm-6 roilbl">
               Application Name: <span class="roiplch"><?php echo $applicationName;  ?></span></br>
@@ -72,27 +72,27 @@
               Cost Per License: <span class="roiplch"><?php echo $costPerLicense;  ?></span></br>
               License Type: <span class="roiplch"><?php echo $licenseType;  ?></span></br>
             </div>
+
             <div class="col-md-6 col-sm-6 leftdiv">
               <span class="lresult" id="roidesign"><span id=roifnllbl> Calculated ROI: </span><br>$
 
                 <?php
                   echo $calculatedROI;
                 ?>
-
-              </span><br><br><br><br><br>
+              </span>
+            </br>
+              <span class="lresult" id="cutlicdesign"><span id=cutlicfnllbl> Purchased licenses can be cut to: </span><br>
+                <?php
+                  echo $cutLicenses;
+                ?>
+              </span>
+              </span><br><br>
             </div>
+
           </div>
 
 
-        </div>
         <br><br>
-      <!--<span class="lresult" id="roidesign"><span id=roifnllbl> Calculated ROI: </span><br>$
-
-        <?php
-          echo $calculatedROI;
-        ?>
-
-      </span><br><br><br>-->
       <a href="company.php" class="entbutdesagain">Click here to calculate again</a>
     </div><!--jumbotron-->
       <!--will delete this later -->

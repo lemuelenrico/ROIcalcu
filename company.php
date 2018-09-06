@@ -82,24 +82,31 @@
               </label><br><br>
               <label class="radiocontainer"><input type="radio" name="radio"><span class="circle"></span>
               </label><br><br>-->
-              <div class="aligncntr nospace">
-              <form>
-              <label class="radiocontainer1 nospace"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br>
-              <label class="radiocontainer2 nospace"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br>
-              <label class="radiocontainer3 nospace"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br>
-              <label class="radiocontainer4 nospace"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br>
-              <label class="radiocontainer5 nospace"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br>
-              <label class="radiocontainer6 nospace"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br>
-              </form>
-            </div>
-            <div class="rightalgn">
-              
+              <form action="software.php" method="POST">
+                <div class="aligncntr nospace">
+
+                  <label class="radiocontainer1 nospace"><input type="radio" name="industry"
+                    value="Engineering" checked="checked"><span class="circle"></span>
+                  </label><br>
+                  <label class="radiocontainer2 nospace"><input type="radio" name="industry"
+                    value="Automotive"><span class="circle"></span>
+                  </label><br>
+                  <label class="radiocontainer3 nospace"><input type="radio" name="industry"
+                    value="Oil and Gas"><span class="circle"></span>
+                  </label><br>
+                  <label class="radiocontainer4 nospace"><input type="radio" name="industry"
+                    value="Mechanical & Precision"><span class="circle"></span>
+                  </label><br>
+                  <label class="radiocontainer5 nospace"><input type="radio" name="industry"
+                    value="Government"><span class="circle"></span>
+                  </label><br>
+                  <label class="radiocontainer6 nospace"><input type="radio" name="industry"
+                    value="Others"><span class="circle"></span>
+                  </label><br>
+
+                </div>
+        <!--    <span class="error"> <?php echo $inderror;?></span> -->
+            <div class="rightalgn industrychanging">See sample calculation for <strong>Engineering</strong>:
               <button onclick="nopdf()" class="btn btn-warning"><!--<span class="glyphicon glyphicon-download-alt">--> Download PDF</button>
             </div>
           </div>
@@ -109,7 +116,7 @@
               <br><br>
               <br>
 
-              <form action="software.php" method="POST">
+
                 <div class="form-group">
                   <input type="text" class="form-control input-lg" placeholder="Company Name"
                           name="comname" required>
@@ -130,7 +137,7 @@
                 <div class="rightalgn">
                 <input type="submit" name="submit" class="nextbutdes" value="Next &raquo">
                 </div>
-              </form>
+          </form>
               <br>
 
             </div>

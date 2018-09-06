@@ -1,31 +1,34 @@
 <?php
 $applicationName  = $_POST ['appname'];     $vendorName       = $_POST ['vendname'];
 $agreementType    = $_POST ['agreetype'];   $licenseType      = $_POST ['lictype'];
-  $iLocHard         = $_POST ['Lochard'];
-  $iLocServ         = $_POST ['Locserve'];  $renewalDate      = $_POST ['rendate'];
-  $iLocCloud        = $_POST ['Loccloud'];
+/*  $iLocHard         = $_POST ['Lochard'];*/
+/*  $iLocServ         = $_POST ['Locserve'];*/  $renewalDate      = $_POST ['rendate'];
+/*  $iLocCloud        = $_POST ['Loccloud'];*/
 $noOfLicenses     = $_POST ['numlicenses']; $costPerLicense   = $_POST ['costlicenses'];
+
+$location = $_REQUEST ['location'];
+$imloc = implode (", ",$location);
 
 $companyName= $_POST ['transi'];
 
-//$companyName= $comName;
-
-        /* for form to form recognition */
-
-        //$comName = $comName;
 
         /*the main formula is as follows*/
 
                   $calculatedROI = ($costPerLicense*$noOfLicenses)/100;
 
+        /*the cut licenses formula is as follows*/
+
+                  $cutLicenses = $noOfLicenses - 3;
+
+
 if (!$_POST['submittoroi']){
     /*echo "All fields are needed to be filled out";*/
 }
 else  {
-    $sql = "INSERT into software  (EntryDate, ApplicationName, AgreementType, ILocHard, ILocServ, ILocCloud,
-                                  NoOfLicenses, VendorName, LicenseType, RenewalDate, CostPerLicense, CalculatedROI)
-            values                (NOW(), '$applicationName', '$agreementType', '$iLocHard','$iLocServ','$iLocCloud',
-                                  '$noOfLicenses','$vendorName','$licenseType','$renewalDate','$costPerLicense', $calculatedROI)";
+    $sql = "INSERT into software  (EntryDate, ApplicationName, AgreementType, Location,
+                                  NoOfLicenses, VendorName, LicenseType, RenewalDate, CostPerLicense, CalculatedROI, CutLicenses)
+            values                (NOW(), '$applicationName', '$agreementType', '$imloc',
+                                  '$noOfLicenses','$vendorName','$licenseType','$renewalDate','$costPerLicense', $calculatedROI, $cutLicenses)";
 }
 
       if (mysqli_query($conn, $sql)) {

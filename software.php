@@ -104,17 +104,36 @@
                 </select>
               </div>
             </div>
-
+<!--
             <div class="form-group row">
               <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Install Location</label>
               <div class="col-sm-1">
-                <input type="checkbox" name="Lochard" id="firstcheckbox" value="Hard drive">
+                <input type="checkbox" name="Lochard" id="firstcheckbox" value="Desktop">
                 <span class="glyphicon glyphicon-hdd glypfonts"></span></div>
                 <div class="col-sm-1">
                 <input type="checkbox" name="Locserve" id="secondcheckbox" value="Server">
                 <span class="glyphicon glyphicon-th-list glypfonts"></span></div>
                 <div class="col-sm-1">
                 <input type="checkbox" name="Loccloud" id="thirdcheckbox" value="Cloud">
+                <span class="glyphicon glyphicon-cloud glypfonts"></span></div>
+
+              <label for="renDate" class="col-sm-2 col-sm-offset-1 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Renewal Date</label>
+              <div class="col-sm-4">
+                <input type="date" class="form-control" id="renDate" placeholder="mm/dd/yyyy"
+                        name="rendate">
+              </div>
+            </div>
+-->
+            <div class="form-group row">
+              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Install Location</label>
+              <div class="col-sm-1">
+                <input type="checkbox" name="location[]" id="firstcheckbox" value="Desktop">
+                <span class="glyphicon glyphicon-hdd glypfonts"></span></div>
+                <div class="col-sm-1">
+                <input type="checkbox" name="location[]" id="secondcheckbox" value="Server">
+                <span class="glyphicon glyphicon-th-list glypfonts"></span></div>
+                <div class="col-sm-1">
+                <input type="checkbox" name="location[]" id="thirdcheckbox" value="Cloud">
                 <span class="glyphicon glyphicon-cloud glypfonts"></span></div>
 
               <label for="renDate" class="col-sm-2 col-sm-offset-1 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Renewal Date</label>
