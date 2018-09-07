@@ -86,28 +86,28 @@
                 <div class="aligncntr nospace">
 
                   <label class="radiocontainer1 nospace"><input type="radio" name="industry"
-                    value="Engineering" checked="checked"><span class="circle"></span>
+                    value="Engineering" checked="checked" onclick="lblindstry(1)"><span class="circle"></span>
                   </label><br>
                   <label class="radiocontainer2 nospace"><input type="radio" name="industry"
-                    value="Automotive"><span class="circle"></span>
+                    value="Automotive" onclick="lblindstry(2)"><span class="circle"></span>
                   </label><br>
                   <label class="radiocontainer3 nospace"><input type="radio" name="industry"
-                    value="Oil and Gas"><span class="circle"></span>
+                    value="Oil and Gas" onclick="lblindstry(3)"><span class="circle"></span>
                   </label><br>
                   <label class="radiocontainer4 nospace"><input type="radio" name="industry"
-                    value="Mechanical & Precision"><span class="circle"></span>
+                    value="Mechanical & Precision" onclick="lblindstry(4)"><span class="circle"></span>
                   </label><br>
                   <label class="radiocontainer5 nospace"><input type="radio" name="industry"
-                    value="Government"><span class="circle"></span>
+                    value="Government" onclick="lblindstry(5)"><span class="circle"></span>
                   </label><br>
                   <label class="radiocontainer6 nospace"><input type="radio" name="industry"
-                    value="Others"><span class="circle"></span>
+                    value="Others" onclick="lblindstry(6)"><span class="circle"></span>
                   </label><br>
 
                 </div>
         <!--    <span class="error"> <?php echo $inderror;?></span> -->
-            <div class="rightalgn industrychanging">See sample calculation for <strong>Engineering</strong>:
-              <button onclick="nopdf()" class="btn btn-warning"><!--<span class="glyphicon glyphicon-download-alt">--> Download PDF</button>
+        <div class="rightalgn industrychanging">See sample calculation for <label id="dl-industry" style="font-weight:bold">Engineering</label>:
+              <a href="#"><button onclick="nopdf()" class="btn btn-warning"></a><!--<span class="glyphicon glyphicon-download-alt">--> Download PDF</button>
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
@@ -150,6 +150,27 @@
       function nopdf() {
         alert("We are working on this feature.");
         }
+
+        function lblindstry(val){
+        if (val==1){
+          document.getElementById('dl-industry').innerHTML = 'Engineering';
+        }
+        else if (val==2){
+          document.getElementById('dl-industry').innerHTML = 'Automotive';
+        }
+        else if (val==3){
+          document.getElementById('dl-industry').innerHTML = 'O & G';
+        }
+        else if (val==4){
+          document.getElementById('dl-industry').innerHTML = 'M & P';
+        }
+        else if (val==5){
+          document.getElementById('dl-industry').innerHTML = 'Government';
+        }
+        else{
+          document.getElementById('dl-industry').innerHTML = 'Others';
+        }
+      }
     </script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

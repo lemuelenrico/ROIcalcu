@@ -127,14 +127,14 @@
             <div class="form-group row">
               <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Install Location</label>
               <div class="col-sm-1">
-                <input type="checkbox" name="location[]" id="firstcheckbox" value="Desktop">
-                <span class="glyphicon glyphicon-hdd glypfonts"></span></div>
+                <label><input type="checkbox" name="location[]" class="glyphpointer" id="firstcheckbox" value="Desktop">
+                <span class="glyphicon glyphicon-hdd glypfonts glyphpointer"></span></label></div>
                 <div class="col-sm-1">
-                <input type="checkbox" name="location[]" id="secondcheckbox" value="Server">
-                <span class="glyphicon glyphicon-th-list glypfonts"></span></div>
+                <label><input type="checkbox" name="location[]" class="glyphpointer" id="secondcheckbox" value="Server">
+                <span class="glyphicon glyphicon-th-list glypfonts glyphpointer"></span></label></div>
                 <div class="col-sm-1">
-                <input type="checkbox" name="location[]" id="thirdcheckbox" value="Cloud">
-                <span class="glyphicon glyphicon-cloud glypfonts"></span></div>
+                <label><input type="checkbox" name="location[]" class="glyphpointer" id="thirdcheckbox" value="Cloud">
+                <span class="glyphicon glyphicon-cloud glypfonts glyphpointer"></span></label></div>
 
               <label for="renDate" class="col-sm-2 col-sm-offset-1 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Renewal Date</label>
               <div class="col-sm-4">
@@ -158,7 +158,7 @@
             <br>
             <div class="row">
               <div class="col-md-9 centertext">
-                  <label><input type="checkbox" id="finalsubmit" value=""><span class="aggrchk"> I hereby grant permission for Snow to use the information I provided to calculate ROI.
+                  <label><input type="checkbox" class="glyphpointer" id="finalsubmit" value=""><span class="aggrchk glyphpointer"> I hereby grant permission for Snow to use the information I provided to calculate ROI.
                   By proceeding, I also agree with the <a href="#">Terms and Conditions</a> of the site. </span></label>
               </div>
               <div class="col-md-2 centertext">

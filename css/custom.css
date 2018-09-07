@@ -919,3 +919,7 @@ input:checked + label[for="female"]{
 .industrychanging {
   font-size: 1.8rem;
 }
+
+.glyphpointer:hover {
+  cursor: pointer;
+}

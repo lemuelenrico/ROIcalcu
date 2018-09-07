@@ -59,8 +59,8 @@
           </div>
           <div class="col-md-4 col-sm-4"></div>
         </div>
-
-        <br><br>
+<hr>
+        <br>
 
 
           <div class="row">
