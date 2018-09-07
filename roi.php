@@ -15,6 +15,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+    <link href="icon/snowflake.png" rel="shortcut icon">
   </head>
   <body>
 
@@ -55,13 +56,14 @@
           </div>
           <div class="col-md-2 col-sm-2 middleset aligncntr">
           <br>
-            <button onclick="nopdf()" class="btn btn-warning">Download PDF</button>
+            <!--<button onclick="nopdf()" class="btn btn-warning">Download PDF</button>-->
+            <!--<a href=""><button onclick="nopdf()" class="btn btn-warning">Download PDF</button></a>-->
+            <a href="files/SampleCalculation.pdf" download><button type="button" class="btn btn-warning"> Download PDF</button>
           </div>
           <div class="col-md-4 col-sm-4"></div>
         </div>
-<hr>
-        <br>
 
+        <br>
 
           <div class="row">
             <div class="col-md-6 col-sm-6 roilbl">

@@ -923,3 +923,8 @@ input:checked + label[for="female"]{
 .glyphpointer:hover {
   cursor: pointer;
 }
+
+.justterm {
+  font-size: 10px;
+  text-align: justify;
+}

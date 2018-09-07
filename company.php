@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+    <link href="icon/snowflake.png" rel="shortcut icon">
   </head>
   <body>
 
@@ -82,7 +83,7 @@
               </label><br><br>
               <label class="radiocontainer"><input type="radio" name="radio"><span class="circle"></span>
               </label><br><br>-->
-              <form action="software.php" method="POST">
+              <form action="software.php" autocomplete="off" method="POST">
                 <div class="aligncntr nospace">
 
                   <label class="radiocontainer1 nospace"><input type="radio" name="industry"
@@ -107,7 +108,9 @@
                 </div>
         <!--    <span class="error"> <?php echo $inderror;?></span> -->
         <div class="rightalgn industrychanging">See sample calculation for <label id="dl-industry" style="font-weight:bold">Engineering</label>:
-              <a href="#"><button onclick="nopdf()" class="btn btn-warning"></a><!--<span class="glyphicon glyphicon-download-alt">--> Download PDF</button>
+              <!--<a href="#"><button onclick="nopdf()" class="btn btn-warning"></a><span class="glyphicon glyphicon-download-alt"> Download PDF</button>-->
+              <a href="files/SampleCalculation.pdf" download><button type="button" class="btn btn-warning"> Download PDF</button>
+              </a>
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
@@ -119,19 +122,19 @@
 
                 <div class="form-group">
                   <input type="text" class="form-control input-lg" placeholder="Company Name"
-                          name="comname" required>
+                          name="comname" autocomplete="off" required>
                 </div>
                 <div class="form-group">
                   <input type="text" class="form-control input-lg" placeholder="Website"
-                          name="website" required>
+                          name="website" autocomplete="off" required>
                 </div>
                 <div class="form-group">
                   <input type="email" class="form-control input-lg" placeholder="Contact Email"
-                          name="comemail" required>
+                          name="comemail" autocomplete="off" required>
                 </div>
                 <div class="form-group">
                   <input type="number" class="form-control input-lg" placeholder="Number of Users"
-                          name="numusers" required>
+                          name="numusers" autocomplete="off" required>
                 </div>
                 <div class="notssub"><strong>Note:</strong> All fields are required.</div>
                 <div class="rightalgn">

@@ -16,6 +16,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+    <link href="icon/snowflake.png" rel="shortcut icon">
   </head>
   <body>
 
@@ -63,18 +64,18 @@
               </div>
           </div>
 
-          <form action="roi.php" id="softwares" method="POST">
+          <form action="roi.php" id="softwares" method="POST" autocomplete="off">
 
             <div class="form-group row">
               <label for="appName" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Application Name</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control" id="appName" placeholder="(i.e. AutoCAD, Petrel)"
-                        name="appname" required>
+                        name="appname" autocomplete="off" required>
               </div>
               <label for="vendName" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Vendor Name</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control" id="vendName" placeholder="(i.e. ANSYS, Halliburton)"
-                        name="vendname">
+                        name="vendname" autocomplete="off">
               </div>
             </div>
 
@@ -147,19 +148,19 @@
               <label for="numLicenses" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Number of Licenses</label>
               <div class="col-sm-4">
                 <input type="number" class="form-control" id="numLicenses" placeholder="0"
-                        name="numlicenses" required>
+                        name="numlicenses" autocomplete="off" required>
               </div>
               <label for="costLicense" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Cost per License ($)</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control" pattern="^\d+(?:\.\d{1,2})$" id="costLicense" placeholder="0.00"
-                        name="costlicenses" required>
+                        name="costlicenses" autocomplete="off" required>
               </div>
             </div>
             <br>
             <div class="row">
               <div class="col-md-9 centertext">
                   <label><input type="checkbox" class="glyphpointer" id="finalsubmit" value=""><span class="aggrchk glyphpointer"> I hereby grant permission for Snow to use the information I provided to calculate ROI.
-                  By proceeding, I also agree with the <a href="#">Terms and Conditions</a> of the site. </span></label>
+                  By proceeding, I also agree with the <a href="terms.html" target="_blank">Terms and Conditions</a> of the site. </span></label>
               </div>
               <div class="col-md-2 centertext">
                   <p><input type="submit" name="submittoroi" class="btn btn-warning alignright" value="Show ROI Calculation"></p>
