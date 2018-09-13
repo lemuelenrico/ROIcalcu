@@ -1,9 +1,7 @@
 body {
   background-color: #47c3dc;
 }
-a:hover {
-  cursor: pointer;
-}
+
 
 .jumbotron {
   padding-top: 2.5rem;

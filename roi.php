@@ -30,14 +30,19 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">
+              <!--  <a class="navbar-brand" href="#">-->
+            <a class="navbar-brand">
               <img src="images/Snowlogo.png"></a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li>
+
+              <!--
+                  <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li> -->
+
+              <li><a><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li>
               <li><a href="help.html"><h class="whitfnt2">Help</p></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
@@ -58,7 +63,7 @@
           <br>
             <!--<button onclick="nopdf()" class="btn btn-warning">Download PDF</button>-->
             <!--<a href=""><button onclick="nopdf()" class="btn btn-warning">Download PDF</button></a>-->
-            <a href="files/SampleCalculation.pdf" download><button type="button" class="btn btn-warning"> Download PDF</button>
+            <a href="files/SampleCalculation.pdf" download><button type="button" class="btn btn-warning"> Download PDF</button></a>
           </div>
           <div class="col-md-4 col-sm-4"></div>
         </div>
