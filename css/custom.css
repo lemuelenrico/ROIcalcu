@@ -1,7 +1,18 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+@font-face {
+    src: url(../fonts/OpenSans-Regular.ttf);
+    font-family: OpenSans;
+}
+
+@font-face {
+    src: url(../fonts/FontsFree-Net-Geogtq-Rg.otf);
+    font-family: Geogtq;
+}
+
 body {
   background-color: #47c3dc;
 }
-
 
 .jumbotron {
   padding-top: 2.5rem;
@@ -42,16 +53,17 @@ body {
 
 #bigtkwy {
   text-align: center;
-  font-size: 6rem;
+  font-size: 6.5rem;
   font-weight: bold;
-  font-family: sans-serif Arial ;
   color: #47c3dc;
+  //line-height: normal;
+  font-family: Geogtq;
 }
 
 #introp {
   text-align: center;
   font-size: 1.7rem;
-  font-family: sans-serif Arial;
+  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   color: #404040;
 }
@@ -59,13 +71,14 @@ body {
 #introc {
   text-align: center;
   font-size: 1.8;
-  font-family: sans-serif Arial;
+  font-family: Geogtq;
   color: #417379;
 }
 
 .jumbotronadd {
+  margin-top: 1.4rem;
   text-align: center;
-  padding-bottom: 12rem;
+  padding-bottom: 9.1rem;
 }
 .rightalgn{
   text-align: right;
@@ -78,32 +91,28 @@ body {
   color: white;
   font-size: 20px;
   font-weight: bold;
-  font-family: Helvetica;
   min-height: inherit;
-  padding: 1.7rem 3rem;
+  padding: 1.2rem 4.5rem;
   border-radius: .5rem;
 }
-
+/*
 .entbutdes:hover {
   background-color: #FF8C00;
   color: gainsboro;
-  border-radius: .8rem;
+  border-radius: .7rem;
 }
 .entbutdesagain {
-  background-color: White;
-  color: #ec8c2d;
-  border-width: 2px;
-  border-color: #ec8c2d;
-  font-size: 16px;
+  background-color: #ec8c2d;
+  color: white;
+  font-size: 20px;
   font-weight: bold;
-  font-family: Helvetica;
   min-height: inherit;
-  padding: 1.3rem 2.4rem;
+  padding: 1.2rem 4.5rem;
   border-radius: .5rem;
-}
+}*/
+
 .dfooter {
   color: white;
-  font-family: sans-serif;
   font-size: 1.5rem;
   padding-top: 0px;
   margin-top: 0px;
@@ -112,16 +121,14 @@ body {
 
 .snowbg {
   background-image: url('../images/snowbg.png');
-  height: 100%;
-  width: 100%;
-
+  max-width: 100%;
 }
 
 .headngsprpg {
   text-align: left;
-  font-size: 4rem;
+  font-size: 4.2rem;
   font-weight: bold;
-  font-family: sans-serif Arial ;
+  font-family: Geogtq;
   color: #47c3dc;
 }
 
@@ -429,6 +436,7 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer1 input:not(:checked) + .circle:after {
   content: "Engineering";
   color: #585858;
+  font-family: OpenSans;
   font-size: 13px;
   // height: 10px;
 //  width: 10px;
@@ -450,6 +458,7 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer1 input:checked + .circle:after {
   content: "Engineering";
   color: White;
+  font-family: OpenSans;
   font-size: 15px;
 //  height: 10px;
 //  width: 10px;
@@ -504,6 +513,7 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer2 input:not(:checked) + .circle:after {
   content: "Automotive";
   color: #585858;
+  font-family: OpenSans;
   font-size: 13px;
   // height: 10px;
 //  width: 10px;
@@ -525,6 +535,7 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer2 input:checked + .circle:after {
   content: "Automotive";
   color: White;
+  font-family: OpenSans;
   font-size: 15px;
 //  height: 10px;
 //  width: 10px;
@@ -578,6 +589,7 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer3 input:not(:checked) + .circle:after {
   content: "Oil and Gas";
   color: #585858;
+  font-family: OpenSans;
   font-size: 13px;
   // height: 10px;
 //  width: 10px;
@@ -599,6 +611,7 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer3 input:checked + .circle:after {
   content: "Oil and Gas";
   color: White;
+  font-family: OpenSans;
   font-size: 15px;
 //  height: 10px;
 //  width: 10px;
@@ -652,6 +665,7 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer4 input:not(:checked) + .circle:after {
   content: "Mechanical & Precision";
   color: #585858;
+  font-family: OpenSans;
   font-size: 13px;
   // height: 10px;
 //  width: 10px;
@@ -673,6 +687,7 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer4 input:checked + .circle:after {
   content: "Mechanical & Precision";
   color: White;
+  font-family: OpenSans;
   font-size: 13.4px;
 //  height: 10px;
 //  width: 10px;
@@ -727,6 +742,7 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer5 input:not(:checked) + .circle:after {
   content: "Government";
   color: #585858;
+  font-family: OpenSans;
   font-size: 13px;
   // height: 10px;
 //  width: 10px;
@@ -748,6 +764,7 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer5 input:checked + .circle:after {
   content: "Government";
   color: White;
+  font-family: OpenSans;
   font-size: 15px;
 //  height: 10px;
 //  width: 10px;
@@ -801,6 +818,7 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer6 input:not(:checked) + .circle:after {
   content: "Others";
   color: #585858;
+  font-family: OpenSans;
   font-size: 13px;
   // height: 10px;
 //  width: 10px;
@@ -822,6 +840,7 @@ label:hover input:not(:checked) ~ img.active {
 .radiocontainer6 input:checked + .circle:after {
   content: "Others";
   color: White;
+  font-family: OpenSans;
   font-size: 15px;
 //  height: 10px;
 //  width: 10px;
@@ -868,28 +887,28 @@ input:checked + label[for="female"]{
 }
 
 .roilbl {
-  font-family: sans-serif Arial;
+  font-family: Geogtq;
   font-size: 2rem;
   font-weight: bold;
   color: #ec8c2d;
 }
 
 .roiplch {
-  font-family: sans-serif Arial;
+  font-family: OpenSans;
   font-size: 2rem;
   font-weight: bold;
   color: #417379;
 }
 
 #roidesign {
-  font-family: sans-serif Arial;
+  font-family: OpenSans;
   font-size: 4.5rem;
   font-weight: normal;
   color: #417379;
 }
 
 #roifnllbl {
-  font-family: sans-serif Arial;
+  font-family: Geogtq;
   font-size: 3.8rem;
   font-weight: bold;
   color: #ec8c2d;
@@ -902,14 +921,14 @@ input:checked + label[for="female"]{
 }
 
 #cutlicdesign {
-  font-family: sans-serif Arial;
+  font-family: OpenSans;
   font-size: 3rem;
   font-weight: normal;
   color: #417379;
 }
 
 #cutlicfnllbl {
-  font-family: sans-serif Arial;
+  font-family: Geogtq;
   font-size: 2.8rem;
   font-weight: bold;
   color: #ec8c2d;
@@ -925,4 +944,56 @@ input:checked + label[for="female"]{
 .justterm {
   font-size: 10px;
   text-align: justify;
+}
+
+#cloudicon {
+  height: 30px;
+}
+
+#desktopicon {
+  height: 30px;
+}
+
+#servericon {
+  height: 30px;
+}
+
+.openfont {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.geofont {
+  font-family: Geogtq;
+}
+
+.dlbutdes {
+  background-color: #ec8c2d;
+  color: white;
+  font-size: 15px;
+  font-family: Geogtq;
+  min-height: inherit;
+  padding: 0.6rem 2.8rem;
+  border-radius: .5rem;
+}
+
+.recalcbutdes {
+  background-color: white;
+  color: #ec8c2d;
+  border-radius: 3px;
+  border-color: #ec8c2d;
+  font-size: 15px;
+  font-family: Geogtq;
+  min-height: inherit;
+  padding: 1rem 2.8rem;
+  border-radius: .5rem;
+}
+
+.showroibutdes {
+  background-color: #ec8c2d;
+  color: white;
+  font-size: 20px;
+  font-family: Geogtq;
+  min-height: inherit;
+  padding: 1.2rem 3rem;
+  border-radius: .5rem;
 }

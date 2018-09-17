@@ -43,8 +43,8 @@
               <!--
                   <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li> -->
 
-              <li><a><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li>
-              <li><a href="help.html"><h class="whitfnt2">Help</h></a></li>
+              <li><a><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
+              <li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -65,13 +65,13 @@
                   <br>
               </div>
               <div class="col-md-6 col-sm-6 rightalgn">
-                  <h3 class= "notssub"><span class="requiredclr">*</span>Required fields.</h3>
+                  <h3 class= "notssub openfont"><span class="requiredclr">*</span>Required fields.</h3>
               </div>
           </div>
 
           <form action="roi.php" id="softwares" method="POST" autocomplete="off">
 
-            <div class="form-group row">
+            <div class="form-group row openfont">
               <label for="appName" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Application Name</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control" id="appName" placeholder="(i.e. AutoCAD, Petrel)"
@@ -84,7 +84,7 @@
               </div>
             </div>
 
-            <div class="form-group row">
+            <div class="form-group row openfont">
               <label for="agreeType" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Agreement Type</label>
               <div class="col-sm-4">
                 <select class="custom-select form-control" id="agreeType"
@@ -130,17 +130,23 @@
               </div>
             </div>
 -->
-            <div class="form-group row">
+            <div class="form-group row openfont">
               <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Install Location</label>
-              <div class="col-sm-1">
-                <label><input type="checkbox" name="location[]" class="glyphpointer" id="firstcheckbox" value="Desktop">
-                <span class="glyphicon glyphicon-hdd glypfonts glyphpointer"></span></label></div>
                 <div class="col-sm-1">
-                <label><input type="checkbox" name="location[]" class="glyphpointer" id="secondcheckbox" value="Server">
-                <span class="glyphicon glyphicon-th-list glypfonts glyphpointer"></span></label></div>
+                  <label><input title="Server" type="checkbox" name="location[]" class="glyphpointer" id="secondcheckbox" value="Server">
+                    <img src="images/iconserv.png" id="servericon" class="glyphpointer" title="Server">
+                  <!--<span class="glyphicon glyphicon-th-list glypfonts glyphpointer" title="Server"></span>-->
+                </label></div>
                 <div class="col-sm-1">
-                <label><input type="checkbox" name="location[]" class="glyphpointer" id="thirdcheckbox" value="Cloud">
-                <span class="glyphicon glyphicon-cloud glypfonts glyphpointer"></span></label></div>
+                  <label><input title="Hard drive" type="checkbox" name="location[]" class="glyphpointer" id="firstcheckbox" value="Desktop">
+                    <img src="images/icondesk.png" id="desktopicon" class="glyphpointer" title="Desktop">
+                  <!--<span class="glyphicon glyphicon-hdd glypfonts glyphpointer" title="Hard drive"></span>-->
+                  </label></div>
+                <div class="col-sm-1">
+                  <label><input title="Cloud" type="checkbox" name="location[]" class="glyphpointer" id="thirdcheckbox" value="Cloud">
+                    <img src="images/iconcloud.png" id="cloudicon" class="glyphpointer" title="Cloud">
+                  <!--<span class="glyphicon glyphicon-cloud glypfonts glyphpointer" title="Cloud"></span>-->
+                  </label></div>
 
               <label for="renDate" class="col-sm-2 col-sm-offset-1 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Renewal Date</label>
               <div class="col-sm-4">
@@ -148,8 +154,7 @@
                         name="rendate">
               </div>
             </div>
-
-            <div class="form-group row">
+            <div class="form-group row openfont">
               <label for="numLicenses" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Number of Licenses</label>
               <div class="col-sm-4">
                 <input type="number" class="form-control" id="numLicenses" placeholder="0"
@@ -157,18 +162,20 @@
               </div>
               <label for="costLicense" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Cost per License ($)</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control" pattern="^\d+(?:\.\d{1,2})$" id="costLicense" placeholder="0.00"
-                        name="costlicenses" autocomplete="off" required>
+                <!--<input type="text" class="form-control" pattern="^\d+(?:\.\d{1,2})$" id="costLicense" placeholder="0.00"
+                        name="costlicenses" autocomplete="off" required>-->
+                    <input type="text" class="form-control" pattern="^\d*(\.\d{0,2})?$" id="costLicense" placeholder="0.00"
+                                name="costlicenses" autocomplete="off" required>
               </div>
             </div>
             <br>
             <div class="row">
               <div class="col-md-9 centertext">
-                  <label><input type="checkbox" class="glyphpointer" id="finalsubmit" value=""><span class="aggrchk glyphpointer"> I hereby grant permission for Snow to use the information I provided to calculate ROI.
+                  <label class="openfont"><input type="checkbox" class="glyphpointer" id="finalsubmit" value=""><span class="aggrchk glyphpointer"> I hereby grant permission for Snow to use the information I provided to calculate ROI.
                   By proceeding, I also agree with the <a href="terms.html" target="_blank">Terms and Conditions</a> of the site. </span></label>
               </div>
               <div class="col-md-2 centertext">
-                  <p><input type="submit" name="submittoroi" class="btn btn-warning alignright" value="Show ROI Calculation"></p>
+                  <p><input type="submit" name="submittoroi" class="btn showroibutdes alignright geofont" value="Show ROI Calculation"></p>
               </div>
             </div>
           </form>
@@ -176,22 +183,15 @@
 
       </div><!-- jumbotron -->
 
-    <!-- will delete this later-->
-    <script>
-    document.getElementById('softwares').addEventListener('submit', function(verification){
-    if(document.getElementById('finalsubmit').checked == false){
-        verification.preventDefault();
-        alert("By clicking Show ROI Calculation, you must accept our terms and conditions!");
-        return false;
-      }
-      });
-    </script>
+<!-- the followng is the link for the custom js files-->
+
+    <script src="js/software.js"></script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-    <p class="dfooter">Copyright © ROI Calculator. All rights reserved.</p>
+    <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
   </body>
 </html>

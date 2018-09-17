@@ -36,8 +36,8 @@
               <!--
                   <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li> -->
 
-              <li><a><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li>
-              <li><a href="help.html"><h class="whitfnt2">Help</p></a></li>
+              <li><a><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
+              <li><a href="help.html"><h class="whitfnt2 geofont">Help</p></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -50,7 +50,7 @@
             <h2 class="headngsprpg">Company Details</h2>
             <br>
 
-            <span class="entbutdes2"><b>Select your Industry</b></span>
+            <span class="entbutdes2 geofont"><b>Select your Industry</b></span>
             <br>
 
               <!-- delete under if done -->
@@ -111,9 +111,9 @@
 
                 </div>
         <!--    <span class="error"> <?php echo $inderror;?></span> -->
-        <div class="rightalgn industrychanging">See sample calculation for <label id="dl-industry" style="font-weight:bold">Engineering</label>:
+        <div class="rightalgn industrychanging openfont">See sample calculation for <label id="dl-industry" style="font-weight:bold">Engineering</label>:
               <!--<a href="#"><button onclick="nopdf()" class="btn btn-warning"></a><span class="glyphicon glyphicon-download-alt"> Download PDF</button>-->
-              <a href="files/SampleCalculation.pdf" download><button type="button" class="btn btn-warning"> Download PDF</button>
+              <a href="files/SampleCalculation.pdf" download><button type="button" class="btn dlbutdes"> Download PDF</button>
               </a>
             </div>
           </div>
@@ -125,62 +125,39 @@
 
 
                 <div class="form-group">
-                  <input type="text" class="form-control input-lg" placeholder="Company Name"
+                  <input type="text" class="form-control input-lg openfont" placeholder="Company Name"
                           name="comname" autocomplete="off" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control input-lg" placeholder="Website"
+                  <input type="text" class="form-control input-lg openfont" placeholder="Website"
                           name="website" autocomplete="off" required>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control input-lg" placeholder="Contact Email"
-                          name="comemail" autocomplete="off" required>
+                  <input type="email" class="form-control input-lg openfont" placeholder="Contact Email"
+                          name="comemail" id="validemail" autocomplete="off" required>
                 </div>
                 <div class="form-group">
-                  <input type="number" class="form-control input-lg" placeholder="Number of Users"
+                  <input type="number" class="form-control input-lg openfont" placeholder="Number of Users"
                           name="numusers" autocomplete="off" required>
                 </div>
-                <div class="notssub"><strong>Note:</strong> All fields are required.</div>
+                <div class="notssub openfont"><strong>Note:</strong> All fields are required.</div>
                 <div class="rightalgn">
-                <input type="submit" name="submit" class="nextbutdes" value="Next &raquo">
+                <input type="submit" name="submit" class="nextbutdes openfont" value="Next &raquo">
                 </div>
           </form>
               <br>
 
             </div>
           </div>
-        </div><!--row-->
+        </div><!--jumbotron-->
 
       </div>
-      <!--will delete this later -->
-    <script>
-      function nopdf() {
-        alert("We are working on this feature.");
-        }
 
-        function lblindstry(val){
-        if (val==1){
-          document.getElementById('dl-industry').innerHTML = 'Engineering';
-        }
-        else if (val==2){
-          document.getElementById('dl-industry').innerHTML = 'Automotive';
-        }
-        else if (val==3){
-          document.getElementById('dl-industry').innerHTML = 'O & G';
-        }
-        else if (val==4){
-          document.getElementById('dl-industry').innerHTML = 'M & P';
-        }
-        else if (val==5){
-          document.getElementById('dl-industry').innerHTML = 'Government';
-        }
-        else{
-          document.getElementById('dl-industry').innerHTML = 'Others';
-        }
-      }
-    </script>
+<!-- the followng is the link for the custom js files-->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/company.js"></script>
+
+    <!-- jQuery pt></script>cessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>

@@ -37,17 +37,17 @@
               <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li>
               <li><a href="help.html"><h class="whitfnt2">Help</p></a></li>
             -->
-            <li><a ><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li>
-            <li><a href="help.html"><h class="whitfnt2">Help</p></a></li>
+            <li><a ><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</h></a></li>
+            <li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
 
       <div class="jumbotron jumbotronadd snowbg">
-        <h1 id="bigtkwy"> ROI Calculator</h1>
+        <h1 id="bigtkwy">ROI Calculator</h1>
         <br>
-          <p id="introp">
+          <p id="introp" class="geofont">
             This ROI Calculator provides you with an approximate amount of the savings that you may get from investing in Snow for Engineering tools.
             It will need your company and software details in order to provide an accurate estimate of your possible ROI. All information provided will be
             processed in accordance with existing privacy and data protection rules and regulations and will be used for the sole purpose of calculating ROI.
@@ -60,7 +60,7 @@
         <p id="introc"><!--Calculate the value your organization can gain from Snow for Engineering.-->Calculate how much your organization can gain from using Snow for Engineering.</p>
         <br>
         <br>
-        <a href="company.php" class="entbutdes">CLICK HERE TO START</a>
+        <a href="company.php" class="btn entbutdes geofont">CLICK HERE TO START</a>
 
       </div>
 
@@ -69,6 +69,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-    <p class="dfooter">Copyright © ROI Calculator. All rights reserved.</p>
+    <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
   </body>
 </html>

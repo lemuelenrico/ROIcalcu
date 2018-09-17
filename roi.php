@@ -42,8 +42,8 @@
               <!--
                   <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li> -->
 
-              <li><a><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li>
-              <li><a href="help.html"><h class="whitfnt2">Help</p></a></li>
+              <li><a><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
+              <li><a href="help.html"><h class="whitfnt2 geofont">Help</p></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -63,7 +63,7 @@
           <br>
             <!--<button onclick="nopdf()" class="btn btn-warning">Download PDF</button>-->
             <!--<a href=""><button onclick="nopdf()" class="btn btn-warning">Download PDF</button></a>-->
-            <a href="files/SampleCalculation.pdf" download><button type="button" class="btn btn-warning"> Download PDF</button></a>
+            <a href="files/SampleCalculation.pdf" download><button type="button" class="btn dlbutdes"> Download PDF</button></a>
           </div>
           <div class="col-md-4 col-sm-4"></div>
         </div>
@@ -100,7 +100,7 @@
 
 
         <br><br>
-      <a href="company.php" class="entbutdesagain">Click here to calculate again</a>
+      <a href="company.php" class="btn recalcbutdes geofont">Click here to calculate again</a>
     </div><!--jumbotron-->
       <!--will delete this later -->
 
@@ -115,6 +115,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-    <p class="dfooter">Copyright © ROI Calculator. All rights reserved.</p>
+    <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
   </body>
 </html>
