@@ -139,7 +139,7 @@
               </div>
               <label for="costLicense" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Cost per License ($)</label>
               <div class="col-sm-4">
-                    <input type="text" class="form-control" pattern="^\d*(\.\d{0,2})?$" id="costLicense" placeholder="0.00"
+                    <input type="text" class="form-control" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense" placeholder="0.00"
                                 name="costlicenses" autocomplete="off" required>
               </div>
             </div>
