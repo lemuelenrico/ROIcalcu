@@ -25,11 +25,6 @@ function nopdf() {
 
 var validemail = document.getElementById("validemail");
 
-/*
-validemail.oninvalid = function (event) {
-  event.target.setCustomValidity("Please enter a valid email.");
-}*/
-
 validemail.addEventListener("input", function (event) {
   if (validemail.validity.typeMismatch) {
     validemail.setCustomValidity("Please enter a valid email.");

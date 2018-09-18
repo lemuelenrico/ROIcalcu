@@ -39,9 +39,6 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
 
-              <!--
-                  <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li> -->
-
               <li><a><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
               <li><a href="help.html"><h class="whitfnt2 geofont">Help</p></a></li>
             </ul>
@@ -61,8 +58,6 @@
           </div>
           <div class="col-md-2 col-sm-2 middleset aligncntr">
           <br>
-            <!--<button onclick="nopdf()" class="btn btn-warning">Download PDF</button>-->
-            <!--<a href=""><button onclick="nopdf()" class="btn btn-warning">Download PDF</button></a>-->
             <a href="files/SampleCalculation.pdf" download><button type="button" class="btn dlbutdes"> Download PDF</button></a>
           </div>
           <div class="col-md-4 col-sm-4"></div>
@@ -77,7 +72,7 @@
               License Type: <span class="roiplch"><?php echo $licenseType;  ?></span></br>
               Number of Licenses: <span class="roiplch"><?php echo $noOfLicenses;  ?></span></br>
               Cost Per License: <span class="roiplch"><?php echo $costPerLicense;  ?></span></br>
-              License Type: <span class="roiplch"><?php echo $licenseType;  ?></span></br>
+              Location: <span class="roiplch"><?php echo $imloc;  ?></span></br>
             </div>
 
             <div class="col-md-6 col-sm-6 leftdiv">
@@ -102,13 +97,6 @@
         <br><br>
       <a href="company.php" class="btn recalcbutdes geofont">Click here to calculate again</a>
     </div><!--jumbotron-->
-      <!--will delete this later -->
-
-    <script>
-      function nopdf() {
-        alert("We are working on this feature.");
-        }
-    </script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

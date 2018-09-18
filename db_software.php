@@ -1,12 +1,9 @@
 <?php
 $applicationName  = $_POST ['appname'];     $vendorName       = $_POST ['vendname'];
 $agreementType    = $_POST ['agreetype'];   $licenseType      = $_POST ['lictype'];
-/*  $iLocHard         = $_POST ['Lochard'];*/
-/*  $iLocServ         = $_POST ['Locserve'];*/  $renewalDate      = $_POST ['rendate'];
-/*  $iLocCloud        = $_POST ['Loccloud'];*/
+$location = $_REQUEST ['location'];         $renewalDate      = $_POST ['rendate'];
 $noOfLicenses     = $_POST ['numlicenses']; $costPerLicense   = $_POST ['costlicenses'];
 
-$location = $_REQUEST ['location'];
 $imloc = implode (", ",$location);
 
 $companyName= $_POST ['transi'];
@@ -22,7 +19,6 @@ $companyName= $_POST ['transi'];
 
 
 if (!$_POST['submittoroi']){
-    /*echo "All fields are needed to be filled out";*/
 }
 else  {
     $sql = "INSERT into software  (EntryDate, ApplicationName, AgreementType, Location,

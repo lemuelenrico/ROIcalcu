@@ -33,8 +33,6 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <!--
-                  <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li> -->
 
               <li><a><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
               <li><a href="help.html"><h class="whitfnt2 geofont">Help</p></a></li>
@@ -50,43 +48,9 @@
             <h2 class="headngsprpg">Company Details</h2>
             <br>
 
-            <span class="entbutdes2 geofont"><b>Select your Industry</b></span>
+            <span class="entbutdes2 geofont"><strong>Select your Industry</strong></span>
             <br>
 
-              <!-- delete under if done -->
-              <!--<div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn custombgopt">
-                  <input type="radio" name="options" id="option1" autocomplete="off">Engineering
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option2" autocomplete="off">Oil and Gas
-                </label><br><br>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off">Automotive
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option4" autocomplete="off">Mechanical & Precision
-                </label><br><br>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option5" autocomplete="off">Government
-                  <input type="radio">
-
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option6" autocomplete="off">Others
-                </label>
-
-              </div> -->
-
-              <!--<input type="radio" id="male" name="gender">
-              <label for="male">Male</label><br>
-              <input type ="radio" id="female" name="gender">
-              <label for="female">Female</label>-->
-
-            <!--  <label class="radiocontainer"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br><br>
-              <label class="radiocontainer"><input type="radio" name="radio"><span class="circle"></span>
-              </label><br><br>-->
               <form action="software.php" autocomplete="off" method="POST">
                 <div class="aligncntr nospace">
 
@@ -110,19 +74,18 @@
                   </label><br>
 
                 </div>
-        <!--    <span class="error"> <?php echo $inderror;?></span> -->
-        <div class="rightalgn industrychanging openfont">See sample calculation for <label id="dl-industry" style="font-weight:bold">Engineering</label>:
-              <!--<a href="#"><button onclick="nopdf()" class="btn btn-warning"></a><span class="glyphicon glyphicon-download-alt"> Download PDF</button>-->
-              <a href="files/SampleCalculation.pdf" download><button type="button" class="btn dlbutdes"> Download PDF</button>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="leftdiv">
-              <br>
-              <br><br>
-              <br>
 
+                    <div class="rightalgn industrychanging openfont">See sample calculation for <label id="dl-industry" style="font-weight:bold">Engineering</label>:
+                          <a href="files/SampleCalculation.pdf" download><button type="button" class="btn dlbutdes"> Download PDF</button>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-6">
+                        <div class="leftdiv">
+
+                <br>
+              <br><br><!--bunch of linebreaks-->
+                <br>
 
                 <div class="form-group">
                   <input type="text" class="form-control input-lg openfont" placeholder="Company Name"
@@ -149,9 +112,9 @@
 
             </div>
           </div>
-        </div><!--jumbotron-->
+        </div><!--row-->
 
-      </div>
+      </div><!--jumbotron-->
 
 <!-- the followng is the link for the custom js files-->
 

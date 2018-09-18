@@ -95,21 +95,6 @@ body {
   padding: 1.2rem 4.5rem;
   border-radius: .5rem;
 }
-/*
-.entbutdes:hover {
-  background-color: #FF8C00;
-  color: gainsboro;
-  border-radius: .7rem;
-}
-.entbutdesagain {
-  background-color: #ec8c2d;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  min-height: inherit;
-  padding: 1.2rem 4.5rem;
-  border-radius: .5rem;
-}*/
 
 .dfooter {
   color: white;
@@ -241,21 +226,6 @@ body {
 #option2 {
   background-image: url("images/Engg_selected.png");
 }
-/*
-label input:checked ~ img.inactive,
-label:hover input:not(:checked) ~ img.inactive {
-  display:none;
-}
-
-label input:not(:checked) ~ img.active,
-label:hover input:checked ~ img.active {
-  display:none;
-}
-
-label:hover input:checked ~ img.inactive,
-label:hover input:not(:checked) ~ img.active {
-  display: block;
-}*/
 
 .custombgopt {
   background: url("images/Gov_default.png");
@@ -268,132 +238,6 @@ label:hover input:not(:checked) ~ img.active {
 .custombgopt:toggle {
   background-color: gray;
 }
-/*
-.radiocontainer {
-  display: inline-block;
-  position: relative;
-  margin-left: 0;
-  cursor: pointer;
-  font-family: sans-serif;
-  font-size: 22px;
-  user-select: none;
-  padding-left: 30px;
-}
-
-.radiocontainer input {
-  display: none;
-  padding-left: 0px;
-}
-
-.radiocontainer .circle {
-  display: inline-block;
-  font-size: 10px;
-  width: 200px;
-  height: 30px;
-  position: absolute;
-  padding-left: 0px;
-  left: 0;
-  top: 0;
-  background-color:  gainsboro;
-  //border-radius: 20%;
-}
-
-.radiocontainer:hover .circle {
-  background-color: lightgray;
-}
-
-.radiocontainer input:not(:checked) + .circle:after {
-  content: "mals";
-  color: blue;
-  font-size: 10px;
-  // height: 10px;
-//  width: 10px;
-  position: absolute;
-  border radius: 20%;
-  top: 50%;
-  left:40%;
-  transform: translate(-40%, -50%);
-}
-
-.radiocontainer input:checked + .circle:after {
-  content: "male";
-  color: blue;
-  font-size: 10px;
-//  height: 10px;
-//  width: 10px;
-  position: absolute;
-  border radius: 20%;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-}*/
-
-/*takeaway*/
-/*
-.radiocontainer1 {
-  display: inline-block;
-  position: relative;
-  margin-left: 0;
-  cursor: pointer;
-  font-family: sans-serif;
-  font-size: 22px;
-  user-select: none;
-  padding-left: 00px;
-}
-
-.radiocontainer1 input {
-  display: none;
-  padding-left: 0px;
-}
-
-.radiocontainer1 .circle {
-  display: inline-block;
-  font-size: 10px;
-  width: 300px;
-  height: 30px;
-  position: relative;
-  padding-left: 0px;
-  left: 0;
-  top: 0;
-  background-color: gainsboro;
-  //border-radius: 20%;
-}
-
-.radiocontainer1:hover .circle {
-  background-color: white;
-  border-color: #ec8c2d;
-  color: gainsboro;
-}
-
-.radiocontainer1 input:not(:checked) + .circle:after {
-  content: "Engineering";
-  color: #585858;
-  font-size: 10px;
-  // height: 10px;
-//  width: 10px;
-  position: absolute;
-//  border radius: 20%;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-}
-
-.radiocontainer1 input:checked + .circle {
-  background-color: #ec8e2d;
-}
-
-.radiocontainer1 input:checked + .circle:after {
-  content: "Engineering";
-  color: White;
-  font-size: 10px;
-//  height: 10px;
-//  width: 10px;
-  position: absolute;
-//  border radius: 20%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}*/
 
 .radiocontainer1 {
   display: inline-block;

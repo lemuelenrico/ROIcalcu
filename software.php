@@ -40,9 +40,6 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
 
-              <!--
-                  <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li> -->
-
               <li><a><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
               <li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>
             </ul>
@@ -110,42 +107,22 @@
                 </select>
               </div>
             </div>
-<!--
-            <div class="form-group row">
-              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Install Location</label>
-              <div class="col-sm-1">
-                <input type="checkbox" name="Lochard" id="firstcheckbox" value="Desktop">
-                <span class="glyphicon glyphicon-hdd glypfonts"></span></div>
-                <div class="col-sm-1">
-                <input type="checkbox" name="Locserve" id="secondcheckbox" value="Server">
-                <span class="glyphicon glyphicon-th-list glypfonts"></span></div>
-                <div class="col-sm-1">
-                <input type="checkbox" name="Loccloud" id="thirdcheckbox" value="Cloud">
-                <span class="glyphicon glyphicon-cloud glypfonts"></span></div>
 
-              <label for="renDate" class="col-sm-2 col-sm-offset-1 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Renewal Date</label>
-              <div class="col-sm-4">
-                <input type="date" class="form-control" id="renDate" placeholder="mm/dd/yyyy"
-                        name="rendate">
-              </div>
-            </div>
--->
             <div class="form-group row openfont">
               <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Install Location</label>
                 <div class="col-sm-1">
                   <label><input title="Server" type="checkbox" name="location[]" class="glyphpointer" id="secondcheckbox" value="Server">
                     <img src="images/iconserv.png" id="servericon" class="glyphpointer" title="Server">
-                  <!--<span class="glyphicon glyphicon-th-list glypfonts glyphpointer" title="Server"></span>-->
                 </label></div>
+
                 <div class="col-sm-1">
                   <label><input title="Hard drive" type="checkbox" name="location[]" class="glyphpointer" id="firstcheckbox" value="Desktop">
                     <img src="images/icondesk.png" id="desktopicon" class="glyphpointer" title="Desktop">
-                  <!--<span class="glyphicon glyphicon-hdd glypfonts glyphpointer" title="Hard drive"></span>-->
                   </label></div>
+
                 <div class="col-sm-1">
                   <label><input title="Cloud" type="checkbox" name="location[]" class="glyphpointer" id="thirdcheckbox" value="Cloud">
                     <img src="images/iconcloud.png" id="cloudicon" class="glyphpointer" title="Cloud">
-                  <!--<span class="glyphicon glyphicon-cloud glypfonts glyphpointer" title="Cloud"></span>-->
                   </label></div>
 
               <label for="renDate" class="col-sm-2 col-sm-offset-1 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Renewal Date</label>
@@ -162,8 +139,6 @@
               </div>
               <label for="costLicense" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Cost per License ($)</label>
               <div class="col-sm-4">
-                <!--<input type="text" class="form-control" pattern="^\d+(?:\.\d{1,2})$" id="costLicense" placeholder="0.00"
-                        name="costlicenses" autocomplete="off" required>-->
                     <input type="text" class="form-control" pattern="^\d*(\.\d{0,2})?$" id="costLicense" placeholder="0.00"
                                 name="costlicenses" autocomplete="off" required>
               </div>
