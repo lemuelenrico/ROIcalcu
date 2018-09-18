@@ -106,7 +106,11 @@ body {
 
 .snowbg {
   background-image: url('../images/snowbg.png');
-  max-width: 100%;
+  background-position: bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+ //  background-size: cover;
+  background-attachment: inherit;
 }
 
 .headngsprpg {
@@ -821,7 +825,7 @@ input:checked + label[for="female"]{
 }
 
 .recalcbutdes {
-  background-color: white;
+  background-color: #eee;
   color: #ec8c2d;
   border-radius: 3px;
   border-color: #ec8c2d;
@@ -840,4 +844,21 @@ input:checked + label[for="female"]{
   min-height: inherit;
   padding: 1.2rem 3rem;
   border-radius: .5rem;
+}
+
+.colorwhite {
+  background-color: white;
+}
+
+table {
+  width: 70%;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
 }

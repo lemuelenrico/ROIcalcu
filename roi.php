@@ -88,14 +88,44 @@
                   echo $cutLicenses;
                 ?>
               </span>
-              </span><br><br>
-            </div>
 
-          </div>
+            </div><!--general display of roi-->
+          </div> <!--row-->
 
 
-        <br><br>
       <a href="company.php" class="btn recalcbutdes geofont">Click here to calculate again</a>
+
+            <br><br><br>
+
+                <table align="center">
+                  <tr>
+                      <th colspan="3" class="aligncntr">ROI Calculation</th>
+                  </tr>
+                  <tr>
+                      <td rowspan="2" width="33%">1st Year</td>
+                      <td>asdfadfadfadfaasdfasdfadfadsfad%</td>
+                  </tr>
+                  <tr>
+                      <td>$</td>
+                  </tr>
+                  <tr>
+                      <td rowspan="2" width="33%">2nd Year</td>
+                      <td>%</td>
+                  </tr>
+                  <tr>
+                      <td>$</td>
+                  </tr>
+                  <tr>
+                      <td rowspan="2" width="33%">3rd Year</td>
+                      <td>%</td>
+                  </tr>
+                  <tr>
+                      <td>$</td>
+                  </tr>
+
+                </table>
+
+
     </div><!--jumbotron-->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

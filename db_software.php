@@ -11,7 +11,7 @@ $companyName= $_POST ['transi'];
 
         /*the main formula is as follows*/
 
-                  $calculatedROI = ($costPerLicense*$noOfLicenses)/100;
+                  $calculatedROI = round((($costPerLicense*$noOfLicenses)/100),2);
 
         /*the cut licenses formula is as follows*/
 

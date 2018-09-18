@@ -111,17 +111,17 @@
             <div class="form-group row openfont">
               <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Install Location</label>
                 <div class="col-sm-1">
-                  <label><input title="Server" type="checkbox" name="location[]" class="glyphpointer" id="secondcheckbox" value="Server">
+                  <label><input title="Server" type="checkbox" name="location[]" class="glyphpointer" id="server" value="Server">
                     <img src="images/iconserv.png" id="servericon" class="glyphpointer" title="Server">
                 </label></div>
 
                 <div class="col-sm-1">
-                  <label><input title="Hard drive" type="checkbox" name="location[]" class="glyphpointer" id="firstcheckbox" value="Desktop">
+                  <label><input title="Hard drive" type="checkbox" name="location[]" class="glyphpointer" id="desktop" value="Desktop">
                     <img src="images/icondesk.png" id="desktopicon" class="glyphpointer" title="Desktop">
                   </label></div>
 
                 <div class="col-sm-1">
-                  <label><input title="Cloud" type="checkbox" name="location[]" class="glyphpointer" id="thirdcheckbox" value="Cloud">
+                  <label><input title="Cloud" type="checkbox" name="location[]" class="glyphpointer" id="cloud" value="Cloud">
                     <img src="images/iconcloud.png" id="cloudicon" class="glyphpointer" title="Cloud">
                   </label></div>
 
@@ -146,15 +146,16 @@
             <br>
             <div class="row">
               <div class="col-md-9 centertext">
-                  <label class="openfont"><input type="checkbox" class="glyphpointer" id="finalsubmit" value=""><span class="aggrchk glyphpointer"> I hereby grant permission for Snow to use the information I provided to calculate ROI.
+                  <label class="openfont"><input type="checkbox" class="glyphpointer" id="finalsubmit" value=""><span class="aggrchk glyphpointer">
+                    I hereby grant permission for Snow to use the information I provided to calculate ROI.
                   By proceeding, I also agree with the <a href="terms.html" target="_blank">Terms and Conditions</a> of the site. </span></label>
               </div>
               <div class="col-md-2 centertext">
-                  <p><input type="submit" name="submittoroi" class="btn showroibutdes alignright geofont" value="Show ROI Calculation"></p>
+                  <p><input type="submit" name="submittoroi" class="btn showroibutdes alignright geofont"
+                    value="Show ROI Calculation" onClick="valthisform();"></p>
               </div>
             </div>
           </form>
-
 
       </div><!-- jumbotron -->
 
