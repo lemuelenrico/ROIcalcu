@@ -48,6 +48,7 @@
 
       <div class="jumbotron aligncntr">
         <div class="container-fluid rightalgn"><img src="images/pointer3.png"></div>
+
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <h2 class="headngsprpg">ROI for
@@ -56,12 +57,26 @@
               ?>
             </h2>
           </div>
-          <div class="col-md-2 col-sm-2 middleset aligncntr">
+          <div class="col-md-3 col-sm-3 middleset aligncntr">
           <br>
-            <a href="files/SampleCalculation.pdf" download><button type="button" class="btn dlbutdes"> Download PDF</button></a>
+            <a href="files/SampleCalculation.pdf" download><button type="button" class="btn dlbutdes">Download PDF</button></a>
           </div>
-          <div class="col-md-4 col-sm-4"></div>
-        </div>
+
+          <div class="col-md-3 col-sm-3 aligncntr"><br>
+            <a href="#">
+              <img src="images/excelicon.png" width="45px" height="45px" onmouseover="this.src='images/exceliconhover.png'"
+                onmouseout="this.src='images/excelicon.png'" title="Export to Excel">
+            </a>
+            <a href="#">
+              <img src="images/pdficon.png" width="45px" height="45px" onmouseover="this.src='images/pdficonhover.png'"
+                onmouseout="this.src='images/pdficon.png'" title="Export to PDF">
+            </a>
+            <a href="#">
+              <img src="images/ppticon.png" width="45px" height="45px" onmouseover="this.src='images/ppticonhover.png'"
+                onmouseout="this.src='images/ppticon.png'" title="Export to PowerPoint">
+            </a>
+          </div>
+        </div><!--row-->
 
         <br>
 
@@ -71,11 +86,12 @@
               Agreement Type: <span class="roiplch"><?php echo $agreementType;  ?></span></br>
               License Type: <span class="roiplch"><?php echo $licenseType;  ?></span></br>
               Number of Licenses: <span class="roiplch"><?php echo $noOfLicenses;  ?></span></br>
-              Cost Per License: <span class="roiplch"><?php echo $costPerLicense;  ?></span></br>
+              Cost Per License: <span class="roiplch">$<?php echo $costPerLicense;  ?></span></br>
               Location: <span class="roiplch"><?php echo $imloc;  ?></span></br>
+              <br>
             </div>
 
-            <div class="col-md-6 col-sm-6 leftdiv">
+            <div class="col-md-6 col-sm-6 roidiv colorwhite">
               <span class="lresult" id="roidesign"><span id=roifnllbl> Calculated ROI: </span><br>$
 
                 <?php
@@ -93,38 +109,45 @@
           </div> <!--row-->
 
 
-      <a href="company.php" class="btn recalcbutdes geofont">Click here to calculate again</a>
-
             <br><br><br>
 
                 <table align="center">
                   <tr>
-                      <th colspan="3" class="aligncntr">ROI Calculation</th>
+                      <th colspan="4" class="aligncntr tabletitlecelldes">ROI Calculation</th>
                   </tr>
                   <tr>
-                      <td rowspan="2" width="33%">1st Year</td>
-                      <td>asdfadfadfadfaasdfasdfadfadsfad%</td>
+                      <td rowspan="2" width="30%" id="firstyrgradient">1st Year</td>
+                      <td width="20%" class="yearlydatalbl colorwhite">ROI</td>
+                      <td class="colorwhite yearlydata">%</td>
                   </tr>
                   <tr>
-                      <td>$</td>
+                      <td width="20%" class="yearlydatalbl pricebgcol">savings</td>
+                      <td class="pricebgcol yearlydata">$</td>
                   </tr>
                   <tr>
-                      <td rowspan="2" width="33%">2nd Year</td>
-                      <td>%</td>
+                      <td rowspan="2" width="30%" id="secondyrgradient">2nd Year</td>
+                      <td width="20%" class="yearlydatalbl colorwhite">ROI</td>
+                      <td class="colorwhite yearlydata">%</td>
                   </tr>
                   <tr>
-                      <td>$</td>
+                      <td width="20%" class="yearlydatalbl pricebgcol">savings</td>
+                      <td class="pricebgcol yearlydata">$</td>
                   </tr>
                   <tr>
-                      <td rowspan="2" width="33%">3rd Year</td>
-                      <td>%</td>
+                      <td rowspan="2" width="30%" id="thrdyrgradient">3rd Year</td>
+                      <td width="20%" class="yearlydatalbl colorwhite">ROI</td>
+                      <td class="colorwhite yearlydata">adfadfafafad%</td>
                   </tr>
                   <tr>
-                      <td>$</td>
+                      <td width="20%" class="yearlydatalbl pricebgcol">savings</td>
+                      <td class="pricebgcol yearlydata">$</td>
                   </tr>
 
                 </table>
 
+          <br><br>
+
+        <a href="company.php" class="btn recalcbutdes geofont">Click here to calculate again</a>
 
     </div><!--jumbotron-->
 

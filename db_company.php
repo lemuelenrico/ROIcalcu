@@ -6,7 +6,7 @@ $noOfUsers  = $_POST ['numusers'];
 $industry   = $_POST ['industry'];
 
 if (!$_POST['submit']){
-    echo "All fields are needed to be filled out";
+    //echo "All fields are needed to be filled out";
 }
 else  {
     $sql = "INSERT into company ( Timestamp, Industry, CompanyName, Website, ContactEmail, NoOfUsers)
