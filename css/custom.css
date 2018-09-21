@@ -903,4 +903,11 @@ th {
   border-style: solid;
   padding-left: 2rem;
   padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+.graphcontainter {
+  width: 100%;
+  height: 430px;
+  text-align: center;
 }

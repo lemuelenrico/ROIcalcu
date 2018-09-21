@@ -11,7 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>ROI Calculator</title>
-
+    <!--charts.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
@@ -120,6 +121,13 @@
 
             <br>
 
+
+            <div class="graphcontainter colorwhite roidiv"><!--you can incluce text here adsfasdf-->
+              <canvas class="colorwhite" id="roiChart"></canvas><br>
+            </div>
+
+
+            <br>
                 <table align="center">
                   <tr>
                       <th colspan="4" class="aligncntr tabletitlecelldes">ROI Calculation</th>
@@ -159,7 +167,61 @@
         <a href="company.php" class="btn recalcbutdes geofont">Click here to calculate again</a>
 
     </div><!--jumbotron-->
+    <script>
+    let roiChart = document.getElementById('roiChart').getContext('2d');
 
+    let theChart = new Chart(roiChart, {
+      type:'bar',
+      data:{
+        labels:['First Year','Second Year','Third Year'],
+        datasets:[{
+          label: 'ROI',
+          data:[
+            <?php echo $valSavings1; ?>,
+            <?php echo $valSavings2; ?>,
+            <?php echo $valSavings3; ?>,
+          ],
+          backgroundColor:['#ffae19','#ffa500','#ec8c2d'],
+          hoverBorderWidth: 1,
+          hoverBorderColor: '#000'
+        }]
+      },
+      options:{
+        maintainAspectRatio: false,
+        title: {
+          display: true,
+          text: 'Total Savings',
+          fontSize: 20
+        },
+        scales: {
+          xAxes: [{
+            scaleLabel: {
+              display: true,
+              labelString: 'Time (Yr)',
+              fontSize: 19,
+              fontColor: "#417379",
+              fontFamily: "Geogtq"
+            }
+          }],
+          yAxes: [{
+            scaleLabel: {
+              display: true,
+              labelString: 'Value ($)',
+              fontSize: 15,
+              fontColor: "#417379",
+              fontFamily: "OpenSans"
+            },
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+
+      }
+    });
+
+    </script>
+    <!--<script src="js/roi.js"></script>-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
