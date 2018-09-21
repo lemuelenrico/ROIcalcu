@@ -56,8 +56,10 @@
                   <p for="transi" id= "applicationnametxt">Application A
                       <!--<?php echo $comName ?>--></p>
                 <div class="col-sm-3">
-                  <!-- the following hidden input is functions as transitional variable from database to database visualization only-->
+                  <!-- the following hidden input function as transitional variables from database to database visualization only-->
                   <input type="hidden" name="transi" value="<?php echo $comName ?>">
+                  <!-- the following hidden input function as transitional variables from database to database visualization only-->
+                  <input type="hidden" name="transi2" value="<?php echo $industry ?>">
                 </div>
                   <br>
               </div>
