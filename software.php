@@ -149,7 +149,7 @@
                                 name="costlicenses" autocomplete="off" required>
               </div>
             </div>
-            </div><!--colorwhite-->
+          </div><!--colorsemiwhite-->
             <br>
 
             <div class="row">
@@ -159,7 +159,7 @@
                     I hereby grant permission for Snow to use the information I provided to calculate ROI.
                   By proceeding, I also agree with the <a href="terms.html" target="_blank">Terms and Conditions</a> of the site. </span></label>
               </div>
-              <div class="col-md-2 centertext">
+              <div class="col-md-2 centertext allspace">
                   <p><input type="submit" name="submittoroi" class="btn showroibutdes alignright geofont"
                     value="Show ROI Calculation" onClick="valthisform();"></p>
               </div>
