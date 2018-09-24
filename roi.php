@@ -89,18 +89,45 @@
 
         <br>
 
-          <div class="row">
-            <div class="col-md-6 col-sm-6 roilbl">
-              Application Name: <span class="roiplch"><?php echo $applicationName;  ?></span></br>
+          <div class="row nospace">
+            <div class="col-md-6 col-sm-6">
+              <!--Application Name: <span class="roiplch"><?php echo $applicationName;  ?></span></br>
               Agreement Type: <span class="roiplch"><?php echo $agreementType;  ?></span></br>
               License Type: <span class="roiplch"><?php echo $licenseType;  ?></span></br>
               Number of Licenses: <span class="roiplch"><?php echo number_format($noOfLicenses); ?></span></br>
               Cost Per License: <span class="roiplch">$<?php echo number_format($costPerLicense,2); ?></span></br>
-              Location: <span class="roiplch"><?php echo $imloc;  ?></span></br>
-              <br>
+              Location: <span class="roiplch"><?php echo $imloc;  ?></span>-->
+
+              <table align="center" class="nospace tableblock">
+                <tr>
+                  <td class="leftalgn roilbl colorwhite smallpadtbl">Application Name:</td>
+                  <td class="leftalgn roiplch colorwhite smallpadtbl"><?php echo $applicationName; ?></td>
+                </tr>
+                <tr>
+                  <td class="leftalgn roilbl pricebgcol smallpadtbl">Agreement Type:</td>
+                  <td class="leftalgn roiplch pricebgcol smallpadtbl"><?php echo $agreementType; ?></td>
+                </tr>
+                <tr>
+                  <td class="leftalgn roilbl colorwhite smallpadtbl">License Type:</td>
+                  <td class="leftalgn roiplch colorwhite smallpadtbl"><?php echo $licenseType; ?></td>
+                </tr>
+                <tr>
+                  <td class="leftalgn roilbl pricebgcol smallpadtbl">Number of Licenses:</td>
+                  <td class="leftalgn roiplch pricebgcol smallpadtbl"><?php echo number_format($noOfLicenses); ?></td>
+                </tr>
+                <tr>
+                  <td class="leftalgn roilbl colorwhite smallpadtbl">Cost per License:</td>
+                  <td class="leftalgn roiplch colorwhite smallpadtbl"><?php echo number_format($costPerLicense,2); ?></td>
+                </tr>
+                <tr>
+                  <td class="leftalgn roilbl pricebgcol smallpadtbl">Location:</td>
+                  <td class="leftalgn roiplch pricebgcol smallpadtbl"><?php echo $imloc; ?></td>
+                </tr>
+              </table>
+
             </div>
 
-            <div class="col-md-6 col-sm-6 roidiv colorwhite">
+            <div class="col-md-6 col-sm-6 roidiv colorwhite roialignmarg">
               <span class="lresult" id="roidesign"><span id=roifnllbl> Calculated ROI: </span><br>$
 
                 <?php
@@ -120,15 +147,22 @@
 
 
             <br>
+            <div class="row nospace">
+              <div class="col-md-6 col-sm-6 nospace">
+                <div class="colorwhite graphcontainter roidiv"><!--you can incluce text here adsfasdf-->
+                  <canvas id="roiChartBar"></canvas><br>
+                </div>
+              </div>
 
 
-            <div class="graphcontainter colorwhite roidiv"><!--you can incluce text here adsfasdf-->
-              <canvas class="colorwhite" id="roiChart"></canvas><br>
+            <div class="col-md-6 col-sm-6 nospace">
+              <div class="colorwhite graphcontainter roidiv"><!--you can incluce text here adsfasdf-->
+                <canvas id="roiChartPie"></canvas><br>
+              </div>
             </div>
+          </div>
 
-
-            <br>
-                <table align="center">
+                <table align="center" class="const">
                   <tr>
                       <th colspan="4" class="aligncntr tabletitlecelldes">ROI Calculation</th>
                   </tr>
@@ -168,18 +202,18 @@
 
     </div><!--jumbotron-->
     <script>
-    let roiChart = document.getElementById('roiChart').getContext('2d');
+    let roiChartBar = document.getElementById('roiChartBar').getContext('2d');
 
-    let theChart = new Chart(roiChart, {
+    let theBarChart = new Chart(roiChartBar, {
       type:'bar',
       data:{
         labels:['First Year','Second Year','Third Year'],
         datasets:[{
           label: 'ROI',
           data:[
-            <?php echo $valSavings1; ?>,
-            <?php echo $valSavings2; ?>,
-            <?php echo $valSavings3; ?>,
+            <?php echo $valROI1; ?>,
+            <?php echo $valROI2; ?>,
+            <?php echo $valROI3; ?>,
           ],
           backgroundColor:['#ffae19','#ffa500','#ec8c2d'],
           hoverBorderWidth: 1,
@@ -190,8 +224,11 @@
         maintainAspectRatio: false,
         title: {
           display: true,
-          text: 'Total Savings',
+          text: 'ROI for Three years',
           fontSize: 20
+        },
+        legend:{
+          display:false
         },
         scales: {
           xAxes: [{
@@ -206,7 +243,7 @@
           yAxes: [{
             scaleLabel: {
               display: true,
-              labelString: 'Value ($)',
+              labelString: 'Value (%)',
               fontSize: 15,
               fontColor: "#417379",
               fontFamily: "OpenSans"
@@ -214,6 +251,43 @@
             ticks: {
               beginAtZero: true
             }
+          }]
+        }
+
+      }
+    });
+
+    let roiChartPie = document.getElementById('roiChartPie').getContext('2d');
+
+    let thePieChart = new Chart(roiChartPie, {
+      type:'doughnut',
+      data:{
+        labels:['First Year','Second Year','Third Year'],
+        datasets:[{
+          label: 'ROI',
+          data:[
+            <?php echo $valSavings1; ?>,
+            <?php echo $valSavings2; ?>,
+            <?php echo $valSavings3; ?>,
+          ],
+          backgroundColor:['#417379','#47c3dc','#ec8c2d'],
+          hoverBorderWidth: 1,
+          hoverBorderColor: '#000'
+        }]
+      },
+      options:{
+        maintainAspectRatio: false,
+        title: {
+          display: true,
+          text: 'Savings for Three Years ($)',
+          fontSize: 20
+        },
+        scales: {
+          xAxes: [{
+            display: false
+          }],
+          yAxes: [{
+            display: false
           }]
         }
 
