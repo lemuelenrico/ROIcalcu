@@ -200,7 +200,13 @@ body {
 
 .softlabel {
   font-family: sans-serif Arial;
-  font-size:1.39rem;
+  font-size:1.6rem;
+  margin: 0px;
+  padding-left: 7px;
+  padding-right: 0px;
+  padding-bottom: 7px;
+  padding-top: 8px;
+  border-width: 0px;
 }
 
 .glypfonts {
@@ -212,9 +218,9 @@ body {
 }
 
 .aggrchk {
-  font-family: Helvetica;
+  font-family: ;
   font-weight: normal;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 .middleset {
@@ -772,15 +778,16 @@ body {
 }
 
 #cloudicon {
-  height: 30px;
+  height: 40px;
 }
 
 #desktopicon {
-  height: 30px;
+  height: 40px;
+  width: 50px;
 }
 
 #servericon {
-  height: 30px;
+  height: 40px;
 }
 
 .openfont {
@@ -919,4 +926,51 @@ th {
 .smallpadtbl {
   padding-top: 0.45rem;
   padding-bottom: 0.5rem;
+}
+
+.bigtxtbx {
+  height: 58px;
+  font-size: 23px;
+}
+
+.midtxtbx {
+  height: 45px;
+  font-size: 18px;
+}
+
+input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:16px;
+    height:16px;
+    background:white;
+    border-radius:2px;
+    border:1px solid;
+    border-color: gray;
+}
+input[type='checkbox']:checked {
+    background: #47c3dc;
+}
+
+input[type='checkbox'].bigchkbx {
+  -webkit-appearance:none;
+  width: 24px;
+  height: 24px;
+  margin-top: 8px;
+  margin-left: 0px;
+}
+
+.leftpad {
+  padding-left: 15px;
+}
+
+.allspace {
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 1px;
+  border-radius: 10px;
+}
+
+.colorsemiwhite {
+  background-color: #f5f5f5;
 }

@@ -1,4 +1,5 @@
 <?php
+
 $applicationName  = $_POST ['appname'];     $vendorName       = $_POST ['vendname'];
 $agreementType    = $_POST ['agreetype'];   $licenseType      = $_POST ['lictype'];
 $location = $_REQUEST ['location'];         $renewalDate      = $_POST ['rendate'];
@@ -6,9 +7,13 @@ $noOfLicenses     = $_POST ['numlicenses']; $costPerLicense   = $_POST ['costlic
 
 $imloc = implode (", ",$location);
 
-$companyName = $_POST ['transi'];
-$industryTr = $_POST ['transi2'];
+/*the following variables are transitional variables*/
 
+$companyName  = $_POST ['transi'];
+$industryTr   = $_POST ['transi2'];
+$comWebsiteTr = $_POST ['transi3'];
+$comEmailTr   = $_POST ['transi4'];
+$noOfUsersTr  = $_POST ['transi5'];
 
         /*the main formula is as follows*/
 
@@ -93,6 +98,7 @@ $industryTr = $_POST ['transi2'];
         }
 
 
+
 if (!$_POST['submittoroi']){
 }
 else  {
@@ -121,6 +127,39 @@ else  {
           echo "Data creation not sucessful";
       }*/
 
+
+
+  //here are the codes for sending emails both the server and Yar_Client
+
+    $toServ       ='roiexpel@gmail.com'; //you can add multiple emails, just separate them with comma
+    $subjectServ  ='ROI Calculator Entry';
+    $messageServ  ="Company Name: ".$companyName."\n"."Industry: ".$industryTr."\n"."Company Website: ".
+                    $comWebsiteTr."\n"."Company Email: ".$comEmailTr."\n"."Number of Users: ".$noOfUsersTr;
+    $headersServ  ="From: lem@lem.com";
+
+    mail($toServ,$subjectServ,$messageServ,$headersServ);
+
+    $toClient=$comEmailTr;
+    $subjectClient="S4E: ROI Calculator";
+    $messageClient='
+                    <html>
+                      <head>
+                      </head>
+                      <body>
+                        <div style="background:#47c3dc; text-align:center; padding: 2rem; color:white;">
+                          <img src="http://bestfoodsgroupng.com/gallery/7f8fd36f6355a49b4ef25c70e1493ffe.png">
+                          <h2>Thank you for calculating using Snow for Engineering!
+                          If you have more questions, you may inquire <a href="https://openit.com/contact-us-2/">here</a>.</h2>
+                        </div>
+                      </body>
+                    </html>
+                    ';
+    $headersClient  ="From: lem@lem.com";
+    $headersClient .= "MIME-Version: 1.0"."\r\n";
+    $headersClient .= "Content-type:text/html;charset=iso-8859-1"."\r\n";
+
+
+    mail($toClient,$subjectClient,$messageClient,$headersClient);
 
 
 ?>

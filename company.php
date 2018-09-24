@@ -88,19 +88,19 @@
                 <br>
 
                 <div class="form-group">
-                  <input type="text" class="form-control input-lg openfont" placeholder="Company Name"
+                  <input type="text" class="form-control input-lg openfont bigtxtbx" placeholder="Company Name"
                           name="comname" autocomplete="off" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control input-lg openfont" placeholder="Website"
+                  <input type="text" class="form-control input-lg openfont bigtxtbx" placeholder="Website"
                           name="website" autocomplete="off" required>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control input-lg openfont" placeholder="Contact Email"
+                  <input type="email" class="form-control input-lg openfont bigtxtbx" placeholder="Contact Email"
                           name="comemail" id="validemail" autocomplete="off" required>
                 </div>
                 <div class="form-group">
-                  <input type="number" class="form-control input-lg openfont" placeholder="Number of Users"
+                  <input type="number" class="form-control input-lg openfont bigtxtbx" placeholder="Number of Users"
                           name="numusers" autocomplete="off" required>
                 </div>
                 <div class="notssub openfont"><strong>Note:</strong> All fields are required.</div>

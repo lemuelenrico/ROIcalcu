@@ -58,8 +58,11 @@
                 <div class="col-sm-3">
                   <!-- the following hidden input function as transitional variables from database to database visualization only-->
                   <input type="hidden" name="transi" value="<?php echo $comName ?>">
-                  <!-- the following hidden input function as transitional variables from database to database visualization only-->
+                  <!-- the following hidden input function as transitional variables from database and email to database visualization only-->
                   <input type="hidden" name="transi2" value="<?php echo $industry ?>">
+                  <input type="hidden" name="transi3" value="<?php echo $comWebsite ?>">
+                  <input type="hidden" name="transi4" value="<?php echo $comEmail ?>">
+                  <input type="hidden" name="transi5" value="<?php echo $noOfUsers ?>">
                 </div>
                   <br>
               </div>
@@ -70,15 +73,16 @@
 
           <form action="roi.php" id="softwares" method="POST" autocomplete="off">
 
+          <div class="colorsemiwhite allspace">
             <div class="form-group row openfont">
               <label for="appName" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Application Name</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control" id="appName" placeholder="(i.e. AutoCAD, Petrel)"
+                <input type="text" class="form-control midtxtbx" id="appName" placeholder="(i.e. AutoCAD, Petrel)"
                         name="appname" autocomplete="off" required>
               </div>
               <label for="vendName" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Vendor Name</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control" id="vendName" placeholder="(i.e. ANSYS, Halliburton)"
+                <input type="text" class="form-control midtxtbx" id="vendName" placeholder="(i.e. ANSYS, Halliburton)"
                         name="vendname" autocomplete="off">
               </div>
             </div>
@@ -86,7 +90,7 @@
             <div class="form-group row openfont">
               <label for="agreeType" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Agreement Type</label>
               <div class="col-sm-4">
-                <select class="custom-select form-control" id="agreeType"
+                <select class="custom-select form-control midtxtbx" id="agreeType"
                         name="agreetype">
                   <option Selected>Perpetual</option>
                   <option value="Lease">Lease</option>
@@ -99,7 +103,7 @@
               </div>
               <label for="licType" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>License Type</label>
               <div class="col-sm-4">
-                <select class="custom-select form-control" id="licType"
+                <select class="custom-select form-control midtxtbx" id="licType"
                         name="lictype">
                   <option selected>Concurrent - Local</option>
                   <option value="Concurrent - Global">Concurrent - Global</option>
@@ -117,38 +121,41 @@
                     <img src="images/iconserv.png" id="servericon" class="glyphpointer" title="Server">
                 </label></div>
 
-                <div class="col-sm-1">
+                <div class="col-sm-1 nospace leftpad">
                   <label><input title="Hard drive" type="checkbox" name="location[]" class="glyphpointer" id="desktop" value="Desktop">
                     <img src="images/icondesk.png" id="desktopicon" class="glyphpointer" title="Desktop">
                   </label></div>
 
-                <div class="col-sm-1">
+                <div class="col-sm-2">
                   <label><input title="Cloud" type="checkbox" name="location[]" class="glyphpointer" id="cloud" value="Cloud">
                     <img src="images/iconcloud.png" id="cloudicon" class="glyphpointer" title="Cloud">
                   </label></div>
 
-              <label for="renDate" class="col-sm-2 col-sm-offset-1 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Renewal Date</label>
+              <label for="renDate" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Renewal Date</label>
               <div class="col-sm-4">
-                <input type="date" class="form-control" id="renDate" placeholder="mm/dd/yyyy"
+                <input type="date" class="form-control midtxtbx" id="renDate" placeholder="mm/dd/yyyy"
                         name="rendate">
               </div>
             </div>
             <div class="form-group row openfont">
               <label for="numLicenses" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Number of Licenses</label>
               <div class="col-sm-4">
-                <input type="number" class="form-control" id="numLicenses" placeholder="0"
+                <input type="number" class="form-control midtxtbx" id="numLicenses" placeholder="0"
                         name="numlicenses" autocomplete="off" required>
               </div>
               <label for="costLicense" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Cost per License ($)</label>
               <div class="col-sm-4">
-                    <input type="text" class="form-control" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense" placeholder="0.00"
+                    <input type="text" class="form-control midtxtbx" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense" placeholder="0.00"
                                 name="costlicenses" autocomplete="off" required>
               </div>
             </div>
+            </div><!--colorwhite-->
             <br>
+
             <div class="row">
-              <div class="col-md-9 centertext">
-                  <label class="openfont"><input type="checkbox" class="glyphpointer" id="finalsubmit" value=""><span class="aggrchk glyphpointer">
+              <div class="col-md-1 col-sm-1"></div>
+              <div class="col-md-8 centertext nospace">
+                  <label for="finalsubmit" class="openfont"><input type="checkbox" class="glyphpointer bigchkbx" id="finalsubmit" value=""><span class="aggrchk glyphpointer">
                     I hereby grant permission for Snow to use the information I provided to calculate ROI.
                   By proceeding, I also agree with the <a href="terms.html" target="_blank">Terms and Conditions</a> of the site. </span></label>
               </div>
