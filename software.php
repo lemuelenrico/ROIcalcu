@@ -47,7 +47,7 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-      <div class="jumbotron">
+      <div class="jumbotron removeextrapadding">
         <div class="container-fluid rightalgn"><img src="images/pointer2.png"></div>
           <h2 class="headngsprpg">Software Details</h2>
           <div class="row">
@@ -92,7 +92,7 @@
               <div class="col-sm-4">
                 <select class="custom-select form-control midtxtbx" id="agreeType"
                         name="agreetype">
-                  <option Selected>Perpetual</option>
+                  <option value ="Perpetual" Selected>Perpetual</option>
                   <option value="Lease">Lease</option>
                   <option value="Rent">Rent</option>
                   <option value="Subscription">Subscription</option>

@@ -47,13 +47,13 @@ $noOfUsersTr  = $_POST ['transi5'];
         $mpSavings2   = ($mpROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
         $mpSavings3   = ($mpROIyr3 * 0.01) * ($costPerLicense*$noOfLicenses);
 
-        $govSavings1  = ($engROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
-        $govSavings2  = ($engROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
-        $govSavings3  = ($engROIyr3 * 0.01) * ($costPerLicense*$noOfLicenses);
+        $govSavings1  = ($govROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
+        $govSavings2  = ($govROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
+        $govSavings3  = ($govROIyr3 * 0.01) * ($costPerLicense*$noOfLicenses);
 
-        $autoSavings1 = ($engROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
-        $autoSavings2 = ($engROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
-        $autoSavings3 = ($engROIyr3 * 0.01) * ($costPerLicense*$noOfLicenses);
+        $autoSavings1 = ($autoROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
+        $autoSavings2 = ($autoROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
+        $autoSavings3 = ($autoROIyr3 * 0.01) * ($costPerLicense*$noOfLicenses);
 
         $othersSavings1 = ($othersROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
         $othersSavings2 = ($othersROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
@@ -98,6 +98,50 @@ $noOfUsersTr  = $_POST ['transi5'];
         }
 
 
+        /*the following are the variables for yearly breakdown per license type, this is open to change*/
+
+        $ppuMultYr1 = 4;  $perpMultYr1 = 1; $lsMultYr1 = 1; $subsMultYr1 = 1; $rntMultYr1 = 1;
+        $ppuMultYr2 = 1;    $perpMultYr2 = 1; $lsMultYr2 = 1; $subsMultYr2 = 1; $rntMultYr2 = 1;
+        $ppuMultYr3 = 1;    $perpMultYr2 = 1; $lsMultYr3 = 1; $subsMultYr3 = 1; $rntMultYr3 = 1;
+
+        /*the following are the conditionals per agreement type*/
+
+        if ($agreementType=='Lease') {
+          $truValROI1 = $valROI1 * $lsMultYr1;    $truValSavings1 = $valSavings1 * $lsMultYr1;
+          $truValROI2 = $valROI2 * $lsMultYr2;    $truValSavings2 = $valSavings2 * $lsMultYr2;
+          $truValROI3 = $valROI3 * $lsMultYr3;    $truValSavings3 = $valSavings3 * $lsMultYr3;
+        }
+
+        elseif ($agreementType=='Rent') {
+          $truValROI1 = $valROI1 * $rntMultYr1;    $truValSavings1 = $valSavings1 * $rntMultYr1;
+          $truValROI2 = $valROI2 * $rntMultYr2;    $truValSavings2 = $valSavings2 * $rntMultYr2;
+          $truValROI3 = $valROI3 * $rntMultYr3;    $truValSavings3 = $valSavings3 * $rntMultYr3;
+        }
+
+        elseif ($agreementType=='Subscription') {
+          $truValROI1 = $valROI1 * $subsMultYr1;    $truValSavings1 = $valSavings1 * $subsMultYr1;
+          $truValROI2 = $valROI2 * $subsMultYr2;    $truValSavings2 = $valSavings2 * $subsMultYr2;
+          $truValROI3 = $valROI3 * $subsMultYr3;    $truValSavings3 = $valSavings3 * $subsMultYr3;
+        }
+
+        elseif ($agreementType=='PPU') {
+          $truValROI1 = $valROI1 * $ppuMultYr1;    $truValSavings1 = $valSavings1 * $ppuMultYr1;
+          $truValROI2 = $valROI2 * $ppuMultYr2;    $truValSavings2 = $valSavings2 * $ppuMultYr2;
+          $truValROI3 = $valROI3 * $ppuMultYr3;    $truValSavings3 = $valSavings3 * $ppuMultYr3;
+        }
+
+        elseif ($agreementType=='Perpetual') {
+          $truValROI1 = $valROI1 * $perpMultYr1;    $truValSavings1 = $valSavings1 * $perpMultYr1;
+          $truValROI2 = $valROI2 * $perpMultYr2;    $truValSavings2 = $valSavings2 * $perpMultYr2;
+          $truValROI3 = $valROI3 * $perpMultYr3;    $truValSavings3 = $valSavings3 * $perpMultYr3;
+        }
+
+        else {
+          $truValROI1 = $valROI1; $truValSavings1 = $valSavings1;
+          $truValROI2 = $valROI2; $truValSavings2 = $valSavings2;
+          $truValROI3 = $valROI3; $truValSavings2 = $valSavings3;
+        }
+
 
 if (!$_POST['submittoroi']){
 }
@@ -108,7 +152,7 @@ else  {
                                   '$noOfLicenses','$vendorName','$licenseType','$renewalDate','$costPerLicense', $calculatedROI, $cutLicenses)";
 
     $sql2 = "INSERT into yearlyroi (EntryDate, ROIyear1, ROIyear2, ROIyear3, SavingsYear1, SavingsYear2, SavingsYear3, Industry, CompanyName)
-            values                (NOW(), '$valROI1', '$valROI2', '$valROI3','$valSavings1','$valSavings2','$valSavings3','$industryTr','$companyName')";
+            values                (NOW(), '$truValROI1', '$truValROI2', '$truValROI3','$truValSavings1','$truValSavings2','$truValSavings3','$industryTr','$companyName')";
 }
 
       if (mysqli_query($conn, $sql)) {
@@ -139,8 +183,8 @@ else  {
 
     mail($toServ,$subjectServ,$messageServ,$headersServ);
 
-    $toClient=$comEmailTr;
-    $subjectClient="S4E: ROI Calculator";
+    /*$toClient=$comEmailTr;
+    $subjectClient="Snow: ROI Calculator";
     $messageClient='
                     <html>
                       <head>
@@ -159,7 +203,7 @@ else  {
     $headersClient .= "Content-type:text/html;charset=iso-8859-1"."\r\n";
 
 
-    mail($toClient,$subjectClient,$messageClient,$headersClient);
+    mail($toClient,$subjectClient,$messageClient,$headersClient);*/
 
 
 ?>

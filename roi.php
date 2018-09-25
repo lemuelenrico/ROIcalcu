@@ -128,17 +128,17 @@
             </div>
 
             <div class="col-md-6 col-sm-6 roidiv colorwhite roialignmarg">
-              <span class="lresult" id="roidesign"><span id=roifnllbl> Calculated ROI: </span><br>$
+              <span class="lresult" id="roidesign"><span id=roifnllbl> Calculated ROI: </span><br>
 
                 <?php
                 //echo $calculatedROI;
-                echo number_format($valSavings3,2);
-                ?>
+                echo number_format($truValROI1);
+                ?>%
               </span>
             </br>
-              <span class="lresult" id="cutlicdesign"><span id=cutlicfnllbl> Purchased licenses can be cut to: </span><br>
+              <span class="lresult" id="cutlicdesign"><span id=cutlicfnllbl>Savings for Year One: </span><br>$
                 <?php
-                  echo number_format($cutLicenses);
+                  echo number_format($truValSavings1,2);
                 ?>
               </span>
 
@@ -169,29 +169,29 @@
                   <tr>
                       <td rowspan="2" width="30%" id="firstyrgradient">1st Year</td>
                       <td width="20%" class="yearlydatalbl colorwhite">ROI</td>
-                      <td class="colorwhite yearlydata"><?php echo number_format($valROI1); ?>%</td>
+                      <td class="colorwhite yearlydata"><?php echo number_format($truValROI1); ?>%</td>
                   </tr>
                   <tr>
                       <td width="20%" class="yearlydatalbl pricebgcol">savings</td>
-                      <td class="pricebgcol yearlydata">$<?php echo number_format($valSavings1,2); ?></td>
+                      <td class="pricebgcol yearlydata">$<?php echo number_format($truValSavings1,2); ?></td>
                   </tr>
                   <tr>
                       <td rowspan="2" width="30%" id="secondyrgradient">2nd Year</td>
                       <td width="20%" class="yearlydatalbl colorwhite">ROI</td>
-                      <td class="colorwhite yearlydata"><?php echo number_format($valROI2); ?>%</td>
+                      <td class="colorwhite yearlydata"><?php echo number_format($truValROI2); ?>%</td>
                   </tr>
                   <tr>
                       <td width="20%" class="yearlydatalbl pricebgcol">savings</td>
-                      <td class="pricebgcol yearlydata">$<?php echo number_format($valSavings2,2); ?></td>
+                      <td class="pricebgcol yearlydata">$<?php echo number_format($truValSavings2,2); ?></td>
                   </tr>
                   <tr>
                       <td rowspan="2" width="30%" id="thrdyrgradient">3rd Year</td>
                       <td width="20%" class="yearlydatalbl colorwhite">ROI</td>
-                      <td class="colorwhite yearlydata"><?php echo number_format ($valROI3); ?>%</td>
+                      <td class="colorwhite yearlydata"><?php echo number_format ($truValROI3); ?>%</td>
                   </tr>
                   <tr>
                       <td width="20%" class="yearlydatalbl pricebgcol">savings</td>
-                      <td class="pricebgcol yearlydata">$<?php echo number_format($valSavings3,2); ?></td>
+                      <td class="pricebgcol yearlydata">$<?php echo number_format($truValSavings3,2); ?></td>
                   </tr>
 
                 </table>
@@ -211,9 +211,9 @@
         datasets:[{
           label: 'ROI',
           data:[
-            <?php echo $valROI1; ?>,
-            <?php echo $valROI2; ?>,
-            <?php echo $valROI3; ?>,
+            <?php echo $truValROI1; ?>,
+            <?php echo $truValROI2; ?>,
+            <?php echo $truValROI3; ?>,
           ],
           backgroundColor:['#ffae19','#ffa500','#ec8c2d'],
           hoverBorderWidth: 1,
@@ -266,11 +266,11 @@
         datasets:[{
           label: 'ROI',
           data:[
-            <?php echo $valSavings1; ?>,
-            <?php echo $valSavings2; ?>,
-            <?php echo $valSavings3; ?>,
+            <?php echo $truValSavings1; ?>,
+            <?php echo $truValSavings2; ?>,
+            <?php echo $truValSavings3; ?>,
           ],
-          backgroundColor:['#417379','#47c3dc','#ec8c2d'],
+          backgroundColor:['#47c3dc','#417379','#ec8c2d'],
           hoverBorderWidth: 1,
           hoverBorderColor: '#000'
         }]
@@ -284,10 +284,17 @@
         },
         scales: {
           xAxes: [{
-            display: false
+            display: false,
+            scaleLabel: {
+              display: true,
+              labelString: 'Time (Yr)',
+              fontSize: 19,
+              fontColor: "#417379",
+              fontFamily: "Geogtq"
+            }
           }],
           yAxes: [{
-            display: false
+            display: false,
           }]
         }
 

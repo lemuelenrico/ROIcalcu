@@ -268,13 +268,14 @@ body {
 
 .radiocontainer1 .circle {
   display: inline-block;
-  font-size: 13px;
+  font-size: 16px;
   width: 300px;
-  height: 30px;
+  height: 35px;
   position: relative;
   padding-left: 0px;
   left: 0;
   top: 0;
+  transition: 0.5s;
   background-color: #d0d0d0;
   //border-radius: 20%;
   margin: 0px;
@@ -291,7 +292,7 @@ body {
   content: "Engineering";
   color: #404040;
   font-family: OpenSans;
-  font-size: 13px;
+  font-size: 16px;
   // height: 10px;
 //  width: 10px;
   position: absolute;
@@ -306,14 +307,14 @@ body {
   background-color: #ec8e2d;
   margin: 0px;
   width: 320px;
-  height: 34px;
+  height: 45px;
 }
 
 .radiocontainer1 input:checked + .circle:after {
   content: "Engineering";
   color: White;
   font-family: OpenSans;
-  font-size: 15px;
+  font-size: 18px;
 //  height: 10px;
 //  width: 10px;
   position: absolute;
@@ -345,13 +346,14 @@ body {
 
 .radiocontainer2 .circle {
   display: inline-block;
-  font-size: 13px;
+  font-size: 16px;
   width: 300px;
-  height: 30px;
+  height: 35px;
   position: relative;
   padding-left: 0px;
   left: 0;
   top: 0;
+  transition: 0.5s;
   background-color: #d0d0d0;
   //border-radius: 20%;
   margin: 0px;
@@ -368,7 +370,7 @@ body {
   content: "Automotive";
   color: #404040;
   font-family: OpenSans;
-  font-size: 13px;
+  font-size: 16px;
   // height: 10px;
 //  width: 10px;
   position: absolute;
@@ -383,14 +385,14 @@ body {
   background-color: #ec8e2d;
   margin: 0px;
   width: 320px;
-  height: 34px;
+  height: 45px;
 }
 
 .radiocontainer2 input:checked + .circle:after {
   content: "Automotive";
   color: White;
   font-family: OpenSans;
-  font-size: 15px;
+  font-size: 18px;
 //  height: 10px;
 //  width: 10px;
   position: absolute;
@@ -421,13 +423,14 @@ body {
 
 .radiocontainer3 .circle {
   display: inline-block;
-  font-size: 13px;
+  font-size: 16px;
   width: 300px;
-  height: 30px;
+  height: 35px;
   position: relative;
   padding-left: 0px;
   left: 0;
   top: 0;
+  transition: 0.5s;
   background-color: #d0d0d0;
   //border-radius: 20%;
   margin: 0px;
@@ -444,7 +447,7 @@ body {
   content: "Oil and Gas";
   color: #404040;
   font-family: OpenSans;
-  font-size: 13px;
+  font-size: 16px;
   // height: 10px;
 //  width: 10px;
   position: absolute;
@@ -459,14 +462,14 @@ body {
   background-color: #ec8e2d;
   margin: 0px;
   width: 320px;
-  height: 34px;
+  height: 45px;
 }
 
 .radiocontainer3 input:checked + .circle:after {
   content: "Oil and Gas";
   color: White;
   font-family: OpenSans;
-  font-size: 15px;
+  font-size: 18px;
 //  height: 10px;
 //  width: 10px;
   position: absolute;
@@ -499,7 +502,7 @@ body {
   display: inline-block;
   font-size: 13px;
   width: 300px;
-  height: 30px;
+  height: 35px;
   position: relative;
   padding-left: 0px;
   left: 0;
@@ -507,6 +510,7 @@ body {
   background-color: #d0d0d0;
   //border-radius: 20%;
   margin: 0px;
+  transition: 0.5s;
 }
 
 .radiocontainer4:hover .circle {
@@ -520,7 +524,7 @@ body {
   content: "Mechanical & Precision";
   color: #404040;
   font-family: OpenSans;
-  font-size: 13px;
+  font-size: 13.9px;
   // height: 10px;
 //  width: 10px;
   position: absolute;
@@ -535,14 +539,14 @@ body {
   background-color: #ec8e2d;
   margin: 0px;
   width: 320px;
-  height: 34px;
+  height: 45px;
 }
 
 .radiocontainer4 input:checked + .circle:after {
   content: "Mechanical & Precision";
   color: White;
   font-family: OpenSans;
-  font-size: 13.4px;
+  font-size: 14.6px;
 //  height: 10px;
 //  width: 10px;
   position: absolute;
@@ -574,9 +578,9 @@ body {
 
 .radiocontainer5 .circle {
   display: inline-block;
-  font-size: 13px;
+  font-size: 16px;
   width: 300px;
-  height: 30px;
+  height: 35px;
   position: relative;
   padding-left: 0px;
   left: 0;
@@ -584,6 +588,7 @@ body {
   background-color: #d0d0d0;
   //border-radius: 20%;
   margin: 0px;
+  transition: 0.5s;
 }
 
 .radiocontainer5:hover .circle {
@@ -597,7 +602,7 @@ body {
   content: "Government";
   color: #404040;
   font-family: OpenSans;
-  font-size: 13px;
+  font-size: 16px;
   // height: 10px;
 //  width: 10px;
   position: absolute;
@@ -611,7 +616,7 @@ body {
 .radiocontainer5 input:checked + .circle {
   background-color: #ec8e2d;
   width: 320px;
-  height: 34px;
+  height: 45px;
   margin: 0px;
 }
 
@@ -619,7 +624,7 @@ body {
   content: "Government";
   color: White;
   font-family: OpenSans;
-  font-size: 15px;
+  font-size: 18px;
 //  height: 10px;
 //  width: 10px;
   position: absolute;
@@ -650,13 +655,14 @@ body {
 
 .radiocontainer6 .circle {
   display: inline-block;
-  font-size: 13px;
+  font-size: 16px;
   width: 300px;
-  height: 30px;
+  height: 35px;
   position: relative;
   padding-left: 0px;
   left: 0;
   top: 0;
+  transition: 0.5s;
   background-color: #d0d0d0;
   //border-radius: 20%;
   margin: 0px;
@@ -673,7 +679,7 @@ body {
   content: "Others";
   color: #404040;
   font-family: OpenSans;
-  font-size: 13px;
+  font-size: 16px;
   // height: 10px;
 //  width: 10px;
   position: absolute;
@@ -688,14 +694,14 @@ body {
   background-color: #ec8e2d;
   margin: 0px;
   width: 320px;
-  height: 34px;
+  height: 45px;
 }
 
 .radiocontainer6 input:checked + .circle:after {
   content: "Others";
   color: White;
   font-family: OpenSans;
-  font-size: 15px;
+  font-size: 18px;
 //  height: 10px;
 //  width: 10px;
   position: absolute;
@@ -973,4 +979,8 @@ input[type='checkbox'].bigchkbx {
 
 .colorsemiwhite {
   background-color: #f5f5f5;
+}
+
+.removeextrapadding {
+  padding-bottom: 10px;
 }

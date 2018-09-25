@@ -109,7 +109,6 @@
                 </div>
           </form>
               <br>
-
             </div>
           </div>
         </div><!--row-->
@@ -125,6 +124,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-    <p class="dfooter">Copyright © ROI Calculator. All rights reserved.</p>
+    <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
   </body>
 </html>
