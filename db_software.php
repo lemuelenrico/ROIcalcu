@@ -183,7 +183,7 @@ else  {
 
     mail($toServ,$subjectServ,$messageServ,$headersServ);
 
-    /*$toClient=$comEmailTr;
+    /*$toClient='roiexpel@gmail.com';
     $subjectClient="Snow: ROI Calculator";
     $messageClient='
                     <html>
@@ -191,7 +191,7 @@ else  {
                       </head>
                       <body>
                         <div style="background:#47c3dc; text-align:center; padding: 2rem; color:white;">
-                          <img src="http://bestfoodsgroupng.com/gallery/7f8fd36f6355a49b4ef25c70e1493ffe.png">
+                          <img src="http://bestfoodsgroupng.com/gallery/7f8fd36f6355a49b4ef25c70e1493ffe.png" width="100px" height="100px">
                           <h2>Thank you for calculating using Snow for Engineering!
                           If you have more questions, you may inquire <a href="https://openit.com/contact-us-2/">here</a>.</h2>
                         </div>
@@ -200,10 +200,34 @@ else  {
                     ';
     $headersClient  ="From: lem@lem.com";
     $headersClient .= "MIME-Version: 1.0"."\r\n";
+    $headersClient .= "Content-type:text/html;charset=iso-8859-1"."\r\n";*/
+
+    $toClient=$comEmailTr;
+    $subjectClient="Calculate ROI with Snow";
+    $messageClient='
+                    <html>
+                      <head>
+                      </head>
+                      <body style="background:#47c3dc;">
+                        <div style="background:#47c3dc; text-align:center; padding: 1rem 8vw 2rem 8vw; color:#585858; font-family: Helvetica;">
+                          <div style="width;100%; margin: 0px;">
+                            <img src="https://lh3.googleusercontent.com/-yZaqfNuqddw/W6nbzBUXsfI/AAAAAAAAAAc/_w-fna_L7e8bdXG8rQuzNvDSQKVibIDcACL0BGAs/w530-d-h129-n-rw/Snowlogo.png" width="136px" height: "33px" >
+                          </div>
+                          <div style="width:100%; background:white; border-radius: 8px; margin: 0px; padding: 1px;" >
+                            <br><h2>Thank you for calculating using Snow for Engineering!<br><br>
+                            If you have more questions, you may inquire <a href="https://openit.com/contact-us-2/">here</a>.</h2><br>
+                          </div>
+                        </div>
+
+                      </body>
+                    </html>
+                    ';
+    $headersClient  ="From: lem@lem.com";
+    $headersClient .= "MIME-Version: 1.0"."\r\n";
     $headersClient .= "Content-type:text/html;charset=iso-8859-1"."\r\n";
 
 
-    mail($toClient,$subjectClient,$messageClient,$headersClient);*/
+    mail($toClient,$subjectClient,$messageClient,$headersClient);
 
 
 ?>

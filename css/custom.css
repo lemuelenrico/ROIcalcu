@@ -825,7 +825,7 @@ body {
   min-height: inherit;
   padding: 1rem 2.8rem;
   border-radius: .5rem;
-  font-weight: bold;
+  //font-weight: bold;
 }
 
 .showroibutdes {

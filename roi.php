@@ -216,8 +216,8 @@
             <?php echo $truValROI3; ?>,
           ],
           backgroundColor:['#ffae19','#ffa500','#ec8c2d'],
-          hoverBorderWidth: 1,
-          hoverBorderColor: '#000'
+          hoverBorderWidth: 3,
+          hoverBorderColor: '#686868'
         }]
       },
       options:{
@@ -271,8 +271,8 @@
             <?php echo $truValSavings3; ?>,
           ],
           backgroundColor:['#47c3dc','#417379','#ec8c2d'],
-          hoverBorderWidth: 1,
-          hoverBorderColor: '#000'
+          hoverBorderWidth: 3,
+          hoverBorderColor: '#686868'
         }]
       },
       options:{
