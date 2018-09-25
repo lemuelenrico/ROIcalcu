@@ -100,9 +100,9 @@ $noOfUsersTr  = $_POST ['transi5'];
 
         /*the following are the variables for yearly breakdown per license type, this is open to change*/
 
-        $ppuMultYr1 = 4;  $perpMultYr1 = 1; $lsMultYr1 = 1; $subsMultYr1 = 1; $rntMultYr1 = 1;
+        $ppuMultYr1 = 4;    $perpMultYr1 = 1; $lsMultYr1 = 1; $subsMultYr1 = 1; $rntMultYr1 = 1;
         $ppuMultYr2 = 1;    $perpMultYr2 = 1; $lsMultYr2 = 1; $subsMultYr2 = 1; $rntMultYr2 = 1;
-        $ppuMultYr3 = 1;    $perpMultYr2 = 1; $lsMultYr3 = 1; $subsMultYr3 = 1; $rntMultYr3 = 1;
+        $ppuMultYr3 = 1;    $perpMultYr3 = 1; $lsMultYr3 = 1; $subsMultYr3 = 1; $rntMultYr3 = 1;
 
         /*the following are the conditionals per agreement type*/
 
@@ -173,7 +173,7 @@ else  {
 
 
 
-  //here are the codes for sending emails both the server and Yar_Client
+  //here are the codes for sending emails both the server and clente
 
     $toServ       ='roiexpel@gmail.com'; //you can add multiple emails, just separate them with comma
     $subjectServ  ='ROI Calculator Entry';
