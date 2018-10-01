@@ -13,6 +13,7 @@
     <title>ROI Calculator</title>
     <!--charts.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
@@ -62,21 +63,21 @@
           <br>
             <a href="files/SampleCalculation.pdf" download><button type="button" class="btn dlbutdes">Download PDF</button></a>
           </div>
-
+<!--the following buttons are not working yet-->
           <div class="col-md-4 col-sm-4 aligncntr"><br>
-            <a href="#">
+            <button id="saveb">
               <img src="images/newpdficon.png" width="45px" height="45px" onmouseover="this.src='images/newpdficonhover.png'"
                 onmouseout="this.src='images/newpdficon.png'" title="Export to PDF">
-            </a>
-            <a href="#">
+            </button>
+            <button>
               <img src="images/newexcelicon.png" width="45px" height="45px" onmouseover="this.src='images/newexceliconhover.png'"
                 onmouseout="this.src='images/newexcelicon.png'" title="Export to Excel">
-            </a>
+            </button>
             <a href="#">
               <img src="images/newppticon.png" width="45px" height="45px" onmouseover="this.src='images/newppticonhover.png'"
                 onmouseout="this.src='images/newppticon.png'" title="Export to PowerPoint">
             </a>
-            <a href="#">
+            <a href="javascript:genScreenshot" id="pngdl">
               <img src="images/pngicon.png" width="45px" height="45px" onmouseover="this.src='images/pngiconhover.png'"
                 onmouseout="this.src='images/pngicon.png'" title="Export to PNG">
             </a>
@@ -168,29 +169,29 @@
                   </tr>
                   <tr>
                       <td rowspan="2" width="30%" id="firstyrgradient">1st Year</td>
-                      <td width="20%" class="yearlydatalbl colorwhite">ROI</td>
+                      <td width="20%" class="yearlydatalbl colorwhite">in %</td>
                       <td class="colorwhite yearlydata"><?php echo number_format($truValROI1); ?>%</td>
                   </tr>
                   <tr>
-                      <td width="20%" class="yearlydatalbl pricebgcol">savings</td>
+                      <td width="20%" class="yearlydatalbl pricebgcol">in $</td>
                       <td class="pricebgcol yearlydata">$<?php echo number_format($truValSavings1,2); ?></td>
                   </tr>
                   <tr>
                       <td rowspan="2" width="30%" id="secondyrgradient">2nd Year</td>
-                      <td width="20%" class="yearlydatalbl colorwhite">ROI</td>
+                      <td width="20%" class="yearlydatalbl colorwhite">in %</td>
                       <td class="colorwhite yearlydata"><?php echo number_format($truValROI2); ?>%</td>
                   </tr>
                   <tr>
-                      <td width="20%" class="yearlydatalbl pricebgcol">savings</td>
+                      <td width="20%" class="yearlydatalbl pricebgcol">in $</td>
                       <td class="pricebgcol yearlydata">$<?php echo number_format($truValSavings2,2); ?></td>
                   </tr>
                   <tr>
                       <td rowspan="2" width="30%" id="thrdyrgradient">3rd Year</td>
-                      <td width="20%" class="yearlydatalbl colorwhite">ROI</td>
+                      <td width="20%" class="yearlydatalbl colorwhite">in %</td>
                       <td class="colorwhite yearlydata"><?php echo number_format ($truValROI3); ?>%</td>
                   </tr>
                   <tr>
-                      <td width="20%" class="yearlydatalbl pricebgcol">savings</td>
+                      <td width="20%" class="yearlydatalbl pricebgcol">in $</td>
                       <td class="pricebgcol yearlydata">$<?php echo number_format($truValSavings3,2); ?></td>
                   </tr>
 
@@ -202,6 +203,7 @@
 
     </div><!--jumbotron-->
     <script>
+
     let roiChartBar = document.getElementById('roiChartBar').getContext('2d');
 
     let theBarChart = new Chart(roiChartBar, {
@@ -300,6 +302,17 @@
 
       }
     });
+//the following codes are not working yet
+    function genScreenshot(){
+        html2canvas(document.body(), {
+            dpi: 192,
+            onrendered: function(canvas){
+              $("#pngdl").attr('href',canvas.toDataURL("image/png"));
+              $("#pngdl").attr('download', 'Result.png');
+              $("#pngdl")[0].click();
+            }
+        });
+    }
 
     </script>
     <!--<script src="js/roi.js"></script>-->

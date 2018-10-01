@@ -10,6 +10,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--for tooltip toggle-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>ROI Calculator</title>
 
@@ -118,17 +121,17 @@
               <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Install Location</label>
                 <div class="col-sm-1">
                   <label><input title="Server" type="checkbox" name="location[]" class="glyphpointer" id="server" value="Server">
-                    <img src="images/iconserv.png" id="servericon" class="glyphpointer" title="Server">
+                    <img src="images/iconserv.png" id="servericon" class="glyphpointer" data-toggle="tooltip" title="Server">
                 </label></div>
 
                 <div class="col-sm-1 nospace leftpad">
                   <label><input title="Hard drive" type="checkbox" name="location[]" class="glyphpointer" id="desktop" value="Desktop">
-                    <img src="images/icondesk.png" id="desktopicon" class="glyphpointer" title="Desktop">
+                    <img src="images/icondesk.png" id="desktopicon" class="glyphpointer" data-toggle="tooltip" title="Desktop">
                   </label></div>
 
                 <div class="col-sm-2">
                   <label><input title="Cloud" type="checkbox" name="location[]" class="glyphpointer" id="cloud" value="Cloud">
-                    <img src="images/iconcloud.png" id="cloudicon" class="glyphpointer" title="Cloud">
+                    <img src="images/iconcloud.png" id="cloudicon" class="glyphpointer" data-toggle="tooltip" title="Cloud">
                   </label></div>
 
               <label for="renDate" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Renewal Date</label>
@@ -145,7 +148,7 @@
               </div>
               <label for="costLicense" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Cost per License ($)</label>
               <div class="col-sm-4">
-                    <input type="text" class="form-control midtxtbx" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense" placeholder="0.00"
+                    <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense" placeholder="0.00"
                                 name="costlicenses" autocomplete="off" required>
               </div>
             </div>

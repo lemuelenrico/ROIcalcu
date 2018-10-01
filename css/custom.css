@@ -984,3 +984,12 @@ input[type='checkbox'].bigchkbx {
 .removeextrapadding {
   padding-bottom: 10px;
 }
+
+button {
+  background-color: #eee;
+  border-width: 0px;
+  padding:0px;
+  margin: 0px;
+  border-width: 0px;
+  outline: none;
+}

@@ -15,3 +15,7 @@ else if(document.getElementById('finalsubmit').checked == false){
     return false;
     }
   });
+
+  $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+  });
