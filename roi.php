@@ -49,16 +49,17 @@
     </nav>
 
       <div class="jumbotron aligncntr">
-        <div class="container-fluid rightalgn"><img src="images/pointer3.png"></div>
+        <div class="container-fluid rightalgn"><img class="pointermarg" src="images/pointer3.png"></div>
 
         <div class="row">
           <div class="col-md-6 col-sm-6">
-            <h2 class="headngsprpg">ROI for
+            <h2 class="headngsprpg nospace">ROI for
               <?php
               echo $companyName;
               ?>
             </h2>
           </div>
+
           <div class="col-md-2 col-sm-2 middleset aligncntr">
           <br>
             <a href="files/SampleCalculation.pdf" download><button type="button" class="btn dlbutdes">Download PDF</button></a>

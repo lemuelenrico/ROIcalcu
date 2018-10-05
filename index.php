@@ -40,7 +40,7 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-      <div class="jumbotron jumbotronadd snowbg colorwhite">
+      <div class="jumbotron jumbotronadd snowbg colorsemiwhite2">
         <h1 id="bigtkwy">ROI Calculator</h1>
         <br>
           <p id="introp" class="geofont">

@@ -42,12 +42,12 @@
     </nav>
 
       <div class="jumbotron">
-        <div class="container-fluid rightalgn"><img src="images/pointer.png"></div>
+
+        <div class="container-fluid rightalgn"><img class="pointermarg" src="images/pointer.png"></div>
         <div class="row">
           <div class="col-md-6 col-sm-6 aligncntr">
-            <h2 class="headngsprpg">Company Details</h2>
-            <br>
-
+            <h2 class="headngsprpg nospace">Company Details</h2>
+            <br> <br>
             <span class="entbutdes2 geofont"><strong>Select your Industry</strong></span>
             <br>
 
@@ -100,7 +100,7 @@
                           name="comemail" id="validemail" autocomplete="off" required>
                 </div>
                 <div class="form-group">
-                  <input type="number" class="form-control input-lg openfont bigtxtbx" placeholder="Number of Users"
+                  <input type="number" min="0" class="form-control input-lg openfont bigtxtbx" placeholder="Number of Users"
                           name="numusers" autocomplete="off" required>
                 </div>
                 <div class="notssub openfont"><strong>Note:</strong> All fields are required.</div>

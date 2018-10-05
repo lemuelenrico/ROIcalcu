@@ -51,12 +51,13 @@
     </nav>
 
       <div class="jumbotron removeextrapadding">
-        <div class="container-fluid rightalgn"><img src="images/pointer2.png"></div>
-          <h2 class="headngsprpg">Software Details</h2>
+        <div class="container-fluid rightalgn"><img class="pointermarg" src="images/pointer2.png"></div>
+          <h2 class="headngsprpg nospace">Software Details</h2>
           <div class="row">
             <form action="roi.php" id="softwares" method="POST">
               <div class="col-md-6 col-sm-6">
-                  <p for="transi" id= "applicationnametxt">Application A
+                <!--the following is commented for the mean time -->
+                <p for="transi" id= "applicationnametxt">Application A
                       <!--<?php echo $comName ?>--></p>
                 <div class="col-sm-3">
                   <!-- the following hidden input function as transitional variables from database to database visualization only-->
@@ -78,12 +79,12 @@
 
           <div class="colorsemiwhite allspace">
             <div class="form-group row openfont">
-              <label for="appName" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Application Name</label>
+              <label for="appName" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Application Name</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control midtxtbx" id="appName" placeholder="(i.e. AutoCAD, Petrel)"
                         name="appname" autocomplete="off" required>
               </div>
-              <label for="vendName" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Vendor Name</label>
+              <label for="vendName" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Vendor Name</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control midtxtbx" id="vendName" placeholder="(i.e. ANSYS, Halliburton)"
                         name="vendname" autocomplete="off">
@@ -91,7 +92,7 @@
             </div>
 
             <div class="form-group row openfont">
-              <label for="agreeType" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr">*</span>Agreement Type</label>
+              <label for="agreeType" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Agreement Type</label>
               <div class="col-sm-4">
                 <select class="custom-select form-control midtxtbx" id="agreeType"
                         name="agreetype">
@@ -104,7 +105,7 @@
                   <option value="Don't Know">Don't Know</option>
                 </select>
               </div>
-              <label for="licType" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>License Type</label>
+              <label for="licType" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>License Type</label>
               <div class="col-sm-4">
                 <select class="custom-select form-control midtxtbx" id="licType"
                         name="lictype">
@@ -118,14 +119,14 @@
             </div>
 
             <div class="form-group row openfont">
-              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Install Location</label>
+              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>Install Location</label>
                 <div class="col-sm-1">
                   <label><input title="Server" type="checkbox" name="location[]" class="glyphpointer" id="server" value="Server">
                     <img src="images/iconserv.png" id="servericon" class="glyphpointer" data-toggle="tooltip" title="Server">
                 </label></div>
 
                 <div class="col-sm-1 nospace leftpad">
-                  <label><input title="Hard drive" type="checkbox" name="location[]" class="glyphpointer" id="desktop" value="Desktop">
+                  <label><input title="Desktop" type="checkbox" name="location[]" class="glyphpointer" id="desktop" value="Desktop">
                     <img src="images/icondesk.png" id="desktopicon" class="glyphpointer" data-toggle="tooltip" title="Desktop">
                   </label></div>
 
@@ -134,19 +135,19 @@
                     <img src="images/iconcloud.png" id="cloudicon" class="glyphpointer" data-toggle="tooltip" title="Cloud">
                   </label></div>
 
-              <label for="renDate" class="col-sm-2 col-form-label softlabel rightalgn"><span class="requiredclr"></span>Renewal Date</label>
+              <label for="renDate" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Renewal Date</label>
               <div class="col-sm-4">
                 <input type="date" class="form-control midtxtbx" id="renDate" placeholder="mm/dd/yyyy"
                         name="rendate">
               </div>
             </div>
             <div class="form-group row openfont">
-              <label for="numLicenses" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Number of Licenses</label>
+              <label for="numLicenses" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>Number of Licenses</label>
               <div class="col-sm-4">
-                <input type="number" class="form-control midtxtbx" id="numLicenses" placeholder="0"
+                <input type="number" min="0" class="form-control midtxtbx" id="numLicenses" placeholder="0"
                         name="numlicenses" autocomplete="off" required>
               </div>
-              <label for="costLicense" class="col-sm-2 col-form-label softlabel rightalgn" required><span class="requiredclr">*</span>Cost per License ($)</label>
+              <label for="costLicense" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>Cost per License ($)</label>
               <div class="col-sm-4">
                     <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense" placeholder="0.00"
                                 name="costlicenses" autocomplete="off" required>
