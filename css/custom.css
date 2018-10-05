@@ -281,462 +281,6 @@ body {
   background-color: gray;
 }
 
-.radiocontainer1 {
-  display: inline-block;
-  position: relative;
-  margin: 0px;
-  cursor: pointer;
-  font-family: sans-serif;
-  font-size: 22px;
-  user-select: none;
-  padding-left: 30px;
-}
-
-.radiocontainer1 input {
-  display: none;
-  padding-left: 0px;
-  margin: 0px;
-}
-
-.radiocontainer1 .circle {
-  display: inline-block;
-  font-size: 16px;
-  width: 300px;
-  height: 35px;
-  position: relative;
-  padding-left: 0px;
-  left: 0;
-  top: 0;
-  transition: 0.5s;
-  background-color: #d0d0d0;
-  //border-radius: 20%;
-  margin: 0px;
-}
-
-.radiocontainer1:hover .circle {
-  background-color: white;
-  border-color: #ec8c2d;
-  color: gainsboro;
-  margin: 0px;
-}
-
-.radiocontainer1 input:not(:checked) + .circle:after {
-  content: "Engineering";
-  color: #404040;
-  font-family: OpenSans;
-  font-size: 16px;
-  // height: 10px;
-//  width: 10px;
-  position: absolute;
-//  border radius: 20%;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  margin: 0px;
-}
-
-.radiocontainer1 input:checked + .circle {
-  background-color: #ec8e2d;
-  margin: 0px;
-  width: 320px;
-  height: 45px;
-}
-
-.radiocontainer1 input:checked + .circle:after {
-  content: "Engineering";
-  color: White;
-  font-family: OpenSans;
-  font-size: 18px;
-//  height: 10px;
-//  width: 10px;
-  position: absolute;
-//  border radius: 20%;
-  top: 50%;
-  left: 48%;
-  transform: translate(-50%, -50%);
-  margin: 0px;
-}
-
-/*----------*/
-.radiocontainer2 {
-  display: inline-block;
-  position: relative;
-  margin-left: 0;
-  cursor: pointer;
-  font-family: sans-serif;
-  font-size: 22px;
-  user-select: none;
-  padding-left: 30px;
-  margin: 0px;
-}
-
-.radiocontainer2 input {
-  display: none;
-  padding-left: 0px;
-  margin: 0px;
-}
-
-.radiocontainer2 .circle {
-  display: inline-block;
-  font-size: 16px;
-  width: 300px;
-  height: 35px;
-  position: relative;
-  padding-left: 0px;
-  left: 0;
-  top: 0;
-  transition: 0.5s;
-  background-color: #d0d0d0;
-  //border-radius: 20%;
-  margin: 0px;
-}
-
-.radiocontainer2:hover .circle {
-  background-color: white;
-  border-color: #ec8c2d;
-  color: gainsboro;
-  margin: 0px;
-}
-
-.radiocontainer2 input:not(:checked) + .circle:after {
-  content: "Automotive";
-  color: #404040;
-  font-family: OpenSans;
-  font-size: 16px;
-  // height: 10px;
-//  width: 10px;
-  position: absolute;
-//  border radius: 20%;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  margin: 0px;
-}
-
-.radiocontainer2 input:checked + .circle {
-  background-color: #ec8e2d;
-  margin: 0px;
-  width: 320px;
-  height: 45px;
-}
-
-.radiocontainer2 input:checked + .circle:after {
-  content: "Automotive";
-  color: White;
-  font-family: OpenSans;
-  font-size: 18px;
-//  height: 10px;
-//  width: 10px;
-  position: absolute;
-//  border radius: 20%;
-  top: 50%;
-  left: 48%;
-  transform: translate(-50%, -50%);
-  margin: 0px;
-}
-/*----------*/
-.radiocontainer3 {
-  display: inline-block;
-  position: relative;
-  margin-left: 0;
-  cursor: pointer;
-  font-family: sans-serif;
-  font-size: 22px;
-  user-select: none;
-  padding-left: 30px;
-  margin: 0px;
-}
-
-.radiocontainer3 input {
-  display: none;
-  padding-left: 0px;
-  margin: 0px;
-}
-
-.radiocontainer3 .circle {
-  display: inline-block;
-  font-size: 16px;
-  width: 300px;
-  height: 35px;
-  position: relative;
-  padding-left: 0px;
-  left: 0;
-  top: 0;
-  transition: 0.5s;
-  background-color: #d0d0d0;
-  //border-radius: 20%;
-  margin: 0px;
-}
-
-.radiocontainer3:hover .circle {
-  background-color: white;
-  border-color: #ec8c2d;
-  color: gainsboro;
-  margin: 0px;
-}
-
-.radiocontainer3 input:not(:checked) + .circle:after {
-  content: "Oil and Gas";
-  color: #404040;
-  font-family: OpenSans;
-  font-size: 16px;
-  // height: 10px;
-//  width: 10px;
-  position: absolute;
-//  border radius: 20%;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  margin: 0px;
-}
-
-.radiocontainer3 input:checked + .circle {
-  background-color: #ec8e2d;
-  margin: 0px;
-  width: 320px;
-  height: 45px;
-}
-
-.radiocontainer3 input:checked + .circle:after {
-  content: "Oil and Gas";
-  color: White;
-  font-family: OpenSans;
-  font-size: 18px;
-//  height: 10px;
-//  width: 10px;
-  position: absolute;
-//  border radius: 20%;
-  top: 50%;
-  left: 48%;
-  transform: translate(-50%, -50%);
-  margin: 0px;
-}
-/*----------*/
-.radiocontainer4 {
-  display: inline-block;
-  position: relative;
-  margin-left: 0;
-  cursor: pointer;
-  font-family: sans-serif;
-  font-size: 22px;
-  user-select: none;
-  padding: 0px;
-  margin: 0px;
-}
-
-.radiocontainer4 input {
-  display: none;
-  padding-left: 0px;
-  margin: 0px;
-}
-
-.radiocontainer4 .circle {
-  display: inline-block;
-  font-size: 13px;
-  width: 300px;
-  height: 35px;
-  position: relative;
-  padding: 0px;
-  left: 0;
-  top: 0;
-  background-color: #d0d0d0;
-  //border-radius: 20%;
-  margin: 0px;
-  transition: 0.5s;
-}
-
-.radiocontainer4:hover .circle {
-  background-color: white;
-  border-color: #ec8c2d;
-  color: gainsboro;
-  margin: 0px;
-}
-
-.radiocontainer4 input:not(:checked) + .circle:after {
-  content: "Mechanical & Precision";
-  color: #404040;
-  font-family: OpenSans;
-  font-size: 16px;
-  position: absolute;
-  top: 45%;
-  left: 42%;
-  transform: translate(-40%, -40%);
-  margin: 0px;
-}
-
-.radiocontainer4 input:checked + .circle {
-  background-color: #ec8e2d;
-  margin: 0px;
-  width: 320px;
-  height: 45px;
-}
-
-.radiocontainer4 input:checked + .circle:after {
-  content: "Mechanical & Precision";
-  color: White;
-  font-family: OpenSans;
-  font-size: 18px;
-  position: absolute;
-  top: 45%;
-  left: 35%;
-  transform: translate(-30%, -40%);
-  padding: 0px;
-  margin: 0px;
-}
-/*----------*/
-.radiocontainer5 {
-  display: inline-block;
-  position: relative;
-  margin-left: 0;
-  cursor: pointer;
-  font-family: sans-serif;
-  font-size: 22px;
-  user-select: none;
-  padding-left: 30px;
-  margin: 0px;
-}
-
-.radiocontainer5 input {
-  display: none;
-  padding-left: 0px;
-  margin: 0px;
-}
-
-.radiocontainer5 .circle {
-  display: inline-block;
-  font-size: 16px;
-  width: 300px;
-  height: 35px;
-  position: relative;
-  padding-left: 0px;
-  left: 0;
-  top: 0;
-  background-color: #d0d0d0;
-  //border-radius: 20%;
-  margin: 0px;
-  transition: 0.5s;
-}
-
-.radiocontainer5:hover .circle {
-  background-color: white;
-  border-color: #ec8c2d;
-  color: gainsboro;
-  margin: 0px;
-}
-
-.radiocontainer5 input:not(:checked) + .circle:after {
-  content: "Government";
-  color: #404040;
-  font-family: OpenSans;
-  font-size: 16px;
-  // height: 10px;
-//  width: 10px;
-  position: absolute;
-  border radius: 20%;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  margin: 0px;
-}
-
-.radiocontainer5 input:checked + .circle {
-  background-color: #ec8e2d;
-  width: 320px;
-  height: 45px;
-  margin: 0px;
-}
-
-.radiocontainer5 input:checked + .circle:after {
-  content: "Government";
-  color: White;
-  font-family: OpenSans;
-  font-size: 18px;
-//  height: 10px;
-//  width: 10px;
-  position: absolute;
-  //border radius: 20%;
-  top: 50%;
-  left: 48%;
-  transform: translate(-50%, -50%);
-  margin: 0px;
-}
-/*----------*/
-.radiocontainer6 {
-  display: inline-block;
-  position: relative;
-  margin-left: 0;
-  cursor: pointer;
-  font-family: sans-serif;
-  font-size: 22px;
-  user-select: none;
-  padding-left: 30px;
-  margin: 0px;
-}
-
-.radiocontainer6 input {
-  display: none;
-  padding-left: 0px;
-  margin: 0px;
-}
-
-.radiocontainer6 .circle {
-  display: inline-block;
-  font-size: 16px;
-  width: 300px;
-  height: 35px;
-  position: relative;
-  padding-left: 0px;
-  left: 0;
-  top: 0;
-  transition: 0.5s;
-  background-color: #d0d0d0;
-  //border-radius: 20%;
-  margin: 0px;
-}
-
-.radiocontainer6:hover .circle {
-  background-color: white;
-  border-color: #ec8c2d;
-  color: gainsboro;
-  margin: 0px;
-}
-
-.radiocontainer6 input:not(:checked) + .circle:after {
-  content: "Others";
-  color: #404040;
-  font-family: OpenSans;
-  font-size: 16px;
-  // height: 10px;
-//  width: 10px;
-  position: absolute;
-  //border radius: 20%;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  margin: 0px;
-}
-
-.radiocontainer6 input:checked + .circle {
-  background-color: #ec8e2d;
-  margin: 0px;
-  width: 320px;
-  height: 45px;
-}
-
-.radiocontainer6 input:checked + .circle:after {
-  content: "Others";
-  color: White;
-  font-family: OpenSans;
-  font-size: 18px;
-//  height: 10px;
-//  width: 10px;
-  position: absolute;
-  //border radius: 20%;
-  top: 50%;
-  left: 48%;
-  transform: translate(-50%, -50%);
-  margin: 0px;
-}
 
 .entbutdes2 {
   background-color: #417379;
@@ -1025,4 +569,250 @@ button {
 
 .pointermarg{
   margin-top: 3rem;
+}
+
+
+.takeawaydiv {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  //background-color: lightgray;
+}
+
+.eng {
+  background: url('../images/industry/Engg_default.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.eng:hover {
+  background: url('../images/industry/Engg_hover.png') repeat-x;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+input[type="radio"]{
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+input:checked + .eng {
+  background: url('../images/industry/Engg_selected.png') repeat-x;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+}
+/*------*/
+.og {
+  background: url('../images/industry/O&G_default.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.og:hover {
+  background: url('../images/industry/O&G_hover.png') repeat-x;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+input:checked + .og {
+  background: url('../images/industry/O&G_selected.png') repeat-x;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+}
+/*------*/
+.auto {
+  background: url('../images/industry/Auto_default.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.auto:hover {
+  background: url('../images/industry/Auto_hover.png') repeat-x;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+input:checked + .auto {
+  background: url('../images/industry/Auto_selected.png') repeat-x;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+}
+
+/*------*/
+.mp {
+  background: url('../images/industry/Mech_default.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.mp:hover {
+  background: url('../images/industry/Mech_hover.png') repeat-x;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+input:checked + .mp {
+  background: url('../images/industry/Mech_selected.png') repeat-x;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+}
+
+/*------*/
+.gov {
+  background: url('../images/industry/Gov_default.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.gov:hover {
+  background: url('../images/industry/Gov_hover.png') repeat-x;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+input:checked + .gov {
+  background: url('../images/industry/Gov_selected.png') repeat-x;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+}
+
+/*------*/
+.oth {
+  background: url('../images/industry/Others_default.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.oth:hover {
+  background: url('../images/industry/Others_hover.png') repeat-x;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+input:checked + .oth {
+  background: url('../images/industry/Others_selected.png') repeat-x;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+}
+
+.firstop .secondtop .thirdtop .fourthtop .fifthtop .sixthtop
+.eng .og .auto .mp .gov .oth {
+  margin:0;
+  padding:0;
+}
+
+label span {
+  cursor: pointer;
+}
+
+
+.firstop {
+  position: absolute;
+  top: 72px;
+  left: 50px;
+}
+
+.secondtop {
+  position: absolute;
+  top: 23px;
+  left: 140px;
+}
+
+.thirdtop {
+  position: absolute;
+  top: 172px;
+  left: 50px;
+}
+
+.fourthtop {
+  position: absolute;
+  top: 172px;
+  left: 230px;
+}
+
+.fifthtop {
+  position: absolute;
+  top: 72px;
+  left: 230px;
+}
+
+.sixthtop {
+  position: absolute;
+  top: 222px;
+  left: 140px;
+}
+
+.selectind {
+  height: 85px;
+  width: 112px;
+  position: absolute;
+  top: 133px;
+  left: 144px;
 }

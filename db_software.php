@@ -175,13 +175,13 @@ else  {
 
   //here are the codes for sending emails both the server and clente
 
-    $toServ       ='roiexpel@gmail.com'; //you can add multiple emails, just separate them with comma
+/*    $toServ       ='roiexpel@gmail.com'; //you can add multiple emails, just separate them with comma
     $subjectServ  ='ROI Calculator Entry';
     $messageServ  ="Company Name: ".$companyName."\n"."Industry: ".$industryTr."\n"."Company Website: ".
                     $comWebsiteTr."\n"."Company Email: ".$comEmailTr."\n"."Number of Users: ".$noOfUsersTr;
     $headersServ  ="From: lem@lem.com";
 
-    mail($toServ,$subjectServ,$messageServ,$headersServ);
+    mail($toServ,$subjectServ,$messageServ,$headersServ); */
 
 
     /*$toClient='roiexpel@gmail.com';
@@ -202,7 +202,7 @@ else  {
     $headersClient  ="From: lem@lem.com";
     $headersClient .= "MIME-Version: 1.0"."\r\n";
     $headersClient .= "Content-type:text/html;charset=iso-8859-1"."\r\n";*/
-
+/*
     $toClient=$comEmailTr;
     $subjectClient="Calculate ROI with Snow";
     $messageClient='
@@ -228,7 +228,7 @@ else  {
     $headersClient .= "Content-type:text/html;charset=iso-8859-1"."\r\n";
 
 
-    mail($toClient,$subjectClient,$messageClient,$headersClient);
+    mail($toClient,$subjectClient,$messageClient,$headersClient); */
 
 
 ?>

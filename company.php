@@ -41,45 +41,32 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-      <div class="jumbotron">
+      <div class="jumbotron colorsemiwhite">
 
         <div class="container-fluid rightalgn"><img class="pointermarg" src="images/pointer.png"></div>
         <div class="row">
           <div class="col-md-6 col-sm-6 aligncntr">
             <h2 class="headngsprpg nospace">Company Details</h2>
-            <br> <br>
-            <span class="entbutdes2 geofont"><strong>Select your Industry</strong></span>
-            <br>
+
 
               <form action="software.php" autocomplete="off" method="POST">
-                <div class="aligncntr nospace">
 
-                  <label class="radiocontainer1 nospace"><input type="radio" name="industry"
-                    value="Engineering" checked="checked" onclick="lblindstry(1)"><span class="circle"></span>
-                  </label><br>
-                  <label class="radiocontainer2 nospace"><input type="radio" name="industry"
-                    value="Automotive" onclick="lblindstry(2)"><span class="circle"></span>
-                  </label><br>
-                  <label class="radiocontainer3 nospace"><input type="radio" name="industry"
-                    value="Oil and Gas" onclick="lblindstry(3)"><span class="circle"></span>
-                  </label><br>
-                  <label class="radiocontainer4 nospace"><input type="radio" name="industry"
-                    value="Mechanical & Precision" onclick="lblindstry(4)"><span class="circle"></span>
-                  </label><br>
-                  <label class="radiocontainer5 nospace"><input type="radio" name="industry"
-                    value="Government" onclick="lblindstry(5)"><span class="circle"></span>
-                  </label><br>
-                  <label class="radiocontainer6 nospace"><input type="radio" name="industry"
-                    value="Others" onclick="lblindstry(6)"><span class="circle"></span>
-                  </label><br>
+                  <div class="takeawaydiv">
+                    <label class="firstop"><input type="radio" name="industry" checked="checked" value="Engineering"><span title="Engineering" class="eng"></span></label>
+                    <label class="secondtop"><input type="radio" name="industry" value="Oil and Gas"><span title="Oil and Gas" class="og"></span></label>
+                    <label class="thirdtop"><input type="radio" name="industry" value="Automotive"><span title="Automotive" class="auto"></span></label><br>
 
-                </div>
+                    <label class="fourthtop"><input type="radio" name="industry" value="Mechanical and Precision"><span ="Mechanical and Precision" class="mp"></span></label>
+                    <label class="fifthtop"><input type="radio" name="industry" value="Government"><span title="Government" class="gov"></span></label>
+                    <label class="sixthtop"><input type="radio" name="industry" value="Others"><span title="Others" class="oth"></span></label>
+                    <img class="selectind" src="images/industry/selectindustry.png">
+                  </div>
 
                     <div class="centertext industrychanging openfont">See sample calculation for <label id="dl-industry" style="font-weight:bold">Engineering</label>:
                           <a href="files/SampleCalculation.pdf" download><button type="button" class="btn dlbutdes"> Download PDF</button>
                           </a>
                         </div>
-                      </div>
+        </div>
                       <div class="col-md-6 col-sm-6">
                         <div class="leftdiv">
 
