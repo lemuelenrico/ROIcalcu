@@ -33,7 +33,7 @@
               <span class="icon-bar"></span>
             </button>
               <!--  <a class="navbar-brand" href="#">-->
-            <a class="navbar-brand">
+            <a class="navbar-brand" href="https://www.snowsoftware.com/int">
               <img src="images/Snowlogo.png"></a>
           </div>
 
@@ -41,7 +41,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
 
-              <li><a><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
+              <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
               <li><a href="help.html"><h class="whitfnt2 geofont">Help</p></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->

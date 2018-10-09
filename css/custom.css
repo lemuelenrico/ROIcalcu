@@ -107,9 +107,9 @@ body {
 }
 
 .jumbotronadd {
-  margin-top: 1.8rem;
+  margin-top: 1.4rem;
   text-align: center;
-  padding-bottom: 122px;
+  padding-bottom: 123px;
 }
 
 .rightalgn{
@@ -815,4 +815,17 @@ label span {
   position: absolute;
   top: 133px;
   left: 144px;
+}
+
+.containeradd {
+  align-items: center;
+}
+
+.forhelpstat{
+  border-width: 2px;
+  background-color: #404040;
+  color: white;
+  padding: 1.5rem;
+  display: block;
+  text-align: center;
 }

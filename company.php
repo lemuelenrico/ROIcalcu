@@ -26,7 +26,7 @@
               <span class="icon-bar"></span>
             </button>
             <!--  <a class="navbar-brand" href="#">-->
-            <a class="navbar-brand">
+            <a class="navbar-brand" href="https://www.snowsoftware.com/int">
               <img src="images/Snowlogo.png"></a>
           </div>
 
@@ -34,7 +34,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
 
-              <li><a><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
+              <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
               <li><a href="help.html"><h class="whitfnt2 geofont">Help</p></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
@@ -56,16 +56,19 @@
                     <label class="secondtop"><input type="radio" name="industry" value="Oil and Gas"><span title="Oil and Gas" class="og"></span></label>
                     <label class="thirdtop"><input type="radio" name="industry" value="Automotive"><span title="Automotive" class="auto"></span></label><br>
 
-                    <label class="fourthtop"><input type="radio" name="industry" value="Mechanical and Precision"><span ="Mechanical and Precision" class="mp"></span></label>
+                    <label class="fourthtop"><input type="radio" name="industry" value="Mechanical and Precision"><span title="Mechanical and Precision" class="mp"></span></label>
                     <label class="fifthtop"><input type="radio" name="industry" value="Government"><span title="Government" class="gov"></span></label>
                     <label class="sixthtop"><input type="radio" name="industry" value="Others"><span title="Others" class="oth"></span></label>
                     <img class="selectind" src="images/industry/selectindustry.png">
                   </div>
 
-                    <div class="centertext industrychanging openfont">See sample calculation for <label id="dl-industry" style="font-weight:bold">Engineering</label>:
+                  <div class="row">
+
+                  </div>
+                  <!--  <div class="centertext industrychanging openfont">See sample calculation for <label id="dl-industry" style="font-weight:bold">Engineering</label>:
                           <a href="files/SampleCalculation.pdf" download><button type="button" class="btn dlbutdes"> Download PDF</button>
                           </a>
-                        </div>
+                        </div> -->
         </div>
                       <div class="col-md-6 col-sm-6">
                         <div class="leftdiv">
