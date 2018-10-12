@@ -33,7 +33,7 @@
               <span class="icon-bar"></span>
             </button>
               <!--  <a class="navbar-brand" href="#">-->
-            <a class="navbar-brand" href="https://www.snowsoftware.com/int">
+            <a class="navbar-brand">
               <img src="images/Snowlogo.png"></a>
           </div>
 
@@ -41,7 +41,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
 
-              <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
+              <li><a><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
               <li><a href="help.html"><h class="whitfnt2 geofont">Help</p></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
@@ -169,31 +169,26 @@
                       <th colspan="4" class="aligncntr tabletitlecelldes">ROI Calculation</th>
                   </tr>
                   <tr>
-                      <td rowspan="2" width="30%" id="firstyrgradient">1st Year</td>
-                      <td width="20%" class="yearlydatalbl colorwhite">in %</td>
-                      <td class="colorwhite yearlydata"><?php echo number_format($truValROI1); ?>%</td>
+                      <td width="30%" class="pricebgcol"></td>
+                      <td width="20%" class="yearlydatalbl pricebgcol">%</td>
+                      <td class="pricebgcol yearlydata">$</td>
                   </tr>
                   <tr>
-                      <td width="20%" class="yearlydatalbl pricebgcol">in $</td>
-                      <td class="pricebgcol yearlydata">$<?php echo number_format($truValSavings1,2); ?></td>
+                      <td width="30%" id="firstyrgradient">1st Year</td>
+                      <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truValROI1); ?>%</td>
+                      <td class="colorwhite yearlydata">$<?php echo number_format($truValSavings1,2); ?></td>
                   </tr>
+
                   <tr>
-                      <td rowspan="2" width="30%" id="secondyrgradient">2nd Year</td>
-                      <td width="20%" class="yearlydatalbl colorwhite">in %</td>
-                      <td class="colorwhite yearlydata"><?php echo number_format($truValROI2); ?>%</td>
+                      <td width="30%" id="secondyrgradient">2nd Year</td>
+                      <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truValROI2); ?>%</td>
+                      <td class="colorwhite yearlydata">$<?php echo number_format($truValSavings2,2); ?></td>
                   </tr>
+
                   <tr>
-                      <td width="20%" class="yearlydatalbl pricebgcol">in $</td>
-                      <td class="pricebgcol yearlydata">$<?php echo number_format($truValSavings2,2); ?></td>
-                  </tr>
-                  <tr>
-                      <td rowspan="2" width="30%" id="thrdyrgradient">3rd Year</td>
-                      <td width="20%" class="yearlydatalbl colorwhite">in %</td>
-                      <td class="colorwhite yearlydata"><?php echo number_format ($truValROI3); ?>%</td>
-                  </tr>
-                  <tr>
-                      <td width="20%" class="yearlydatalbl pricebgcol">in $</td>
-                      <td class="pricebgcol yearlydata">$<?php echo number_format($truValSavings3,2); ?></td>
+                      <td width="30%" id="thrdyrgradient">3rd Year</td>
+                      <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truValROI3); ?>%</td>
+                      <td class="colorwhite yearlydata">$<?php echo number_format($truValSavings3,2); ?></td>
                   </tr>
 
                 </table>

@@ -52,18 +52,26 @@
               <form action="software.php" autocomplete="off" method="POST">
 
                   <div class="takeawaydiv">
-                    <label class="firstop"><input type="radio" name="industry" checked="checked" value="Engineering"><span title="Engineering" class="eng"></span></label>
-                    <label class="secondtop"><input type="radio" name="industry" value="Oil and Gas"><span title="Oil and Gas" class="og"></span></label>
-                    <label class="thirdtop"><input type="radio" name="industry" value="Automotive"><span title="Automotive" class="auto"></span></label><br>
+                    <label class="firstop"><input type="radio" id="ind1" name="industry" checked="checked" onclick="lblindstry(1)" value="Engineering"><span title="Engineering" class="eng"></span></label>
+                    <label class="secondtop"><input type="radio" id="ind2" name="industry" onclick="lblindstry(3)" value="Oil and Gas"><span title="Oil and Gas" class="og"></span></label>
+                    <label class="thirdtop"><input type="radio" id="ind3" name="industry" onclick="lblindstry(2)" value="Automotive"><span title="Automotive" class="auto"></span></label><br>
 
-                    <label class="fourthtop"><input type="radio" name="industry" value="Mechanical and Precision"><span title="Mechanical and Precision" class="mp"></span></label>
-                    <label class="fifthtop"><input type="radio" name="industry" value="Government"><span title="Government" class="gov"></span></label>
-                    <label class="sixthtop"><input type="radio" name="industry" value="Others"><span title="Others" class="oth"></span></label>
+                    <label class="fourthtop"><input type="radio" id="ind4" name="industry" onclick="lblindstry(4)" value="Mechanical and Precision"><span title="Mechanical and Precision" class="mp"></span></label>
+                    <label class="fifthtop"><input type="radio" id="ind5" name="industry" onclick="lblindstry(5)" value="Government"><span title="Government" class="gov"></span></label>
+                    <label class="sixthtop"><input type="radio" id="ind6" name="industry" onclick="lblindstry(6)" value="Others"><span title="Others" class="oth"></span></label>
                     <img class="selectind" src="images/industry/selectindustry.png">
                   </div>
 
                   <div class="row">
+                    <div class="custcenterright col-md-8 col-sm-8 centertext industrychanging openfont nospace">
+                    See customer stories for <label id="dl-industry" style="font-weight:bold">Engineering </label>:
+                              <!--<a href="files/SampleCalculation.pdf" download></a>-->
 
+                    </div>
+                    <div class="col-md-4 col-md-4 nospace custbotspc">
+                      <!--<button href="#" type="button" class="btn dlbutdes">Click here!</button>-->
+                      <a class="btn dlbutdes" id="customerstory" target="_blank" href="https://openit.com/resources/customer-stories">Click here!</a>
+                      </div>
                   </div>
                   <!--  <div class="centertext industrychanging openfont">See sample calculation for <label id="dl-industry" style="font-weight:bold">Engineering</label>:
                           <a href="files/SampleCalculation.pdf" download><button type="button" class="btn dlbutdes"> Download PDF</button>
