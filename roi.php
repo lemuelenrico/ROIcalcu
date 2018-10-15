@@ -66,15 +66,37 @@
           </div>
 <!--the following buttons are not working yet-->
           <div class="col-md-4 col-sm-4 aligncntr"><br>
-            <button id="saveb">
-              <img src="images/newpdficon.png" width="45px" height="45px" onmouseover="this.src='images/newpdficonhover.png'"
-                onmouseout="this.src='images/newpdficon.png'" title="Export to PDF">
-            </button>
+
+            <form action="report2.php" method="POST" target="_blank">
+              <!-- the following hidden input function as transitional variables for reporting-->
+              <input type="hidden" name="repcom" value="<?php echo $companyName ?>">
+              <!--<input type="hidden" name="repind" value="<?php echo $industry?>">-->
+              <input type="hidden" name="repappname" value="<?php echo $applicationName ?>">
+              <input type="hidden" name="repagree" value="<?php echo $agreementType ?>">
+              <input type="hidden" name="replictype" value="<?php echo $licenseType ?>">
+              <input type="hidden" name="repnooflic" value="<?php echo $noOfLicenses ?>">
+              <input type="hidden" name="repcost" value="<?php echo $costPerLicense ?>">
+              <input type="hidden" name="reploc" value="<?php echo $imloc ?>">
+              <!--the folowing are subject to changes -->
+              <input type="hidden" name="reproi" value="<?php echo $truValROI1 ?>">
+              <input type="hidden" name="repsav" value="<?php echo $truValSavings1 ?>">
+              <input type="hidden" name="reproi2" value="<?php echo $truValROI2 ?>">
+              <input type="hidden" name="repsav2" value="<?php echo $truValSavings2 ?>">
+              <input type="hidden" name="reproi3" value="<?php echo $truValROI3 ?>">
+              <input type="hidden" name="repsav3" value="<?php echo $truValSavings3 ?>">
+
+              <button type="submit">
+                <img src="images/newpdficon.png" width="45px" height="45px" onmouseover="this.src='images/newpdficonhover.png'"
+                  onmouseout="this.src='images/newpdficon.png'" title="Export to PDF">
+              </button>
+            </form>
+
+
             <button>
               <img src="images/newexcelicon.png" width="45px" height="45px" onmouseover="this.src='images/newexceliconhover.png'"
                 onmouseout="this.src='images/newexcelicon.png'" title="Export to Excel">
             </button>
-            <a href="#">
+            <a href="#" target="_blank">
               <img src="images/newppticon.png" width="45px" height="45px" onmouseover="this.src='images/newppticonhover.png'"
                 onmouseout="this.src='images/newppticon.png'" title="Export to PowerPoint">
             </a>
