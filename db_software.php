@@ -146,9 +146,9 @@ $noOfUsersTr  = $_POST ['transi5'];
 if (!$_POST['submittoroi']){
 }
 else  {
-    $sql = "INSERT into software  (EntryDate, ApplicationName, AgreementType, Location,
+    $sql = "INSERT into software  (EntryDate, CompanyName, ApplicationName, AgreementType, Location,
                                   NoOfLicenses, VendorName, LicenseType, RenewalDate, CostPerLicense, CalculatedROI, CutLicenses)
-            values                (NOW(), '$applicationName', '$agreementType', '$imloc',
+            values                (NOW(), '$companyName', '$applicationName', '$agreementType', '$imloc',
                                   '$noOfLicenses','$vendorName','$licenseType','$renewalDate','$costPerLicense', $calculatedROI, $cutLicenses)";
 
     $sql2 = "INSERT into yearlyroi (EntryDate, ROIyear1, ROIyear2, ROIyear3, SavingsYear1, SavingsYear2, SavingsYear3, Industry, CompanyName)
@@ -173,15 +173,15 @@ else  {
 
 
 
-  //here are the codes for sending emails both the server and clente
+  //here are the codes for sending emails both the server and client
 
-/*    $toServ       ='roiexpel@gmail.com'; //you can add multiple emails, just separate them with comma
+    $toServ       ='roiexpel@gmail.com'; //you can add multiple emails, just separate them with comma
     $subjectServ  ='ROI Calculator Entry';
     $messageServ  ="Company Name: ".$companyName."\n"."Industry: ".$industryTr."\n"."Company Website: ".
                     $comWebsiteTr."\n"."Company Email: ".$comEmailTr."\n"."Number of Users: ".$noOfUsersTr;
     $headersServ  ="From: lem@lem.com";
 
-    mail($toServ,$subjectServ,$messageServ,$headersServ); */
+    mail($toServ,$subjectServ,$messageServ,$headersServ);
 
 
     /*$toClient='roiexpel@gmail.com';
@@ -202,7 +202,7 @@ else  {
     $headersClient  ="From: lem@lem.com";
     $headersClient .= "MIME-Version: 1.0"."\r\n";
     $headersClient .= "Content-type:text/html;charset=iso-8859-1"."\r\n";*/
-/*
+
     $toClient=$comEmailTr;
     $subjectClient="Calculate ROI with Snow";
     $messageClient='
@@ -216,7 +216,7 @@ else  {
                           </div>
                           <div style="width:100%; background:white; border-radius: 8px; margin: 0px; padding: 1px;" >
                             <br><h2>Thank you for calculating using Snow for Engineering!<br><br>
-                            If you have more questions, you may inquire <a href="https://openit.com/contact-us-2/">here</a>.</h2><br>
+                            If you have more questions, you may proceed <a href="https://openit.com/contact-us-2/">here</a>.</h2><br>
                           </div>
                         </div>
 
@@ -228,7 +228,7 @@ else  {
     $headersClient .= "Content-type:text/html;charset=iso-8859-1"."\r\n";
 
 
-    mail($toClient,$subjectClient,$messageClient,$headersClient); */
+    mail($toClient,$subjectClient,$messageClient,$headersClient);
 
 
 ?>

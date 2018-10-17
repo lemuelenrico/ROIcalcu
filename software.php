@@ -44,7 +44,9 @@
             <ul class="nav navbar-nav navbar-right">
 
               <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
-              <li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>
+              <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
+              <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>-->
+              <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -151,6 +153,7 @@
               <div class="col-sm-4">
                     <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense" placeholder="0.00"
                                 name="costlicenses" autocomplete="off" required>
+
               </div>
             </div>
           </div><!--colorsemiwhite-->
@@ -160,8 +163,10 @@
               <div class="col-md-1 col-sm-1"></div>
               <div class="col-md-8 centertext nospace">
                   <label for="finalsubmit" class="openfont"><input type="checkbox" class="glyphpointer bigchkbx" id="finalsubmit" value=""><span class="aggrchk glyphpointer">
-                    I hereby grant permission for Snow to use the information I provided to calculate ROI.
-                  By proceeding, I also agree with the <a href="terms.html" target="_blank">Terms and Conditions</a> of the site. </span></label>
+                    I consent the collection of my data to be used for the purpose of calculating ROI.
+                  By proceeding, I also agree with the <!--<a href="terms.html" target="_blank"><u>Terms and Conditions</u></a> of the site.-->
+                  <a href="https://www.snowsoftware.com/int/legal/termsofuse" target="_blank"><u>Terms and Conditions</u></a> of the site.</span>
+                </label>
               </div>
               <div class="col-md-2 centertext allspace">
                   <p><input type="submit" name="submittoroi" class="btn showroibutdes alignright geofont"

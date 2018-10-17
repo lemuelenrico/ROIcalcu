@@ -34,7 +34,9 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
             <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</h></a></li>
-            <li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>
+            <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
+            <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>-->
+            <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -43,15 +45,20 @@
       <div class="jumbotron jumbotronadd snowbg colorsemiwhite2">
         <h1 id="bigtkwy">ROI Calculator</h1>
         <br>
-          <p id="introp" class="geofont">
+          <!--<p id="introp" class="geofont">
             This ROI Calculator provides you with an approximate amount of the savings that you may get from investing in Snow for Engineering tools.
             It will need your company and software details in order to provide an accurate estimate of your possible ROI. All information provided will be
             processed in accordance with existing privacy and data protection rules and regulations and will be used for the sole purpose of calculating ROI.
+          </p>-->
+          <p id="introp" class="geofont">
+            This ROI Calculator provides you with an approximate amount of the savings that you may get from investing in Snow for Engineering tools.
+            All information provided will be processed in accordance with existing privacy and data protection rules and regulations and will be used for the sole purpose of calculating ROI.
           </p>
         <br>
         <br>
-        <p id="introc">Calculate how much your organization can gain from using Snow for Engineering.</p>
         <br>
+        <br>
+        <p id="introc">Calculate how much your organization can gain from using Snow for Engineering.</p>
         <br>
         <a href="company.php" class="btn entbutdes geofont">CLICK HERE TO START</a>
 

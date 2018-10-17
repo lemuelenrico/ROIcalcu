@@ -36,13 +36,14 @@
             <a class="navbar-brand">
               <img src="images/Snowlogo.png"></a>
           </div>
-
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
 
               <li><a><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
-              <li><a href="help.html"><h class="whitfnt2 geofont">Help</p></a></li>
+              <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
+              <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</p></a></li>-->
+              <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -60,12 +61,12 @@
             </h2>
           </div>
 
-          <div class="col-md-2 col-sm-2 middleset aligncntr">
-          <br>
+          <!--<div class="col-md-2 col-sm-2 middleset aligncntr">
+
             <a href="files/SampleCalculation.pdf" download><button type="button" class="btn dlbutdes">Download PDF</button></a>
-          </div>
+          </div>-->
 <!--the following buttons are not working yet-->
-          <div class="col-md-4 col-sm-4 aligncntr"><br>
+          <div class="col-md-6 col-sm-6 rightalgn"><br>
 
             <form action="report2.php" method="POST" target="_blank">
               <!-- the following hidden input function as transitional variables for reporting-->
@@ -86,12 +87,12 @@
               <input type="hidden" name="repsav3" value="<?php echo $truValSavings3 ?>">
 
               <button type="submit">
-                <img src="images/newpdficon.png" width="45px" height="45px" onmouseover="this.src='images/newpdficonhover.png'"
+                <img src="images/newpdficon.png" width="40px" height="40px" onmouseover="this.src='images/newpdficonhover.png'"
                   onmouseout="this.src='images/newpdficon.png'" title="Export to PDF">
               </button>
             </form>
 
-
+            <!--
             <button>
               <img src="images/newexcelicon.png" width="45px" height="45px" onmouseover="this.src='images/newexceliconhover.png'"
                 onmouseout="this.src='images/newexcelicon.png'" title="Export to Excel">
@@ -107,7 +108,7 @@
             <a href="#">
               <img src="images/jpgicon.png" width="45px" height="45px" onmouseover="this.src='images/jpgiconhover.png'"
                 onmouseout="this.src='images/jpgicon.png'" title="Export to JPG">
-            </a>
+            </a>-->
           </div>
         </div><!--row-->
 
@@ -235,7 +236,7 @@
             <?php echo $truValROI2; ?>,
             <?php echo $truValROI3; ?>,
           ],
-          backgroundColor:['#ffae19','#ffa500','#ec8c2d'],
+          backgroundColor:['#47c3dc','#417379','#ec8c2d'],
           hoverBorderWidth: 3,
           hoverBorderColor: '#686868'
         }]
