@@ -26,12 +26,12 @@ $noOfUsersTr  = $_POST ['transi5'];
         /*the following are the variables for yearly breakdown of ROI, this is open to change*/
 
         $engROIyr1  = 917;   $ogROIyr1   = 1458;   $mpROIyr1     = 105;
-        $engROIyr2  = 1000;  $ogROIyr2   = 1500;   $mpROIyr2     = 120;
-        $engROIyr3  = 1100;  $ogROIyr3   = 1600;   $mpROIyr3     = 150;
+        $engROIyr2  = 500;   $ogROIyr2   = 750;    $mpROIyr2     = 90;
+        $engROIyr3  = 600;   $ogROIyr3   = 800;    $mpROIyr3     = 50;
 
         $govROIyr1  = 105;   $autoROIyr1 =  110;   $othersROIyr1 = 474;
-        $govROIyr2  = 120;   $autoROIyr2 =  120;   $othersROIyr2 = 496;
-        $govROIyr3  = 150;   $autoROIyr3 =  150;   $othersROIyr3 = 573;
+        $govROIyr2  = 107;   $autoROIyr2 =  60;   $othersROIyr2  = 196;
+        $govROIyr3  = 50;    $autoROIyr3 =  75;   $othersROIyr3  = 73;
 
         /*the following are the formula for each industry*/
 
@@ -100,7 +100,7 @@ $noOfUsersTr  = $_POST ['transi5'];
 
         /*the following are the variables for yearly breakdown per license type, this is open to change*/
 
-        $ppuMultYr1 = 4;    $perpMultYr1 = 1; $lsMultYr1 = 1; $subsMultYr1 = 1; $rntMultYr1 = 1;
+        $ppuMultYr1 = 2;    $perpMultYr1 = 1; $lsMultYr1 = 1; $subsMultYr1 = 1; $rntMultYr1 = 1;
         $ppuMultYr2 = 1;    $perpMultYr2 = 1; $lsMultYr2 = 1; $subsMultYr2 = 1; $rntMultYr2 = 1;
         $ppuMultYr3 = 1;    $perpMultYr3 = 1; $lsMultYr3 = 1; $subsMultYr3 = 1; $rntMultYr3 = 1;
 
@@ -178,7 +178,16 @@ else  {
     $toServ       ='roiexpel@gmail.com'; //you can add multiple emails, just separate them with comma
     $subjectServ  ='ROI Calculator Entry';
     $messageServ  ="Company Name: ".$companyName."\n"."Industry: ".$industryTr."\n"."Company Website: ".
-                    $comWebsiteTr."\n"."Company Email: ".$comEmailTr."\n"."Number of Users: ".$noOfUsersTr;
+                    $comWebsiteTr."\n"."Company Email: ".$comEmailTr."\n"."Number of Users: ".$noOfUsersTr.
+                    "\n"."Application Name: ".$applicationName.", Vendor Name: ".$vendorName.
+                    "\n"."Agreement Type: ".$agreementType.", License Type: ".$licenseType.
+                    "\n"."Install Location: ".$imloc.
+                    "\n"."Renewal Date: ".$renewalDate.
+                    "\n"."Number of Licenses: ".$noOfLicenses.",    Cost per License: ".$costPerLicense.
+                    "\n"."Year 1 ROI: ".$truValROI1."%  |  $".$truValSavings1.
+                    "\n"."Year 2 ROI: ".$truValROI2."%  |  $".$truValSavings2.
+                    "\n"."Year 3 ROI: ".$truValROI3."%  |  $".$truValSavings3;
+
     $headersServ  ="From: lem@lem.com";
 
     mail($toServ,$subjectServ,$messageServ,$headersServ);
@@ -204,11 +213,9 @@ else  {
     $headersClient .= "Content-type:text/html;charset=iso-8859-1"."\r\n";*/
 
     $toClient=$comEmailTr;
-    $subjectClient="Calculate ROI with Snow";
-    $messageClient='
+    $subjectClient  ="Calculate ROI with Snow";
+    $messageClient  ='
                     <html>
-                      <head>
-                      </head>
                       <body style="background:#47c3dc;">
                         <div style="background:#47c3dc; text-align:center; padding: 1rem 8vw 2rem 8vw; color:#585858; font-family: Helvetica;">
                           <div style="width;100%; margin: 0px;">
@@ -216,10 +223,12 @@ else  {
                           </div>
                           <div style="width:100%; background:white; border-radius: 8px; margin: 0px; padding: 1px;" >
                             <br><h2>Thank you for calculating using Snow for Engineering!<br><br>
-                            If you have more questions, you may proceed <a href="https://openit.com/contact-us-2/">here</a>.</h2><br>
-                          </div>
+                            If you have more questions, you may proceed <a href="https://www.snowsoftware.com/int/contact">here</a>.</h2><br><strong>';
+    $messageClient .= $companyName;
+    $messageClient .='
+                      </strong>
                         </div>
-
+                      </div>
                       </body>
                     </html>
                     ';
