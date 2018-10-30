@@ -175,7 +175,7 @@ else  {
 
   //here are the codes for sending emails both the server and client
 
-    $toServ       ='roiexpel@gmail.com'; //you can add multiple emails, just separate them with comma
+  /*  $toServ       ='roiexpel@gmail.com'; //you can add multiple emails, just separate them with comma
     $subjectServ  ='ROI Calculator Entry';
     $messageServ  ="Company Name: ".$companyName."\n"."Industry: ".$industryTr."\n"."Company Website: ".
                     $comWebsiteTr."\n"."Company Email: ".$comEmailTr."\n"."Number of Users: ".$noOfUsersTr.
@@ -190,7 +190,7 @@ else  {
 
     $headersServ  ="From: lem@lem.com";
 
-    mail($toServ,$subjectServ,$messageServ,$headersServ);
+    mail($toServ,$subjectServ,$messageServ,$headersServ); */
 
 
     /*$toClient='roiexpel@gmail.com';
@@ -212,7 +212,7 @@ else  {
     $headersClient .= "MIME-Version: 1.0"."\r\n";
     $headersClient .= "Content-type:text/html;charset=iso-8859-1"."\r\n";*/
 
-    $toClient=$comEmailTr;
+  /*  $toClient=$comEmailTr;
     $subjectClient  ="Calculate ROI with Snow";
     $messageClient  ='
                     <html>
@@ -237,7 +237,35 @@ else  {
     $headersClient .= "Content-type:text/html;charset=iso-8859-1"."\r\n";
 
 
-    mail($toClient,$subjectClient,$messageClient,$headersClient);
+    mail($toClient,$subjectClient,$messageClient,$headersClient); */
+      $passcode = 'QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm0123456789';
+      $passcode = substr(str_shuffle($passcode), 0, 6);
 
+      $toClient=$comEmailTr;
+      $subjectClient  ="ROI calc Passcode";
+      $messageClient  ='
+                      <html>
+                        <body style="background:#47c3dc;">
+                          <div style="background:#47c3dc; text-align:center; padding: 1rem 8vw 2rem 8vw; color:#585858; font-family: Helvetica;">
+                            <div style="width;100%; margin: 0px;">
+                              <img src="https://lh3.googleusercontent.com/-yZaqfNuqddw/W6nbzBUXsfI/AAAAAAAAAAc/_w-fna_L7e8bdXG8rQuzNvDSQKVibIDcACL0BGAs/w530-d-h129-n-rw/Snowlogo.png" width="136px" height: "33px" >
+                            </div>
+                            <div style="width:100%; background:white; border-radius: 8px; margin: 0px; padding: 1px;" >
+                              <br><h2>Here is your verification Code: <br><br>
+                              <strong>';
+      $messageClient .= $passcode;
+      $messageClient .='
+                        </strong>
+                          </div>
+                        </div>
+                        </body>
+                      </html>
+                      ';
+      $headersClient  ="From: lem@lem.com";
+      $headersClient .= "MIME-Version: 1.0"."\r\n";
+      $headersClient .= "Content-type:text/html;charset=iso-8859-1"."\r\n";
+
+
+      mail($toClient,$subjectClient,$messageClient,$headersClient);
 
 ?>

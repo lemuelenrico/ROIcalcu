@@ -56,7 +56,7 @@
         <div class="container-fluid rightalgn"><img class="pointermarg" src="images/pointer2.png"></div>
           <h2 class="headngsprpg nospace">Software Details</h2>
           <div class="row">
-            <form action="roi.php" id="softwares" method="POST">
+            <form action="verifier.php" id="softwares" method="POST">
               <div class="col-md-6 col-sm-6">
                 <!--the following is commented for the mean time -->
                 <p for="transi" id= "applicationnametxt">Application A
