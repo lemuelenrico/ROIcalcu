@@ -5,7 +5,6 @@
         include ('connection.php');
         error_reporting(0);
         include ('db_company.php');
-
     ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,39 +21,40 @@
     <link href="icon/snowflake.png" rel="shortcut icon">
   </head>
   <body>
+    <nav class="navbar navbar-default nobord navsmallmrgbot">
+      <div class="container-fluid blueb navpad2">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!--  <a class="navbar-brand" href="#">-->
+          <a class="navbar-brand" href="https://www.snowsoftware.com/int">
+            <img src="images/Snowlogo.png"></a>
+        </div>
 
-    <div class="container">
-      <nav class="navbar navbar-default nobord const navsmallmrgbot">
-        <div class="container-fluid blueb">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-              <!--  <a class="navbar-brand" href="#">-->
-            <a class="navbar-brand" href="https://www.snowsoftware.com/int">
-              <img src="images/Snowlogo.png"></a>
-          </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-
-              <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
-              <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
-              <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>-->
-              <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+            <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
+            <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
+          <!--  <li><a href="help.html"><h class="whitfnt2 geofont">Help</p></a></li> -->
+            <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
     </nav>
 
-      <div class="jumbotron removeextrapadding">
-        <div class="container-fluid rightalgn"><img class="pointermarg" src="images/pointer2.png"></div>
-          <h2 class="headngsprpg nospace">Software Details</h2>
+  <div class="jumbotron jumboadd">
+    <h2 class="headngsprpg nospace centertext">Software Details</h2>
+  </div>
+    <div class="container">
+      <div class="jumbotron jumbotronaddcomp">
+        <img class="pointermarg" src="images/pointer2.png">
           <div class="row">
             <form action="verifier.php" id="softwares" method="POST">
               <div class="col-md-6 col-sm-6">
@@ -79,7 +79,7 @@
 
           <form action="roi.php" id="softwares" method="POST" autocomplete="off">
 
-          <div class="colorsemiwhite allspace">
+          <div class="colodarkerdiv allspace">
             <div class="form-group row openfont">
               <label for="appName" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Application Name</label>
               <div class="col-sm-4">
@@ -92,7 +92,6 @@
                         name="vendname" autocomplete="off">
               </div>
             </div>
-
             <div class="form-group row openfont">
               <label for="agreeType" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Agreement Type</label>
               <div class="col-sm-4">
@@ -153,16 +152,14 @@
               <div class="col-sm-4">
                     <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense" placeholder="0.00"
                                 name="costlicenses" autocomplete="off" required>
-
               </div>
             </div>
           </div><!--colorsemiwhite-->
             <br>
-
             <div class="row">
               <div class="col-md-1 col-sm-1"></div>
               <div class="col-md-8 centertext nospace">
-                  <label for="finalsubmit" class="openfont"><input type="checkbox" class="glyphpointer bigchkbx" id="finalsubmit" value=""><span class="aggrchk glyphpointer">
+                  <label for="finalsubmit" class="openfont whitfnt"><input type="checkbox" class="glyphpointer bigchkbx" id="finalsubmit" value=""><span class="aggrchk glyphpointer">
                     I consent the collection of my data to be used for the purpose of calculating ROI.
                   By proceeding, I also agree with the <!--<a href="terms.html" target="_blank"><u>Terms and Conditions</u></a> of the site.-->
                   <a href="https://www.snowsoftware.com/int/legal/termsofuse" target="_blank"><u>Terms and Conditions</u></a> of the site.</span>
@@ -174,18 +171,15 @@
               </div>
             </div>
           </form>
-
       </div><!-- jumbotron -->
-
 <!-- the followng is the link for the custom js files-->
-
     <script src="js/software.js"></script>
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-
-    <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
+    <div class="footer">
+      <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
+    </div>
   </body>
 </html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
       <?php
+          //session_start();
           include ('connection.php');
           error_reporting(0);
           include ('db_verifier.php');
@@ -20,50 +21,49 @@
     <link href="icon/snowflake.png" rel="shortcut icon">
   </head>
   <body>
+    <nav class="navbar navbar-default nobord navsmallmrgbot">
+      <div class="container-fluid blueb navpad2">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <!--  <a class="navbar-brand" href="#">-->
+          <a class="navbar-brand" href="https://www.snowsoftware.com/int">
+            <img src="images/Snowlogo.png"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
 
-    <div class="container">
-      <nav class="navbar navbar-default nobord const navsmallmrgbot">
-        <div class="container-fluid blueb">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-              <!--  <a class="navbar-brand" href="#">-->
-            <a class="navbar-brand" href="https://www.snowsoftware.com/int">
-              <img src="images/Snowlogo.png"></a>
-          </div>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-
-              <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
-              <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
-              <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</p></a></li>-->
-              <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+            <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
+            <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
+            <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</p></a></li>-->
+            <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
     </nav>
-      <div class="jumbotron aligncntr">
-        <div class="container-fluid rightalgn"><img class="pointermarg" src="images/pointer3.png"></div>
+    <div class="jumbotron jumboadd">
+      <h2 class="headngsprpg nospace centertext">ROI for
+        <?php
+        echo $companyName;
+         ?>
+      </h2>
+    </div>
+    <div class="container">
+      <div class="jumbotron jumbotronaddcomp">
+        <div class="container-fluid aligncntr"><img class="pointermarg" src="images/pointer3.png"></div>
         <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <h2 class="headngsprpg nospace">ROI for
-              <?php
-              echo $companyName;
-              ?>
-            </h2>
-          </div>
           <!--<div class="col-md-2 col-sm-2 middleset aligncntr">
 
             <a href="files/SampleCalculation.pdf" download><button type="button" class="btn dlbutdes">Download PDF</button></a>
           </div>-->
 <!--the following buttons are not working yet-->
-          <div class="col-md-6 col-sm-6 rightalgn"><br>
+          <div class="container-fluid rightalgn"><br>
 
             <form action="report2.php" method="POST" target="_blank">
               <!-- the following hidden input function as transitional variables for reporting-->
@@ -204,7 +204,6 @@
                       <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truValROI2); ?>%</td>
                       <td class="colorwhite yearlydata">$<?php echo number_format($truValSavings2,2); ?></td>
                   </tr>
-
                   <tr>
                       <td width="30%" id="thrdyrgradient">3rd Year</td>
                       <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truValROI3); ?>%</td>

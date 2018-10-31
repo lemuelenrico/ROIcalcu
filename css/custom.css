@@ -11,7 +11,13 @@
 }
 
 body {
-  background-color: #47c3dc;
+  //background-color: #47c3dc;
+  background-image: url("../images/roiback.jpg");
+  //background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+   -o-background-size: cover;
 }
 
 //.container {
@@ -40,7 +46,8 @@ body {
 }
 
 .jumbotron {
-  padding-top: 2.5rem;
+  padding-top: 2rem;
+  margin-bottom: 10px;
 }
 
 .const {
@@ -80,30 +87,40 @@ body {
   text-align: center;
   font-size: 6.5rem;
   font-weight: bold;
-  color: #47c3dc;
+  color: white;
+  //color: #47c3dc;
   //line-height: normal;
   font-family: Geogtq;
 }
 
 #introp {
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  color: #404040;
+  //font-weight: bold;
+  color: white;
+  //color: #404040;
 }
 
 #introc {
   text-align: center;
   font-size: 1.8;
   font-family: Geogtq;
-  color: #417379;
+  //color: #417379;
+  color: white;
 }
 
 .jumbotronadd {
   margin-top: 1.4rem;
   text-align: center;
   padding-bottom: 127px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.jumbotronaddcomp {
+  text-align: center;
+  padding-bottom: 50px;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .rightalgn{
@@ -115,11 +132,12 @@ body {
 .entbutdes {
   background-color: #ec8c2d;
   color: white;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 22px;
+  //font-weight: bold;
   min-height: inherit;
   padding: 1.5rem 6rem;
   border-radius: .5rem;
+  border-width: 0px;
 }
 
 .dfooter {
@@ -141,27 +159,29 @@ body {
 
 .headngsprpg {
   text-align: left;
-  font-size: 4.2rem;
-  font-weight: bold;
+  font-size: 6.5rem;
+  //font-weight: bold;
   font-family: Geogtq;
-  color: #47c3dc;
+  //color: #47c3dc;
+  color: white;
 }
 
-.leftdiv {
-  border-left:  1px;
-  border-top: 0px;
-  border-right: 0px;
-  border-bottom: 0px;
-  border-color: #D3D3D3;
-  border-style: solid;
-  padding-left: 4rem;
-  padding-right: 2rem;
-}
+//.leftdiv {
+//  border-left:  1px;
+//  border-top: 0px;
+//  border-right: 0px;
+//  border-bottom: 0px;
+//  border-color: #D3D3D3;
+//  border-style: solid;
+//  padding-left: 4rem;
+//  padding-right: 2rem;
+//}
 
 .notssub {
   font-size: 1.4rem;
   font-family: sans-serif Arial;
-  color: #417379;
+  //color: #417379;
+  color: white;
 }
 
 .nextbutdes {
@@ -225,7 +245,6 @@ body {
 }
 
 .softlabel {
-  font-family: sans-serif Arial;
   font-size:1.6rem;
   margin: 0px;
   padding-left: 7px;
@@ -233,6 +252,8 @@ body {
   padding-bottom: 7px;
   padding-top: 8px;
   border-width: 0px;
+  color: white;
+  font-style: normal;
 }
 
 .glypfonts {
@@ -389,7 +410,6 @@ body {
   min-height: inherit;
   padding: 1rem 2.8rem;
   border-radius: .5rem;
-  //font-weight: bold;
 }
 
 .showroibutdes {
@@ -508,11 +528,13 @@ th {
 .bigtxtbx {
   height: 58px;
   font-size: 23px;
+  color: white;
 }
 
 .midtxtbx {
   height: 45px;
   font-size: 18px;
+  color: white;
 }
 
 input[type='checkbox'] {
@@ -550,7 +572,7 @@ input[type='checkbox'].bigchkbx {
 }
 
 .colorsemiwhite {
-  background-color: #f5f5f5;
+  background: rgba(0, 0, 0, 0.2);;
 }
 .colorsemiwhite2 {
   background-color: #f9f9f9;
@@ -573,7 +595,6 @@ button {
   margin-top: 3rem;
 }
 
-
 .takeawaydiv {
   width: 100%;
   height: 350px;
@@ -582,7 +603,7 @@ button {
 }
 
 .eng {
-  background: url('../images/industry/Engg_default.png');
+  background: url('../images/industry/Engg_hover.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100px;
@@ -592,7 +613,7 @@ button {
 }
 
 .eng:hover {
-  background: url('../images/industry/Engg_hover.png') repeat-x;
+  background: url('../images/industry/Engg_default.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100px;
@@ -617,7 +638,7 @@ input:checked + .eng {
 }
 /*------*/
 .og {
-  background: url('../images/industry/O&G_default.png');
+  background: url('../images/industry/O&G_hover.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100px;
@@ -627,7 +648,7 @@ input:checked + .eng {
 }
 
 .og:hover {
-  background: url('../images/industry/O&G_hover.png') repeat-x;
+  background: url('../images/industry/O&G_default.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100px;
@@ -646,7 +667,7 @@ input:checked + .og {
 }
 /*------*/
 .auto {
-  background: url('../images/industry/Auto_default.png');
+  background: url('../images/industry/Auto_hover.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100px;
@@ -656,7 +677,7 @@ input:checked + .og {
 }
 
 .auto:hover {
-  background: url('../images/industry/Auto_hover.png') repeat-x;
+  background: url('../images/industry/Auto_default.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100px;
@@ -676,7 +697,7 @@ input:checked + .auto {
 
 /*------*/
 .mp {
-  background: url('../images/industry/Mech_default.png');
+  background: url('../images/industry/Mech_hover.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100px;
@@ -686,7 +707,7 @@ input:checked + .auto {
 }
 
 .mp:hover {
-  background: url('../images/industry/Mech_hover.png') repeat-x;
+  background: url('../images/industry/Mech_default.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100px;
@@ -706,7 +727,7 @@ input:checked + .mp {
 
 /*------*/
 .gov {
-  background: url('../images/industry/Gov_default.png');
+  background: url('../images/industry/Gov_hover.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100px;
@@ -716,7 +737,7 @@ input:checked + .mp {
 }
 
 .gov:hover {
-  background: url('../images/industry/Gov_hover.png') repeat-x;
+  background: url('../images/industry/Gov_default.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100px;
@@ -736,7 +757,7 @@ input:checked + .gov {
 
 /*------*/
 .oth {
-  background: url('../images/industry/Others_default.png');
+  background: url('../images/industry/Others_hover.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100px;
@@ -746,7 +767,7 @@ input:checked + .gov {
 }
 
 .oth:hover {
-  background: url('../images/industry/Others_hover.png') repeat-x;
+  background: url('../images/industry/Others_default.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100px;
@@ -831,6 +852,7 @@ label span {
 
 .custcenterright {
   text-align: right;
+  color: white;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -871,4 +893,66 @@ label span {
   padding-bottom: 2rem;
   color: #404040;
   font-weight: 500;
+}
+
+.footer {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #47c3dc;
+  color: white;
+  text-align: center;
+}
+
+.navpad {
+  padding: 18px;
+}
+
+.navpad2 {
+  padding-top: 18px;
+  padding-left: 18px;
+  padding-bottom: 8px;
+  padding-right: 18px;
+}
+
+.jumboadd {
+  margin-top: 1.4rem;
+  text-align: center;
+  border-radius: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.whitefont {
+  color: white;
+}
+
+.form-control {
+  background: transparent;
+  border-color: white;
+}
+
+a{
+  color: white;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #808080;
+}
+
+.verifytxtbox {
+  height: 58px;
+  font-size: 25px;
+  color: black;
+  text-align: center;
+}
+
+.verifyjumbotron {
+  margin: 100px auto;
+  width: 80%;
 }

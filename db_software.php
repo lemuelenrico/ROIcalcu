@@ -241,31 +241,45 @@ else  {
       $passcode = 'QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm0123456789';
       $passcode = substr(str_shuffle($passcode), 0, 6);
 
-      $toClient=$comEmailTr;
-      $subjectClient  ="ROI calc Passcode";
-      $messageClient  ='
+      //$_SESSION['passcode'] = $passcode;
+
+      $toVerify=$comEmailTr;
+      $subjectVerify  ="ROI calc Passcode";
+      $messageVerify  ='
                       <html>
-                        <body style="background:#47c3dc;">
-                          <div style="background:#47c3dc; text-align:center; padding: 1rem 8vw 2rem 8vw; color:#585858; font-family: Helvetica;">
-                            <div style="width;100%; margin: 0px;">
-                              <img src="https://lh3.googleusercontent.com/-yZaqfNuqddw/W6nbzBUXsfI/AAAAAAAAAAc/_w-fna_L7e8bdXG8rQuzNvDSQKVibIDcACL0BGAs/w530-d-h129-n-rw/Snowlogo.png" width="136px" height: "33px" >
-                            </div>
-                            <div style="width:100%; background:white; border-radius: 8px; margin: 0px; padding: 1px;" >
-                              <br><h2>Here is your verification Code: <br><br>
-                              <strong>';
-      $messageClient .= $passcode;
-      $messageClient .='
-                        </strong>
-                          </div>
+                        <body>
+                        <div style="color:#585858; font-family: Helvetica;" padding:0; margin:0;>
+                        <div style="width:500px; margin: 0 auto;">
+                        <div style="width:100%; background:#47c3dc; margin: 0; padding-top: 20px; padding-bottom: 16px; text-align:center;">
+                        <img src="https://lh3.googleusercontent.com/-yZaqfNuqddw/W6nbzBUXsfI/AAAAAAAAAAc/_w-fna_L7e8bdXG8rQuzNvDSQKVibIDcACL0BGAs/w530-d-h129-n-rw/Snowlogo.png" width="136px" height: "33px" >
+                        </div>
+                        <div style="width:100%; text-align:center; background:#E8E8E8; margin:0; padding:0;">
+                        <br><h2>Hello ';
+      $messageVerify .= $companyName;
+      $messageVerify .= '! Here is your verification code for <br>calculated results: <br><br>
+                        <div style="width:200px; background:white; font-size: 30px; font-family: Arial; margin:0 auto; padding: 10px; border-bottom: 6px solid #ec8c2d;">';
+      $messageVerify .= $passcode;
+      $messageVerify .='
+                        </div><br>
+                        <div style="background:#dcdcdc; text-align:center; width:100%; margin: 0; padding-top: 40px; padding-bottom: 50px; color:#f5f5f5; font-size:12px;">
+                        <a href="https://www.snowsoftware.com/int/contact" style="background-color:#ec8c2d; color:white; padding: 15px 20px; text-decoration:none; font-size:16px;">CONTACT SNOW</a>
+                        </div>
+                        <br>
+                        <div style="background:#47c3dc; width:100%; margin: 0; padding-top: 10px; padding-bottom: 12px; color:#f5f5f5; font-size:12px;">';
+      $messageVerify .= 'All rights reserved ©';
+      $messageVerify .= date('Y');
+      $messageVerify .='. Snow ROI Calculator.
+                        </div>
+                        </div>
+                        </div>
                         </div>
                         </body>
                       </html>
                       ';
-      $headersClient  ="From: lem@lem.com";
-      $headersClient .= "MIME-Version: 1.0"."\r\n";
-      $headersClient .= "Content-type:text/html;charset=iso-8859-1"."\r\n";
+      $headersVerify  ="From: lem@lem.com";
+      $headersVerify .= "MIME-Version: 1.0"."\r\n";
+      $headersVerify .= "Content-type:text/html;charset=iso-8859-1"."\r\n";
 
-
-      mail($toClient,$subjectClient,$messageClient,$headersClient);
+      mail($toVerify,$subjectVerify,$messageVerify,$headersVerify);
 
 ?>

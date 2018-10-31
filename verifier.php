@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <?php
+        //session_start();
         include ('connection.php');
         error_reporting(0);
         include ('db_software.php');
@@ -18,10 +19,8 @@
     <link href="icon/snowflake.png" rel="shortcut icon">
   </head>
   <body>
-
-    <div class="container">
-      <nav class="navbar navbar-default nobord const navsmallmrgbot">
-        <div class="container-fluid blueb">
+      <nav class="navbar navbar-default nobord navsmallmrgbot">
+        <div class="container-fluid navpad2 blueb">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -42,17 +41,16 @@
                   <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li> -->
 
               <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
+              <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
               <li><a href="#"><h class="whitfnt2 geofont">Help</p></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-
-      <div class="jumbotron centertext">
-          <h2 class="headngsprpg">Verifier</h2>
-
-          <h3 class="forhelpstat openfont"> Please input the code we've sent to your email. <h>
-
+    <div class="container centertext">
+      <div class="jumbotron jumbotronaddcomp verifyjumbotron">
+          <h3 class="openfont whitefont">For security reasons, we sent a verifier to <u><i><?php echo $comEmailTr; ?></i></u>, please input the six-character code you received <br> or you can click
+                <a><u onclick="resend()">here</u></a> to send another verifier.<h3>
             <form onsubmit="return verify()" action="roi.php" method="post">
             <!--the following are just transitional variabl-->
               <input type="hidden" name="vercom" value="<?php echo $companyName ?>">
@@ -70,19 +68,24 @@
               <input type="hidden" name="versav2" value="<?php echo $truValSavings2 ?>">
               <input type="hidden" name="verroi3" value="<?php echo $truValROI3 ?>">
               <input type="hidden" name="versav3" value="<?php echo $truValSavings3 ?>">
-
-              <input class="bigtxtbx" type="text" id="passcode" name="passcode" required>
-              <input type="submit" value="Enter">
+              <input class="verifytxtbox" type="text" id="passcode" name="passcode" required><br><br>
+              <!--<span class="text-danger"><?php echo $verificationError; ?></span>-->
+              <input type="submit" class="entbutdes" name="enter" value="Proceed">
+            <!--  <button class="entbutdes" onclick="resend()">Resend</button> -->
             </form>
           </div>
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
+    <div class="footer">
+      <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
+    </div>
     <script>
-    function verify(){var/*sfdasdfasdfasfasdfasdfasfadf*/pass=document.getElementById('passcode').value;if(pass!="<?php echo$passcode;?>"){alert("Passcode is wrong.");return false;}}
+    function resend() {
+      location.reload();
+    }
+    function verify(){var _0x414dx1=document["getElementById"]("passcode")["value"];if(_0x414dx1!= "<?php echo$passcode;?>"){alert("Passcode is wrong.");return false}}
     </script>
   </body>
 </html>
