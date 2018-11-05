@@ -15,8 +15,8 @@
   <body>
 
     <div class="container">
-      <nav class="navbar navbar-default nobord const navsmallmrgbot">
-        <div class="container-fluid blueb">
+      <<nav class="navbar navbar-default nobord navsmallmrgbot">
+        <div class="container-fluid navpad2 blueb">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -29,6 +29,7 @@
             <a class="navbar-brand" href="https://www.snowsoftware.com/int">
               <img src="../images/Snowlogo.png"></a>
           </div>
+
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -37,8 +38,7 @@
 
               <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
               <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
-              <!--<li><a href="#"><h class="whitfnt2 geofont">Help</p></a></li>-->
-              <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
+              <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</p></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -87,7 +87,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <script>
       var sendvalidemail = document.getElementById("sendvalidemail");
 

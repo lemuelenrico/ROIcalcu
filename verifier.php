@@ -42,7 +42,7 @@
 
               <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
               <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
-              <li><a href="#"><h class="whitfnt2 geofont">Help</p></a></li>
+              <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</p></a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

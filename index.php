@@ -45,11 +45,6 @@
       <div class="jumbotron jumbotronadd">
         <h1 id="bigtkwy">ROI Calculator</h1>
         <br>
-          <!--<p id="introp" class="geofont">
-            This ROI Calculator provides you with an approximate amount of the savings that you may get from investing in Snow for Engineering tools.
-            It will need your company and software details in order to provide an accurate estimate of your possible ROI. All information provided will be
-            processed in accordance with existing privacy and data protection rules and regulations and will be used for the sole purpose of calculating ROI.
-          </p>-->
           <p id="introp" class="geofont">
             This ROI Calculator provides you with an approximate amount of the savings that you may get from investing in Snow for Engineering tools.
             All information provided will be processed in accordance with existing privacy and data protection rules and regulations and will be used for the sole purpose of calculating ROI.
