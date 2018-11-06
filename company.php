@@ -56,7 +56,7 @@
                     <label class="secondtop"><input type="radio" id="ind2" name="industry" onclick="lblindstry(3)" value="Oil and Gas"><span title="Oil and Gas" class="og"></span></label>
                     <label class="thirdtop"><input type="radio" id="ind3" name="industry" onclick="lblindstry(2)" value="Automotive"><span title="Automotive" class="auto"></span></label><br>
 
-                    <label class="fourthtop"><input type="radio" id="ind4" name="industry" onclick="lblindstry(4)" value="Mechanical and Precision"><span title="Mechanical and Precision" class="mp"></span></label>
+                    <label class="fourthtop"><input type="radio" id="ind4" name="industry" onclick="lblindstry(4)" value="Mechanical & Precision"><span title="Mechanical and Precision" class="mp"></span></label>
                     <label class="fifthtop"><input type="radio" id="ind5" name="industry" onclick="lblindstry(5)" value="Government"><span title="Government" class="gov"></span></label>
                     <label class="sixthtop"><input type="radio" id="ind6" name="industry" onclick="lblindstry(6)" value="Others"><span title="Others" class="oth"></span></label>
                     <img class="selectind" src="images/industry/selectindustry.png">
@@ -77,8 +77,8 @@
                           </a>
                         </div> -->
         </div>
-                      <div class="col-md-6 col-sm-6">
-                        <div class="leftdiv">
+            <div class="col-md-6 col-sm-6">
+              <div class="leftdiv">
 
                 <br>
               <br><!--bunch of linebreaks-->

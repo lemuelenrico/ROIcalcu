@@ -9,6 +9,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--  <script>
+
+    function background(value){
+      var value = "Automotive";
+      if (value=="Automotive") {
+        document.body.style.background = url('../images/roiback2.jpg');
+      }
+    }
+
+  </script> -->
+
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!--for tooltip toggle, backdraw is burger menu for mobile view has some decreased functionality-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -20,6 +31,13 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="icon/snowflake.png" rel="shortcut icon">
+    <style>
+
+    body {
+    background-image: url("<?php echo $backgroundURL; ?>");
+    }
+
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-default nobord navsmallmrgbot">
@@ -60,7 +78,7 @@
             <form action="verifier.php" id="softwares" method="POST">
               <div class="col-md-6 col-sm-6">
                 <!--the following is commented for the mean time -->
-                <p for="transi" id= "applicationnametxt">Application A
+               <!--<p for="transi" id= "applicationnametxt">Application A-->
                       <!--<?php echo $comName ?>--></p>
                 <div class="col-sm-3">
                   <!-- the following hidden input function as transitional variables from database to database visualization only-->
@@ -78,9 +96,16 @@
               </div>
           </div>
 
+          <div class="leftalgn nospace">
+              <label class="selectorspace"><input type="radio" name="Applicationlbl" value="" checked="checked"><span class="applbl centertext openfont">Application</span></label>
+              <label class="selectorspace"><input type="radio" name="AppSelector" value="" onclick="selector(1)" checked="checked"><span class="app1 centertext openfont">A</span></label>
+              <label class="selectorspace"><input type="radio" name="AppSelector" value="" onclick="selector(2)"><span class="app2 centertext openfont">B</span></label>
+              <label class="selectorspace"><input type="radio" name="AppSelector" value="" onclick="selector(3)"><span class="app3 centertext openfont">C</span></label>
+          </div>
+
           <form action="roi.php" id="softwares" method="POST" autocomplete="off">
 
-          <div class="colodarkerdiv allspace">
+          <div id="AppSelector1">
             <div class="form-group row openfont">
               <label for="appName" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Application Name</label>
               <div class="col-sm-4">
@@ -156,6 +181,161 @@
               </div>
             </div>
           </div><!--colorsemiwhite-->
+
+          <div id="AppSelector2">
+            <div class="form-group row openfont">
+              <label for="appName2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Application Name2</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control midtxtbx" id="appName2" placeholder="(i.e. AutoCAD, Petrel)"
+                        name="appname2" autocomplete="off" required>
+              </div>
+              <label for="vendName2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Vendor Name2</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control midtxtbx" id="vendName2" placeholder="(i.e. ANSYS, Halliburton)"
+                        name="vendname2" autocomplete="off">
+              </div>
+            </div>
+            <div class="form-group row openfont">
+              <label for="agreeType2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Agreement Type2</label>
+              <div class="col-sm-4">
+                <select class="custom-select form-control midtxtbx" id="agreeType2"
+                        name="agreetype2">
+                  <option value ="Perpetual" Selected>Perpetual</option>
+                  <option value="Lease">Lease</option>
+                  <option value="Rent">Rent</option>
+                  <option value="Subscription">Subscription</option>
+                  <option value="PPU">PPU</option>
+                  <option value="Other">Other</option>
+                  <option value="Don't Know">Don't Know</option>
+                </select>
+              </div>
+              <label for="licType2" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>License Type2</label>
+              <div class="col-sm-4">
+                <select class="custom-select form-control midtxtbx" id="licType2"
+                        name="lictype2">
+                  <option selected>Concurrent - Local</option>
+                  <option value="Concurrent - Global">Concurrent - Global</option>
+                  <option value="Named User">Named User</option>
+                  <option value="Host Bound">Host Bound</option>
+                  <option value="Elapsed Time">Elapsed Time</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group row openfont">
+              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>Install Location2</label>
+                <div class="col-sm-1">
+                  <label><input title="Server" type="checkbox" name="location2[]" class="glyphpointer" id="server2" value="Server">
+                    <img src="images/iconserv.png" id="servericon" class="glyphpointer" data-toggle="tooltip" title="Server">
+                </label></div>
+
+                <div class="col-sm-1 nospace leftpad">
+                  <label><input title="Desktop" type="checkbox" name="location2[]" class="glyphpointer" id="desktop2" value="Desktop">
+                    <img src="images/icondesk.png" id="desktopicon" class="glyphpointer" data-toggle="tooltip" title="Desktop">
+                  </label></div>
+
+                <div class="col-sm-2">
+                  <label><input title="Cloud" type="checkbox" name="location2[]" class="glyphpointer" id="cloud2" value="Cloud">
+                    <img src="images/iconcloud.png" id="cloudicon" class="glyphpointer" data-toggle="tooltip" title="Cloud">
+                  </label></div>
+
+              <label for="renDate2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Renewal Date2</label>
+              <div class="col-sm-4">
+                <input type="date" class="form-control midtxtbx" id="renDate2" placeholder="mm/dd/yyyy"
+                        name="rendate2">
+              </div>
+            </div>
+            <div class="form-group row openfont">
+              <label for="numLicenses2" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>NumberofLicenses2</label>
+              <div class="col-sm-4">
+                <input type="number" min="0" class="form-control midtxtbx" id="numLicenses2" placeholder="0"
+                        name="numlicenses2" autocomplete="off" required>
+              </div>
+              <label for="costLicense2" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>CostperLicense($)2</label>
+              <div class="col-sm-4">
+                    <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense2" placeholder="0.00"
+                                name="costlicenses2" autocomplete="off" required>
+              </div>
+            </div>
+          </div>
+
+          <div id="AppSelector3">
+            <div class="form-group row openfont">
+              <label for="appName3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Application Name3</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control midtxtbx" id="appName3" placeholder="(i.e. AutoCAD, Petrel)"
+                        name="appname3" autocomplete="off" required>
+              </div>
+              <label for="vendName3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Vendor Name3</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control midtxtbx" id="vendName3" placeholder="(i.e. ANSYS, Halliburton)"
+                        name="vendname3" autocomplete="off">
+              </div>
+            </div>
+            <div class="form-group row openfont">
+              <label for="agreeType3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Agreement Type3</label>
+              <div class="col-sm-4">
+                <select class="custom-select form-control midtxtbx" id="agreeType3"
+                        name="agreetype3">
+                  <option value ="Perpetual" Selected>Perpetual</option>
+                  <option value="Lease">Lease</option>
+                  <option value="Rent">Rent</option>
+                  <option value="Subscription">Subscription</option>
+                  <option value="PPU">PPU</option>
+                  <option value="Other">Other</option>
+                  <option value="Don't Know">Don't Know</option>
+                </select>
+              </div>
+              <label for="licType3" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>License Type3</label>
+              <div class="col-sm-4">
+                <select class="custom-select form-control midtxtbx" id="licType3"
+                        name="lictype3">
+                  <option selected>Concurrent - Local</option>
+                  <option value="Concurrent - Global">Concurrent - Global</option>
+                  <option value="Named User">Named User</option>
+                  <option value="Host Bound">Host Bound</option>
+                  <option value="Elapsed Time">Elapsed Time</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group row openfont">
+              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>Install Location3</label>
+                <div class="col-sm-1">
+                  <label><input title="Server" type="checkbox" name="location[]" class="glyphpointer" id="server3" value="Server">
+                    <img src="images/iconserv.png" id="servericon" class="glyphpointer" data-toggle="tooltip" title="Server">
+                </label></div>
+
+                <div class="col-sm-1 nospace leftpad">
+                  <label><input title="Desktop" type="checkbox" name="location[]" class="glyphpointer" id="desktop3" value="Desktop">
+                    <img src="images/icondesk.png" id="desktopicon" class="glyphpointer" data-toggle="tooltip" title="Desktop">
+                  </label></div>
+
+                <div class="col-sm-2">
+                  <label><input title="Cloud" type="checkbox" name="location[]" class="glyphpointer" id="cloud3" value="Cloud">
+                    <img src="images/iconcloud.png" id="cloudicon" class="glyphpointer" data-toggle="tooltip" title="Cloud">
+                  </label></div>
+
+              <label for="renDate3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Renewal Date3</label>
+              <div class="col-sm-4">
+                <input type="date" class="form-control midtxtbx" id="renDate3" placeholder="mm/dd/yyyy"
+                        name="rendate3">
+              </div>
+            </div>
+            <div class="form-group row openfont">
+              <label for="numLicenses3" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>NumberofLicenses3</label>
+              <div class="col-sm-4">
+                <input type="number" min="0" class="form-control midtxtbx" id="numLicenses3" placeholder="0"
+                        name="numlicenses3" autocomplete="off" required>
+              </div>
+              <label for="costLicense3" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>CostperLicense($)3</label>
+              <div class="col-sm-4">
+                    <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense3" placeholder="0.00"
+                                name="costlicenses3" autocomplete="off" required>
+              </div>
+            </div>
+          </div>
+
             <br>
             <div class="row">
               <div class="col-md-1 col-sm-1"></div>
@@ -172,7 +352,25 @@
               </div>
             </div>
           </form>
-      </div><!-- jumbotron -->
+        </div>
+
+        <!--modals-->
+            <div id="modal-wrapper" class="modal">
+                <div class="modal-content animate">
+                    <span onclick="document.getElementById('modal-wrapper').style.display='none'"
+                    class="close" title="Close PopUp">&times;</span>
+                    <p class="leftalgn">Please choose atleast one Install Location. </p>
+                </div>
+              </div>
+
+              <div id="modal-wrapper2" class="modal2">
+                  <div class="modal-content animate">
+                      <span onclick="document.getElementById('modal-wrapper2').style.display='none'"
+                      class="close" title="Close PopUp">&times;</span>
+                      <p class="leftalgn">  Please agree to our terms and conditions to proceed.</p>
+                    </div>
+                </div>
+
 <!-- the followng is the link for the custom js files-->
     <script src="js/software.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
