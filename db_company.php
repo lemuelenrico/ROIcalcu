@@ -52,4 +52,7 @@ elseif ($industry=='Others') {
   $backgroundURL = "images/bg/Other_bg.jpg";
 }
 
+else {
+  $backgroundURL = "images/roiback.jpg";
+}
 ?>

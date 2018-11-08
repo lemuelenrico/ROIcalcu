@@ -34,7 +34,7 @@
     <style>
 
     body {
-    background-image: url("<?php echo $backgroundURL; ?>");
+    //background-image: url("<?php echo $backgroundURL; ?>");
     }
 
     </style>
@@ -182,7 +182,7 @@
             </div>
           </div><!--colorsemiwhite-->
 
-          <div id="AppSelector2">
+        <!--  <div id="AppSelector2">
             <div class="form-group row openfont">
               <label for="appName2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Application Name2</label>
               <div class="col-sm-4">
@@ -334,7 +334,7 @@
                                 name="costlicenses3" autocomplete="off" required>
               </div>
             </div>
-          </div>
+          </div>-->
 
             <br>
             <div class="row">
@@ -357,17 +357,19 @@
         <!--modals-->
             <div id="modal-wrapper" class="modal">
                 <div class="modal-content animate">
+                  <img src="images/warning.png" length="40px" width="140px">
                     <span onclick="document.getElementById('modal-wrapper').style.display='none'"
                     class="close" title="Close PopUp">&times;</span>
-                    <p class="leftalgn">Please choose atleast one Install Location. </p>
+                    <p class="centertext">Please choose atleast one Install Location. </p>
                 </div>
               </div>
 
               <div id="modal-wrapper2" class="modal2">
                   <div class="modal-content animate">
+                    <img src="images/warning.png" length="40px" width="140px">
                       <span onclick="document.getElementById('modal-wrapper2').style.display='none'"
                       class="close" title="Close PopUp">&times;</span>
-                      <p class="leftalgn">  Please agree to our terms and conditions to proceed.</p>
+                      <p class="center">  Please agree to our terms and conditions to proceed.</p>
                     </div>
                 </div>
 

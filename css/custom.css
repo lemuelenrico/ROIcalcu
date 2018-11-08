@@ -458,29 +458,29 @@ th {
 }
 
 #firstyrgradient {
-  //background: linear-gradient(top, #ffba00 0%, #ffae19 100%);
-  //background: -webkit-linear-gradient(top, #ffba00 0%, #ffae19 100%);
-  background-color: #47c3dc;
+  background: linear-gradient(top, #ffba00 0%, #ffae19 100%);
+  background: -webkit-linear-gradient(top, #ffba00 0%, #ffae19 100%);
+  //background-color: #47c3dc;
   font-family: Geogtq;
   font-size: 4vh;
   color: white;
-  //border-bottom: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
 #secondyrgradient {
-  //background: linear-gradient(top, #ffae19 0%, #ffa500 100%);
-  //background: -webkit-linear-gradient(top, #ffae19 0%, #ffa500 100%);
-  background-color: #417379;
+  background: linear-gradient(top, #ffae19 0%, #ffa500 100%);
+  background: -webkit-linear-gradient(top, #ffae19 0%, #ffa500 100%);
+  //background-color: #417379;
   font-family: Geogtq;
   font-size: 4vh;
   color: white;
-  //border-bottom:2px solid white;
+  border-bottom:2px solid white;
 }
 
 #thrdyrgradient {
-  //background: linear-gradient(top, #ffa500 0%, #ec8c2d 100%);
-  //background: -webkit-linear-gradient(top, #ffa500 0%, #ec8c2d 100%);
-  background-color: #ec8c2d;
+  background: linear-gradient(top, #ffa500 0%, #ec8c2d 100%);
+  background: -webkit-linear-gradient(top, #ffa500 0%, #ec8c2d 100%);
+  //background-color: #ec8c2d;
   font-family: Geogtq;
   font-size: 4vh;
   color: white;
@@ -840,7 +840,7 @@ label span {
 }
 
 .selectind {
-  height: 85px;
+  height: 88px;
   width: 112px;
   position: absolute;
   top: 133px;
@@ -1102,19 +1102,24 @@ input:checked + .applbl {
 /* Modal Content Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 4% auto 15% auto;
+    margin: 14% auto 15% auto;
     border: 1px solid #888;
     width: 50%;
 	  padding: 30px;
     text-align: center;
     border-radius: 10px;
+    border-width: 10px;
+    border-color: #47c3dc;
+    font-family: OpenSans;
+    font-size: 30px;
+    text-align: center;
 }
 
 /* The Close Button (x) */
 .close {
     position: absolute;
     right: 25px;
-    top: 0;
+    top: 10px;
     color: #000;
     font-size: 35px;
     font-weight: bold;

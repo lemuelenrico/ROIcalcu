@@ -171,14 +171,14 @@
             <br>
             <div class="row nospace">
               <div class="col-md-6 col-sm-6 nospace">
-                <div class="colorwhite graphcontainter roidiv"><!--you can incluce text here adsfasdf-->
+                <div class="graphcontainter roidiv"><!--you can incluce text here adsfasdf-->
                   <canvas id="roiChartBar"></canvas><br>
                 </div>
               </div>
 
 
             <div class="col-md-6 col-sm-6 nospace">
-              <div class="colorwhite graphcontainter roidiv"><!--you can incluce text here adsfasdf-->
+              <div class="graphcontainter roidiv"><!--you can incluce text here adsfasdf-->
                 <canvas id="roiChartPie"></canvas><br>
               </div>
             </div>
@@ -233,9 +233,9 @@
             <?php echo $truValROI2; ?>,
             <?php echo $truValROI3; ?>,
           ],
-          backgroundColor:['#47c3dc','#417379','#ec8c2d'],
+          backgroundColor:['#ffae19','#ffa500','#ec8c2d'],
           hoverBorderWidth: 3,
-          hoverBorderColor: '#686868'
+          hoverBorderColor: "#F0F0F0"
         }]
       },
       options:{
@@ -243,7 +243,8 @@
         title: {
           display: true,
           text: 'ROI for Three years',
-          fontSize: 20
+          fontSize: 20,
+          fontColor: "white"
         },
         legend:{
           display:false
@@ -254,7 +255,7 @@
               display: true,
               labelString: 'Time (Yr)',
               fontSize: 19,
-              fontColor: "#417379",
+              fontColor: "white",
               fontFamily: "Geogtq"
             }
           }],
@@ -263,7 +264,7 @@
               display: true,
               labelString: 'Value (%)',
               fontSize: 15,
-              fontColor: "#417379",
+              fontColor: "white",
               fontFamily: "OpenSans"
             },
             ticks: {
@@ -289,8 +290,9 @@
             <?php echo $truValSavings3; ?>,
           ],
           backgroundColor:['#47c3dc','#417379','#ec8c2d'],
+          borderWidth: 0,
           hoverBorderWidth: 3,
-          hoverBorderColor: '#686868'
+          hoverBorderColor: '#F0F0F0'
         }]
       },
       options:{
@@ -298,7 +300,8 @@
         title: {
           display: true,
           text: 'Savings for Three Years ($)',
-          fontSize: 20
+          fontSize: 20,
+          fontColor: "white"
         },
         scales: {
           xAxes: [{
@@ -307,7 +310,7 @@
               display: true,
               labelString: 'Time (Yr)',
               fontSize: 19,
-              fontColor: "#417379",
+              fontColor: "white",
               fontFamily: "Geogtq"
             }
           }],
