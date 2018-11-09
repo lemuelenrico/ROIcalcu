@@ -25,6 +25,12 @@ $noOfUsersTr  = $_POST ['transi5'];
 
         /*the following are the variables for yearly breakdown of ROI, this is open to change*/
 
+        /*
+        $engROI = array(917, 500, 600);
+        $ogROI = array(1458, 750, 800);
+        $mpROI = array(105, 90, 50);
+        var_dump($engROI);*/
+
         $engROIyr1  = 917;   $ogROIyr1   = 1458;   $mpROIyr1     = 105;
         $engROIyr2  = 500;   $ogROIyr2   = 750;    $mpROIyr2     = 90;
         $engROIyr3  = 600;   $ogROIyr3   = 800;    $mpROIyr3     = 50;
@@ -34,6 +40,7 @@ $noOfUsersTr  = $_POST ['transi5'];
         $govROIyr3  = 50;    $autoROIyr3 =  75;   $othersROIyr3  = 73;
 
         /*the following are the formula for each industry*/
+
 
         $engSavings1  = ($engROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
         $engSavings2  = ($engROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
@@ -46,6 +53,17 @@ $noOfUsersTr  = $_POST ['transi5'];
         $mpSavings1   = ($mpROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
         $mpSavings2   = ($mpROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
         $mpSavings3   = ($mpROIyr3 * 0.01) * ($costPerLicense*$noOfLicenses);
+
+        /*
+        $engSavings = [];
+        $ogSavings = [];
+        $mpSavings = [];
+        for($i = 0; $i < 3; $i++){
+            $engSavings = ($engROI[$i] * 0.01) * ($costPerLicense*$noOfLicenses);
+            $ogSavings = ($ogROI[$i] * 0.01) * ($costPerLicense*$noOfLicenses);
+            $mpSavings = ($mpROI[$i] * 0.01) * ($costPerLicense*$noOfLicenses);
+        }
+        var_dump($engSavings);*/
 
         $govSavings1  = ($govROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
         $govSavings2  = ($govROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);

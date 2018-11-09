@@ -1102,7 +1102,7 @@ input:checked + .applbl {
 /* Modal Content Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 14% auto 15% auto;
+    margin: 4% auto 15% auto;
     border: 1px solid #888;
     width: 50%;
 	  padding: 30px;
@@ -1149,4 +1149,99 @@ input:checked + .applbl {
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
     //-webkit-filter: blur(8px);
+}
+
+
+.lvl1 {
+  background: url('../images/snowlevels/first_default.png');
+  opacity: 0.4;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 117px;
+  width: 300px;
+  display: inline-block;
+
+}
+
+input:checked + .lvl1 {
+  background: url('../images/snowlevels/first_selected.png');
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 117px;
+  width: 300px;
+  display: inline-block;
+}
+
+.lvl2 {
+  background: url('../images/snowlevels/second_default.png');
+  opacity: 0.4;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 162px;
+  width: 300px;
+  display: inline-block;
+
+}
+
+input:checked + .lvl2 {
+  background: url('../images/snowlevels/second_selected.png');
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 162px;
+  width: 300px;
+  display: inline-block;
+}
+
+.lvl3 {
+  background: url('../images/snowlevels/third_default.png');
+  opacity: 0.4;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 155px;
+  width: 300px;
+  display: inline-block;
+
+}
+
+input:checked + .lvl3 {
+  background: url('../images/snowlevels/third_selected.png');
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 155px;
+  width: 300px;
+  display: inline-block;
+}
+
+.lvlselectorspace {
+  padding-top: auto;
+  padding-bottom: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.lvlselectordiv {
+  height: 180px;
+  position: relative;
+  //background-color: orange;
+}
+
+.lvlselectorspace1 {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+}
+
+.lvlselectorspace2 {
+  position: absolute;
+  top: 10px;
+  left: 330px;
+}
+
+.lvlselectorspace3 {
+  position: absolute;
+  top: 12px;
+  left: 612px;
 }

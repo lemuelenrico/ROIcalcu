@@ -182,12 +182,12 @@
             </div>
           </div><!--colorsemiwhite-->
 
-        <!--  <div id="AppSelector2">
+        <div id="AppSelector2">
             <div class="form-group row openfont">
               <label for="appName2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Application Name2</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control midtxtbx" id="appName2" placeholder="(i.e. AutoCAD, Petrel)"
-                        name="appname2" autocomplete="off" required>
+                        name="appname2" autocomplete="off">
               </div>
               <label for="vendName2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Vendor Name2</label>
               <div class="col-sm-4">
@@ -209,7 +209,7 @@
                   <option value="Don't Know">Don't Know</option>
                 </select>
               </div>
-              <label for="licType2" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>License Type2</label>
+              <label for="licType2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>License Type2</label>
               <div class="col-sm-4">
                 <select class="custom-select form-control midtxtbx" id="licType2"
                         name="lictype2">
@@ -223,7 +223,7 @@
             </div>
 
             <div class="form-group row openfont">
-              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>Install Location2</label>
+              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn openfont"<span class="requiredclr">*</span>Install Location2</label>
                 <div class="col-sm-1">
                   <label><input title="Server" type="checkbox" name="location2[]" class="glyphpointer" id="server2" value="Server">
                     <img src="images/iconserv.png" id="servericon" class="glyphpointer" data-toggle="tooltip" title="Server">
@@ -246,15 +246,15 @@
               </div>
             </div>
             <div class="form-group row openfont">
-              <label for="numLicenses2" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>NumberofLicenses2</label>
+              <label for="numLicenses2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>NumberofLicenses2</label>
               <div class="col-sm-4">
                 <input type="number" min="0" class="form-control midtxtbx" id="numLicenses2" placeholder="0"
-                        name="numlicenses2" autocomplete="off" required>
+                        name="numlicenses2" autocomplete="off">
               </div>
               <label for="costLicense2" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>CostperLicense($)2</label>
               <div class="col-sm-4">
                     <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense2" placeholder="0.00"
-                                name="costlicenses2" autocomplete="off" required>
+                                name="costlicenses2" autocomplete="off">
               </div>
             </div>
           </div>
@@ -264,7 +264,7 @@
               <label for="appName3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Application Name3</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control midtxtbx" id="appName3" placeholder="(i.e. AutoCAD, Petrel)"
-                        name="appname3" autocomplete="off" required>
+                        name="appname3" autocomplete="off">
               </div>
               <label for="vendName3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Vendor Name3</label>
               <div class="col-sm-4">
@@ -286,7 +286,7 @@
                   <option value="Don't Know">Don't Know</option>
                 </select>
               </div>
-              <label for="licType3" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>License Type3</label>
+              <label for="licType3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>License Type3</label>
               <div class="col-sm-4">
                 <select class="custom-select form-control midtxtbx" id="licType3"
                         name="lictype3">
@@ -300,7 +300,7 @@
             </div>
 
             <div class="form-group row openfont">
-              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>Install Location3</label>
+              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Install Location3</label>
                 <div class="col-sm-1">
                   <label><input title="Server" type="checkbox" name="location[]" class="glyphpointer" id="server3" value="Server">
                     <img src="images/iconserv.png" id="servericon" class="glyphpointer" data-toggle="tooltip" title="Server">
@@ -323,18 +323,18 @@
               </div>
             </div>
             <div class="form-group row openfont">
-              <label for="numLicenses3" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>NumberofLicenses3</label>
+              <label for="numLicenses3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>NumberofLicenses3</label>
               <div class="col-sm-4">
                 <input type="number" min="0" class="form-control midtxtbx" id="numLicenses3" placeholder="0"
-                        name="numlicenses3" autocomplete="off" required>
+                        name="numlicenses3" autocomplete="off">
               </div>
-              <label for="costLicense3" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>CostperLicense($)3</label>
+              <label for="costLicense3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>CostperLicense($)3</label>
               <div class="col-sm-4">
                     <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense3" placeholder="0.00"
-                                name="costlicenses3" autocomplete="off" required>
+                                name="costlicenses3" autocomplete="off">
               </div>
             </div>
-          </div>-->
+          </div>
 
             <br>
             <div class="row">
@@ -355,7 +355,7 @@
         </div>
 
         <!--modals-->
-            <div id="modal-wrapper" class="modal">
+              <div id="modal-wrapper" class="modal">
                 <div class="modal-content animate">
                   <img src="images/warning.png" length="40px" width="140px">
                     <span onclick="document.getElementById('modal-wrapper').style.display='none'"
@@ -364,7 +364,7 @@
                 </div>
               </div>
 
-              <div id="modal-wrapper2" class="modal2">
+                <div id="modal-wrapper2" class="modal2">
                   <div class="modal-content animate">
                     <img src="images/warning.png" length="40px" width="140px">
                       <span onclick="document.getElementById('modal-wrapper2').style.display='none'"

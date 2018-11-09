@@ -63,6 +63,12 @@
             <a href="files/SampleCalculation.pdf" download><button type="button" class="btn dlbutdes">Download PDF</button></a>
           </div>-->
 <!--the following buttons are not working yet-->
+          <div class="container-fluid lvlselectordiv centertext">
+            <label class="lvlselectorspace1"><input type="radio" name="lvlSelector" checked><span class="lvl1"></span></label>
+            <label class="lvlselectorspace2"><input type="radio" name="lvlSelector"><span class="lvl2"></span></label>
+            <label class="lvlselectorspace3"><input type="radio" name="lvlSelector"><span class="lvl3"></span></label>
+          </div>
+
           <div class="container-fluid rightalgn"><br>
 
             <form action="report2.php" method="POST" target="_blank">
