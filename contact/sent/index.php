@@ -31,10 +31,8 @@ if(isset($_POST['submit'])) {
     <link href="../../icon/snowflake.png" rel="shortcut icon">
   </head>
   <body>
-
-    <div class="container">
-      <nav class="navbar navbar-default nobord const navsmallmrgbot">
-        <div class="container-fluid blueb">
+      <nav class="navbar navbar-default nobord navsmallmrgbot">
+        <div class="container-fluid blueb navpad2">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -61,11 +59,10 @@ if(isset($_POST['submit'])) {
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-
-      <div class="jumbotron contactpagejumbadd blueb">
+<div class="container centertext">
+      <div class="jumbotron contactpagejumbadd jumbotronaddcomp">
           <!--<h2 class="headngsprpg">Send us a message</h2>-->
           <form action="index.php" method="POST">
-            <div class="contactdiv">
               <div id="contacthead" class="centertext">
                 <img src="../../images/checksent.png" height="50" width="50">
                 <h>Your message has been sent!</h>
@@ -74,23 +71,23 @@ if(isset($_POST['submit'])) {
                 <div class="col-md-6 col-sm-6">
                   <div class="form-group">
                     <label class="introc" for="name">Name:</label>
-                    <input type="text" class="form-control" name="name" required>
+                    <input type="text" class="form-control midtxtbx" name="name" required>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6">
                   <div class="form-group">
                     <label class="introc" for="company">Company:</label>
-                    <input type="text" class="form-control" name="company" required>
+                    <input type="text" class="form-control midtxtbx" name="company" required>
                   </div>
                 </div>
                 </div>
                 <div class="form-group">
                   <label class="introc" for="email">Email:</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
+                  <input type="email" class="form-control midtxtbx" name="email" id="email" required>
                 </div>
                 <div class="form-group">
                   <label class="introc" for="subject">Subject:</label>
-                  <input type="text" class="form-control" name="subject" required>
+                  <input type="text" class="form-control midtxtbx" name="subject" required>
                 </div>
                 <div class="form-group">
                   <label class="introc" for="message">Message:</label>
@@ -99,7 +96,7 @@ if(isset($_POST['submit'])) {
               <div class="centertext">
                 <button type="submit" name="submit" class="btn dlbutdes">Send</button>
               </div>
-              </div>
+
             </form>
       </div>
 
@@ -107,7 +104,8 @@ if(isset($_POST['submit'])) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../js/bootstrap.min.js"></script>
-
-    <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
+    <div class="footer">
+      <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
+    </div>
   </body>
 </html>

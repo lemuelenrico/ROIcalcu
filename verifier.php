@@ -51,7 +51,7 @@
       <div class="jumbotron jumbotronaddcomp verifyjumbotron">
           <h3 class="openfont whitefont">For security reasons, we sent a verifier to <u><i><?php echo $comEmailTr; ?></i></u>, please input the six-character code you received <br> or you can click
                 <a><u onclick="resend()">here</u></a> to send another verifier.<h3>
-            <form onsubmit="return verify()" action="roi.php" method="post">
+            <form onsubmit="return verify()" action="roi_1.php" method="post">
             <!--the following are just transitional variabl-->
               <input type="hidden" name="vercom" value="<?php echo $companyName ?>">
               <input type="hidden" name="verind" value="<?php echo $industry?>">

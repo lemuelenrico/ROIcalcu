@@ -223,7 +223,7 @@
             </div>
 
             <div class="form-group row openfont">
-              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn openfont"<span class="requiredclr">*</span>Install Location2</label>
+              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Install Location2</label>
                 <div class="col-sm-1">
                   <label><input title="Server" type="checkbox" name="location2[]" class="glyphpointer" id="server2" value="Server">
                     <img src="images/iconserv.png" id="servericon" class="glyphpointer" data-toggle="tooltip" title="Server">

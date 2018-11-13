@@ -68,7 +68,6 @@
             <label class="lvlselectorspace2"><input type="radio" name="lvlSelector"><span class="lvl2"></span></label>
             <label class="lvlselectorspace3"><input type="radio" name="lvlSelector"><span class="lvl3"></span></label>
           </div>
-
           <div class="container-fluid rightalgn"><br>
 
             <form action="report2.php" method="POST" target="_blank">
@@ -175,7 +174,7 @@
 
 
             <br>
-            <div class="row nospace">
+            <div class="row nospace" id="charts">
               <div class="col-md-6 col-sm-6 nospace">
                 <div class="graphcontainter roidiv"><!--you can incluce text here adsfasdf-->
                   <canvas id="roiChartBar"></canvas><br>
@@ -327,17 +326,6 @@
 
       }
     });
-//the following codes are not working yet
-    function genScreenshot(){
-        html2canvas(document.body(), {
-            dpi: 192,
-            onrendered: function(canvas){
-              $("#pngdl").attr('href',canvas.toDataURL("image/png"));
-              $("#pngdl").attr('download', 'Result.png');
-              $("#pngdl")[0].click();
-            }
-        });
-    }
 
     </script>
     <!--<script src="js/roi.js"></script>-->

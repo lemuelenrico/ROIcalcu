@@ -30,7 +30,6 @@ else if(document.getElementById('finalsubmit').checked == false){
             modal2.style.display = "none";
         }
     }
-
   $(document).ready(function(){
       $('[data-toggle="tooltip"]').tooltip();
   });

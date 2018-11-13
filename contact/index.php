@@ -13,9 +13,7 @@
     <link href="../icon/snowflake.png" rel="shortcut icon">
   </head>
   <body>
-
-    <div class="container">
-      <<nav class="navbar navbar-default nobord navsmallmrgbot">
+      <nav class="navbar navbar-default nobord navsmallmrgbot">
         <div class="container-fluid navpad2 blueb">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -43,11 +41,10 @@
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-
-      <div class="jumbotron contactpagejumbadd blueb">
+    <div class="container centertext">
+      <div class="jumbotron contactpagejumbadd jumbotronaddcomp">
           <!--<h2 class="headngsprpg">Send us a message</h2>-->
           <form action="sent/index.php" method="POST">
-            <div class="contactdiv">
               <div id="contacthead" class="leftalgn">
                 <h>Send us a direct message:</h>
               </div>
@@ -55,23 +52,23 @@
                 <div class="col-md-6 col-sm-6">
                   <div class="form-group">
                     <label class="introc" for="name">Name:</label>
-                    <input type="text" class="form-control" name="name" required>
+                    <input type="text" class="form-control midtxtbx" name="name" required>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6">
                   <div class="form-group">
                     <label class="introc" for="company">Company:</label>
-                    <input type="text" class="form-control" name="company" required>
+                    <input type="text" class="form-control midtxtbx" name="company" required>
                   </div>
                 </div>
                 </div>
                 <div class="form-group">
                   <label class="introc" for="email">Email:</label>
-                  <input type="email" class="form-control" id="sendvalidemail" name="email" required>
+                  <input type="email" class="form-control midtxtbx" id="sendvalidemail" name="email" required>
                 </div>
                 <div class="form-group">
                   <label class="introc" for="subject">Subject:</label>
-                  <input type="text" class="form-control" name="subject" required>
+                  <input type="text" class="form-control midtxtbx" name="subject" required>
                 </div>
                 <div class="form-group">
                   <label class="introc" for="message">Message:</label>
@@ -80,7 +77,7 @@
               <div class="centertext">
                 <button type="submit" name="submit" class="btn dlbutdes">Send</button>
               </div>
-              </div>
+
             </form>
       </div>
 
@@ -100,6 +97,8 @@
         }
       });
     </script>
-    <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
+    <div class= "footer">
+      <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
+    </div>
   </body>
 </html>
