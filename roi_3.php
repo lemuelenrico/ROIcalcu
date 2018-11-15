@@ -62,22 +62,56 @@
           <div class="col-md-4 col-sm-4"> <!--for app details -->
             <fieldset>
               <legend class="geofont">Select Optimization Level</legend>
-
                 <div class="row nospace">
                   <div class="col-md-4 col-sm-4 nospace centertext levelpad">
                     <div class="middlelvl">
                       <img class="lvlnotselect" src="images/snowlevels/level_1.png" width="50px" >
                     </div>
-                      <button class="levelbutdes">Level 1
+                    <form action="roi_1.php" method="POST">
+                      <!-- the following hidden input function as transitional variables for reporting-->
+                      <input type="hidden" name="vercom" value="<?php echo $companyName ?>">
+                      <!--<input type="hidden" name="repind" value="<?php echo $industry?>">-->
+                      <input type="hidden" name="verappname" value="<?php echo $applicationName ?>">
+                      <input type="hidden" name="veragree" value="<?php echo $agreementType ?>">
+                      <input type="hidden" name="verlictype" value="<?php echo $licenseType ?>">
+                      <input type="hidden" name="vernooflic" value="<?php echo $noOfLicenses ?>">
+                      <input type="hidden" name="vercost" value="<?php echo $costPerLicense ?>">
+                      <input type="hidden" name="verloc" value="<?php echo $imloc ?>">
+                      <!--the folowing are subject to changes -->
+                      <input type="hidden" name="verroi" value="<?php echo $truValROI1 ?>">
+                      <input type="hidden" name="versav" value="<?php echo $truValSavings1 ?>">
+                      <input type="hidden" name="verroi2" value="<?php echo $truValROI2 ?>">
+                      <input type="hidden" name="versav2" value="<?php echo $truValSavings2 ?>">
+                      <input type="hidden" name="verroi3" value="<?php echo $truValROI3 ?>">
+                      <input type="hidden" name="versav3" value="<?php echo $truValSavings3 ?>">
+                      <button type="submit" class="levelbutdes">Level 1
                       </button>
+                    </form>
                   </div>
-
                   <div class="col-md-4 col-sm-4 nospace centertext levelpad">
                     <div class="middlelvl">
                       <img class="lvlnotselect" src="images/snowlevels/level_2.png" width="70px">
                     </div>
-                    <button class="levelbutdes">Level 2
+                    <form action="roi_2.php" method="POST">
+                      <!-- the following hidden input function as transitional variables for reporting-->
+                      <input type="hidden" name="vercom" value="<?php echo $companyName ?>">
+                      <!--<input type="hidden" name="repind" value="<?php echo $industry?>">-->
+                      <input type="hidden" name="verappname" value="<?php echo $applicationName ?>">
+                      <input type="hidden" name="veragree" value="<?php echo $agreementType ?>">
+                      <input type="hidden" name="verlictype" value="<?php echo $licenseType ?>">
+                      <input type="hidden" name="vernooflic" value="<?php echo $noOfLicenses ?>">
+                      <input type="hidden" name="vercost" value="<?php echo $costPerLicense ?>">
+                      <input type="hidden" name="verloc" value="<?php echo $imloc ?>">
+                      <!--the folowing are subject to changes -->
+                      <input type="hidden" name="verroi" value="<?php echo $truValROI1 ?>">
+                      <input type="hidden" name="versav" value="<?php echo $truValSavings1 ?>">
+                      <input type="hidden" name="verroi2" value="<?php echo $truValROI2 ?>">
+                      <input type="hidden" name="versav2" value="<?php echo $truValSavings2 ?>">
+                      <input type="hidden" name="verroi3" value="<?php echo $truValROI3 ?>">
+                      <input type="hidden" name="versav3" value="<?php echo $truValSavings3 ?>">
+                    <button type="submit" class="levelbutdes">Level 2
                     </button>
+                  </form>
                   </div>
 
                   <div class="col-md-4 col-sm-4 nospace centertext levelpad">
@@ -186,7 +220,7 @@
           </div>
           <div class="col-md-8 col-sm-8"> <!-- visuals -->
             <fieldset>
-              <legend class="geofont centertext"><img class="centerlvlimg" src="images/snowlevels/level_3.png" width="60px">&nbsp;Results Details&nbsp;<img class="centerlvlimg" src="images/snowlevels/level_3.png" width="60px" ></legend>
+              <legend class="geofont centertext"><img class="centerlvlimg" src="images/snowlevels/level_3.png" width="45px">&nbsp;Results Details&nbsp;<!--<img class="centerlvlimg" src="images/snowlevels/level_3.png" width="60px">--></legend>
               <div class="row charttopmarg">
                 <div class="col-md-6 col-sm6">
                   <div class="roidiv colorwhite">
@@ -231,6 +265,7 @@
                         <img src="images/newpdficon.png" width="40px" height="40px" onmouseover="this.src='images/newpdficonhover.png'"
                           onmouseout="this.src='images/newpdficon.png'" title="Export to PDF">
                       </button>
+                    </form>
                     </span>
                   </div>
                 </div>

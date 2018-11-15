@@ -68,11 +68,20 @@
               <input type="hidden" name="versav2" value="<?php echo $truValSavings2 ?>">
               <input type="hidden" name="verroi3" value="<?php echo $truValROI3 ?>">
               <input type="hidden" name="versav3" value="<?php echo $truValSavings3 ?>">
-              <input class="verifytxtbox" type="text" id="passcode" name="passcode" required><br><br>
+              <input class="verifytxtbox" type="text" id="f9_vmlvf" name="passcode" autocomplete="off" required><br><br>
               <!--<span class="text-danger"><?php echo $verificationError; ?></span>-->
               <input type="submit" class="entbutdes" name="enter" value="Proceed">
             <!--  <button class="entbutdes" onclick="resend()">Resend</button> -->
             </form>
+          </div>
+
+          <div id="alertwrong" class="modal">
+            <div class="modal-content animate">
+              <img src="images/warning.png" width="100px">
+                <span onclick="document.getElementById('alertwrong').style.display='none'"
+                class="close" title="Close PopUp">&times;</span>
+                <p class="center">Passcode is wrong.</p>
+              </div>
           </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -85,7 +94,19 @@
     function resend() {
       location.reload();
     }
-    function verify(){var _0x414dx1=document["getElementById"]("passcode")["value"];if(_0x414dx1!= "<?php echo$passcode;?>"){alert("Passcode is wrong.");return false}}
+    function zverify(){var _0x414dx1=document["getElementById"]("passcode")["value"];if(_0x414dx1!= "ajdfkejl"){alert("Passcode is wrong.");return false}}
+    function verify(){var _0x414dx1=document["getElementById"]("f9_vmlvf")["value"];if(_0x414dx1!= "<?php echo$passcode;?>"){document.getElementById('alertwrong').style.display='block';return false}}
+    $(document).keydown(function(e) {
+     if (e.key === "Escape") {
+         document.getElementById('alertwrong').style.display  = "none";
+    }
+    });
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('alertwrong'))
+              {
+                document.getElementById('alertwrong').style.display = "none";
+              }
+    }
     </script>
   </body>
 </html>

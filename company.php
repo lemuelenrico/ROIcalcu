@@ -50,6 +50,7 @@
         <img class="pointermarg" src="images/pointer1.png">
         <div class="row">
           <div class="col-md-6 col-sm-6 aligncntr">
+            <h2 class="instructiontext">Industry Selection</h2>
               <form action="software.php" autocomplete="off" method="POST">
                   <div class="takeawaydiv">
                     <label class="firstop"><input type="radio" id="ind1" name="industry" checked="checked" onclick="lblindstry(1)" value="Engineering"><span title="Engineering" class="eng"></span></label>
@@ -59,7 +60,10 @@
                     <label class="fourthtop"><input type="radio" id="ind4" name="industry" onclick="lblindstry(4)" value="Mechanical & Precision"><span title="Mechanical and Precision" class="mp"></span></label>
                     <label class="fifthtop"><input type="radio" id="ind5" name="industry" onclick="lblindstry(5)" value="Government"><span title="Government" class="gov"></span></label>
                     <label class="sixthtop"><input type="radio" id="ind6" name="industry" onclick="lblindstry(6)" value="Others"><span title="Others" class="oth"></span></label>
-                    <img class="selectind" src="images/industry/selectindustry.png">
+                    <label class="seventhtop"><input type="radio" id="ind7" name="industry" onclick="lblindstry(7)" value="Aerospace"><span title="Aerospace" class="aero"></span></label>
+                    <!--<img class="selectind" src="images/industry/selectindustry.png">-->
+                    <label id="industrytxt"><input id="industryinput" type="text" class="form-control openfont industrybox" placeholder="Industry"
+                            name="otherindustry" autocomplete="off"></label>
                   </div>
 
                   <div class="row">
@@ -80,17 +84,17 @@
             <div class="col-md-6 col-sm-6">
               <div class="leftdiv">
 
-                <br>
+                <br><br>
               <br><!--bunch of linebreaks-->
 
 
                 <div class="form-group">
                   <input type="text" class="form-control input-lg openfont bigtxtbx" placeholder="Company Name"
-                          name="comname" autocomplete="off" required>
+                          name="comname" id="comname" autocomplete="off" required>
                 </div>
                 <div class="form-group">
                   <input type="text" class="form-control input-lg openfont bigtxtbx" placeholder="Website"
-                          name="website" autocomplete="off" required>
+                          name="website" id="website" autocomplete="off" required>
                 </div>
                 <div class="form-group">
                   <input type="email" class="form-control input-lg openfont bigtxtbx" placeholder="Contact Email"
@@ -98,11 +102,11 @@
                 </div>
                 <div class="form-group">
                   <input type="number" min="0" class="form-control input-lg openfont bigtxtbx" placeholder="Number of Engineers"
-                          name="numusers" autocomplete="off" required>
+                          name="numusers" id="numusers" autocomplete="off" required>
                 </div>
                 <div class="notssub openfont"><strong>Note:</strong> All fields are required.</div>
                 <div class="rightalgn">
-                <input type="submit" name="submit" class="nextbutdes openfont" value="Next &raquo">
+                <input type="submit" onclick="valthisform();" name="submit" class="nextbutdes openfont" value="Next &raquo">
                 </div>
           </form>
               <br>
@@ -112,15 +116,33 @@
 
       </div><!--jumbotron-->
 
+      <!--the following contain the modals for form validation -->
+
+      <div id="companyval" class="modal">
+        <div class="modal-content animate">
+          <img src="images/warning.png" width="100px">
+            <span onclick="document.getElementById('companyval').style.display='none'"
+            class="close" title="Close PopUp">&times;</span>
+            <p class="centertext">Please complete the details.</p>
+        </div>
+      </div>
+
 <!-- the followng is the link for the custom js files-->
 
     <script src="js/company.js"></script>
+    <script>
+
+    </script>
+
 
     <!-- jQuery pt></script>cessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
 
+
+    </script>
     <div class="footer">
       <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
     </div>

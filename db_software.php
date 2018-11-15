@@ -31,12 +31,12 @@ $noOfUsersTr  = $_POST ['transi5'];
         $mpROI = array(105, 90, 50);
         var_dump($engROI);*/
 
-        $engROIyr1  = 917;   $ogROIyr1   = 1458;   $mpROIyr1     = 105;
-        $engROIyr2  = 500;   $ogROIyr2   = 750;    $mpROIyr2     = 90;
-        $engROIyr3  = 600;   $ogROIyr3   = 800;    $mpROIyr3     = 50;
+        $engROIyr1  = 217;   $ogROIyr1   = 148;   $mpROIyr1     = 105;
+        $engROIyr2  = 50;   $ogROIyr2   = 43;    $mpROIyr2     = 40;
+        $engROIyr3  = 63;   $ogROIyr3   = 75;    $mpROIyr3     = 10;
 
-        $govROIyr1  = 105;   $autoROIyr1 =  110;   $othersROIyr1 = 474;
-        $govROIyr2  = 107;   $autoROIyr2 =  60;   $othersROIyr2  = 196;
+        $govROIyr1  = 105;   $autoROIyr1 =  189;   $othersROIyr1 = 74;
+        $govROIyr2  = 107;   $autoROIyr2 =  40;   $othersROIyr2  = 96;
         $govROIyr3  = 50;    $autoROIyr3 =  75;   $othersROIyr3  = 73;
 
         /*the following are the formula for each industry*/
@@ -115,12 +115,18 @@ $noOfUsersTr  = $_POST ['transi5'];
           $valROI3 = $othersROIyr3;    $valSavings3 = $othersSavings3;
         }
 
+        else {
+          $valROI1 = $othersROIyr1;    $valSavings1 = $othersSavings1;
+          $valROI2 = $othersROIyr2;    $valSavings2 = $othersSavings2;
+          $valROI3 = $othersROIyr3;    $valSavings3 = $othersSavings3;
+        }
+
 
         /*the following are the variables for yearly breakdown per license type, this is open to change*/
 
         $ppuMultYr1 = 2;    $perpMultYr1 = 1; $lsMultYr1 = 1; $subsMultYr1 = 1; $rntMultYr1 = 1;
         $ppuMultYr2 = 1;    $perpMultYr2 = 1; $lsMultYr2 = 1; $subsMultYr2 = 1; $rntMultYr2 = 1;
-        $ppuMultYr3 = 1;    $perpMultYr3 = 1; $lsMultYr3 = 1; $subsMultYr3 = 1; $rntMultYr3 = 1;
+        $ppuMultYr3 = 1.5;   $perpMultYr3 = 1; $lsMultYr3 = 1; $subsMultYr3 = 1; $rntMultYr3 = 1;
 
         /*the following are the conditionals per agreement type*/
 
@@ -160,10 +166,18 @@ $noOfUsersTr  = $_POST ['transi5'];
           $truValROI3 = $valROI3; $truValSavings2 = $valSavings3;
         }
 
+        //these are the variables for roi in diff levelbutdes
 
-if (!$_POST['submittoroi']){
-}
-else  {
+        $tru_2_1 = 1; $tru_2_2 = 1; $tru_2_3 = 1;
+        $tru_3_1 = 1; $tru_3_2 = 1; $tru_3_3 = 1;
+
+        $truVal_2_ROI1 = 0; $truVal_2_ROI2 = 0; $truVal_2_ROI3 = 0;
+        $truVal_3_ROI1 = 0; $truVal_3_ROI2 = 0; $truVal_3_ROI3 = 0;
+
+
+  if (!$_POST['submittoroi']){
+  }
+  else  {
     $sql = "INSERT into software  (EntryDate, CompanyName, ApplicationName, AgreementType, Location,
                                   NoOfLicenses, VendorName, LicenseType, RenewalDate, CostPerLicense, CalculatedROI, CutLicenses)
             values                (NOW(), '$companyName', '$applicationName', '$agreementType', '$imloc',
@@ -180,7 +194,6 @@ else  {
       /*else {
           echo "Data creation not sucessful";
       }*/
-
       if (mysqli_query($conn, $sql2)) {
         /*  echo "Data creation successful";*/
       }

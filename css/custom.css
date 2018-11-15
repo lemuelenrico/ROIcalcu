@@ -314,14 +314,16 @@ body {
 
 .roilbl {
   font-family: Geogtq;
-  font-size: 2.1rem;
+  //font-size: 2.1rem;
+  font-size: 2.3vh;
   font-weight: bold;
   color: #ec8c2d;
 }
 
 .roiplch {
   font-family: OpenSans;
-  font-size: 2rem;
+  //font-size: 2rem;
+  font-size: 2.3vh;
   font-weight: bold;
   color: #417379;
 }
@@ -793,8 +795,37 @@ input:checked + .oth {
   display: inline-block;
 }
 
-.firstop .secondtop .thirdtop .fourthtop .fifthtop .sixthtop
-.eng .og .auto .mp .gov .oth {
+.aero {
+  background: url('../images/industry/Aero_hover.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.aero:hover {
+  background: url('../images/industry/Aero_default.png') repeat-x;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+input:checked + .aero {
+  background: url('../images/industry/Aero_selected.png') repeat-x;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 120px;
+  display: inline-block;
+}
+
+.firstop .secondtop .thirdtop .fourthtop .fifthtop .sixthtop .seventhtop
+.eng .og .auto .mp .gov .oth .aero {
   margin:0;
   padding:0;
 }
@@ -807,7 +838,7 @@ label span {
 .firstop {
   position: absolute;
   top: 72px;
-  left: 50px;
+  left: 52px;
 }
 
 .secondtop {
@@ -818,25 +849,31 @@ label span {
 
 .thirdtop {
   position: absolute;
-  top: 172px;
-  left: 50px;
+  top: 171px;
+  left: 52px;
 }
 
 .fourthtop {
   position: absolute;
-  top: 172px;
-  left: 230px;
+  top: 171px;
+  left: 228px;
 }
 
 .fifthtop {
   position: absolute;
   top: 72px;
-  left: 230px;
+  left: 228px;
 }
 
 .sixthtop {
   position: absolute;
-  top: 222px;
+  top: 221px;
+  left: 140px;
+}
+
+.seventhtop {
+  position: absolute;
+  top: 122px;
   left: 140px;
 }
 
@@ -1075,7 +1112,7 @@ input:checked + .applbl {
 
 /* The Modal (background) */
 .modal {
-	  display:none;
+	  display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -1124,21 +1161,6 @@ input:checked + .applbl {
     from {opacity: 0;}
     to {opacity: 1;}
 }
-
-/* The Modal (background) */
-.modal2 {
-	  display:none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-    //-webkit-filter: blur(8px);
-}
-
 
 .lvl1 {
   background: url('../images/snowlevels/first_default.png');
@@ -1324,4 +1346,28 @@ fieldset legend {
 .appfield {
   background: rgba(236, 140, 45, 0.1);
   border: 2px solid #ec8c2d;
+}
+
+.instructiontext {
+  font-family: Geogtq;
+  text-align: left;
+  color: white;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.industrybox {
+  height: 45px;
+  width: 190px;
+  font-size: 17px;
+  color: white;
+  border-width: 0px 0px 1px 0px;
+}
+
+#industrytxt {
+  position: absolute;
+  top: 285px;
+  left: 250px;
+  display: none;
 }

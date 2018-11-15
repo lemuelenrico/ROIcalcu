@@ -90,9 +90,10 @@
                   <input type="hidden" name="transi5" value="<?php echo $noOfUsers ?>">
                 </div>
                   <br>
+              <h2 class="instructiontext">Top Three Applications</h2>
               </div>
               <div class="col-md-6 col-sm-6 rightalgn">
-                  <h3 class= "notssub openfont"><span class="requiredclr">*</span>Required fields.</h3>
+                  <h3 class="notssub openfont"><span class="requiredclr">*</span>Required fields.</h3>
               </div>
           </div>
 
@@ -187,7 +188,7 @@
               <label for="appName2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Application Name2</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control midtxtbx" id="appName2" placeholder="(i.e. AutoCAD, Petrel)"
-                        name="appname2" autocomplete="off">
+                        name="appname2" autocomplete="off" required>
               </div>
               <label for="vendName2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Vendor Name2</label>
               <div class="col-sm-4">
@@ -249,12 +250,12 @@
               <label for="numLicenses2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>NumberofLicenses2</label>
               <div class="col-sm-4">
                 <input type="number" min="0" class="form-control midtxtbx" id="numLicenses2" placeholder="0"
-                        name="numlicenses2" autocomplete="off">
+                        name="numlicenses2" autocomplete="off" required>
               </div>
               <label for="costLicense2" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>CostperLicense($)2</label>
               <div class="col-sm-4">
                     <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense2" placeholder="0.00"
-                                name="costlicenses2" autocomplete="off">
+                                name="costlicenses2" autocomplete="off" required>
               </div>
             </div>
           </div>
@@ -264,7 +265,7 @@
               <label for="appName3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Application Name3</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control midtxtbx" id="appName3" placeholder="(i.e. AutoCAD, Petrel)"
-                        name="appname3" autocomplete="off">
+                        name="appname3" autocomplete="off" required>
               </div>
               <label for="vendName3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Vendor Name3</label>
               <div class="col-sm-4">
@@ -326,12 +327,12 @@
               <label for="numLicenses3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>NumberofLicenses3</label>
               <div class="col-sm-4">
                 <input type="number" min="0" class="form-control midtxtbx" id="numLicenses3" placeholder="0"
-                        name="numlicenses3" autocomplete="off">
+                        name="numlicenses3" autocomplete="off" required>
               </div>
               <label for="costLicense3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>CostperLicense($)3</label>
               <div class="col-sm-4">
                     <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense3" placeholder="0.00"
-                                name="costlicenses3" autocomplete="off">
+                                name="costlicenses3" autocomplete="off" required>
               </div>
             </div>
           </div>
@@ -357,21 +358,48 @@
         <!--modals-->
               <div id="modal-wrapper" class="modal">
                 <div class="modal-content animate">
-                  <img src="images/warning.png" length="40px" width="140px">
-                    <span onclick="document.getElementById('modal-wrapper').style.display='none'"
+                  <img src="images/warning.png" width="100px">
+                    <span onclick="closemodals();"
                     class="close" title="Close PopUp">&times;</span>
-                    <p class="centertext">Please choose atleast one Install Location. </p>
+                    <p class="centertext">Please choose atleast one Install Location per application. </p>
                 </div>
               </div>
 
-                <div id="modal-wrapper2" class="modal2">
-                  <div class="modal-content animate">
-                    <img src="images/warning.png" length="40px" width="140px">
-                      <span onclick="document.getElementById('modal-wrapper2').style.display='none'"
-                      class="close" title="Close PopUp">&times;</span>
-                      <p class="center">  Please agree to our terms and conditions to proceed.</p>
-                    </div>
-                </div>
+              <div id="modal-wrapper2" class="modal">
+                <div class="modal-content animate">
+                  <img src="images/warning.png" width="100px">
+                    <span onclick="closemodals();"
+                    class="close" title="Close PopUp">&times;</span>
+                    <p class="center">  Please agree to our terms and conditions to proceed.</p>
+                  </div>
+              </div>
+
+              <div id="modal-wrapper3" class="modal">
+                <div class="modal-content animate">
+                  <img src="images/warning.png" width="100px">
+                    <span onclick="closemodals();"
+                    class="close" title="Close PopUp">&times;</span>
+                    <p class="center"> Details are missing in Application A.</p>
+                  </div>
+              </div>
+
+              <div id="modal-wrapper4" class="modal">
+                <div class="modal-content animate">
+                  <img src="images/warning.png" width="100px">
+                    <span onclick="closemodals();"
+                    class="close" title="Close PopUp">&times;</span>
+                    <p class="center"> Details are missing in Application B.</p>
+                  </div>
+              </div>
+
+              <div id="modal-wrapper5" class="modal">
+                <div class="modal-content animate">
+                  <img src="images/warning.png" width="100px">
+                    <span onclick="closemodals();"
+                    class="close" title="Close PopUp">&times;</span>
+                    <p class="center"> Details are missing in Application C.</p>
+                  </div>
+              </div>
 
 <!-- the followng is the link for the custom js files-->
     <script src="js/software.js"></script>
