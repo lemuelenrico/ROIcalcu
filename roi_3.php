@@ -185,11 +185,11 @@
 
             </fieldset>
             <br>
-            <fieldset>
-              <legend class="geofont centertext">Application Details</legend>
+            <fieldset class="appfield">
+              <legend class="geofont centertext">Software Details</legend>
               <table align="center" class="tablemarg">
                   <tr>
-                    <td class="centertext smallpadtbl headperapp" colspan="4">Application A</td>
+                    <td class="centertext smallpadtbl headperapp1" colspan="4">Application A</td>
                   </tr>
                   <tr>
                     <td width="45%" class="leftalgn roilbl colorwhite smallpadtbl">Name:</td>
@@ -219,7 +219,7 @@
 
                 <table align="center" class="tablemarg">
                     <tr>
-                      <td class="centertext smallpadtbl headperapp" colspan="4">Application B</td>
+                      <td class="centertext smallpadtbl headperapp2" colspan="4">Application B</td>
                     </tr>
                     <tr>
                       <td width="45%" class="leftalgn roilbl colorwhite smallpadtbl">Name:</td>
@@ -249,7 +249,7 @@
 
                   <table align="center" class="tablemarg">
                       <tr>
-                        <td class="centertext smallpadtbl headperapp" colspan="4">Application C</td>
+                        <td class="centertext smallpadtbl headperapp3" colspan="4">Application C</td>
                       </tr>
                       <tr>
                         <td width="45%" class="leftalgn roilbl colorwhite smallpadtbl">Name:</td>
@@ -353,33 +353,40 @@
                   </div>
                 </div>
               </div>
-              <table align="center" class="const">
-                  <tr>
-                      <th colspan="4" class="aligncntr">ROI Calculation</th>
-                  </tr>
-                  <tr>
-                      <td width="30%" class="pricebgcol"></td>
-                      <td width="20%" class="yearlydatalbl pricebgcol">%</td>
-                      <td class="pricebgcol yearlydata">$</td>
-                  </tr>
-                  <tr>
-                      <td width="30%" id="firstyrgradient">1st Year</td>
-                      <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_3_ROI1); ?>%</td>
-                      <td class="colorwhite yearlydata">$<?php echo number_format($truVal_3_Savings1,2); ?></td>
-                  </tr>
-
-                  <tr>
-                      <td width="30%" id="secondyrgradient">2nd Year</td>
-                      <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_3_ROI2); ?>%</td>
-                      <td class="colorwhite yearlydata">$<?php echo number_format($truVal_3_Savings2,2); ?></td>
-                  </tr>
-                  <tr>
-                      <td width="30%" id="thrdyrgradient">3rd Year</td>
-                      <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_3_ROI3); ?>%</td>
-                      <td class="colorwhite yearlydata">$<?php echo number_format($truVal_3_Savings3,2); ?></td>
-                  </tr>
-
-                </table>
+              <div class="row charttopmarg">
+                <div class="col-md-6 col-sm-6">
+                  <div class="graphcontainter roidiv">
+                    <canvas id="roiChartLine"></canvas>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                  <table align="center" class="const">
+                      <tr>
+                          <th colspan="4" class="aligncntr">ROI Calculation</th>
+                      </tr>
+                      <tr>
+                          <td width="30%" class="pricebgcol"></td>
+                          <td width="20%" class="yearlydatalbl pricebgcol">%</td>
+                          <td class="pricebgcol yearlydata">$</td>
+                      </tr>
+                      <tr>
+                          <td width="30%" id="firstyrgradient">1st Year</td>
+                          <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_3_ROI1); ?>%</td>
+                          <td class="colorwhite yearlydata">$<?php echo number_format($truVal_3_Savings1,2); ?></td>
+                      </tr>
+                      <tr>
+                          <td width="30%" id="secondyrgradient">2nd Year</td>
+                          <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_3_ROI2); ?>%</td>
+                          <td class="colorwhite yearlydata">$<?php echo number_format($truVal_3_Savings2,2); ?></td>
+                      </tr>
+                      <tr>
+                          <td width="30%" id="thrdyrgradient">3rd Year</td>
+                          <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_3_ROI3); ?>%</td>
+                          <td class="colorwhite yearlydata">$<?php echo number_format($truVal_3_Savings3,2); ?></td>
+                      </tr>
+                    </table>
+                </div>
+              </div>
             </fieldset>
           </div>
         </div>
@@ -393,9 +400,9 @@
     let theBarChart = new Chart(roiChartBar, {
       type:'bar',
       data:{
-        labels:['First Year','Second Year','Third Year'],
+        labels:['<?php echo $applicationName; ?>','<?php echo $applicationName_2; ?>','<?php echo $applicationName_3; ?>'],
         datasets:[{
-          label: 'ROI',
+          label: 'Cost',
           data:[
             <?php echo $truVal_3_ROI1; ?>,
             <?php echo $truVal_3_ROI2; ?>,
@@ -410,7 +417,7 @@
         maintainAspectRatio: false,
         title: {
           display: true,
-          text: 'ROI for Three years',
+          text: 'Software Expenses',
           fontSize: 20,
           fontColor: "white"
         },
@@ -421,22 +428,26 @@
           xAxes: [{
             scaleLabel: {
               display: true,
-              labelString: 'Time (Yr)',
+              labelString: 'Applications',
               fontSize: 19,
               fontColor: "white",
               fontFamily: "Geogtq"
+            },
+            ticks: {
+               fontColor: 'white'
             }
           }],
           yAxes: [{
             scaleLabel: {
               display: true,
-              labelString: 'Value (%)',
+              labelString: 'Cost in USD',
               fontSize: 15,
               fontColor: "white",
               fontFamily: "OpenSans"
             },
             ticks: {
-              beginAtZero: true
+              beginAtZero: true,
+              fontColor: 'white'
             }
           }]
         }
@@ -487,6 +498,68 @@
           }]
         }
 
+      }
+    });
+
+    let roiChartLine = document.getElementById('roiChartLine').getContext('2d');
+
+    let theLineChart = new Chart(roiChartLine, {
+      type:'line',
+      data:{
+        labels:['','First Year','Second Year','Third Year'],
+        datasets:[{
+          label: 'ROI',
+          data:[
+            0,
+            <?php echo $truVal_3_ROI1; ?>,
+            <?php echo $truVal_3_ROI2; ?>,
+            <?php echo $truVal_3_ROI3; ?>,
+          ],
+          borderColor:'#47c3dc',
+          hoverBorderWidth: 3,
+          pointBackgroundColor: 'white',
+          pointRadius: 4,
+          pointHoverRadius: 6
+        }]
+      },
+      options:{
+        maintainAspectRatio: false,
+        title: {
+          display: true,
+          text: 'ROI for Three years',
+          fontSize: 20,
+          fontColor: "white"
+        },
+        legend:{
+          display: true
+        },
+        scales: {
+          xAxes: [{
+            scaleLabel: {
+              display: true,
+              labelString: 'Time (Yr)',
+              fontSize: 19,
+              fontColor: "white",
+              fontFamily: "Geogtq"
+            },
+            ticks: {
+               fontColor: 'white'
+            }
+          }],
+          yAxes: [{
+            scaleLabel: {
+              display: true,
+              labelString: 'Value (%)',
+              fontSize: 15,
+              fontColor: "white",
+              fontFamily: "OpenSans"
+            },
+            ticks: {
+              beginAtZero: true,
+              fontColor: 'white'
+            }
+          }]
+        }
       }
     });
 

@@ -32,11 +32,11 @@ $noOfUsersTr  = $_POST ['transi5'];
 
         /*the main formula is as follows*/
 
-                  $calculatedROI = round((($costPerLicense*$noOfLicenses)/100),2);
+              //    $calculatedROI = round((($costPerLicense*$noOfLicenses)/100),2);
 
         /*the cut licenses formula is as follows*/
 
-                  $cutLicenses = $noOfLicenses - 3;
+                //  $cutLicenses = $noOfLicenses - 3;
 
         /*the following are the variables for yearly breakdown of ROI, this is open to change*/
 

@@ -66,7 +66,7 @@
                             name="otherindustry" autocomplete="off"></label>
                   </div>
 
-                  <div class="row">
+                  <div class="row hide">
                     <div class="custcenterright col-md-8 col-sm-8 centertext industrychanging openfont nospace">
                     See customer stories for <label id="dl-industry" style="font-weight:bold">Engineering </label>:
                       <!--<a href="files/SampleCalculation.pdf" download></a>-->
