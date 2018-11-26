@@ -303,17 +303,17 @@
             <div class="form-group row openfont">
               <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Install Location3</label>
                 <div class="col-sm-1">
-                  <label><input title="Server" type="checkbox" name="location[]" class="glyphpointer" id="server3" value="Server">
+                  <label><input title="Server" type="checkbox" name="location3[]" class="glyphpointer" id="server3" value="Server">
                     <img src="images/iconserv.png" id="servericon" class="glyphpointer" data-toggle="tooltip" title="Server">
                 </label></div>
 
                 <div class="col-sm-1 nospace leftpad">
-                  <label><input title="Desktop" type="checkbox" name="location[]" class="glyphpointer" id="desktop3" value="Desktop">
+                  <label><input title="Desktop" type="checkbox" name="location3[]" class="glyphpointer" id="desktop3" value="Desktop">
                     <img src="images/icondesk.png" id="desktopicon" class="glyphpointer" data-toggle="tooltip" title="Desktop">
                   </label></div>
 
                 <div class="col-sm-2">
-                  <label><input title="Cloud" type="checkbox" name="location[]" class="glyphpointer" id="cloud3" value="Cloud">
+                  <label><input title="Cloud" type="checkbox" name="location3[]" class="glyphpointer" id="cloud3" value="Cloud">
                     <img src="images/iconcloud.png" id="cloudicon" class="glyphpointer" data-toggle="tooltip" title="Cloud">
                   </label></div>
 

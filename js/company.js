@@ -18,12 +18,14 @@ var modalcomp = document.getElementById('companyval');
     $('#customerstory').attr("href","https://openit.com/customer-stories/chiyoda-philippines-corporation/");
     $("body").css('backgroundImage', "url('images/bg/Eng_bg.jpg')");
     $("#industrytxt").css('display',"none");
+    $("#industryinput").attr('required',false);
   }
   else if (val==2){
     document.getElementById('dl-industry').innerHTML = 'Automotive';
     $('#customerstory').attr("href","https://openit.com/customer-stories/nissan-motor-corp-ltd/");
     $("body").css('backgroundImage', "url('images/bg/Automotive_bg.jpg')");
     $("#industrytxt").css('display',"none");
+    $("#industryinput").attr('required',false);
   }
   else if (val==3){
     document.getElementById('dl-industry').innerHTML = 'O & G';

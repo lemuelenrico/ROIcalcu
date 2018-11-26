@@ -4,13 +4,14 @@ $comWebsite = $_POST ['website'];
 $comEmail   = $_POST ['comemail'];
 $noOfUsers  = $_POST ['numusers'];
 $industry   = $_POST ['industry'];
+$otherIndustry = $_POST ['otherindustry'];
 
 if (!$_POST['submit']){
     //echo "All fields are needed to be filled out";
 }
 else  {
-    $sql = "INSERT into company ( Timestamp, Industry, CompanyName, Website, ContactEmail, NoOfUsers)
-            values              (NOW(), '$industry', '$comName', '$comWebsite', '$comEmail','$noOfUsers' )";
+    $sql = "INSERT into company ( Timestamp, Industry, OtherIndustry, CompanyName, Website, ContactEmail, NoOfUsers)
+            values              (NOW(), '$industry','$otherIndustry', '$comName', '$comWebsite', '$comEmail','$noOfUsers' )";
 }
 
       if (mysqli_query($conn, $sql)) {

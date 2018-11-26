@@ -8,12 +8,42 @@ $licenseType     = $_POST['verlictype'];
 $noOfLicenses    = $_POST['vernooflic'];
 $costPerLicense  = $_POST['vercost'];
 $imloc           = $_POST['verloc'];
+
+$applicationName_2 = $_POST['verappname2'];
+$agreementType_2   = $_POST['veragree2'];
+$licenseType_2     = $_POST['verlictype2'];
+$noOfLicenses_2    = $_POST['vernooflic2'];
+$costPerLicense_2  = $_POST['vercost2'];
+$imloc_2           = $_POST['verloc2'];
+
+$applicationName_3 = $_POST['verappname3'];
+$agreementType_3   = $_POST['veragree3'];
+$licenseType_3     = $_POST['verlictype3'];
+$noOfLicenses_3    = $_POST['vernooflic3'];
+$costPerLicense_3  = $_POST['vercost3'];
+$imloc_3           = $_POST['verloc3'];
+
 $truValROI1      = $_POST['verroi'];
 $truValSavings1  = $_POST['versav'];
 $truValROI2      = $_POST['verroi2'];
 $truValSavings2  = $_POST['versav2'];
 $truValROI3      = $_POST['verroi3'];
 $truValSavings3  = $_POST['versav3'];
+
+$truVal_2_ROI1     = $_POST['verroi_2_1'];
+$truVal_2_Savings1 = $_POST['versav_2_1'];
+$truVal_2_ROI2     = $_POST['verroi_2_2'];
+$truVal_2_Savings2 = $_POST['versav_2_2'];
+$truVal_2_ROI3     = $_POST['verroi_2_3'];
+$truVal_2_Savings3 = $_POST['versav_2_3'];
+
+$truVal_3_ROI1     = $_POST['verroi_3_1'];
+$truVal_3_Savings1 = $_POST['versav_3_1'];
+$truVal_3_ROI2     = $_POST['verroi_3_2'];
+$truVal_3_Savings2 = $_POST['versav_3_2'];
+$truVal_3_ROI3     = $_POST['verroi_3_3'];
+$truVal_3_Savings3 = $_POST['versav_3_3'];
+
 //$passcodeInput   = $_POST['passcode'];
 
 $lasRepSav   = number_format($verSav,2);

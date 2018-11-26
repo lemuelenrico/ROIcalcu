@@ -53,21 +53,50 @@
                 <a><u onclick="resend()">here</u></a> to send another verifier.<h3>
             <form onsubmit="return verify()" action="roi_1.php" method="post">
             <!--the following are just transitional variabl-->
-              <input type="hidden" name="vercom" value="<?php echo $companyName ?>">
-              <input type="hidden" name="verind" value="<?php echo $industry?>">
-              <input type="hidden" name="verappname" value="<?php echo $applicationName ?>">
-              <input type="hidden" name="veragree" value="<?php echo $agreementType ?>">
-              <input type="hidden" name="verlictype" value="<?php echo $licenseType ?>">
-              <input type="hidden" name="vernooflic" value="<?php echo $noOfLicenses ?>">
-              <input type="hidden" name="vercost" value="<?php echo $costPerLicense ?>">
-              <input type="hidden" name="verloc" value="<?php echo $imloc ?>">
+              <input type="hidden" name="vercom" value="<?php echo $companyName; ?>">
+              <input type="hidden" name="verind" value="<?php echo $industry; ?>">
+              <input type="hidden" name="verappname" value="<?php echo $applicationName; ?>">
+              <input type="hidden" name="veragree" value="<?php echo $agreementType; ?>">
+              <input type="hidden" name="verlictype" value="<?php echo $licenseType; ?>">
+              <input type="hidden" name="vernooflic" value="<?php echo $noOfLicenses; ?>">
+              <input type="hidden" name="vercost" value="<?php echo $costPerLicense; ?>">
+              <input type="hidden" name="verloc" value="<?php echo $imloc; ?>">
+            <!--Additional applications-->
+              <input type="hidden" name="verappname2" value="<?php echo $applicationName_2; ?>">
+              <input type="hidden" name="veragree2" value="<?php echo $agreementType_2; ?>">
+              <input type="hidden" name="verlictype2" value="<?php echo $licenseType_2; ?>">
+              <input type="hidden" name="vernooflic2" value="<?php echo $noOfLicenses_2; ?>">
+              <input type="hidden" name="vercost2" value="<?php echo $costPerLicense_2; ?>">
+              <input type="hidden" name="verloc2" value="<?php echo $imloc_2; ?>">
+
+              <input type="hidden" name="verappname3" value="<?php echo $applicationName_3; ?>">
+              <input type="hidden" name="veragree3" value="<?php echo $agreementType_3; ?>">
+              <input type="hidden" name="verlictype3" value="<?php echo $licenseType_3; ?>">
+              <input type="hidden" name="vernooflic3" value="<?php echo $noOfLicenses_3; ?>">
+              <input type="hidden" name="vercost3" value="<?php echo $costPerLicense_3; ?>">
+              <input type="hidden" name="verloc3" value="<?php echo $imloc_3; ?>">
             <!--subject to change-->
-              <input type="hidden" name="verroi" value="<?php echo $truValROI1 ?>">
-              <input type="hidden" name="versav" value="<?php echo $truValSavings1 ?>">
-              <input type="hidden" name="verroi2" value="<?php echo $truValROI2 ?>">
-              <input type="hidden" name="versav2" value="<?php echo $truValSavings2 ?>">
-              <input type="hidden" name="verroi3" value="<?php echo $truValROI3 ?>">
-              <input type="hidden" name="versav3" value="<?php echo $truValSavings3 ?>">
+              <input type="hidden" name="verroi" value="<?php echo $truValROI1; ?>">
+              <input type="hidden" name="versav" value="<?php echo $truValSavings1; ?>">
+              <input type="hidden" name="verroi2" value="<?php echo $truValROI2; ?>">
+              <input type="hidden" name="versav2" value="<?php echo $truValSavings2; ?>">
+              <input type="hidden" name="verroi3" value="<?php echo $truValROI3; ?>">
+              <input type="hidden" name="versav3" value="<?php echo $truValSavings3; ?>">
+            <!--the following are for higher level values -->
+              <input type="hidden" name="verroi_2_1" value="<?php echo $truVal_2_ROI1; ?>">
+              <input type="hidden" name="versav_2_1" value="<?php echo $truVal_2_Savings1; ?>">
+              <input type="hidden" name="verroi_2_2" value="<?php echo $truVal_2_ROI2; ?>">
+              <input type="hidden" name="versav_2_2" value="<?php echo $truVal_2_Savings2; ?>">
+              <input type="hidden" name="verroi_2_3" value="<?php echo $truVal_2_ROI3; ?>">
+              <input type="hidden" name="versav_2_3" value="<?php echo $truVal_2_Savings3; ?>">
+
+              <input type="hidden" name="verroi_3_1" value="<?php echo $truVal_3_ROI1; ?>">
+              <input type="hidden" name="versav_3_1" value="<?php echo $truVal_3_Savings1; ?>">
+              <input type="hidden" name="verroi_3_2" value="<?php echo $truVal_3_ROI2; ?>">
+              <input type="hidden" name="versav_3_2" value="<?php echo $truVal_3_Savings2; ?>">
+              <input type="hidden" name="verroi_3_3" value="<?php echo $truVal_3_ROI3; ?>">
+              <input type="hidden" name="versav_3_3" value="<?php echo $truVal_3_Savings3; ?>">
+
               <input class="verifytxtbox" type="text" id="f9_vmlvf" name="passcode" autocomplete="off" required><br><br>
               <!--<span class="text-danger"><?php echo $verificationError; ?></span>-->
               <input type="submit" class="entbutdes" name="enter" value="Proceed">

@@ -7,6 +7,21 @@ $noOfLicenses     = $_POST ['numlicenses']; $costPerLicense   = $_POST ['costlic
 
 $imloc = implode (", ",$location);
 
+$applicationName_2  = $_POST ['appname2'];     $vendorName_2       = $_POST ['vendname2'];
+$agreementType_2    = $_POST ['agreetype2'];   $licenseType_2      = $_POST ['lictype2'];
+$location_2 = $_REQUEST ['location2'];         $renewalDate_2      = $_POST ['rendate2'];
+$noOfLicenses_2     = $_POST ['numlicenses2']; $costPerLicense_2   = $_POST ['costlicenses2'];
+
+$imloc_2 = implode (", ",$location_2);
+
+$applicationName_3  = $_POST ['appname3'];     $vendorName_3       = $_POST ['vendname3'];
+$agreementType_3    = $_POST ['agreetype3'];   $licenseType_3      = $_POST ['lictype3'];
+$location_3 = $_REQUEST ['location3'];         $renewalDate_3      = $_POST ['rendate3'];
+$noOfLicenses_3     = $_POST ['numlicenses3']; $costPerLicense_3   = $_POST ['costlicenses3'];
+
+$imloc_3 = implode (", ",$location_3);
+
+
 /*the following variables are transitional variables*/
 
 $companyName  = $_POST ['transi'];
@@ -31,28 +46,28 @@ $noOfUsersTr  = $_POST ['transi5'];
         $mpROI = array(105, 90, 50);
         var_dump($engROI);*/
 
-        $engROIyr1  = 217;   $ogROIyr1   = 148;   $mpROIyr1     = 105;
-        $engROIyr2  = 50;   $ogROIyr2   = 43;    $mpROIyr2     = 40;
-        $engROIyr3  = 63;   $ogROIyr3   = 75;    $mpROIyr3     = 10;
+        $engROIyr1 = 217;   $ogROIyr1   = 148;   $mpROIyr1     = 105;
+        $engROIyr2 = 50;   $ogROIyr2   = 43;    $mpROIyr2     = 40;
+        $engROIyr3 = 63;   $ogROIyr3   = 75;    $mpROIyr3     = 10;
 
-        $govROIyr1  = 105;   $autoROIyr1 =  189;   $othersROIyr1 = 74;
-        $govROIyr2  = 107;   $autoROIyr2 =  40;   $othersROIyr2  = 96;
-        $govROIyr3  = 50;    $autoROIyr3 =  75;   $othersROIyr3  = 73;
+        $govROIyr1 = 105;   $autoROIyr1 =  189;   $othersROIyr1 = 74;
+        $govROIyr2 = 107;   $autoROIyr2 =  40;   $othersROIyr2  = 96;
+        $govROIyr3 = 50;    $autoROIyr3 =  75;   $othersROIyr3  = 73;
 
         /*the following are the formula for each industry*/
 
 
-        $engSavings1  = ($engROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
-        $engSavings2  = ($engROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
-        $engSavings3  = ($engROIyr3 * 0.01) * ($costPerLicense*$noOfLicenses);
+        $engSavings1 = ($engROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
+        $engSavings2 = ($engROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
+        $engSavings3 = ($engROIyr3 * 0.01) * ($costPerLicense*$noOfLicenses);
 
-        $ogSavings1   = ($ogROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
-        $ogSavings2   = ($ogROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
-        $ogSavings3   = ($ogROIyr3 * 0.01) * ($costPerLicense*$noOfLicenses);
+        $ogSavings1  = ($ogROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
+        $ogSavings2  = ($ogROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
+        $ogSavings3  = ($ogROIyr3 * 0.01) * ($costPerLicense*$noOfLicenses);
 
-        $mpSavings1   = ($mpROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
-        $mpSavings2   = ($mpROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
-        $mpSavings3   = ($mpROIyr3 * 0.01) * ($costPerLicense*$noOfLicenses);
+        $mpSavings1  = ($mpROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
+        $mpSavings2  = ($mpROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
+        $mpSavings3  = ($mpROIyr3 * 0.01) * ($costPerLicense*$noOfLicenses);
 
         /*
         $engSavings = [];
@@ -166,13 +181,33 @@ $noOfUsersTr  = $_POST ['transi5'];
           $truValROI3 = $valROI3; $truValSavings2 = $valSavings3;
         }
 
-        //these are the variables for roi in diff levelbutdes
+        //these are the variables for roi in higher levels
 
-        $tru_2_1 = 1; $tru_2_2 = 1; $tru_2_3 = 1;
-        $tru_3_1 = 1; $tru_3_2 = 1; $tru_3_3 = 1;
+        $tru_2_1 = 1.3; $tru_2_2 = 1.4; $tru_2_3 = 1.3;
 
-        $truVal_2_ROI1 = 0; $truVal_2_ROI2 = 0; $truVal_2_ROI3 = 0;
-        $truVal_3_ROI1 = 0; $truVal_3_ROI2 = 0; $truVal_3_ROI3 = 0;
+        $tru_3_1 = 1.5; $tru_3_2 = 1.6; $tru_3_3 = 1.4;
+
+        //level2 roi
+        $truVal_2_ROI1 = $truValROI1 * $tru_2_1;
+        $truVal_2_ROI2 = $truValROI2 * $tru_2_2;
+        $truVal_2_ROI3 = $truValROI3 * $tru_2_3;
+
+        //level3 roi
+        $truVal_3_ROI1 = $truValROI1 * $tru_3_1;
+        $truVal_3_ROI2 = $truValROI2 * $tru_3_2;
+        $truVal_3_ROI3 = $truValROI3 * $tru_3_3;
+
+        //level2 savings
+        $truVal_2_Savings1 = $truValSavings1 * $tru_2_1;
+        $truVal_2_Savings2 = $truValSavings2 * $tru_2_2;
+        $truVal_2_Savings3 = $truValSavings3 * $tru_2_3;
+
+        //level3 savings
+        $truVal_3_Savings1 = $truValSavings1 * $tru_3_1;
+        $truVal_3_Savings2 = $truValSavings2 * $tru_3_2;
+        $truVal_3_Savings3 = $truValSavings3 * $tru_3_3;
+
+
 
 
   if (!$_POST['submittoroi']){
@@ -181,9 +216,23 @@ $noOfUsersTr  = $_POST ['transi5'];
     $sql = "INSERT into software  (EntryDate, CompanyName, ApplicationName, AgreementType, Location,
                                   NoOfLicenses, VendorName, LicenseType, RenewalDate, CostPerLicense, CalculatedROI, CutLicenses)
             values                (NOW(), '$companyName', '$applicationName', '$agreementType', '$imloc',
-                                  '$noOfLicenses','$vendorName','$licenseType','$renewalDate','$costPerLicense', $calculatedROI, $cutLicenses)";
+                                    '$noOfLicenses','$vendorName','$licenseType','$renewalDate','$costPerLicense', $calculatedROI, $cutLicenses),
+                                  (NOW(), '$companyName', '$applicationName_2', '$agreementType_2', '$imloc_2',
+                                    '$noOfLicenses_2','$vendorName_2','$licenseType_2','$renewalDate_2','$costPerLicense_2', $calculatedROI, $cutLicenses),
+                                  (NOW(), '$companyName', '$applicationName_3', '$agreementType_3', '$imloc_3',
+                                    '$noOfLicenses_3','$vendorName_3','$licenseType_3','$renewalDate_3','$costPerLicense_3', $calculatedROI, $cutLicenses)";
 
-    $sql2 = "INSERT into yearlyroi (EntryDate, ROIyear1, ROIyear2, ROIyear3, SavingsYear1, SavingsYear2, SavingsYear3, Industry, CompanyName)
+  /*$sql_2 = "INSERT into software  (EntryDate, CompanyName, ApplicationName, AgreementType, Location,
+                                  NoOfLicenses, VendorName, LicenseType, RenewalDate, CostPerLicense, CalculatedROI, CutLicenses)
+              values              (NOW(), '$companyName_2', '$applicationName_2', '$agreementType_2', '$imloc_2',
+                                  '$noOfLicenses_2','$vendorName_2','$licenseType_2','$renewalDate_2','$costPerLicense_2', $calculatedROI_2, $cutLicenses_2)";
+
+    $sql_3 = "INSERT into software  (EntryDate, CompanyName, ApplicationName, AgreementType, Location,
+                                  NoOfLicenses, VendorName, LicenseType, RenewalDate, CostPerLicense, CalculatedROI, CutLicenses)
+              values              (NOW(), '$companyName_3', '$applicationName_3', '$agreementType_3', '$imloc_3',
+                                  '$noOfLicenses_3','$vendorName_3','$licenseType_3','$renewalDate_3','$costPerLicense_3', $calculatedROI_3, $cutLicenses_3)"; */
+
+    $sqlroi = "INSERT into yearlyroi (EntryDate, ROIyear1, ROIyear2, ROIyear3, SavingsYear1, SavingsYear2, SavingsYear3, Industry, CompanyName)
             values                (NOW(), '$truValROI1', '$truValROI2', '$truValROI3','$truValSavings1','$truValSavings2','$truValSavings3','$industryTr','$companyName')";
 }
 
@@ -194,13 +243,10 @@ $noOfUsersTr  = $_POST ['transi5'];
       /*else {
           echo "Data creation not sucessful";
       }*/
-      if (mysqli_query($conn, $sql2)) {
+      if (mysqli_query($conn, $sqlroi)) {
         /*  echo "Data creation successful";*/
       }
-    //the code below can be removed
-      /*else {
-          echo "Data creation not sucessful";
-      }*/
+
 
 
 
