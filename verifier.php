@@ -76,30 +76,38 @@
               <input type="hidden" name="vercost3" value="<?php echo $costPerLicense_3; ?>">
               <input type="hidden" name="verloc3" value="<?php echo $imloc_3; ?>">
             <!--subject to change-->
-              <input type="hidden" name="verroi" value="<?php echo $truValROI1; ?>">
-              <input type="hidden" name="versav" value="<?php echo $truValSavings1; ?>">
-              <input type="hidden" name="verroi2" value="<?php echo $truValROI2; ?>">
-              <input type="hidden" name="versav2" value="<?php echo $truValSavings2; ?>">
-              <input type="hidden" name="verroi3" value="<?php echo $truValROI3; ?>">
-              <input type="hidden" name="versav3" value="<?php echo $truValSavings3; ?>">
+              <input type="hidden" name="verroi" value="<?php echo $ROI_1_1; ?>">
+              <input type="hidden" name="versav" value="<?php echo $savings_1_1; ?>">
+              <input type="hidden" name="verroi2" value="<?php echo $ROI_1_2; ?>">
+              <input type="hidden" name="versav2" value="<?php echo $savings_1_2; ?>">
+              <input type="hidden" name="verroi3" value="<?php echo $ROI_1_3; ?>">
+              <input type="hidden" name="versav3" value="<?php echo $savings_1_3; ?>">
             <!--the following are for higher level values -->
-              <input type="hidden" name="verroi_2_1" value="<?php echo $truVal_2_ROI1; ?>">
-              <input type="hidden" name="versav_2_1" value="<?php echo $truVal_2_Savings1; ?>">
-              <input type="hidden" name="verroi_2_2" value="<?php echo $truVal_2_ROI2; ?>">
-              <input type="hidden" name="versav_2_2" value="<?php echo $truVal_2_Savings2; ?>">
-              <input type="hidden" name="verroi_2_3" value="<?php echo $truVal_2_ROI3; ?>">
-              <input type="hidden" name="versav_2_3" value="<?php echo $truVal_2_Savings3; ?>">
+              <input type="hidden" name="verroi_2_1" value="<?php echo $ROI_2_1; ?>">
+              <input type="hidden" name="versav_2_1" value="<?php echo $savings_2_1; ?>">
+              <input type="hidden" name="verroi_2_2" value="<?php echo $ROI_2_2; ?>">
+              <input type="hidden" name="versav_2_2" value="<?php echo $savings_2_2; ?>">
+              <input type="hidden" name="verroi_2_3" value="<?php echo $ROI_2_3; ?>">
+              <input type="hidden" name="versav_2_3" value="<?php echo $savings_2_3; ?>">
 
-              <input type="hidden" name="verroi_3_1" value="<?php echo $truVal_3_ROI1; ?>">
-              <input type="hidden" name="versav_3_1" value="<?php echo $truVal_3_Savings1; ?>">
-              <input type="hidden" name="verroi_3_2" value="<?php echo $truVal_3_ROI2; ?>">
-              <input type="hidden" name="versav_3_2" value="<?php echo $truVal_3_Savings2; ?>">
-              <input type="hidden" name="verroi_3_3" value="<?php echo $truVal_3_ROI3; ?>">
-              <input type="hidden" name="versav_3_3" value="<?php echo $truVal_3_Savings3; ?>">
+              <input type="hidden" name="verroi_3_1" value="<?php echo $ROI_3_1; ?>">
+              <input type="hidden" name="versav_3_1" value="<?php echo $savings_3_1; ?>">
+              <input type="hidden" name="verroi_3_2" value="<?php echo $ROI_3_2; ?>">
+              <input type="hidden" name="versav_3_2" value="<?php echo $savings_3_2; ?>">
+              <input type="hidden" name="verroi_3_3" value="<?php echo $ROI_3_3; ?>">
+              <input type="hidden" name="versav_3_3" value="<?php echo $savings_3_3; ?>">
+
+              <input type="hidden" name="appCost_1" value="<?php echo $applicationA_costs; ?>">
+              <input type="hidden" name="appCost_2" value="<?php echo $applicationB_costs; ?>">
+              <input type="hidden" name="appCost_3" value="<?php echo $applicationC_costs; ?>">
 
               <input class="verifytxtbox" type="text" id="f9_vmlvf" name="passcode" autocomplete="off" required><br><br>
               <!--<span class="text-danger"><?php echo $verificationError; ?></span>-->
               <input type="submit" class="entbutdes" name="enter" value="Proceed">
+
+              <!-- INCLUDE ALL OTHER VARIABLES FOR NEW INCLUDED CHART, APPLIATIONACOST, APPLICATIONBCOSTS, APPLICATION C CO -->
+
+
             <!--  <button class="entbutdes" onclick="resend()">Resend</button> -->
             </form>
           </div>
@@ -123,7 +131,7 @@
     function resend() {
       location.reload();
     }
-    function zverify(){var _0x414dx1=document["getElementById"]("passcode")["value"];if(_0x414dx1!= "ajdfkejl"){alert("Passcode is wrong.");return false}}
+    function zverify(){var _0x414dx1=document["getElementById"]("passcode")["value"];if(_0x414dx1!= "ajdfjl"){alert("Passcode is wrong.");return false}}
     function verify(){var _0x414dx1=document["getElementById"]("f9_vmlvf")["value"];if(_0x414dx1!= "<?php echo$passcode;?>"){document.getElementById('alertwrong').style.display='block';return false}}
     $(document).keydown(function(e) {
      if (e.key === "Escape") {

@@ -44,6 +44,10 @@ $truVal_3_Savings2 = $_POST['versav_3_2'];
 $truVal_3_ROI3     = $_POST['verroi_3_3'];
 $truVal_3_Savings3 = $_POST['versav_3_3'];
 
+$applicationA_costs = $_POST['appCost_1'];
+$applicationB_costs = $_POST['appCost_2'];
+$applicationC_costs = $_POST['appCost_3'];
+
 //$passcodeInput   = $_POST['passcode'];
 
 $lasRepSav   = number_format($verSav,2);

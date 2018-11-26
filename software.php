@@ -185,19 +185,19 @@
 
         <div id="AppSelector2">
             <div class="form-group row openfont">
-              <label for="appName2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Application Name2</label>
+              <label for="appName2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Application Name</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control midtxtbx" id="appName2" placeholder="(i.e. AutoCAD, Petrel)"
                         name="appname2" autocomplete="off" required>
               </div>
-              <label for="vendName2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Vendor Name2</label>
+              <label for="vendName2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Vendor Name</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control midtxtbx" id="vendName2" placeholder="(i.e. ANSYS, Halliburton)"
                         name="vendname2" autocomplete="off">
               </div>
             </div>
             <div class="form-group row openfont">
-              <label for="agreeType2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Agreement Type2</label>
+              <label for="agreeType2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Agreement Type</label>
               <div class="col-sm-4">
                 <select class="custom-select form-control midtxtbx" id="agreeType2"
                         name="agreetype2">
@@ -210,7 +210,7 @@
                   <option value="Don't Know">Don't Know</option>
                 </select>
               </div>
-              <label for="licType2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>License Type2</label>
+              <label for="licType2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>License Type</label>
               <div class="col-sm-4">
                 <select class="custom-select form-control midtxtbx" id="licType2"
                         name="lictype2">
@@ -224,7 +224,7 @@
             </div>
 
             <div class="form-group row openfont">
-              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Install Location2</label>
+              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Install Location</label>
                 <div class="col-sm-1">
                   <label><input title="Server" type="checkbox" name="location2[]" class="glyphpointer" id="server2" value="Server">
                     <img src="images/iconserv.png" id="servericon" class="glyphpointer" data-toggle="tooltip" title="Server">
@@ -240,19 +240,19 @@
                     <img src="images/iconcloud.png" id="cloudicon" class="glyphpointer" data-toggle="tooltip" title="Cloud">
                   </label></div>
 
-              <label for="renDate2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Renewal Date2</label>
+              <label for="renDate2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Renewal Date</label>
               <div class="col-sm-4">
                 <input type="date" class="form-control midtxtbx" id="renDate2" placeholder="mm/dd/yyyy"
                         name="rendate2">
               </div>
             </div>
             <div class="form-group row openfont">
-              <label for="numLicenses2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>NumberofLicenses2</label>
+              <label for="numLicenses2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Number of Licenses</label>
               <div class="col-sm-4">
                 <input type="number" min="0" class="form-control midtxtbx" id="numLicenses2" placeholder="0"
                         name="numlicenses2" autocomplete="off" required>
               </div>
-              <label for="costLicense2" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>CostperLicense($)2</label>
+              <label for="costLicense2" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>Cost per License ($)</label>
               <div class="col-sm-4">
                     <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense2" placeholder="0.00"
                                 name="costlicenses2" autocomplete="off" required>
@@ -262,19 +262,19 @@
 
           <div id="AppSelector3">
             <div class="form-group row openfont">
-              <label for="appName3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Application Name3</label>
+              <label for="appName3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Application Name</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control midtxtbx" id="appName3" placeholder="(i.e. AutoCAD, Petrel)"
                         name="appname3" autocomplete="off" required>
               </div>
-              <label for="vendName3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Vendor Name3</label>
+              <label for="vendName3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Vendor Name</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control midtxtbx" id="vendName3" placeholder="(i.e. ANSYS, Halliburton)"
                         name="vendname3" autocomplete="off">
               </div>
             </div>
             <div class="form-group row openfont">
-              <label for="agreeType3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Agreement Type3</label>
+              <label for="agreeType3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Agreement Type</label>
               <div class="col-sm-4">
                 <select class="custom-select form-control midtxtbx" id="agreeType3"
                         name="agreetype3">
@@ -287,7 +287,7 @@
                   <option value="Don't Know">Don't Know</option>
                 </select>
               </div>
-              <label for="licType3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>License Type3</label>
+              <label for="licType3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>License Type</label>
               <div class="col-sm-4">
                 <select class="custom-select form-control midtxtbx" id="licType3"
                         name="lictype3">
@@ -301,7 +301,7 @@
             </div>
 
             <div class="form-group row openfont">
-              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Install Location3</label>
+              <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Install Location</label>
                 <div class="col-sm-1">
                   <label><input title="Server" type="checkbox" name="location3[]" class="glyphpointer" id="server3" value="Server">
                     <img src="images/iconserv.png" id="servericon" class="glyphpointer" data-toggle="tooltip" title="Server">
@@ -317,19 +317,19 @@
                     <img src="images/iconcloud.png" id="cloudicon" class="glyphpointer" data-toggle="tooltip" title="Cloud">
                   </label></div>
 
-              <label for="renDate3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Renewal Date3</label>
+              <label for="renDate3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Renewal Date</label>
               <div class="col-sm-4">
                 <input type="date" class="form-control midtxtbx" id="renDate3" placeholder="mm/dd/yyyy"
                         name="rendate3">
               </div>
             </div>
             <div class="form-group row openfont">
-              <label for="numLicenses3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>NumberofLicenses3</label>
+              <label for="numLicenses3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Number of Licenses</label>
               <div class="col-sm-4">
                 <input type="number" min="0" class="form-control midtxtbx" id="numLicenses3" placeholder="0"
                         name="numlicenses3" autocomplete="off" required>
               </div>
-              <label for="costLicense3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>CostperLicense($)3</label>
+              <label for="costLicense3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Cost per License ($)</label>
               <div class="col-sm-4">
                     <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense3" placeholder="0.00"
                                 name="costlicenses3" autocomplete="off" required>

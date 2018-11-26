@@ -30,13 +30,156 @@ $comWebsiteTr = $_POST ['transi3'];
 $comEmailTr   = $_POST ['transi4'];
 $noOfUsersTr  = $_POST ['transi5'];
 
+//initialization of all the variables
+
+$lvl_1_licReduction = 0.77; $lvl_1_licReductionYear2 = 0.12; $lvl_1_licReductionYear3 = 0.09;
+$lvl_2_licReduction = 0.68; $lvl_2_licReductionYear2 = 0.12; $lvl_2_licReductionYear3 = 0.09;
+$lvl_3_licReduction = 0.59; $lvl_3_licReductionYear2 = 0.12; $lvl_3_licReductionYear3 = 0.09;
+
+$pricePerUser_1 = 0; $pricePerUser_2 = 0; $pricePerUser_3 = 0;
+$applicationA_costs = 0; $applicationB_costs = 0; $applicationC_costs = 0;
+$applicationTotalCosts = 0;
+
+$purchaseCost_1 = 0;
+$purchaseCost_2 = 0;
+$purchaseCost_3 = 0;
+
+$applicationTotalCostsReduced_1 = 0;
+$applicationTotalCostsReduced_2 = 0;
+$applicationTotalCostsReduced_3 = 0;
+
+$applicationReductionSavings_1 = 0;
+$applicationReductionSavings_1 = 0;
+$applicationReductionSavings_1 = 0;
+
+$ROI_1_1 = 0; $ROI_1_2 = 0; $ROI_1_3 = 0;
+$ROI_2_1 = 0; $ROI_2_2 = 0; $ROI_2_3 = 0;
+$ROI_3_1 = 0; $ROI_3_2 = 0; $ROI_3_3 = 0;
+
+$savings_1_1 = 0;  $savings_1_2 = 0;  $savings_1_3 = 0;
+$savings_2_1 = 0;  $savings_2_2 = 0;  $savings_2_3 = 0;
+$savings_3_1 = 0;  $savings_3_2 = 0;  $savings_3_3 = 0;
+
+//user pricing conditional
+if($noOfUsersTr >= 0 && $noOfUsersTr <= 34) {
+  $pricePerUser_1 = 472.49;
+  $pricePerUser_2 = 780.48;
+  $pricePerUser_3 = 1064.76;
+}
+elseif($noOfUsersTr >= 35 && $noOfUsersTr <= 99) {
+  $pricePerUser_1 = 300.22;
+  $pricePerUser_2 = 679.08;
+  $pricePerUser_3 = 926.28;
+}
+elseif($noOfUsersTr >= 100 && $noOfUsersTr <= 349) {
+  $pricePerUser_1 = 233.11;
+  $pricePerUser_2 = 590.76;
+  $pricePerUser_3 = 805.92;
+}
+elseif($noOfUsersTr >= 350 && $noOfUsersTr <= 999) {
+  $pricePerUser_1 = 191.7;
+  $pricePerUser_2 = 513.96;
+  $pricePerUser_3 = 701.04;
+}
+elseif($noOfUsersTr >= 1000 && $noOfUsersTr <= 3499) {
+  $pricePerUser_2 = 164.01;
+  $pricePerUser_1 = 447.12;
+  $pricePerUser_3 = 609.96;
+}
+elseif($noOfUsersTr >= 3500 && $noOfUsersTr <= 9999) {
+  $pricePerUser_1 = 141.56;
+  $pricePerUser_2 = 389.04;
+  $pricePerUser_3 = 530.64;
+}
+elseif($noOfUsersTr >= 10000 && $noOfUsersTr <= 34999) {
+  $pricePerUser_1 = 122.95;
+  $pricePerUser_2 = 338.4;
+  $pricePerUser_3 = 461.64;
+}
+elseif($noOfUsersTr >= 35000 && $noOfUsersTr <= 99999) {
+  $pricePerUser_1 = 106.78;
+  $pricePerUser_2 = 294.48;
+  $pricePerUser_3 = 401.64;
+}
+elseif($noOfUsersTr >= 100000) {
+  $pricePerUser_1 = 92.94;
+  $pricePerUser_2 = 256.2;
+  $pricePerUser_3 = 349.44;
+}
+
+$applicationA_costs = $noOfLicenses * $costPerLicense;
+$applicationB_costs = $noOfLicenses_2 * $costPerLicense_2;
+$applicationC_costs = $noOfLicenses_3 * $costPerLicense_3;
+
+$applicationTotalCosts = $applicationA_costs + $applicationB_costs + $applicationC_costs;
+
+//level 1-------------
+$purchaseCost_1 = $pricePerUser_1 * $noOfUsersTr;
+
+$applicationTotalCostsReduced_1 = $applicationTotalCosts * $lvl_1_licReduction;
+
+$applicationReductionSavings_1 = $applicationTotalCosts - $applicationTotalCostsReduced_1;
+
+$savings_1_1 = $applicationReductionSavings_1 - $purchaseCost_1;
+$savings_1_2 = $savings_1_1 * $lvl_1_licReductionYear2;
+$savings_1_3 = $savings_1_1 * $lvl_1_licReductionYear3;
+
+$ROI_1_1 = ($savings_1_1/$purchaseCost_1) * 100;
+$ROI_1_2 = (($savings_1_1/$purchaseCost_1) * $lvl_1_licReductionYear2) * 100;
+$ROI_1_3 = (($savings_1_1/$purchaseCost_1) * $lvl_1_licReductionYear3) * 100;
+
+//guess formula for ff Years
+//guess formula for ff Years
+//guess formula for ff Years
+//guess formula for ff Years
+
+//level 2-------------
+$purchaseCost_2 = $pricePerUser_2 * $noOfUsersTr;
+
+$applicationTotalCostsReduced_2 = $applicationTotalCosts * $lvl_2_licReduction;
+
+$applicationReductionSavings_2 = $applicationTotalCosts - $applicationTotalCostsReduced_2;
+
+$savings_2_1 = $applicationReductionSavings_2 - $purchaseCost_2;
+$savings_2_2 = $savings_2_1 * $lvl_2_licReductionYear2;
+$savings_2_3 = $savings_2_1 * $lvl_2_licReductionYear3;
+
+$ROI_2_1 = ($savings_2_1/$purchaseCost_2) * 100;
+$ROI_2_2 = (($savings_2_1/$purchaseCost_2) * $lvl_2_licReductionYear2) * 100;
+$ROI_2_3 = (($savings_2_1/$purchaseCost_2) * $lvl_2_licReductionYear3) * 100;
+
+//guess formula for ff Years
+//guess formula for ff Years
+//guess formula for ff Years
+//guess formula for ff Years
+
+//level 3-------------
+$purchaseCost_3 = $pricePerUser_3 * $noOfUsersTr;
+
+$applicationTotalCostsReduced_3 = $applicationTotalCosts * $lvl_3_licReduction;
+
+$applicationReductionSavings_3 = $applicationTotalCosts - $applicationTotalCostsReduced_3;
+
+$savings_3_1 = $applicationReductionSavings_3 - $purchaseCost_3;
+$savings_3_2 = $savings_3_1 * $lvl_3_licReductionYear2;
+$savings_3_3 = $savings_3_1 * $lvl_3_licReductionYear3;
+
+$ROI_3_1 = ($savings_3_1/$purchaseCost_3) * 100;
+$ROI_3_2 = (($savings_3_1/$purchaseCost_3) * $lvl_3_licReductionYear2) * 100;
+$ROI_3_3 = (($savings_3_1/$purchaseCost_3) * $lvl_3_licReductionYear3) * 100;
+
+//guess formula for ff Years
+//guess formula for ff Years
+//guess formula for ff Years
+//guess formula for ff Years
+
         /*the main formula is as follows*/
 
-              //    $calculatedROI = round((($costPerLicense*$noOfLicenses)/100),2);
+                 $calculatedROI = round((($costPerLicense*$noOfLicenses)/100),2);
 
         /*the cut licenses formula is as follows*/
 
-                //  $cutLicenses = $noOfLicenses - 3;
+                 $cutLicenses = $noOfLicenses - 3;
 
         /*the following are the variables for yearly breakdown of ROI, this is open to change*/
 
@@ -45,7 +188,7 @@ $noOfUsersTr  = $_POST ['transi5'];
         $ogROI = array(1458, 750, 800);
         $mpROI = array(105, 90, 50);
         var_dump($engROI);*/
-
+/*--------------
         $engROIyr1 = 217;   $ogROIyr1   = 148;   $mpROIyr1     = 105;
         $engROIyr2 = 50;   $ogROIyr2   = 43;    $mpROIyr2     = 40;
         $engROIyr3 = 63;   $ogROIyr3   = 75;    $mpROIyr3     = 10;
@@ -53,10 +196,10 @@ $noOfUsersTr  = $_POST ['transi5'];
         $govROIyr1 = 105;   $autoROIyr1 =  189;   $othersROIyr1 = 74;
         $govROIyr2 = 107;   $autoROIyr2 =  40;   $othersROIyr2  = 96;
         $govROIyr3 = 50;    $autoROIyr3 =  75;   $othersROIyr3  = 73;
-
+----------------*/
         /*the following are the formula for each industry*/
 
-
+/*--------------
         $engSavings1 = ($engROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
         $engSavings2 = ($engROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
         $engSavings3 = ($engROIyr3 * 0.01) * ($costPerLicense*$noOfLicenses);
@@ -68,7 +211,7 @@ $noOfUsersTr  = $_POST ['transi5'];
         $mpSavings1  = ($mpROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
         $mpSavings2  = ($mpROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
         $mpSavings3  = ($mpROIyr3 * 0.01) * ($costPerLicense*$noOfLicenses);
-
+----------------*/
         /*
         $engSavings = [];
         $ogSavings = [];
@@ -79,7 +222,7 @@ $noOfUsersTr  = $_POST ['transi5'];
             $mpSavings = ($mpROI[$i] * 0.01) * ($costPerLicense*$noOfLicenses);
         }
         var_dump($engSavings);*/
-
+/*--------------
         $govSavings1  = ($govROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
         $govSavings2  = ($govROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
         $govSavings3  = ($govROIyr3 * 0.01) * ($costPerLicense*$noOfLicenses);
@@ -91,9 +234,9 @@ $noOfUsersTr  = $_POST ['transi5'];
         $othersSavings1 = ($othersROIyr1 * 0.01) * ($costPerLicense*$noOfLicenses);
         $othersSavings2 = ($othersROIyr2 * 0.01) * ($costPerLicense*$noOfLicenses);
         $othersSavings3 = ($othersROIyr3 * 0.01) * ($costPerLicense*$noOfLicenses);
-
+----------------*/
         /*the following are the conditionals per industry*/
-
+/*--------------
         if ($industryTr=='Engineering') {
           $valROI1 = $engROIyr1;    $valSavings1 = $engSavings1;
           $valROI2 = $engROIyr2;    $valSavings2 = $engSavings2;
@@ -135,16 +278,16 @@ $noOfUsersTr  = $_POST ['transi5'];
           $valROI2 = $othersROIyr2;    $valSavings2 = $othersSavings2;
           $valROI3 = $othersROIyr3;    $valSavings3 = $othersSavings3;
         }
-
+----------------*/
 
         /*the following are the variables for yearly breakdown per license type, this is open to change*/
-
+/*--------------
         $ppuMultYr1 = 2;    $perpMultYr1 = 1; $lsMultYr1 = 1; $subsMultYr1 = 1; $rntMultYr1 = 1;
         $ppuMultYr2 = 1;    $perpMultYr2 = 1; $lsMultYr2 = 1; $subsMultYr2 = 1; $rntMultYr2 = 1;
         $ppuMultYr3 = 1.5;   $perpMultYr3 = 1; $lsMultYr3 = 1; $subsMultYr3 = 1; $rntMultYr3 = 1;
-
+----------------*/
         /*the following are the conditionals per agreement type*/
-
+/*--------------
         if ($agreementType=='Lease') {
           $truValROI1 = $valROI1 * $lsMultYr1;    $truValSavings1 = $valSavings1 * $lsMultYr1;
           $truValROI2 = $valROI2 * $lsMultYr2;    $truValSavings2 = $valSavings2 * $lsMultYr2;
@@ -180,9 +323,9 @@ $noOfUsersTr  = $_POST ['transi5'];
           $truValROI2 = $valROI2; $truValSavings2 = $valSavings2;
           $truValROI3 = $valROI3; $truValSavings2 = $valSavings3;
         }
-
+----------------*/
         //these are the variables for roi in higher levels
-
+/*--------------
         $tru_2_1 = 1.3; $tru_2_2 = 1.4; $tru_2_3 = 1.3;
 
         $tru_3_1 = 1.5; $tru_3_2 = 1.6; $tru_3_3 = 1.4;
@@ -206,8 +349,7 @@ $noOfUsersTr  = $_POST ['transi5'];
         $truVal_3_Savings1 = $truValSavings1 * $tru_3_1;
         $truVal_3_Savings2 = $truValSavings2 * $tru_3_2;
         $truVal_3_Savings3 = $truValSavings3 * $tru_3_3;
-
-
+----------------*/
 
 
   if (!$_POST['submittoroi']){
@@ -233,7 +375,7 @@ $noOfUsersTr  = $_POST ['transi5'];
                                   '$noOfLicenses_3','$vendorName_3','$licenseType_3','$renewalDate_3','$costPerLicense_3', $calculatedROI_3, $cutLicenses_3)"; */
 
     $sqlroi = "INSERT into yearlyroi (EntryDate, ROIyear1, ROIyear2, ROIyear3, SavingsYear1, SavingsYear2, SavingsYear3, Industry, CompanyName)
-            values                (NOW(), '$truValROI1', '$truValROI2', '$truValROI3','$truValSavings1','$truValSavings2','$truValSavings3','$industryTr','$companyName')";
+            values                (NOW(), '$ROI_1_1', '$ROI_1_2', '$ROI_1_3','$savings_1_1','$savings_1_2','$savings_1_3','$industryTr','$companyName')";
 }
 
       if (mysqli_query($conn, $sql)) {
@@ -246,8 +388,6 @@ $noOfUsersTr  = $_POST ['transi5'];
       if (mysqli_query($conn, $sqlroi)) {
         /*  echo "Data creation successful";*/
       }
-
-
 
 
   //here are the codes for sending emails both the server and client

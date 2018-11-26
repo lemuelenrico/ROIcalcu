@@ -408,9 +408,9 @@
         datasets:[{
           label: 'Cost',
           data:[
-            <?php echo $truValROI1; ?>,
-            <?php echo $truValROI2; ?>,
-            <?php echo $truValROI3; ?>,
+            <?php echo round($applicationA_costs); ?>,
+            <?php echo round($applicationB_costs); ?>,
+            <?php echo round($applicationC_costs); ?>
           ],
           backgroundColor:['#ffae19','#ffa500','#ec8c2d'],
           hoverBorderWidth: 3,
@@ -468,9 +468,9 @@
         datasets:[{
           label: 'ROI',
           data:[
-            <?php echo $truValSavings1; ?>,
-            <?php echo $truValSavings2; ?>,
-            <?php echo $truValSavings3; ?>,
+            <?php echo round($truValSavings1); ?>,
+            <?php echo round($truValSavings2); ?>,
+            <?php echo round($truValSavings3); ?>
           ],
           backgroundColor:['#47c3dc','#417379','#ec8c2d'],
           borderWidth: 0,
@@ -514,9 +514,9 @@
           label: 'ROI',
           data:[
             0,
-            <?php echo $truValROI1; ?>,
-            <?php echo $truValROI2; ?>,
-            <?php echo $truValROI3; ?>,
+            <?php echo round($truValROI1); ?>,
+            <?php echo round($truValROI2); ?>,
+            <?php echo round($truValROI3); ?>
           ],
           borderColor:'#47c3dc',
           hoverBorderWidth: 3,

@@ -1,0 +1,263 @@
+[33mcommit 948f957bf6b018c33f3819face55a674f5baeb29[m[33m ([m[1;36mHEAD -> [m[1;32mrevise[m[33m, [m[1;31morigin/revise[m[33m)[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Mon Nov 26 12:09:38 2018 +0800
+
+    added line chart
+
+[33mcommit d3ce76df2e91cb0fdb61641c27cdf11e87031c3b[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Mon Nov 26 10:11:22 2018 +0800
+
+    excel export, removed OpeniT logo
+
+[33mcommit f9b65471d1c87413a5056a821c53ebecab18211b[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Thu Nov 15 15:22:28 2018 +0800
+
+    edited pointer size, added tons of modals for 3 apps, added additional industry and others textbox plus its verification verifier validation
+
+[33mcommit bebebe2037aa096f1d9eda50adc546087072fe06[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Tue Nov 13 19:57:32 2018 +0800
+
+    roi 3pages fixed contact
+
+[33mcommit 2322bc43ae6f14884038a9187b003bf16aa80bc9[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Fri Nov 9 20:22:21 2018 +0800
+
+    danens php suggestion commented, levels
+
+[33mcommit 3eacd3467f6fc975dba7361e5f63d7239247673a[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Thu Nov 8 22:16:14 2018 +0800
+
+    Modal Design
+
+[33mcommit 15a4541206e607789a5c94f4928d48cf934998ad[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Tue Nov 6 19:39:12 2018 +0800
+
+    multiApps buttons, changing bg modals started
+
+[33mcommit 6ad6183ef3a7739c15560731f24ac044fb92603a[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Mon Nov 5 13:05:11 2018 +0800
+
+    bugs: burger not working fixed
+
+[33mcommit 08a23f68cbc5216bfdd0cccc2821a5298842d355[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Wed Oct 31 21:18:42 2018 +0800
+
+    modern GUI, bugs in verifier, contact, burger-menu
+
+[33mcommit c646daa51a8aa3870c8447a542058c5fadf6b0f1[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Tue Oct 30 09:57:50 2018 +0800
+
+    clientside email verify
+
+[33mcommit fd2eb3adfef44b879b9f0be5f658f4018e9882cb[m[33m ([m[1;31morigin/takeawaydes[m[33m, [m[1;32mtakeawaydes[m[33m)[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Mon Oct 29 13:51:19 2018 +0800
+
+    last commit for this branch
+
+[33mcommit 90a2af741a5e2220ef5a7dd53ab26a50f62a2161[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Wed Oct 17 20:57:04 2018 +0800
+
+    contact page, revised wordings on index, colors on visuals and report and minor edits on software page
+
+[33mcommit 501a773f2788d3d86e8b0e1bfc13732b510f0e55[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Mon Oct 15 21:04:14 2018 +0800
+
+    dynamic pdf exporting
+
+[33mcommit c94b06b80801e0eb5a00cfcc947c030ec81c9a1e[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Fri Oct 12 11:52:41 2018 +0800
+
+    edited page pointers revised table
+
+[33mcommit caa53f498f7edc827c09e91dab7bcc83fb34eef2[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Tue Oct 9 16:25:43 2018 +0800
+
+    helppg, add links to nav bar
+
+[33mcommit 39a58f25653f0fee8be54a68d2e76402de5d0653[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Fri Oct 5 20:35:27 2018 +0800
+
+    takeaway done
+
+[33mcommit 0138f95ad983593f68404012163f4ba5d5e4de85[m[33m ([m[1;31morigin/clean[m[33m, [m[1;32mclean[m[33m)[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Fri Oct 5 18:31:38 2018 +0800
+
+    fixed styling and other stuff
+
+[33mcommit 45a50b4a0f46ba3ec1ee74ae7d44751d3a15de03[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Mon Oct 1 14:20:42 2018 +0800
+
+    last commit, extract not yet working
+
+[33mcommit aac794c6c24895d2d62006809abd0b60c951e5fb[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Tue Sep 25 17:28:26 2018 +0800
+
+    mail not yet done
+
+[33mcommit aee8e3caa87f4b97ca734227d893b5bea1d6d8c7[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Tue Sep 25 14:08:05 2018 +0800
+
+    perpetual bug fixed
+
+[33mcommit e569af21257acc2c2cc524820d587582d432acb3[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Tue Sep 25 13:55:52 2018 +0800
+
+    addtl conditionals, animated industry selection, fxd preci
+
+[33mcommit 804bcc641826b436fe1eeca3dac2ba189f726aea[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Mon Sep 24 21:45:56 2018 +0800
+
+    fixed showroicalcbutton alignment
+
+[33mcommit 7f5e93fe0a9c49728ef5872436335f0510c78fc1[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Mon Sep 24 21:33:04 2018 +0800
+
+    email notif for client and server, bigtextbox
+
+[33mcommit 8c8bacd3afa82af6cc10e0dfc96669b745095303[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Mon Sep 24 13:56:15 2018 +0800
+
+    added another chart, fix roi divs
+
+[33mcommit 40ab0d6e884f62d9989188cec893adc7969fbe94[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Fri Sep 21 22:11:44 2018 +0800
+
+    chart is done
+
+[33mcommit f876f97d1d7ad3eb091f301b2dc2543183db9ac5[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Fri Sep 21 14:39:27 2018 +0800
+
+    industry calculation conditionals addtl espbtn
+
+[33mcommit 61123e0fb9c79697d00a9273a384f788d854be50[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Thu Sep 20 13:17:48 2018 +0800
+
+    added roi table and exporting buttons
+
+[33mcommit 91e35632fb8265865e181d60f314bdafb7e400b2[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Tue Sep 18 21:57:01 2018 +0800
+
+    index responsive background, texbox choice validation
+
+[33mcommit 732125ecf8a22edeac71f029c1dae594ea3bca88[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Tue Sep 18 15:24:51 2018 +0800
+
+    added title on currency format
+
+[33mcommit a4bc92b766bdea97433a4327aa8febcf884665de[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Tue Sep 18 14:40:11 2018 +0800
+
+    clean version of backend changed duplicates in roi
+
+[33mcommit 60b05641e69fe0ec67d514f2075a3822f0f7a330[m[33m ([m[1;31morigin/backend[m[33m, [m[1;32mbackend[m[33m)[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Mon Sep 17 21:58:38 2018 +0800
+
+    Fixed fonts, title/tooltip, currency, custom warning
+
+[33mcommit fd819b96d73fe8a909861f25dce5c846cbd82dd8[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Thu Sep 13 21:57:28 2018 +0800
+
+    removed hyperlink
+
+[33mcommit ad684e50617d3e3f73cc0e9c3c2160f56681d7e1[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Fri Sep 7 19:24:38 2018 +0800
+
+    adjusted the index background and icon
+
+[33mcommit b300083e1dbcd4bc8cc03b60c3850012435ca502[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Fri Sep 7 12:19:17 2018 +0800
+
+    Changing label for Industry
+
+[33mcommit ef4a7d04053acd2d43c5806a6f0ae3bbd6b4bff4[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Thu Sep 6 22:32:22 2018 +0800
+
+    style on industry, finished backend
+
+[33mcommit 2c7c8e02d3359f6b6195e66e508c8ca1165e2c29[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Thu Sep 6 12:38:35 2018 +0800
+
+    Added company to roi display, fixed radio buttons
+
+[33mcommit ac9c7a6d925e2eb1c14d267bf3a55a607dba0882[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Tue Sep 4 15:22:27 2018 +0800
+
+    The backend and workflow of calculated ROI have been added
+
+[33mcommit 4928698f857df9ef04220b7529ea7113ee216286[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Thu Aug 30 21:48:21 2018 +0800
+
+    firsttakewayupdate
+
+[33mcommit 168e3aeb7452b80c4b755150e1fb489b233d4a1d[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Tue Aug 28 20:38:17 2018 +0800
+
+    Created backend except Checkbox
+
+[33mcommit bb94f50c280659cf2f43b49b96ebab2192504315[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Tue Aug 28 10:21:47 2018 +0800
+
+    backend 2nd commit
+
+[33mcommit 98b86fb27549af2e0dfa726252a084fe0c030e1a[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Tue Aug 28 10:19:40 2018 +0800
+
+    first backend commit
+
+[33mcommit 56237197c6e3e78d9bd4363b3ee4f5895980cd76[m[33m ([m[1;32mmaster[m[33m)[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Fri Aug 24 19:52:11 2018 +0800
+
+    Uwian na
+
+[33mcommit 81bffe7ee48314cbe2f1a2b5d04fbf966a944f64[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Thu Aug 23 20:35:30 2018 +0800
+
+    GUI Change
+
+[33mcommit 4ff8a28b4eb525b34ac4a0d2ab6780e567e04586[m
+Author: Lemuel G. Enrico <lenrico@openit.com>
+Date:   Wed Aug 22 18:14:36 2018 +0800
+
+    On branch master
