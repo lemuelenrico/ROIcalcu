@@ -34,7 +34,7 @@
     <style>
 
     body {
-    //background-image: url("<?php echo $backgroundURL; ?>");
+    background-image: url("<?php echo $backgroundURL; ?>");
     }
 
     </style>
@@ -90,7 +90,7 @@
                   <input type="hidden" name="transi5" value="<?php echo $noOfUsers ?>">
                 </div>
                   <br>
-              <h2 class="instructiontext">Top Three Applications</h2>
+              <h2 class="instructiontext">Three Most Expensive Applications</h2>
               </div>
               <div class="col-md-6 col-sm-6 rightalgn">
                   <h3 class="notssub openfont"><span class="requiredclr">*</span>Required fields.</h3>

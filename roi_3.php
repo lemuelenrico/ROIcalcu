@@ -317,7 +317,7 @@
                     </div>
                     <div class="row">
                       <div class="col-md-6 col-sm-6 smallspace">
-                        <form action="report2.php" method="POST" target="_blank">
+                        <form action="ReportLevel_3.php" method="POST" target="_blank">
                           <!-- the following hidden input function as transitional variables for reporting-->
                           <input type="hidden" name="repcom" value="<?php echo $companyName ?>">
                           <!--<input type="hidden" name="repind" value="<?php echo $industry?>">-->
@@ -327,13 +327,28 @@
                           <input type="hidden" name="repnooflic" value="<?php echo $noOfLicenses ?>">
                           <input type="hidden" name="repcost" value="<?php echo $costPerLicense ?>">
                           <input type="hidden" name="reploc" value="<?php echo $imloc ?>">
+
+                          <input type="hidden" name="repappname2" value="<?php echo $applicationName_2 ?>">
+                          <input type="hidden" name="repagree2" value="<?php echo $agreementType_2 ?>">
+                          <input type="hidden" name="replictype2" value="<?php echo $licenseType_2 ?>">
+                          <input type="hidden" name="repnooflic2" value="<?php echo $noOfLicenses_2 ?>">
+                          <input type="hidden" name="repcost2" value="<?php echo $costPerLicense_2 ?>">
+                          <input type="hidden" name="reploc2" value="<?php echo $imloc_2 ?>">
+
+                          <input type="hidden" name="repappname3" value="<?php echo $applicationName_3 ?>">
+                          <input type="hidden" name="repagree3" value="<?php echo $agreementType_3 ?>">
+                          <input type="hidden" name="replictype3" value="<?php echo $licenseType_3 ?>">
+                          <input type="hidden" name="repnooflic3" value="<?php echo $noOfLicenses_3 ?>">
+                          <input type="hidden" name="repcost3" value="<?php echo $costPerLicense_3 ?>">
+                          <input type="hidden" name="reploc3" value="<?php echo $imloc_3 ?>">
+
                           <!--the folowing are subject to changes -->
-                          <input type="hidden" name="reproi" value="<?php echo $truValROI1 ?>">
-                          <input type="hidden" name="repsav" value="<?php echo $truValSavings1 ?>">
-                          <input type="hidden" name="reproi2" value="<?php echo $truValROI2 ?>">
-                          <input type="hidden" name="repsav2" value="<?php echo $truValSavings2 ?>">
-                          <input type="hidden" name="reproi3" value="<?php echo $truValROI3 ?>">
-                          <input type="hidden" name="repsav3" value="<?php echo $truValSavings3 ?>">
+                          <input type="hidden" name="reproi" value="<?php echo $truVal_3_ROI1 ?>">
+                          <input type="hidden" name="repsav" value="<?php echo $truVal_3_Savings1 ?>">
+                          <input type="hidden" name="reproi2" value="<?php echo $truVal_3_ROI2 ?>">
+                          <input type="hidden" name="repsav2" value="<?php echo $truVal_3_Savings2 ?>">
+                          <input type="hidden" name="reproi3" value="<?php echo $truVal_3_ROI3 ?>">
+                          <input type="hidden" name="repsav3" value="<?php echo $truVal_3_Savings3 ?>">
                           <button type="submit" id="downloadpdf" class="btn">Export to<br>
                             <img src="images/newpdficon.png" width="40px" height="40px" onmouseover="this.src='images/newpdficonhover.png'"
                               onmouseout="this.src='images/newpdficon.png'" title="Export to PDF">
