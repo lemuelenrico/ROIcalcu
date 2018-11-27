@@ -116,6 +116,11 @@
                       <input type="hidden" name="versav_3_2" value="<?php echo $truVal_3_Savings2; ?>">
                       <input type="hidden" name="verroi_3_3" value="<?php echo $truVal_3_ROI3; ?>">
                       <input type="hidden" name="versav_3_3" value="<?php echo $truVal_3_Savings3; ?>">
+
+                      <input type="hidden" name="appCost_1" value="<?php echo $applicationA_costs; ?>">
+                      <input type="hidden" name="appCost_2" value="<?php echo $applicationB_costs; ?>">
+                      <input type="hidden" name="appCost_3" value="<?php echo $applicationC_costs; ?>">
+
                       <button type="submit" class="levelbutdes">Level 1
                       </button>
                     </form>
@@ -169,6 +174,10 @@
                       <input type="hidden" name="versav_3_2" value="<?php echo $truVal_3_Savings2; ?>">
                       <input type="hidden" name="verroi_3_3" value="<?php echo $truVal_3_ROI3; ?>">
                       <input type="hidden" name="versav_3_3" value="<?php echo $truVal_3_Savings3; ?>">
+
+                      <input type="hidden" name="appCost_1" value="<?php echo $applicationA_costs; ?>">
+                      <input type="hidden" name="appCost_2" value="<?php echo $applicationB_costs; ?>">
+                      <input type="hidden" name="appCost_3" value="<?php echo $applicationC_costs; ?>">
                     <button type="submit" class="levelbutdes">Level 2
                     </button>
                   </form>
@@ -404,9 +413,9 @@
         datasets:[{
           label: 'Cost',
           data:[
-            <?php echo $truVal_3_ROI1; ?>,
-            <?php echo $truVal_3_ROI2; ?>,
-            <?php echo $truVal_3_ROI3; ?>,
+            <?php echo round($applicationA_costs); ?>,
+            <?php echo round($applicationB_costs); ?>,
+            <?php echo round($applicationC_costs); ?>,
           ],
           backgroundColor:['#ffae19','#ffa500','#ec8c2d'],
           hoverBorderWidth: 3,
@@ -464,9 +473,9 @@
         datasets:[{
           label: 'ROI',
           data:[
-            <?php echo $truVal_3_Savings1; ?>,
-            <?php echo $truVal_3_Savings2; ?>,
-            <?php echo $truVal_3_Savings3; ?>,
+            <?php echo round($truVal_3_Savings1); ?>,
+            <?php echo round($truVal_3_Savings2); ?>,
+            <?php echo round($truVal_3_Savings3); ?>,
           ],
           backgroundColor:['#47c3dc','#417379','#ec8c2d'],
           borderWidth: 0,
@@ -511,9 +520,9 @@
           label: 'ROI',
           data:[
             0,
-            <?php echo $truVal_3_ROI1; ?>,
-            <?php echo $truVal_3_ROI2; ?>,
-            <?php echo $truVal_3_ROI3; ?>,
+            <?php echo round($truVal_3_ROI1); ?>,
+            <?php echo round($truVal_3_ROI2); ?>,
+            <?php echo round($truVal_3_ROI3); ?>,
           ],
           borderColor:'#47c3dc',
           hoverBorderWidth: 3,
@@ -563,30 +572,32 @@
       }
     });
 
+    </script>
 
-        window.saveFile = function saveFile() {
-      /*    var data1 = [ {"":"Name",             "Application A":"<?php echo $applicationName; ?>", "Application B":"<?php echo $applicationName_2; ?>", "Application C":"<?php echo $applicationName_3; ?>"},
-                        {"":"AgreementType",    "Application A":"<?php echo $agreementType; ?>",   "Application B":"<?php echo $agreementType_2; ?>",   "Application C":"<?php echo $agreementType_3; ?>"},
-                        {"":"LicenseType",      "Application A":"<?php echo $licenseType; ?>",     "Application B":"<?php echo $licenseType_2; ?>",     "Application C":"<?php echo $licenseType_3; ?>"},
-                        {"":"NumberOfLicenses", "Application A":<?php echo $noOfLicenses; ?>,    "Application B":<?php echo $noOfLicenses_2; ?>,    "Application C":<?php echo $noOfLicenses_3; ?>},
-                        {"":"CostPerLicense",   "Application A":<?php echo $costPerLicense; ?>,  "Application B":<?php echo $costPerLicense_2; ?>,  "Application C":<?php echo $costPerLicense_3; ?>},
-                        {"":"Location",         "Application A":"<?php echo $imloc; ?>",           "Application B":"<?php echo $imloc_2; ?>",           "Application C":"<?php echo $imloc_3; ?>"} ]; */
+    <script>
+            window.saveFile = function saveFile() {
+          /*    var data1 = [ {"":"Name",             "Application A":"<?php echo $applicationName; ?>", "Application B":"<?php echo $applicationName_2; ?>", "Application C":"<?php echo $applicationName_3; ?>"},
+                            {"":"AgreementType",    "Application A":"<?php echo $agreementType; ?>",   "Application B":"<?php echo $agreementType_2; ?>",   "Application C":"<?php echo $agreementType_3; ?>"},
+                            {"":"LicenseType",      "Application A":"<?php echo $licenseType; ?>",     "Application B":"<?php echo $licenseType_2; ?>",     "Application C":"<?php echo $licenseType_3; ?>"},
+                            {"":"NumberOfLicenses", "Application A":<?php echo $noOfLicenses; ?>,    "Application B":<?php echo $noOfLicenses_2; ?>,    "Application C":<?php echo $noOfLicenses_3; ?>},
+                            {"":"CostPerLicense",   "Application A":<?php echo $costPerLicense; ?>,  "Application B":<?php echo $costPerLicense_2; ?>,  "Application C":<?php echo $costPerLicense_3; ?>},
+                            {"":"Location",         "Application A":"<?php echo $imloc; ?>",           "Application B":"<?php echo $imloc_2; ?>",           "Application C":"<?php echo $imloc_3; ?>"} ]; */
 
-         var applications = [ {"":"Application A", "Name":"<?php echo $applicationName; ?>", "Agreement Type":"<?php echo $agreementType; ?>", "License Type":"<?php echo $licenseType; ?>", "Number of Licenses":<?php echo $noOfLicenses; ?>, "Cost per License":<?php echo $costPerLicense; ?>, "Location":"<?php echo $imloc; ?>"},
-                              {"":"Application B", "Name":"<?php echo $applicationName_2; ?>", "Agreement Type":"<?php echo $agreementType_2; ?>", "License Type":"<?php echo $licenseType_2; ?>", "Number of Licenses":<?php echo $noOfLicenses_2; ?>, "Cost per License":<?php echo $costPerLicense_2; ?>, "Location":"<?php echo $imloc_2; ?>"},
-                              {"":"Application C", "Name":"<?php echo $applicationName_3; ?>", "Agreement Type":"<?php echo $agreementType_3; ?>", "License Type":"<?php echo $licenseType_3; ?>", "Number of Licenses":<?php echo $noOfLicenses_3; ?>, "Cost per License":<?php echo $costPerLicense_3; ?>, "Location":"<?php echo $imloc_3; ?>"} ];
+               window.saveFile = function saveFile () {
+                 var applications = [ {"":"Application A", "Name":"<?php echo $applicationName; ?>", "Agreement Type":"<?php echo $agreementType; ?>", "License Type":"<?php echo $licenseType; ?>", "Number of Licenses":<?php echo $noOfLicenses; ?>, "Cost per License":<?php echo $costPerLicense; ?>, "Location":"<?php echo $imloc; ?>"},
+                                                 {"":"Application B", "Name":"<?php echo $applicationName_2; ?>", "Agreement Type":"<?php echo $agreementType_2; ?>", "License Type":"<?php echo $licenseType_2; ?>", "Number of Licenses":<?php echo $noOfLicenses_2; ?>, "Cost per License":<?php echo $costPerLicense_2; ?>, "Location":"<?php echo $imloc_2; ?>"},
+                                                 {"":"Application C", "Name":"<?php echo $applicationName_3; ?>", "Agreement Type":"<?php echo $agreementType_3; ?>", "License Type":"<?php echo $licenseType_3; ?>", "Number of Licenses":<?php echo $noOfLicenses_3; ?>, "Cost per License":<?php echo $costPerLicense_3; ?>, "Location":"<?php echo $imloc_3; ?>"} ];
 
-          var roi = [ {"ROI Calculation Level_3":"1st Year","%":<?php echo $truVal_3_ROI1 ?>, "$":<?php echo number_format($truVal_3_Savings1,2); ?>},
-                      {"ROI Calculation Level_3":"2nd Year","%":<?php echo $truVal_3_ROI2 ?>, "$":<?php echo number_format($truVal_3_Savings2,2); ?>},
-                      {"ROI Calculation Level_3":"3rd Year","%":<?php echo $truVal_3_ROI3 ?>, "$":<?php echo number_format($truVal_3_Savings3,2); ?>}  ];
+                 var roi = [   {"ROI Calculation Level_3":"1st Year","%":<?php echo round($truVal_3_ROI1); ?>, "$":<?php echo round($truVal_3_Savings1); ?>},
+                               {"ROI Calculation Level_3":"2nd Year","%":<?php echo round($truVal_3_ROI2); ?>, "$":<?php echo round($truVal_3_Savings2); ?>},
+                               {"ROI Calculation Level_3":"2nd Year","%":<?php echo round($truVal_3_ROI3); ?>, "$":<?php echo round($truVal_3_Savings3); ?>} ];
 
-          var opts = [{sheetid:'Application',header:true},{sheetid:'ROI',header:false}];
-          var res = alasql('SELECT INTO XLSX("SnowLevel3_ROIreport<?php echo $companyName; ?>.xlsx",?) FROM ?',
-                           [opts,[applications,roi]]);
-          }
+                 var opts = [{sheetid:'Application',header:true},{sheetid:'ROI',header:false}];
+                 var res = alasql('SELECT INTO XLSX("SnowLevel3_ROIreport<?php echo $companyName; ?>.xlsx",?) FROM ?',
+                                  [opts,[applications,roi]]);
+                 }
+              }
 
-
-s
     </script>
     <!--<script src="js/roi.js"></script>-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
