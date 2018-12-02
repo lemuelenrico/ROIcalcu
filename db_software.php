@@ -21,7 +21,6 @@ $noOfLicenses_3     = $_POST ['numlicenses3']; $costPerLicense_3   = $_POST ['co
 
 $imloc_3 = implode (", ",$location_3);
 
-
 /*the following variables are transitional variables*/
 
 $companyName  = $_POST ['transi'];
@@ -32,9 +31,9 @@ $noOfUsersTr  = $_POST ['transi5'];
 
 //initialization of all the variables
 
-$lvl_1_licReduction = 0.77; $lvl_1_licReductionYear2 = 0.12; $lvl_1_licReductionYear3 = 0.09;
-$lvl_2_licReduction = 0.68; $lvl_2_licReductionYear2 = 0.12; $lvl_2_licReductionYear3 = 0.09;
-$lvl_3_licReduction = 0.59; $lvl_3_licReductionYear2 = 0.12; $lvl_3_licReductionYear3 = 0.09;
+$lvl_1_licReduction = 0.77; $lvl_1_licReductionYear2 = 0.2; $lvl_1_licReductionYear3 = 0.2;
+$lvl_2_licReduction = 0.68; $lvl_2_licReductionYear2 = 0.2; $lvl_2_licReductionYear3 = 0.2;
+$lvl_3_licReduction = 0.59; $lvl_3_licReductionYear2 = 0.2; $lvl_3_licReductionYear3 = 0.2;
 
 $pricePerUser_1 = 0; $pricePerUser_2 = 0; $pricePerUser_3 = 0;
 $applicationA_costs = 0; $applicationB_costs = 0; $applicationC_costs = 0;
@@ -62,47 +61,47 @@ $savings_3_1 = 0;  $savings_3_2 = 0;  $savings_3_3 = 0;
 
 //user pricing conditional
 if($noOfUsersTr >= 0 && $noOfUsersTr <= 34) {
-  $pricePerUser_1 = 472.49;
+  $pricePerUser_1 = 487.44;
   $pricePerUser_2 = 780.48;
   $pricePerUser_3 = 1064.76;
 }
 elseif($noOfUsersTr >= 35 && $noOfUsersTr <= 99) {
-  $pricePerUser_1 = 300.22;
+  $pricePerUser_1 = 309.72;
   $pricePerUser_2 = 679.08;
   $pricePerUser_3 = 926.28;
 }
 elseif($noOfUsersTr >= 100 && $noOfUsersTr <= 349) {
-  $pricePerUser_1 = 233.11;
+  $pricePerUser_1 = 240.48;
   $pricePerUser_2 = 590.76;
   $pricePerUser_3 = 805.92;
 }
 elseif($noOfUsersTr >= 350 && $noOfUsersTr <= 999) {
-  $pricePerUser_1 = 191.7;
+  $pricePerUser_1 = 197.76;
   $pricePerUser_2 = 513.96;
   $pricePerUser_3 = 701.04;
 }
 elseif($noOfUsersTr >= 1000 && $noOfUsersTr <= 3499) {
-  $pricePerUser_2 = 164.01;
+  $pricePerUser_2 = 168.2;
   $pricePerUser_1 = 447.12;
   $pricePerUser_3 = 609.96;
 }
 elseif($noOfUsersTr >= 3500 && $noOfUsersTr <= 9999) {
-  $pricePerUser_1 = 141.56;
+  $pricePerUser_1 = 146.04;
   $pricePerUser_2 = 389.04;
   $pricePerUser_3 = 530.64;
 }
 elseif($noOfUsersTr >= 10000 && $noOfUsersTr <= 34999) {
-  $pricePerUser_1 = 122.95;
+  $pricePerUser_1 = 126.84;
   $pricePerUser_2 = 338.4;
   $pricePerUser_3 = 461.64;
 }
 elseif($noOfUsersTr >= 35000 && $noOfUsersTr <= 99999) {
-  $pricePerUser_1 = 106.78;
+  $pricePerUser_1 = 110.16;
   $pricePerUser_2 = 294.48;
   $pricePerUser_3 = 401.64;
 }
 elseif($noOfUsersTr >= 100000) {
-  $pricePerUser_1 = 92.94;
+  $pricePerUser_1 = 95.88;
   $pricePerUser_2 = 256.2;
   $pricePerUser_3 = 349.44;
 }
@@ -374,8 +373,10 @@ $ROI_3_3 = (($savings_3_1/$purchaseCost_3) * $lvl_3_licReductionYear3) * 100;
               values              (NOW(), '$companyName_3', '$applicationName_3', '$agreementType_3', '$imloc_3',
                                   '$noOfLicenses_3','$vendorName_3','$licenseType_3','$renewalDate_3','$costPerLicense_3', $calculatedROI_3, $cutLicenses_3)"; */
 
-    $sqlroi = "INSERT into yearlyroi (EntryDate, ROIyear1, ROIyear2, ROIyear3, SavingsYear1, SavingsYear2, SavingsYear3, Industry, CompanyName)
-            values                (NOW(), '$ROI_1_1', '$ROI_1_2', '$ROI_1_3','$savings_1_1','$savings_1_2','$savings_1_3','$industryTr','$companyName')";
+    $sqlroi = "INSERT into yearlyroi (EntryDate, Level, ROIyear1, ROIyear2, ROIyear3, SavingsYear1, SavingsYear2, SavingsYear3, Industry, CompanyName)
+            values                (NOW(), 'Level_1', '$ROI_1_1', '$ROI_1_2', '$ROI_1_3','$savings_1_1','$savings_1_2','$savings_1_3','$industryTr','$companyName'),
+                                  (NOW(), 'Level_2', '$ROI_2_1', '$ROI_2_2', '$ROI_2_3','$savings_2_1','$savings_2_2','$savings_2_3','$industryTr','$companyName'),
+                                  (NOW(), 'Level_3', '$ROI_3_1', '$ROI_3_2', '$ROI_3_3','$savings_3_1','$savings_3_2','$savings_3_3','$industryTr','$companyName')";
 }
 
       if (mysqli_query($conn, $sql)) {
