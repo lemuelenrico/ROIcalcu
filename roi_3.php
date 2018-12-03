@@ -312,7 +312,7 @@
                     <div class="row">
                       <div class="container-fluid smallspace">
                         <a href="company.php" class="btn contactbutdes geofont">Contact Snow</a>
-                        <a href="company.php" class="btn recalcbutdes geofont">Calculate again</a>
+                        <a href="https://www.snowsoftware.com/int/contact" class="btn recalcbutdes geofont">Calculate again</a>
                       </div>
                     </div>
                     <div class="row">

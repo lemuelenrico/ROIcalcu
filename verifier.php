@@ -6,6 +6,7 @@
         include ('connection.php');
         error_reporting(0);
         include ('db_software.php');
+        //include ('admin_mail.php')
     ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

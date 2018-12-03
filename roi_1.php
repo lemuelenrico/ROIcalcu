@@ -5,6 +5,7 @@
           include ('connection.php');
           error_reporting(0);
           include ('db_verifier.php');
+          //include ('admin_mail.php');
       ?>
   <head>
     <meta charset="utf-8">
@@ -314,7 +315,7 @@
                   <div class="roidiv nospace colorwhite"><br>
                     <div class="row">
                       <div class="container-fluid smallspace">
-                        <a href="company.php" class="btn contactbutdes geofont">Contact Snow</a>
+                        <a href="https://www.snowsoftware.com/int/contact" class="btn contactbutdes geofont">Contact Snow</a>
                         <a href="company.php" class="btn recalcbutdes geofont">Calculate again</a>
                       </div>
                     </div>
