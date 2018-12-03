@@ -400,18 +400,18 @@
                       </tr>
                       <tr>
                           <td width="30%" id="firstyrgradient">1st Year</td>
-                          <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_2_ROI1); ?>%</td>
+                          <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_2_ROI1,2); ?>%</td>
                           <td class="colorwhite yearlydata">$<?php echo number_format($truVal_2_Savings1,2); ?></td>
                       </tr>
 
                       <tr>
                           <td width="30%" id="secondyrgradient">2nd Year</td>
-                          <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_2_ROI2); ?>%</td>
+                          <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_2_ROI2,2); ?>%</td>
                           <td class="colorwhite yearlydata">$<?php echo number_format($truVal_2_Savings2,2); ?></td>
                       </tr>
                       <tr>
                           <td width="30%" id="thrdyrgradient">3rd Year</td>
-                          <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_2_ROI3); ?>%</td>
+                          <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_2_ROI3,2); ?>%</td>
                           <td class="colorwhite yearlydata">$<?php echo number_format($truVal_2_Savings3,2); ?></td>
                       </tr>
                     </table>

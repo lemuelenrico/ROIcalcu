@@ -31,9 +31,10 @@ $noOfUsersTr  = $_POST ['transi5'];
 
 //initialization of all the variables
 
-$lvl_1_licReduction = 0.77; $lvl_1_licReductionYear2 = 0.2; $lvl_1_licReductionYear3 = 0.2;
-$lvl_2_licReduction = 0.68; $lvl_2_licReductionYear2 = 0.2; $lvl_2_licReductionYear3 = 0.2;
-$lvl_3_licReduction = 0.59; $lvl_3_licReductionYear2 = 0.2; $lvl_3_licReductionYear3 = 0.2;
+$lvl_1_licReduction = 0.8; $lvl_1_licReductionYear2 = 0.05; $lvl_1_licReductionYear3 = 0.05;
+$lvl_2_licReduction = 0.7; $lvl_2_licReductionYear2 = 0.07; $lvl_2_licReductionYear3 = 0.07;
+$lvl_3_licReduction = 0.6; $lvl_3_licReductionYear2 = 0.1; $lvl_3_licReductionYear3 = 0.1;
+$mS = 0.2;
 
 $pricePerUser_1 = 0; $pricePerUser_2 = 0; $pricePerUser_3 = 0;
 $applicationA_costs = 0; $applicationB_costs = 0; $applicationC_costs = 0;
@@ -43,13 +44,23 @@ $purchaseCost_1 = 0;
 $purchaseCost_2 = 0;
 $purchaseCost_3 = 0;
 
-$applicationTotalCostsReduced_1 = 0;
-$applicationTotalCostsReduced_2 = 0;
-$applicationTotalCostsReduced_3 = 0;
+$applicationTotalCostsReduced_1_1 = 0; $applicationTotalCostsReduced_2_1 = 0; $applicationTotalCostsReduced_3_1 = 0;
+$applicationTotalCostsReduced_1_2 = 0; $applicationTotalCostsReduced_2_2 = 0; $applicationTotalCostsReduced_3_2 = 0;
+$applicationTotalCostsReduced_1_3 = 0; $applicationTotalCostsReduced_2_3 = 0; $applicationTotalCostsReduced_3_3 = 0;
 
-$applicationReductionSavings_1 = 0;
-$applicationReductionSavings_1 = 0;
-$applicationReductionSavings_1 = 0;
+$applicationReductionSavings_1_1 = 0; $applicationReductionSavings_2_1 = 0; $applicationReductionSavings_3_1 = 0;
+$applicationReductionSavings_1_2 = 0; $applicationReductionSavings_2_2 = 0; $applicationReductionSavings_3_2 = 0;
+$applicationReductionSavings_1_3 = 0; $applicationReductionSavings_2_3 = 0; $applicationReductionSavings_3_3 = 0;
+
+//total cost for yr 1 is the same for all level
+$applicationTotalCosts_1_2 = 0; $applicationTotalCosts_1_3 = 0;
+$applicationTotalCosts_2_2 = 0; $applicationTotalCosts_2_3 = 0;
+$applicationTotalCosts_3_2 = 0; $applicationTotalCosts_3_3 = 0;
+
+//maintenance are for 2nd and 3rd yr only with same value
+$mSCost_1 = 0;
+$mSCost_2 = 0;
+$mSCost_3 = 0;
 
 $ROI_1_1 = 0; $ROI_1_2 = 0; $ROI_1_3 = 0;
 $ROI_2_1 = 0; $ROI_2_2 = 0; $ROI_2_3 = 0;
@@ -61,49 +72,49 @@ $savings_3_1 = 0;  $savings_3_2 = 0;  $savings_3_3 = 0;
 
 //user pricing conditional
 if($noOfUsersTr >= 0 && $noOfUsersTr <= 34) {
-  $pricePerUser_1 = 487.44;
-  $pricePerUser_2 = 780.48;
-  $pricePerUser_3 = 1064.76;
+  $pricePerUser_1 = 499;
+  $pricePerUser_2 = 799;
+  $pricePerUser_3 = 1090;
 }
 elseif($noOfUsersTr >= 35 && $noOfUsersTr <= 99) {
-  $pricePerUser_1 = 309.72;
-  $pricePerUser_2 = 679.08;
-  $pricePerUser_3 = 926.28;
+  $pricePerUser_1 = 317;
+  $pricePerUser_2 = 695;
+  $pricePerUser_3 = 948;
 }
 elseif($noOfUsersTr >= 100 && $noOfUsersTr <= 349) {
-  $pricePerUser_1 = 240.48;
-  $pricePerUser_2 = 590.76;
-  $pricePerUser_3 = 805.92;
+  $pricePerUser_1 = 246;
+  $pricePerUser_2 = 605;
+  $pricePerUser_3 = 825;
 }
 elseif($noOfUsersTr >= 350 && $noOfUsersTr <= 999) {
-  $pricePerUser_1 = 197.76;
-  $pricePerUser_2 = 513.96;
-  $pricePerUser_3 = 701.04;
+  $pricePerUser_1 = 203;
+  $pricePerUser_2 = 526;
+  $pricePerUser_3 = 718;
 }
 elseif($noOfUsersTr >= 1000 && $noOfUsersTr <= 3499) {
-  $pricePerUser_2 = 168.2;
-  $pricePerUser_1 = 447.12;
-  $pricePerUser_3 = 609.96;
+  $pricePerUser_2 = 173;
+  $pricePerUser_1 = 458;
+  $pricePerUser_3 = 624;
 }
 elseif($noOfUsersTr >= 3500 && $noOfUsersTr <= 9999) {
-  $pricePerUser_1 = 146.04;
-  $pricePerUser_2 = 389.04;
-  $pricePerUser_3 = 530.64;
+  $pricePerUser_1 = 150;
+  $pricePerUser_2 = 398;
+  $pricePerUser_3 = 543;
 }
 elseif($noOfUsersTr >= 10000 && $noOfUsersTr <= 34999) {
-  $pricePerUser_1 = 126.84;
-  $pricePerUser_2 = 338.4;
-  $pricePerUser_3 = 461.64;
+  $pricePerUser_1 = 130;
+  $pricePerUser_2 = 346;
+  $pricePerUser_3 = 473;
 }
 elseif($noOfUsersTr >= 35000 && $noOfUsersTr <= 99999) {
-  $pricePerUser_1 = 110.16;
-  $pricePerUser_2 = 294.48;
-  $pricePerUser_3 = 401.64;
+  $pricePerUser_1 = 113;
+  $pricePerUser_2 = 301;
+  $pricePerUser_3 = 411;
 }
 elseif($noOfUsersTr >= 100000) {
-  $pricePerUser_1 = 95.88;
-  $pricePerUser_2 = 256.2;
-  $pricePerUser_3 = 349.44;
+  $pricePerUser_1 = 98;
+  $pricePerUser_2 = 262;
+  $pricePerUser_3 = 358;
 }
 
 $applicationA_costs = $noOfLicenses * $costPerLicense;
@@ -115,62 +126,81 @@ $applicationTotalCosts = $applicationA_costs + $applicationB_costs + $applicatio
 //level 1-------------
 $purchaseCost_1 = $pricePerUser_1 * $noOfUsersTr;
 
-$applicationTotalCostsReduced_1 = $applicationTotalCosts * $lvl_1_licReduction;
+$applicationTotalCostsReduced_1_1 = $applicationTotalCosts * $lvl_1_licReduction;
 
-$applicationReductionSavings_1 = $applicationTotalCosts - $applicationTotalCostsReduced_1;
+$applicationReductionSavings_1_1 = $applicationTotalCosts - $applicationTotalCostsReduced_1_1;
 
-$savings_1_1 = $applicationReductionSavings_1 - $purchaseCost_1;
-$savings_1_2 = $savings_1_1 * $lvl_1_licReductionYear2;
-$savings_1_3 = $savings_1_1 * $lvl_1_licReductionYear3;
+$savings_1_1 = $applicationReductionSavings_1_1 - $purchaseCost_1;
+$ROI_1_1 = ($savings_1_1/$applicationTotalCosts) * 100;
 
-$ROI_1_1 = ($savings_1_1/$purchaseCost_1) * 100;
-$ROI_1_2 = (($savings_1_1/$purchaseCost_1) * $lvl_1_licReductionYear2) * 100;
-$ROI_1_3 = (($savings_1_1/$purchaseCost_1) * $lvl_1_licReductionYear3) * 100;
+//yr 2 calculation
+$applicationTotalCosts_1_2 = $applicationTotalCostsReduced_1_1;
+$applicationTotalCostsReduced_1_2 = $applicationTotalCosts_1_2 * (1-$lvl_1_licReductionYear2);
+$applicationReductionSavings_1_2 = $applicationTotalCosts_1_2 - $applicationTotalCostsReduced_1_2;
+$mSCost_1 = $purchaseCost_1 * $mS;
+$savings_1_2 = $applicationReductionSavings_1_2 - $mSCost_1;
+$ROI_1_2 = ($savings_1_2/$applicationTotalCosts_1_2) * 100;
 
-//guess formula for ff Years
-//guess formula for ff Years
-//guess formula for ff Years
-//guess formula for ff Years
+//yr 3 calculation
+$applicationTotalCosts_1_3 = $applicationTotalCostsReduced_1_2;
+$applicationTotalCostsReduced_1_3 = $applicationTotalCosts_1_3 * (1-$lvl_1_licReductionYear3);
+$applicationReductionSavings_1_3 = $applicationTotalCosts_1_3 - $applicationTotalCostsReduced_1_3;
+$savings_1_3 = $applicationReductionSavings_1_3 - $mSCost_1;
+$ROI_1_3 = ($savings_1_3/$applicationTotalCosts_1_3) * 100;
+
 
 //level 2-------------
 $purchaseCost_2 = $pricePerUser_2 * $noOfUsersTr;
 
-$applicationTotalCostsReduced_2 = $applicationTotalCosts * $lvl_2_licReduction;
+$applicationTotalCostsReduced_2_1 = $applicationTotalCosts * $lvl_2_licReduction;
 
-$applicationReductionSavings_2 = $applicationTotalCosts - $applicationTotalCostsReduced_2;
+$applicationReductionSavings_2_1 = $applicationTotalCosts - $applicationTotalCostsReduced_2_1;
 
-$savings_2_1 = $applicationReductionSavings_2 - $purchaseCost_2;
-$savings_2_2 = $savings_2_1 * $lvl_2_licReductionYear2;
-$savings_2_3 = $savings_2_1 * $lvl_2_licReductionYear3;
+$savings_2_1 = $applicationReductionSavings_2_1 - $purchaseCost_2;
+$ROI_2_1 = ($savings_2_1/$applicationTotalCosts) * 100;
 
-$ROI_2_1 = ($savings_2_1/$purchaseCost_2) * 100;
-$ROI_2_2 = (($savings_2_1/$purchaseCost_2) * $lvl_2_licReductionYear2) * 100;
-$ROI_2_3 = (($savings_2_1/$purchaseCost_2) * $lvl_2_licReductionYear3) * 100;
+//yr 2 calculation
+$applicationTotalCosts_2_2 = $applicationTotalCostsReduced_2_1;
+$applicationTotalCostsReduced_2_2 = $applicationTotalCosts_2_2 * (1-$lvl_2_licReductionYear2);
+$applicationReductionSavings_2_2 = $applicationTotalCosts_2_2 - $applicationTotalCostsReduced_2_2;
+$mSCost_2 = $purchaseCost_2 * $mS;
+$savings_2_2 = $applicationReductionSavings_2_2 - $mSCost_2;
+$ROI_2_2 = ($savings_2_2/$applicationTotalCosts_2_2) * 100;
 
-//guess formula for ff Years
-//guess formula for ff Years
-//guess formula for ff Years
-//guess formula for ff Years
+//yr 3 calculation
+$applicationTotalCosts_2_3 = $applicationTotalCostsReduced_2_2;
+$applicationTotalCostsReduced_2_3 = $applicationTotalCosts_2_3 * (1-$lvl_2_licReductionYear3);
+$applicationReductionSavings_2_3 = $applicationTotalCosts_2_3 - $applicationTotalCostsReduced_2_3;
+$savings_2_3 = $applicationReductionSavings_2_3 - $mSCost_2;
+$ROI_2_3 = ($savings_2_3/$applicationTotalCosts_2_3) * 100;
+
 
 //level 3-------------
 $purchaseCost_3 = $pricePerUser_3 * $noOfUsersTr;
 
-$applicationTotalCostsReduced_3 = $applicationTotalCosts * $lvl_3_licReduction;
+$applicationTotalCostsReduced_3_1 = $applicationTotalCosts * $lvl_3_licReduction;
 
-$applicationReductionSavings_3 = $applicationTotalCosts - $applicationTotalCostsReduced_3;
+$applicationReductionSavings_3_1 = $applicationTotalCosts - $applicationTotalCostsReduced_3_1;
 
-$savings_3_1 = $applicationReductionSavings_3 - $purchaseCost_3;
-$savings_3_2 = $savings_3_1 * $lvl_3_licReductionYear2;
-$savings_3_3 = $savings_3_1 * $lvl_3_licReductionYear3;
+$savings_3_1 = $applicationReductionSavings_3_1 - $purchaseCost_3;
+$ROI_3_1 = ($savings_3_1/$applicationTotalCosts) * 100;
 
-$ROI_3_1 = ($savings_3_1/$purchaseCost_3) * 100;
-$ROI_3_2 = (($savings_3_1/$purchaseCost_3) * $lvl_3_licReductionYear2) * 100;
-$ROI_3_3 = (($savings_3_1/$purchaseCost_3) * $lvl_3_licReductionYear3) * 100;
+//yr 2 calculation
+$applicationTotalCosts_3_2 = $applicationTotalCostsReduced_3_1;
+$applicationTotalCostsReduced_3_2 = $applicationTotalCosts_3_2 * (1-$lvl_3_licReductionYear2);
+$applicationReductionSavings_3_2 = $applicationTotalCosts_3_2 - $applicationTotalCostsReduced_3_2;
+$mSCost_3 = $purchaseCost_3 * $mS;
+$savings_3_2 = $applicationReductionSavings_3_2 - $mSCost_3;
+$ROI_3_2 = ($savings_3_2/$applicationTotalCosts_3_2) * 100;
 
-//guess formula for ff Years
-//guess formula for ff Years
-//guess formula for ff Years
-//guess formula for ff Years
+//yr 3 calculation
+$applicationTotalCosts_3_3 = $applicationTotalCostsReduced_3_2;
+$applicationTotalCostsReduced_3_3 = $applicationTotalCosts_3_3 * (1-$lvl_3_licReductionYear3);
+$applicationReductionSavings_3_3 = $applicationTotalCosts_3_3 - $applicationTotalCostsReduced_3_3;
+$savings_3_3 = $applicationReductionSavings_3_3 - $mSCost_3;
+$ROI_3_3 = ($savings_3_3/$applicationTotalCosts_3_3) * 100;
+
+
 
         /*the main formula is as follows*/
 
