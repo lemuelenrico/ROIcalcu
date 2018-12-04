@@ -92,8 +92,8 @@ elseif($noOfUsersTr >= 350 && $noOfUsersTr <= 999) {
   $pricePerUser_3 = 718;
 }
 elseif($noOfUsersTr >= 1000 && $noOfUsersTr <= 3499) {
-  $pricePerUser_2 = 173;
-  $pricePerUser_1 = 458;
+  $pricePerUser_1 = 173;
+  $pricePerUser_2 = 458;
   $pricePerUser_3 = 624;
 }
 elseif($noOfUsersTr >= 3500 && $noOfUsersTr <= 9999) {

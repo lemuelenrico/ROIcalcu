@@ -53,6 +53,10 @@ elseif ($industry=='Others') {
   $backgroundURL = "images/bg/Other_bg.jpg";
 }
 
+elseif ($industry=='Aerospace') {
+  $backgroundURL = "images/bg/Aero_bg.jpg";
+}
+
 else {
   $backgroundURL = "images/roiback.jpg";
 }
