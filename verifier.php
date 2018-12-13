@@ -20,34 +20,32 @@
     <link href="icon/snowflake.png" rel="shortcut icon">
   </head>
   <body>
-      <nav class="navbar navbar-default nobord navsmallmrgbot">
-        <div class="container-fluid navpad2 blueb">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-              <!--  <a class="navbar-brand" href="#">-->
-            <a class="navbar-brand" href="https://www.snowsoftware.com/int">
-              <img src="images/Snowlogo.png"></a>
-          </div>
+    <nav class="navbar navbar-default nobord navsmallmrgbot">
+      <div class="container-fluid blueb navpad">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://www.snowsoftware.com/int">
+          <!--  <a class="navbar-brand" href="#"> -->
+            <img src="images/Snowlogo.png"></a>
+        </div>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <!--
-                  <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li> -->
-
-              <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
-              <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
-              <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</p></a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</h></a></li>
+          <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
+          <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>-->
+          <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+  </nav>
     <div class="container centertext">
       <div class="jumbotron jumbotronaddcomp verifyjumbotron">
           <h3 class="openfont whitefont">For security reasons, we sent a verifier to <u><i><?php echo $comEmailTr; ?></i></u>, please input the six-character code you received <br> or you can click
@@ -101,6 +99,18 @@
               <input type="hidden" name="appCost_1" value="<?php echo $applicationA_costs; ?>">
               <input type="hidden" name="appCost_2" value="<?php echo $applicationB_costs; ?>">
               <input type="hidden" name="appCost_3" value="<?php echo $applicationC_costs; ?>">
+
+
+              <input type="hidden" name="maxapp" value="<?php echo $maxapp; ?>">
+              <input type="hidden" name="maxappcost" value="<?php echo $maxappcost; ?>">
+
+              <input type="hidden" name="maxappreduction1" value="<?php echo $maxappCostReductionLvl_1; ?>">
+              <input type="hidden" name="maxappreduction2" value="<?php echo $maxappCostReductionLvl_2; ?>">
+              <input type="hidden" name="maxappreduction3" value="<?php echo $maxappCostReductionLvl_3; ?>">
+
+              <input type="hidden" name="overallsav1" value="<?php echo $level_1_overallSav; ?>">
+              <input type="hidden" name="overallsav2" value="<?php echo $level_2_overallSav; ?>">
+              <input type="hidden" name="overallsav3" value="<?php echo $level_3_overallSav; ?>">
 
               <input class="verifytxtbox" type="text" id="f9_vmlvf" name="passcode" autocomplete="off" required><br><br>
               <!--<span class="text-danger"><?php echo $verificationError; ?></span>-->

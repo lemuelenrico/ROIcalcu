@@ -1,43 +1,31 @@
-function nopdf() {
-  alert("We are working on this feature.");
-  }
-
-  /* the ff is not yet working
-  $(function(){
-    if (document.getElementById('industrytxt').style.display == 'block') {
-      $("#industrytxt").prop("required",true);
-      return false;
-    }
-  }); */
-
 var modalcomp = document.getElementById('companyval');
 
   function lblindstry(val){
   if (val==1){
     document.getElementById('dl-industry').innerHTML = 'Engineering';
     $('#customerstory').attr("href","https://openit.com/customer-stories/chiyoda-philippines-corporation/");
-    $("body").css('backgroundImage', "url('images/bg/Eng_bg.jpg')");
+    $("body").css('backgroundImage', "url('images/bg/engg_rec.png')");
     $("#industrytxt").css('display',"none");
     $("#industryinput").attr('required',false);
   }
   else if (val==2){
     document.getElementById('dl-industry').innerHTML = 'Automotive';
     $('#customerstory').attr("href","https://openit.com/customer-stories/nissan-motor-corp-ltd/");
-    $("body").css('backgroundImage', "url('images/bg/Automotive_bg.jpg')");
+    $("body").css('backgroundImage', "url('images/bg/auto2_rec.png')");
     $("#industrytxt").css('display',"none");
     $("#industryinput").attr('required',false);
   }
   else if (val==3){
     document.getElementById('dl-industry').innerHTML = 'O & G';
     $('#customerstory').attr("href","https://openit.com/customer-stories/maersk-oil/");
-    $("body").css('backgroundImage', "url('images/bg/OG_bg.jpg')");
+    $("body").css('backgroundImage', "url('images/bg/og2_rec.png')");
     $("#industrytxt").css('display',"none");
     $("#industryinput").attr('required',false);
   }
   else if (val==4){
     document.getElementById('dl-industry').innerHTML = 'M & P';
     $('#customerstory').attr("href","https://openit.com/resources/customer-stories");
-    $("body").css('backgroundImage', "url('images/bg/Precision_bg.jpg')");
+    $("body").css('backgroundImage', "url('images/bg/mp2_rec.png')");
     $("#industrytxt").css('display',"none");
     $("#industryinput").attr('required',false);
   }
@@ -51,14 +39,14 @@ var modalcomp = document.getElementById('companyval');
   else if (val==7){
     document.getElementById('dl-industry').innerHTML = 'Aerospace';
     $('#customerstory').attr("href","https://openit.com/customer-stories/avio-aerospace/");
-    $("body").css('backgroundImage', "url('images/bg/Aero_bg.jpg')");
+    $("body").css('backgroundImage', "url('images/bg/aero2_rec.png')");
     $("#industrytxt").css('display',"none");
     $("#industryinput").attr('required',false);
   }
   else{
     document.getElementById('dl-industry').innerHTML = 'Others';
     $('#customerstory').attr("href","https://openit.com/customer-stories/avio-aerospace/");
-    $("body").css('backgroundImage', "url('images/bg/Other_bg.jpg')");
+    $("body").css('backgroundImage', "url('images/bg/oth_rec.png')");
     $("#industrytxt").css('display',"block");
     $("#industryinput").attr('required',true);
   }
@@ -75,17 +63,6 @@ validemail.addEventListener("input", function (event) {
   }
 });
 
-
-function valthisform(){
-  if (document.getElementById("comname").value == '' ||
-      document.getElementById("website").value == '' ||
-      document.getElementById("validemail").value == '' ||
-      document.getElementById("numusers").value == '') {
-        document.getElementById('companyval').style.display = 'block';
-        return false;
-      }
-}
-
 window.onclick = function(event) {
   if (event.target == modalcomp)
     {
@@ -98,3 +75,13 @@ $(document).keydown(function(e) {
      modalcomp.style.display  = "none";
 }
 });
+
+function valthisform(){
+  if (document.getElementById("comname").value == '' ||
+      document.getElementById("website").value == '' ||
+      document.getElementById("validemail").value == '' ||
+      document.getElementById("numusers").value == '') {
+        document.getElementById('companyval').style.display = 'block';
+        return false;
+      }
+}

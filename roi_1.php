@@ -20,6 +20,9 @@
     <script src="https://cdn.jsdelivr.net/alasql/0.3/alasql.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.7.12/xlsx.core.min.js"></script>
 
+
+
+
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
@@ -27,7 +30,7 @@
   </head>
   <body>
     <nav class="navbar navbar-default nobord navsmallmrgbot">
-      <div class="container-fluid blueb navpad2">
+      <div class="container-fluid blueb navpad">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -36,22 +39,23 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <!--<a class="navbar-brand" href="#">-->
           <a class="navbar-brand" href="https://www.snowsoftware.com/int">
+          <!--  <a class="navbar-brand" href="#"> -->
             <img src="images/Snowlogo.png"></a>
         </div>
+
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-
-            <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
-            <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
-            <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</p></a></li>-->
-            <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
+          <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</h></a></li>
+          <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
+          <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>-->
+          <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
-    </nav>
+  </nav>
+
     <div class="jumbotron jumboadd">
       <h2 class="headngsprpg nospace centertext">ROI for
         <?php
@@ -131,6 +135,17 @@
                       <input type="hidden" name="appCost_2" value="<?php echo $applicationB_costs; ?>">
                       <input type="hidden" name="appCost_3" value="<?php echo $applicationC_costs; ?>">
 
+                      <input type="hidden" name="maxapp" value="<?php echo $maxapp; ?>">
+                      <input type="hidden" name="maxappcost" value="<?php echo $maxappcost; ?>">
+
+                      <input type="hidden" name="maxappreduction1" value="<?php echo $maxappCostReductionLvl_1; ?>">
+                      <input type="hidden" name="maxappreduction2" value="<?php echo $maxappCostReductionLvl_2; ?>">
+                      <input type="hidden" name="maxappreduction3" value="<?php echo $maxappCostReductionLvl_3; ?>">
+
+                      <input type="hidden" name="overallsav1" value="<?php echo $level_1_overallSav; ?>">
+                      <input type="hidden" name="overallsav2" value="<?php echo $level_2_overallSav; ?>">
+                      <input type="hidden" name="overallsav3" value="<?php echo $level_3_overallSav; ?>">
+
                     <button type="submit" class="levelbutdes">Level 2
                     </button>
                   </form>
@@ -190,6 +205,18 @@
                       <input type="hidden" name="appCost_2" value="<?php echo $applicationB_costs; ?>">
                       <input type="hidden" name="appCost_3" value="<?php echo $applicationC_costs; ?>">
 
+                      <input type="hidden" name="maxapp" value="<?php echo $maxapp; ?>">
+                      <input type="hidden" name="maxappcost" value="<?php echo $maxappcost; ?>">
+
+                      <input type="hidden" name="maxappreduction1" value="<?php echo $maxappCostReductionLvl_1; ?>">
+                      <input type="hidden" name="maxappreduction2" value="<?php echo $maxappCostReductionLvl_2; ?>">
+                      <input type="hidden" name="maxappreduction3" value="<?php echo $maxappCostReductionLvl_3; ?>">
+
+                      <input type="hidden" name="overallsav1" value="<?php echo $level_1_overallSav; ?>">
+                      <input type="hidden" name="overallsav2" value="<?php echo $level_2_overallSav; ?>">
+                      <input type="hidden" name="overallsav3" value="<?php echo $level_3_overallSav; ?>">
+
+
                     <button type="submit" class="levelbutdes">Level 3
                     </button>
                   </form>
@@ -197,7 +224,70 @@
                 </div>
 
             </fieldset>
+
             <br>
+
+            <div class="row actionpointsbuttonpad">
+              <div class="container-fluid smallspace">
+                <a href="https://www.snowsoftware.com/int/contact" class="btn contactbutdes geofont">Contact Snow</a>
+              </div>
+            </div>
+
+            <div class="row actionpointsbuttonpad">
+              <div class="col-md-8 col-sm-8 smallspace">
+                <a href="company.php" class="btn recalcbutdes geofont">Calculate again</a>
+              </div>
+              <div class="col-md-2 col-sm-2 smallspace">
+                <form action="ReportLevel_1.php" method="POST" target="_blank">
+                  <!-- the following hidden input function as transitional variables for reporting-->
+                  <input type="hidden" name="repcom" value="<?php echo $companyName ?>">
+                  <!--<input type="hidden" name="repind" value="<?php echo $industry?>">-->
+                  <input type="hidden" name="repappname" value="<?php echo $applicationName ?>">
+                  <input type="hidden" name="repagree" value="<?php echo $agreementType ?>">
+                  <input type="hidden" name="replictype" value="<?php echo $licenseType ?>">
+                  <input type="hidden" name="repnooflic" value="<?php echo $noOfLicenses ?>">
+                  <input type="hidden" name="repcost" value="<?php echo $costPerLicense ?>">
+                  <input type="hidden" name="reploc" value="<?php echo $imloc ?>">
+
+                  <input type="hidden" name="repappname2" value="<?php echo $applicationName_2 ?>">
+                  <input type="hidden" name="repagree2" value="<?php echo $agreementType_2 ?>">
+                  <input type="hidden" name="replictype2" value="<?php echo $licenseType_2 ?>">
+                  <input type="hidden" name="repnooflic2" value="<?php echo $noOfLicenses_2 ?>">
+                  <input type="hidden" name="repcost2" value="<?php echo $costPerLicense_2 ?>">
+                  <input type="hidden" name="reploc2" value="<?php echo $imloc_2 ?>">
+
+                  <input type="hidden" name="repappname3" value="<?php echo $applicationName_3 ?>">
+                  <input type="hidden" name="repagree3" value="<?php echo $agreementType_3 ?>">
+                  <input type="hidden" name="replictype3" value="<?php echo $licenseType_3 ?>">
+                  <input type="hidden" name="repnooflic3" value="<?php echo $noOfLicenses_3 ?>">
+                  <input type="hidden" name="repcost3" value="<?php echo $costPerLicense_3 ?>">
+                  <input type="hidden" name="reploc3" value="<?php echo $imloc_3 ?>">
+                  <!--the folowing are subject to changes -->
+                  <input type="hidden" name="reproi" value="<?php echo $truValROI1 ?>">
+                  <input type="hidden" name="repsav" value="<?php echo $truValSavings1 ?>">
+                  <input type="hidden" name="reproi2" value="<?php echo $truValROI2 ?>">
+                  <input type="hidden" name="repsav2" value="<?php echo $truValSavings2 ?>">
+                  <input type="hidden" name="reproi3" value="<?php echo $truValROI3 ?>">
+                  <input type="hidden" name="repsav3" value="<?php echo $truValSavings3 ?>">
+
+
+                  <button type="submit" id="downloadpdf" class="btn smallpad2">
+                    <img src="images/newpdficon.png" width="40px" height="40px" onmouseover="this.src='images/newpdficonhover.png'"
+                      onmouseout="this.src='images/newpdficon.png'" title="Export to PDF">
+                  </button>
+                </form>
+              </div>
+              <div class="col-md-2 col-sm-2 smallspace">
+                <button id="downloadxl" class="btn smallpad2" onclick="saveFile()">
+                    <img src="images/newexcelicon.png" width="40px" height="40px" onmouseover="this.src='images/newexceliconhover.png'"
+                  onmouseout="this.src='images/newexcelicon.png'" title="Export to Excel">
+                </button>
+              </div>
+            </div>
+
+          <br>
+
+
             <fieldset class="appfield">
               <legend class="geofont centertext">Software Details</legend>
               <table align="center" class="tablemarg">
@@ -297,99 +387,66 @@
               <div class="row charttopmarg">
                 <div class="col-md-6 col-sm6">
                   <div class="roidiv colorwhite">
-                    <span class="lresult" id="roidesign"><span id=roifnllbl>Calculated ROI: </span><br>
+                    <span class="lresult" id="roidesign"><span id=roifnllbl>Highest ROI: </span><br>
                       <?php
                       //echo $calculatedROI;
                       echo number_format($truValROI1);
                       ?>%
                     </span>
-                  </br>
-                    <span class="lresult" id="cutlicdesign"><span id=cutlicfnllbl>Savings for Year One: </span><br>$
+
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm6">
+                  <div class="roidiv colorwhite">
+                    <span class="lresult" id="cutlicdesign"><span id=cutlicfnllbl>Highest Savings: </span><br>$
                       <?php
-                        echo number_format($truValSavings1,2);
+                        echo number_format($truValSavings1);
                       ?>
                     </span>
                   </div>
                 </div>
-                <div class="col-md-6 col-sm6">
-                  <div class="roidiv nospace colorwhite"><br>
-                    <div class="row">
-                      <div class="container-fluid smallspace">
-                        <a href="https://www.snowsoftware.com/int/contact" class="btn contactbutdes geofont">Contact Snow</a>
-                        <a href="company.php" class="btn recalcbutdes geofont">Calculate again</a>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6 col-sm-6 smallspace">
-                        <form action="ReportLevel_1.php" method="POST" target="_blank">
-                          <!-- the following hidden input function as transitional variables for reporting-->
-                          <input type="hidden" name="repcom" value="<?php echo $companyName ?>">
-                          <!--<input type="hidden" name="repind" value="<?php echo $industry?>">-->
-                          <input type="hidden" name="repappname" value="<?php echo $applicationName ?>">
-                          <input type="hidden" name="repagree" value="<?php echo $agreementType ?>">
-                          <input type="hidden" name="replictype" value="<?php echo $licenseType ?>">
-                          <input type="hidden" name="repnooflic" value="<?php echo $noOfLicenses ?>">
-                          <input type="hidden" name="repcost" value="<?php echo $costPerLicense ?>">
-                          <input type="hidden" name="reploc" value="<?php echo $imloc ?>">
-
-                          <input type="hidden" name="repappname2" value="<?php echo $applicationName_2 ?>">
-                          <input type="hidden" name="repagree2" value="<?php echo $agreementType_2 ?>">
-                          <input type="hidden" name="replictype2" value="<?php echo $licenseType_2 ?>">
-                          <input type="hidden" name="repnooflic2" value="<?php echo $noOfLicenses_2 ?>">
-                          <input type="hidden" name="repcost2" value="<?php echo $costPerLicense_2 ?>">
-                          <input type="hidden" name="reploc2" value="<?php echo $imloc_2 ?>">
-
-                          <input type="hidden" name="repappname3" value="<?php echo $applicationName_3 ?>">
-                          <input type="hidden" name="repagree3" value="<?php echo $agreementType_3 ?>">
-                          <input type="hidden" name="replictype3" value="<?php echo $licenseType_3 ?>">
-                          <input type="hidden" name="repnooflic3" value="<?php echo $noOfLicenses_3 ?>">
-                          <input type="hidden" name="repcost3" value="<?php echo $costPerLicense_3 ?>">
-                          <input type="hidden" name="reploc3" value="<?php echo $imloc_3 ?>">
-                          <!--the folowing are subject to changes -->
-                          <input type="hidden" name="reproi" value="<?php echo $truValROI1 ?>">
-                          <input type="hidden" name="repsav" value="<?php echo $truValSavings1 ?>">
-                          <input type="hidden" name="reproi2" value="<?php echo $truValROI2 ?>">
-                          <input type="hidden" name="repsav2" value="<?php echo $truValSavings2 ?>">
-                          <input type="hidden" name="reproi3" value="<?php echo $truValROI3 ?>">
-                          <input type="hidden" name="repsav3" value="<?php echo $truValSavings3 ?>">
-
-                          <button type="submit" id="downloadpdf" class="btn">Export to<br>
-                            <img src="images/newpdficon.png" width="40px" height="40px" onmouseover="this.src='images/newpdficonhover.png'"
-                              onmouseout="this.src='images/newpdficon.png'" title="Export to PDF">
-                          </button>
-                        </form>
-                      </div>
-                      <div class="col-md-6 col-sm-6 smallspace">
-                        <button id="downloadxl" class="btn" onclick="saveFile()">Export to<br>
-                            <img src="images/newexcelicon.png" width="40px" height="40px" onmouseover="this.src='images/newexceliconhover.png'"
-                          onmouseout="this.src='images/newexcelicon.png'" title="Export to Excel">
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
 
               <div class="row charttopmarg">
-                <div class="col-md-6 col-sm-6">
+
+                <div class="col-md-6 col-sm-6 leftalgn whitefont">
                   <div class="graphcontainter roidiv">
                     <canvas id="roiChartBar"></canvas>
                   </div>
+                  <button id="showanalbar" class="analysisbut" onclick="showanalbar()">Show Analysis &darr;</button><br>
+                  <div id="analbar">
+                    <p><span class="analysishighlight">&#9632;</span> Your most expensive application is <span class="analysishighlight"><?php echo $maxapp; ?></span>. <br>
+                      <span class="analysishighlight">&#9632;</span> You can cut down <span class="analysishighlight">$<?php echo number_format($maxappCostReductionLvl_1,2); ?></span> on
+                      <span class="analysishighlight"><?php echo $maxapp; ?></span> alone using Snow for Engineering Level 1.</p>
+                      <a>Ask a Snow for Engineering expert &raquo;</a><br><br>
+                  </div>
+                  <button id="hideanalbar" class="analysisbut" onclick="hideanalbar()">Hide Analysis &uarr;</button>
                 </div>
-                <div class="col-md-6 col-sm-6">
+
+                <div class="col-md-6 col-sm-6 leftalgn whitefont">
                   <div class="graphcontainter roidiv">
                     <canvas id="roiChartPie"></canvas>
                   </div>
+                  <button id="showanaldon" class="analysisbut" onclick="showanaldon()">Show Analysis &darr;</button><br>
+                  <div id="analdon">
+                    <p><span class="analysishighlight">&#9632;</span> Using Snow for Engineering Level 1, you can have a total of <span class="analysishighlight">$<?php echo number_format($level_1_overallSav,2); ?></span> Savings for 3 years. <br>
+                      <span class="analysishighlight">&#9632;</span> The cost of Snow for Engineering software is already subtracted in the savings value in the chart shown above.</p>
+                      <a>Ask a Snow for Engineering expert &raquo;</a><br><br>
+                  </div>
+                  <button id="hideanaldon" class="analysisbut" onclick="hideanaldon()">Hide Analysis &uarr;</button>
                 </div>
               </div>
 
-              <div class="row charttopmarg">
-                <div class="col-md-6 col-sm-6">
+              <br>
+
+                <div class="container-fluid nospace">
                   <div class="graphcontainter roidiv">
                     <canvas id="roiChartLine"></canvas>
                   </div>
+                  <button id="showanalline" class="analysisbut" onclick="showanalline()">Show Analysis &darr;</button>
                 </div>
-                <div class="col-md-6 col-sm-6">
+                <div id="analline">
+                <div class="container-fluid nospace">
                   <table align="center" class="const">
                       <tr>
                           <th colspan="4" class="aligncntr">ROI Calculation</th>
@@ -417,10 +474,18 @@
                       </tr>
                     </table>
                 </div>
+                <div class="leftalgn openfont whitefont"><br>
+                <p> <span class="analysishighlight">&#9632;</span> The value of ROI is already noticeable on the first year of purchase since a lot of optimization will happen on this period.
+                    That's why it is observable that ROI for the following years is much lower than the first year of purchase.<br>
+                    <span class="analysishighlight">&#9632;</span> For the following years, the ROI will be relative to the <span class="analysishighlight">Support and Maintenance cost</span> that is <span class="analysishighlight">20%</span> of Snow for Engineering purchase cost.</p>
+                    <a>Ask a Snow for Engineering expert &raquo;</a><br><br>
+                </div>
               </div>
+                <button id="hideanalline" class="analysisbut" onclick="hideanalline()">Hide Analysis &uarr;</button>
+              </div>
+
             </fieldset>
           </div>
-        </div>
     </div>  <!--jumbotron-->
   </div> <!-- container fluid -->
 
@@ -439,7 +504,7 @@
             <?php echo round($applicationB_costs); ?>,
             <?php echo round($applicationC_costs); ?>
           ],
-          backgroundColor:['#ffae19','#ffa500','#ec8c2d'],
+          backgroundColor:['#47c3dc','#47c3dc','#47c3dc'],
           hoverBorderWidth: 3,
           hoverBorderColor: "#F0F0F0"
         }]
@@ -513,6 +578,11 @@
           fontSize: 20,
           fontColor: "white"
         },
+        legend:{
+            labels:{
+              fontColor: "white"
+            }
+        },
         scales: {
           xAxes: [{
             display: false,
@@ -545,7 +615,7 @@
             <?php echo round($truValROI2); ?>,
             <?php echo round($truValROI3); ?>
           ],
-          borderColor:'#47c3dc',
+          borderColor:'#ec8c2d',
           hoverBorderWidth: 3,
           pointBackgroundColor: 'white',
           pointRadius: 4,
@@ -616,6 +686,41 @@
           var res = alasql('SELECT INTO XLSX("SnowLevel1_ROIreport<?php echo $companyName; ?>.xlsx",?) FROM ?',
                            [opts,[applications,roi]]);
           }
+    </script>
+
+    <script>
+      function showanalbar() {
+        $("#analbar").css('display',"block");
+        $("#hideanalbar").css('display',"block");
+        $("#showanalbar").css('display',"none");
+      }
+      function hideanalbar() {
+        $("#analbar").css('display',"none");
+        $("#hideanalbar").css('display',"none");
+        $("#showanalbar").css('display',"block");
+      }
+
+      function showanaldon() {
+        $("#analdon").css('display',"block");
+        $("#hideanaldon").css('display',"block");
+        $("#showanaldon").css('display',"none");
+      }
+      function hideanaldon() {
+        $("#analdon").css('display',"none");
+        $("#hideanaldon").css('display',"none");
+        $("#showanaldon").css('display',"block");
+      }
+
+      function showanalline() {
+        $("#analline").css('display',"block");
+        $("#hideanalline").css('display',"block");
+        $("#showanalline").css('display',"none");
+      }
+      function hideanalline() {
+        $("#analline").css('display',"none");
+        $("#hideanalline").css('display',"none");
+        $("#showanalline").css('display',"block");
+      }
     </script>
 
     <!--<script src="js/roi.js"></script>-->

@@ -11,10 +11,11 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="icon/snowflake.png" rel="shortcut icon">
+    
   </head>
   <body>
     <nav class="navbar navbar-default nobord navsmallmrgbot">
-      <div class="container-fluid blueb navpad2">
+      <div class="container-fluid blueb navpad">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -23,23 +24,22 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <!--  <a class="navbar-brand" href="#">-->
           <a class="navbar-brand" href="https://www.snowsoftware.com/int">
+          <!--  <a class="navbar-brand" href="#"> -->
             <img src="images/Snowlogo.png"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-
-            <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
-            <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
-          <!--  <li><a href="help.html"><h class="whitfnt2 geofont">Help</p></a></li> -->
-            <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
+          <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</h></a></li>
+          <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
+          <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>-->
+          <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
-    </nav>
+  </nav>
 
     <div class="jumbotron jumboadd">
       <h2 class="headngsprpg nospace centertext">Company Details</h2>
@@ -56,14 +56,19 @@
                     <label class="firstop"><input type="radio" id="ind1" name="industry" checked="checked" onclick="lblindstry(1)" value="Engineering"><span title="Engineering" class="eng"></span></label>
                     <label class="secondtop"><input type="radio" id="ind2" name="industry" onclick="lblindstry(3)" value="Oil and Gas"><span title="Oil and Gas" class="og"></span></label>
                     <label class="thirdtop"><input type="radio" id="ind3" name="industry" onclick="lblindstry(2)" value="Automotive"><span title="Automotive" class="auto"></span></label><br>
-
                     <label class="fourthtop"><input type="radio" id="ind4" name="industry" onclick="lblindstry(4)" value="Mechanical & Precision"><span title="Mechanical and Precision" class="mp"></span></label>
-                    <label class="fifthtop"><input type="radio" id="ind5" name="industry" onclick="lblindstry(5)" value="Government"><span title="Government" class="gov"></span></label>
+                    <!--<label class="fifthtop"><input type="radio" id="ind5" name="industry" onclick="lblindstry(5)" value="Government"><span title="Government" class="gov"></span></label>-->
                     <label class="sixthtop"><input type="radio" id="ind6" name="industry" onclick="lblindstry(6)" value="Others"><span title="Others" class="oth"></span></label>
                     <label class="seventhtop"><input type="radio" id="ind7" name="industry" onclick="lblindstry(7)" value="Aerospace"><span title="Aerospace" class="aero"></span></label>
-                    <!--<img class="selectind" src="images/industry/selectindustry.png">-->
+                    <img class="snowlogoind" src="images/industry/snowlogoind.png">
                     <label id="industrytxt"><input id="industryinput" type="text" class="form-control openfont industrybox" placeholder="Industry"
                             name="otherindustry" autocomplete="off"></label>
+                    <img class="industrybd1" src="images/industry/industrybd.png">
+                    <img class="industrybd2" src="images/industry/industrybd.png">
+                    <img class="industrybd3" src="images/industry/industrybd.png">
+                    <img class="industrybd4" src="images/industry/industrybd.png">
+                    <img class="industrybd5" src="images/industry/industrybd.png">
+                    <img class="industrybd6" src="images/industry/industrybd.png">
                   </div>
 
                   <div class="row hide">
@@ -106,7 +111,7 @@
                 </div>
                 <div class="notssub openfont"><strong>Note:</strong> All fields are required.</div>
                 <div class="rightalgn">
-                <input type="submit" onclick="valthisform();" name="submit" class="nextbutdes openfont" value="Next &raquo">
+                <input type="submit" onclick="valthisform();" name="submit" class="btn vpdfbutdes geofont" value="Next &raquo">
                 </div>
           </form>
               <br>
@@ -130,10 +135,6 @@
 <!-- the followng is the link for the custom js files-->
 
     <script src="js/company.js"></script>
-    <script>
-
-    </script>
-
 
     <!-- jQuery pt></script>cessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

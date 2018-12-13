@@ -13,34 +13,32 @@
     <link href="../icon/snowflake.png" rel="shortcut icon">
   </head>
   <body>
-      <nav class="navbar navbar-default nobord navsmallmrgbot">
-        <div class="container-fluid navpad2 blueb">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-              <!--  <a class="navbar-brand" href="#">-->
-            <a class="navbar-brand" href="https://www.snowsoftware.com/int">
-              <img src="../images/Snowlogo.png"></a>
-          </div>
+    <nav class="navbar navbar-default nobord navsmallmrgbot">
+      <div class="container-fluid blueb navpad">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://www.snowsoftware.com/int">
+          <!--  <a class="navbar-brand" href="#"> -->
+            <img src="../images/Snowlogo.png"></a>
+        </div>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <!--
-                  <li><a href="#"><h class="whitfnt">Snow for Engineering: ROI Calculator</p></a></li> -->
-
-              <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</p></a></li>
-              <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
-              <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</p></a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</h></a></li>
+          <li><a href="../contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
+          <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>-->
+          <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+  </nav>
     <div class="container centertext">
       <div class="jumbotron contactpagejumbadd jumbotronaddcomp">
           <!--<h2 class="headngsprpg">Send us a message</h2>-->
@@ -52,23 +50,23 @@
                 <div class="col-md-6 col-sm-6">
                   <div class="form-group">
                     <label class="introc" for="name">Name:</label>
-                    <input type="text" class="form-control midtxtbx" name="name" required>
+                    <input type="text" class="form-control midtxtbx" name="name" required autocomplete="off">
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6">
                   <div class="form-group">
                     <label class="introc" for="company">Company:</label>
-                    <input type="text" class="form-control midtxtbx" name="company" required>
+                    <input type="text" class="form-control midtxtbx" name="company" required autocomplete="off">
                   </div>
                 </div>
                 </div>
                 <div class="form-group">
                   <label class="introc" for="email">Email:</label>
-                  <input type="email" class="form-control midtxtbx" id="sendvalidemail" name="email" required>
+                  <input type="email" class="form-control midtxtbx" id="sendvalidemail" name="email" required autocomplete="off">
                 </div>
                 <div class="form-group">
                   <label class="introc" for="subject">Subject:</label>
-                  <input type="text" class="form-control midtxtbx" name="subject" required>
+                  <input type="text" class="form-control midtxtbx" name="subject" required autocomplete="off">
                 </div>
                 <div class="form-group">
                   <label class="introc" for="message">Message:</label>

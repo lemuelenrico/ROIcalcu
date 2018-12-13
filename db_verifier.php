@@ -48,6 +48,17 @@ $applicationA_costs = $_POST['appCost_1'];
 $applicationB_costs = $_POST['appCost_2'];
 $applicationC_costs = $_POST['appCost_3'];
 
+$maxapp     = $_POST['maxapp'];
+$maxappcost = $_POST['maxappcost'];
+
+$maxappCostReductionLvl_1 = $_POST['maxappreduction1'];
+$maxappCostReductionLvl_2 = $_POST['maxappreduction2'];
+$maxappCostReductionLvl_3 = $_POST['maxappreduction3'];
+
+$level_1_overallSav = $_POST['overallsav1'];
+$level_2_overallSav = $_POST['overallsav2'];
+$level_3_overallSav = $_POST['overallsav3'];
+
 //$passcodeInput   = $_POST['passcode'];
 
 $lasRepSav   = number_format($verSav,2);

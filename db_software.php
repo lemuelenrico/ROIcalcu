@@ -202,6 +202,49 @@ $ROI_3_3 = ($savings_3_3/$applicationTotalCosts_3_3) * 100;
 
 
 
+
+
+
+/*the following variables are for roi calc analysis*/
+$maxapp = "";
+$maxappcost = 0;
+$maxappcostmulti = 0;
+
+$maxappCostReductionLvl_1 = 0;
+$maxappCostReductionLvl_2 = 0;
+$maxappCostReductionLvl_3 = 0;
+
+$level_1_overallSav = 0;
+$level_2_overallSav = 0;
+$level_3_overallSav = 0;
+
+$maxappcost = max($costPerLicense, $costPerLicense_2, $costPerLicense_3);
+
+if ($maxappcost == $costPerLicense) {
+  $maxapp = $applicationName;
+  $maxappcostmulti = $applicationA_costs;
+}
+elseif ($maxappcost == $costPerLicense_2) {
+  $maxapp = $applicationName_2;
+  $maxappcostmulti = $applicationB_costs;
+}
+elseif ($maxappcost == $costPerLicense_3) {
+  $maxapp = $applicationName_3;
+  $maxappcostmulti = $applicationC_costs;
+}
+
+$level_1_overallSav = $savings_1_1 + $savings_1_2 + $savings_1_3;
+$level_2_overallSav = $savings_2_1 + $savings_2_2 + $savings_2_3;
+$level_3_overallSav = $savings_3_1 + $savings_3_2 + $savings_3_3;
+
+//$maxappCostReductionLvl_1 = $maxappcostmulti1 * ( 1 - $lvl_1_licReduction );
+//$maxappCostReductionLvl_2 = $maxappcostmulti2 * ( 1 - $lvl_2_licReduction );
+//$maxappCostReductionLvl_3 = $maxappcostmulti3 * ( 1 - $lvl_3_licReduction );
+
+$maxappCostReductionLvl_1 = $maxappcostmulti * ( 1 - $lvl_1_licReduction);
+$maxappCostReductionLvl_2 = $maxappcostmulti * ( 1 - $lvl_2_licReduction);
+$maxappCostReductionLvl_3 = $maxappcostmulti * ( 1 - $lvl_3_licReduction);
+
         /*the main formula is as follows*/
 
                  $calculatedROI = round((($costPerLicense*$noOfLicenses)/100),2);
