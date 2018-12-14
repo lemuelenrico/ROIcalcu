@@ -11,7 +11,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="icon/snowflake.png" rel="shortcut icon">
-    
+
   </head>
   <body>
     <nav class="navbar navbar-default nobord navsmallmrgbot">
@@ -145,7 +145,7 @@
 
     </script>
     <div class="footer">
-      <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
+      <p class="dfooter geofont">Copyright © <?php echo date('Y'); ?> ROI Calculator. All rights reserved.</p>
     </div>
   </body>
 </html>

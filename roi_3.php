@@ -432,35 +432,37 @@
                   </div>
                   <button id="showanalline" class="analysisbut" onclick="showanalline()">Show Analysis &darr;</button>
               </div>
+              
+              <div class="container-fluid nospace">
+                <table align="center" class="const">
+                    <tr>
+                        <th colspan="4" class="aligncntr">ROI Calculation</th>
+                    </tr>
+                    <tr>
+                        <td width="30%" class="pricebgcol"></td>
+                        <td width="20%" class="yearlydatalbl pricebgcol">%</td>
+                        <td class="pricebgcol yearlydata">$</td>
+                    </tr>
+                    <tr>
+                        <td width="30%" id="firstyrgradient">1st Year</td>
+                        <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_3_ROI1,2); ?>%</td>
+                        <td class="colorwhite yearlydata">$<?php echo number_format($truVal_3_Savings1,2); ?></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" id="secondyrgradient">2nd Year</td>
+                        <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_3_ROI2,2); ?>%</td>
+                        <td class="colorwhite yearlydata">$<?php echo number_format($truVal_3_Savings2,2); ?></td>
+                    </tr>
+                    <tr>
+                        <td width="30%" id="thrdyrgradient">3rd Year</td>
+                        <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_3_ROI3,2); ?>%</td>
+                        <td class="colorwhite yearlydata">$<?php echo number_format($truVal_3_Savings3,2); ?></td>
+                    </tr>
+                  </table>
+              </div>
 
               <div id="analline">
-                <div class="container-fluid nospace">
-                  <table align="center" class="const">
-                      <tr>
-                          <th colspan="4" class="aligncntr">ROI Calculation</th>
-                      </tr>
-                      <tr>
-                          <td width="30%" class="pricebgcol"></td>
-                          <td width="20%" class="yearlydatalbl pricebgcol">%</td>
-                          <td class="pricebgcol yearlydata">$</td>
-                      </tr>
-                      <tr>
-                          <td width="30%" id="firstyrgradient">1st Year</td>
-                          <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_3_ROI1,2); ?>%</td>
-                          <td class="colorwhite yearlydata">$<?php echo number_format($truVal_3_Savings1,2); ?></td>
-                      </tr>
-                      <tr>
-                          <td width="30%" id="secondyrgradient">2nd Year</td>
-                          <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_3_ROI2,2); ?>%</td>
-                          <td class="colorwhite yearlydata">$<?php echo number_format($truVal_3_Savings2,2); ?></td>
-                      </tr>
-                      <tr>
-                          <td width="30%" id="thrdyrgradient">3rd Year</td>
-                          <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_3_ROI3,2); ?>%</td>
-                          <td class="colorwhite yearlydata">$<?php echo number_format($truVal_3_Savings3,2); ?></td>
-                      </tr>
-                    </table>
-                </div>
+
                 <div class="leftalgn openfont whitefont"><br>
                 <p> <span class="analysishighlight">&#9632;</span> The value of ROI is already noticeable on the first year of purchase since a lot of optimization will happen on this period.
                     That's why it is observable that ROI for the following years is much lower than the first year of purchase.<br>
@@ -470,7 +472,7 @@
                 <button id="hideanalline" class="analysisbut" onclick="hideanalline()">Hide Analysis &uarr;</button>
               </div>
             </fieldset>
-
+          </div>
         </div>
     </div>  <!--jumbotron-->
   </div> <!-- container fluid -->
@@ -718,6 +720,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-    <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
-  </body>
+    <div class="footer2">
+      <p class="dfooter geofont">Copyright © <?php echo date('Y'); ?> ROI Calculator. All rights reserved.</p>
+    </div>
+    </body>
 </html>

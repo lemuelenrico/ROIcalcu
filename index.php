@@ -59,7 +59,7 @@
       </div>
 
       <div class="footer">
-        <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
+        <p class="dfooter geofont">Copyright © <?php echo date('Y'); ?> ROI Calculator. All rights reserved.</p>
       </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

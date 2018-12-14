@@ -440,7 +440,6 @@
                   <button id="showanalline" class="analysisbut" onclick="showanalline()">Show Analysis &darr;</button>
                 </div>
 
-              <div id="analline">
                 <div class="container-fluid nospace">
                   <table align="center" class="const">
                       <tr>
@@ -469,6 +468,9 @@
                       </tr>
                     </table>
                 </div>
+
+              <div id="analline">
+
                 <div class="leftalgn openfont whitefont"><br>
                 <p> <span class="analysishighlight">&#9632;</span> The value of ROI is already noticeable on the first year of purchase since a lot of optimization will happen on this period.
                     That's why it is observable that ROI for the following years is much lower than the first year of purchase.<br>
@@ -725,6 +727,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-    <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
-  </body>
+    <div class="footer2">
+      <p class="dfooter geofont">Copyright © <?php echo date('Y'); ?> ROI Calculator. All rights reserved.</p>
+    </div>
+    </body>
 </html>

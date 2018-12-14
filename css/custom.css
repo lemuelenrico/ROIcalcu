@@ -1561,3 +1561,12 @@ fieldset legend {
 p {
   padding: 10px;
 }
+
+.footer2 {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  width: 100%;
+  background-color: #47c3dc;
+  color: white;
+  text-align: center;
+}
