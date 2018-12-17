@@ -58,6 +58,6 @@ elseif ($industry=='Aerospace') {
 }
 
 else {
-  $backgroundURL = "images/roiback.jpg";
+  $backgroundURL = "images/bg/engg_rec.png";
 }
 ?>

@@ -135,9 +135,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <div class="footer">
-      <p class="dfooter geofont">Copyright © <?php echo date('Y'); ?> ROI Calculator. All rights reserved.</p>
-    </div>
     <script>
     function resend() {
       location.reload();
@@ -156,5 +153,9 @@
               }
     }
     </script>
+
+    <div class="footer">
+      <p class="dfooter geofont">Copyright © <?php echo date('Y'); ?> ROI Calculator. All rights reserved.</p>
+    </div>
   </body>
 </html>

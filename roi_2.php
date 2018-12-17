@@ -379,23 +379,23 @@
               <div class="row charttopmarg">
                 <div class="col-md-6 col-sm6">
                   <div class="roidiv colorwhite">
-                    <span class="lresult" id="roidesign"><span id=roifnllbl>Highest ROI: </span><br>
-                      <?php
-                      //echo $calculatedROI;
-                      echo number_format($truVal_2_ROI1);
-                      ?>%
-                    </span>
-
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm6">
-                  <div class="roidiv colorwhite">
+                    
                     <span class="lresult" id="cutlicdesign"><span id=cutlicfnllbl>Highest Savings: </span><br>$
                       <?php
                         echo number_format($truVal_2_Savings1);
                       ?>
                     </span>
 
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm6">
+                  <div class="roidiv colorwhite">
+
+                    <span class="lresult" id="roidesign"><span id=roifnllbl>Highest ROI: </span><br>
+                      <?php
+                      echo number_format($truVal_2_ROI1);
+                      ?>%
+                    </span>
 
               </div>
             </div>
@@ -423,8 +423,7 @@
                   </div>
                   <button id="showanaldon" class="analysisbut" onclick="showanaldon()">Show Analysis &darr;</button><br>
                   <div id="analdon">
-                    <p><span class="analysishighlight">&#9632;</span> Using Snow for Engineering Level 2, you can have a total of <span class="analysishighlight">$<?php echo number_format($level_2_overallSav,2); ?></span> Savings for 3 years. <br>
-                      <span class="analysishighlight">&#9632;</span> The cost of Snow for Engineering software is already subtracted in the savings value in the chart shown above.</p>
+                    <p><span class="analysishighlight">&#9632;</span> Using Snow for Engineering Level 2, you can have a total of <span class="analysishighlight">$<?php echo number_format($level_2_overallSav,2); ?></span> Savings for 3 years.</p>
                       <a target="_blank" href="https://www.snowsoftware.com/int/contact">Ask a Snow for Engineering expert &raquo;</a><br><br>
                   </div>
                   <button id="hideanaldon" class="analysisbut" onclick="hideanaldon()">Hide Analysis &uarr;</button>
@@ -473,8 +472,7 @@
 
                 <div class="leftalgn openfont whitefont"><br>
                 <p> <span class="analysishighlight">&#9632;</span> The value of ROI is already noticeable on the first year of purchase since a lot of optimization will happen on this period.
-                    That's why it is observable that ROI for the following years is much lower than the first year of purchase.<br>
-                    <span class="analysishighlight">&#9632;</span> For the following years, the ROI will be relative to the <span class="analysishighlight">Support and Maintenance cost</span> that is <span class="analysishighlight">20%</span> of Snow for Engineering purchase cost.</p>
+                    That's why it is observable that ROI for the following years is much lower than the first year of purchase.</p>
                     <a target="_blank" href="https://www.snowsoftware.com/int/contact">Ask a Snow for Engineering expert &raquo;</a><br><br>
                 </div>
               </div>

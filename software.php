@@ -187,7 +187,7 @@
               <label for="appName2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Application Name</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control midtxtbx" id="appName2" placeholder="(i.e. AutoCAD, Petrel)"
-                        name="appname2" autocomplete="off" required>
+                        name="appname2" autocomplete="off">
               </div>
               <label for="vendName2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Vendor Name</label>
               <div class="col-sm-4">
@@ -249,12 +249,12 @@
               <label for="numLicenses2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Number of Licenses</label>
               <div class="col-sm-4">
                 <input type="number" min="0" class="form-control midtxtbx" id="numLicenses2" placeholder="0"
-                        name="numlicenses2" autocomplete="off" required>
+                        name="numlicenses2" autocomplete="off">
               </div>
-              <label for="costLicense2" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>Cost per License ($)</label>
+              <label for="costLicense2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Cost per License ($)</label>
               <div class="col-sm-4">
                     <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense2" placeholder="0.00"
-                                name="costlicenses2" autocomplete="off" required>
+                                name="costlicenses2" autocomplete="off">
               </div>
             </div>
           </div>
@@ -264,7 +264,7 @@
               <label for="appName3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Application Name</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control midtxtbx" id="appName3" placeholder="(i.e. AutoCAD, Petrel)"
-                        name="appname3" autocomplete="off" required>
+                        name="appname3" autocomplete="off">
               </div>
               <label for="vendName3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Vendor Name</label>
               <div class="col-sm-4">
@@ -326,12 +326,12 @@
               <label for="numLicenses3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Number of Licenses</label>
               <div class="col-sm-4">
                 <input type="number" min="0" class="form-control midtxtbx" id="numLicenses3" placeholder="0"
-                        name="numlicenses3" autocomplete="off" required>
+                        name="numlicenses3" autocomplete="off">
               </div>
               <label for="costLicense3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Cost per License ($)</label>
               <div class="col-sm-4">
                     <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense3" placeholder="0.00"
-                                name="costlicenses3" autocomplete="off" required>
+                                name="costlicenses3" autocomplete="off">
               </div>
             </div>
           </div>

@@ -10,7 +10,7 @@ if(document.getElementById('server').checked == false &&
     return false;
   }
 
-else if(document.getElementById('server2').checked == false &&
+/*else if(document.getElementById('server2').checked == false &&
     document.getElementById('desktop2').checked == false &&
     document.getElementById('cloud2').checked == false){
     verification.preventDefault();
@@ -26,7 +26,7 @@ else if(document.getElementById('server3').checked == false &&
     //alert("Please choose atleast one Install Location.");
     document.getElementById('modal-wrapper').style.display='block';
     return false;
-  }
+  }*/
 
 else if(document.getElementById('finalsubmit').checked == false){
     verification.preventDefault();
@@ -105,7 +105,7 @@ else if(document.getElementById('finalsubmit').checked == false){
                 document.getElementById('modal-wrapper3').style.display='block';
                 return false;
               }
-    else if (document.getElementById("appName2").value == '' ||
+  /*  else if (document.getElementById("appName2").value == '' ||
         document.getElementById("numLicenses2").value == '' ||
         document.getElementById("costLicense2").value == '') {
                 document.getElementById('modal-wrapper4').style.display='block';
@@ -116,7 +116,27 @@ else if(document.getElementById('finalsubmit').checked == false){
         document.getElementById("costLicense3").value == '') {
                 document.getElementById('modal-wrapper5').style.display='block';
                 return false;
-              }
+              } */
+      if (document.getElementById("appName2").value != '') {
+        if (document.getElementById("numLicenses2").value == '' ||
+              document.getElementById("costLicense2").value == '' ||
+              (document.getElementById('server2').checked == false &&
+                  document.getElementById('desktop2').checked == false &&
+                  document.getElementById('cloud2').checked == false)) {
+                      document.getElementById('modal-wrapper4').style.display='block';
+                      return false;
+                    }
+                  }
+      if (document.getElementById("appName2").value != '') {
+        if (document.getElementById("numLicenses2").value == '' ||
+              document.getElementById("costLicense2").value == '' ||
+              (document.getElementById('server2').checked == false &&
+                  document.getElementById('desktop2').checked == false &&
+                  document.getElementById('cloud2').checked == false)) {
+                      document.getElementById('modal-wrapper4').style.display='block';
+                      return false;
+                    }
+                  }
   }
 
   function closemodals(){
