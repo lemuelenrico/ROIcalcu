@@ -96,7 +96,7 @@
       });
     </script>
     <div class= "footer">
-      <p class="dfooter geofont">Copyright © ROI Calculator. All rights reserved.</p>
+      <p class="dfooter geofont">Copyright © <?php echo date('Y'); ?> Snow Software. All rights reserved.</p>
     </div>
   </body>
 </html>

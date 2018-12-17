@@ -720,7 +720,7 @@
     <script src="js/bootstrap.min.js"></script>
 
     <div class="footer2">
-      <p class="dfooter geofont">Copyright © <?php echo date('Y'); ?> ROI Calculator. All rights reserved.</p>
+      <p class="dfooter geofont">Copyright © <?php echo date('Y'); ?> Snow Software. All rights reserved.</p>
     </div>
     </body>
 </html>
