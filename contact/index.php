@@ -70,7 +70,7 @@
                 </div>
                 <div class="form-group">
                   <label class="introc" for="message">Message:</label>
-                  <textarea class="form-control" rows="5" name="message" required></textarea>
+                  <textarea class="form-control whitfnt" rows="5" name="message" required></textarea>
                 </div>
               <div class="centertext">
                 <button type="submit" name="submit" class="btn dlbutdes">Send</button>

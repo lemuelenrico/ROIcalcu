@@ -616,7 +616,10 @@
           fontColor: "white"
         },
         legend:{
-          display: true
+          display: true,
+          labels:{
+            fontColor: "white"
+          }
         },
         scales: {
           xAxes: [{

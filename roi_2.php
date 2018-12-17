@@ -379,7 +379,7 @@
               <div class="row charttopmarg">
                 <div class="col-md-6 col-sm6">
                   <div class="roidiv colorwhite">
-                    
+
                     <span class="lresult" id="cutlicdesign"><span id=cutlicfnllbl>Highest Savings: </span><br>$
                       <?php
                         echo number_format($truVal_2_Savings1);
@@ -626,7 +626,10 @@
           fontColor: "white"
         },
         legend:{
-          display: true
+          display: true,
+          labels:{
+            fontColor: "white"
+          }
         },
         scales: {
           xAxes: [{
