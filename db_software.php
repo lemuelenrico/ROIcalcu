@@ -140,26 +140,26 @@ $applicationTotalCostsReduced_1_1 = $applicationTotalCosts * $lvl_1_licReduction
 
 $applicationReductionSavings_1_1 = $applicationTotalCosts - $applicationTotalCostsReduced_1_1;
 
-//$savings_1_1 = $applicationReductionSavings_1_1 - $purchaseCost_1;
-$savings_1_1 = $applicationReductionSavings_1_1;
-$ROI_1_1 = ($savings_1_1/$applicationTotalCosts) * 100;
+$savings_1_1 = $applicationReductionSavings_1_1 - $purchaseCost_1;
+//$savings_1_1 = $applicationReductionSavings_1_1;
+$ROI_1_1 = ($savings_1_1/$purchaseCost_1) * 100;
 
 //yr 2 calculation
 $applicationTotalCosts_1_2 = $applicationTotalCostsReduced_1_1;
 $applicationTotalCostsReduced_1_2 = $applicationTotalCosts_1_2 * (1-$lvl_1_licReductionYear2);
 $applicationReductionSavings_1_2 = $applicationTotalCosts_1_2 - $applicationTotalCostsReduced_1_2;
 $mSCost_1 = $purchaseCost_1 * $mS;
-//$savings_1_2 = $applicationReductionSavings_1_2 - $mSCost_1;
-$savings_1_2 = $applicationReductionSavings_1_2;
-$ROI_1_2 = ($savings_1_2/$applicationTotalCosts_1_2) * 100;
+$savings_1_2 = $applicationReductionSavings_1_2 - $mSCost_1;
+//$savings_1_2 = $applicationReductionSavings_1_2;
+$ROI_1_2 = ($savings_1_2/$mSCost_1) * 100;
 
 //yr 3 calculation
 $applicationTotalCosts_1_3 = $applicationTotalCostsReduced_1_2;
 $applicationTotalCostsReduced_1_3 = $applicationTotalCosts_1_3 * (1-$lvl_1_licReductionYear3);
 $applicationReductionSavings_1_3 = $applicationTotalCosts_1_3 - $applicationTotalCostsReduced_1_3;
-$savings_1_3 = $applicationReductionSavings_1_3;
-//$savings_1_3 = $applicationReductionSavings_1_3 - $mSCost_1;
-$ROI_1_3 = ($savings_1_3/$applicationTotalCosts_1_3) * 100;
+//$savings_1_3 = $applicationReductionSavings_1_3;
+$savings_1_3 = $applicationReductionSavings_1_3 - $mSCost_1;
+$ROI_1_3 = ($savings_1_3/$mSCost_1) * 100;
 
 
 //level 2-------------
@@ -169,26 +169,26 @@ $applicationTotalCostsReduced_2_1 = $applicationTotalCosts * $lvl_2_licReduction
 
 $applicationReductionSavings_2_1 = $applicationTotalCosts - $applicationTotalCostsReduced_2_1;
 
-$savings_2_1 = $applicationReductionSavings_2_1;
-//$savings_2_1 = $applicationReductionSavings_2_1 - $purchaseCost_2;
-$ROI_2_1 = ($savings_2_1/$applicationTotalCosts) * 100;
+//$savings_2_1 = $applicationReductionSavings_2_1;
+$savings_2_1 = $applicationReductionSavings_2_1 - $purchaseCost_2;
+$ROI_2_1 = ($savings_2_1/$purchaseCost_2) * 100;
 
 //yr 2 calculation
 $applicationTotalCosts_2_2 = $applicationTotalCostsReduced_2_1;
 $applicationTotalCostsReduced_2_2 = $applicationTotalCosts_2_2 * (1-$lvl_2_licReductionYear2);
 $applicationReductionSavings_2_2 = $applicationTotalCosts_2_2 - $applicationTotalCostsReduced_2_2;
 $mSCost_2 = $purchaseCost_2 * $mS;
-//$savings_2_2 = $applicationReductionSavings_2_2 - $mSCost_2;
-$savings_2_2 = $applicationReductionSavings_2_2;
-$ROI_2_2 = ($savings_2_2/$applicationTotalCosts_2_2) * 100;
+$savings_2_2 = $applicationReductionSavings_2_2 - $mSCost_2;
+//$savings_2_2 = $applicationReductionSavings_2_2;
+$ROI_2_2 = ($savings_2_2/$mSCost_2) * 100;
 
 //yr 3 calculation
 $applicationTotalCosts_2_3 = $applicationTotalCostsReduced_2_2;
 $applicationTotalCostsReduced_2_3 = $applicationTotalCosts_2_3 * (1-$lvl_2_licReductionYear3);
 $applicationReductionSavings_2_3 = $applicationTotalCosts_2_3 - $applicationTotalCostsReduced_2_3;
-//$savings_2_3 = $applicationReductionSavings_2_3 - $mSCost_2;
-$savings_2_3 = $applicationReductionSavings_2_3;
-$ROI_2_3 = ($savings_2_3/$applicationTotalCosts_2_3) * 100;
+$savings_2_3 = $applicationReductionSavings_2_3 - $mSCost_2;
+//$savings_2_3 = $applicationReductionSavings_2_3;
+$ROI_2_3 = ($savings_2_3/$mSCost_2) * 100;
 
 
 //level 3-------------
@@ -198,26 +198,26 @@ $applicationTotalCostsReduced_3_1 = $applicationTotalCosts * $lvl_3_licReduction
 
 $applicationReductionSavings_3_1 = $applicationTotalCosts - $applicationTotalCostsReduced_3_1;
 
-$savings_3_1 = $applicationReductionSavings_3_1;
-//$savings_3_1 = $applicationReductionSavings_3_1 - $purchaseCost_3;
-$ROI_3_1 = ($savings_3_1/$applicationTotalCosts) * 100;
+//$savings_3_1 = $applicationReductionSavings_3_1;
+$savings_3_1 = $applicationReductionSavings_3_1 - $purchaseCost_3;
+$ROI_3_1 = ($savings_3_1/$purchaseCost_3) * 100;
 
 //yr 2 calculation
 $applicationTotalCosts_3_2 = $applicationTotalCostsReduced_3_1;
 $applicationTotalCostsReduced_3_2 = $applicationTotalCosts_3_2 * (1-$lvl_3_licReductionYear2);
 $applicationReductionSavings_3_2 = $applicationTotalCosts_3_2 - $applicationTotalCostsReduced_3_2;
 $mSCost_3 = $purchaseCost_3 * $mS;
-//$savings_3_2 = $applicationReductionSavings_3_2 - $mSCost_3;
-$savings_3_2 = $applicationReductionSavings_3_2;
-$ROI_3_2 = ($savings_3_2/$applicationTotalCosts_3_2) * 100;
+$savings_3_2 = $applicationReductionSavings_3_2 - $mSCost_3;
+//$savings_3_2 = $applicationReductionSavings_3_2;
+$ROI_3_2 = ($savings_3_2/$mSCost_3) * 100;
 
 //yr 3 calculation
 $applicationTotalCosts_3_3 = $applicationTotalCostsReduced_3_2;
 $applicationTotalCostsReduced_3_3 = $applicationTotalCosts_3_3 * (1-$lvl_3_licReductionYear3);
 $applicationReductionSavings_3_3 = $applicationTotalCosts_3_3 - $applicationTotalCostsReduced_3_3;
-//$savings_3_3 = $applicationReductionSavings_3_3 - $mSCost_3;
-$savings_3_3 = $applicationReductionSavings_3_3;
-$ROI_3_3 = ($savings_3_3/$applicationTotalCosts_3_3) * 100;
+$savings_3_3 = $applicationReductionSavings_3_3 - $mSCost_3;
+//$savings_3_3 = $applicationReductionSavings_3_3;
+$ROI_3_3 = ($savings_3_3/$mSCost_3) * 100;
 
 
 /*the following variables are for roi calc analysis*/
