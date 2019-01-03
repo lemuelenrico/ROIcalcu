@@ -48,8 +48,8 @@
   </nav>
     <div class="container centertext">
       <div class="jumbotron jumbotronaddcomp verifyjumbotron">
-          <h3 class="openfont whitefont">For security reasons, we sent a verifier to <u><i><?php echo $comEmailTr; ?></i></u>, please input the six-character code you received <br> or you can click
-                <a><u onclick="resend()">here</u></a> to send another verifier.<h3>
+          <h3 class="openfont whitefont">Please provide the verification code sent to <u><i><?php echo $comEmailTr; ?></i></u>.<br> Didn't receive a code? Click
+                <a><u onclick="resend()">here</u></a> to send a new one.<h3>
             <form onsubmit="return verify()" action="roi_1.php" method="post">
             <!--the following are just transitional variabl-->
               <input type="hidden" name="vercom" value="<?php echo $companyName; ?>">

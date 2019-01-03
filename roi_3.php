@@ -461,7 +461,7 @@
               <div id="analline">
 
                 <div class="leftalgn openfont whitefont"><br>
-                <p> <span class="analysishighlight">&#9632;</span> The value of ROI is already noticeable on the first year of purchase since a lot of optimization will happen on this period.
+                <p> <span class="analysishighlight">&#9632;</span> The ROI is already noticeable in the first year of purchase since a lot of optimization will happen on this period.
                     That's why it is observable that ROI for the following years is much lower than the first year of purchase.</p>
                     <a target="_blank" href="https://www.snowsoftware.com/int/contact">Ask a Snow for Engineering expert &raquo;</a><br><br>
                 </div>
