@@ -46,8 +46,8 @@
         <h1 id="bigtkwy">ROI Calculator</h1>
         <br>
           <p id="introp" class="geofont">
-            This ROI Calculator provides you with an approximate amount of the savings that you may get from investing in Snow for Engineering tools.
-            All information provided will be processed in accordance with existing privacy and data protection rules and regulations and will be used for the sole purpose of calculating ROI.
+            ROI Calculator provides an approximate amount of savings from investing in Snow for Engineering tools.
+            All the information provided is processed per existing privacy and data protection rules and regulations and used for the sole purpose of calculating ROI.
           </p>
         <br>
         <br>
