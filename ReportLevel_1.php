@@ -327,7 +327,7 @@ $pdf->Cell(63,11,"{$numRepROI3}%",1,0, "C");
 $pdf->setTextColor(64,64,64);
 $pdf->Cell(63,11,"{$numRepSav3}",1,1, "C");
 
-$pdf->Image("images/pdfexporting/ROIexpthirdstate.png",30,253,0,13);
+$pdf->Image("images/pdfexporting/ROIexpthirdstate.png",23,253,0,10);
 
 /*$pdf->Cell(0,10,"Date Today: {$currentDate}",1,1,'C');
 $pdf->Cell(0,10,"Company Name: {$repCom}",1,1,'C');
