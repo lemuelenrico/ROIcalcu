@@ -550,7 +550,7 @@ $maxappCostReductionLvl_3 = $maxappcostmulti * ( 1 - $lvl_3_licReduction);
       //$_SESSION['passcode'] = $passcode;
 
       $toVerify=$comEmailTr;
-      $subjectVerify  ="ROI calc Passcode";
+      $subjectVerify  ="Passcode";
       $messageVerify  ='
                       <html>
                         <body>
@@ -572,7 +572,7 @@ $maxappCostReductionLvl_3 = $maxappcostmulti * ( 1 - $lvl_3_licReduction);
                         </div>
                         <br>
                         <div style="background:#47c3dc; width:100%; margin: 0; padding-top: 10px; padding-bottom: 12px; color:#f5f5f5; font-size:12px;">';
-      $messageVerify .= 'All rights reserved ©';
+      $messageVerify .= 'All rights reserved &copy;';
       $messageVerify .= date('Y');
       $messageVerify .='. Snow ROI Calculator.
                         </div>
@@ -582,7 +582,7 @@ $maxappCostReductionLvl_3 = $maxappcostmulti * ( 1 - $lvl_3_licReduction);
                         </body>
                       </html>
                       ';
-      $headersVerify  ="From: lem@lem.com";
+      $headersVerify  ="From: Snow ROI Calculator <roiexpel@gmail.com>";
       $headersVerify .= "MIME-Version: 1.0"."\r\n";
       $headersVerify .= "Content-type:text/html;charset=iso-8859-1"."\r\n";
 

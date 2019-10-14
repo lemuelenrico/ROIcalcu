@@ -42,8 +42,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-          <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</h></a></li>
-          <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
+          <li><a href="index.php"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</h></a></li>
+          <li><a href="contact/index.php"><h class="whitfnt2 geofont">Contact Us</h></a></li>
           <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>-->
           <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
           </ul>

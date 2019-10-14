@@ -58,8 +58,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-          <li><a href="http://mnl365win:8080/roicalcu/"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</h></a></li>
-          <li><a href="contact"><h class="whitfnt2 geofont">Contact Us</h></a></li>
+          <li><a href="index.php"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</h></a></li>
+          <li><a href="contact/index.php"><h class="whitfnt2 geofont">Contact Us</h></a></li>
           <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>-->
           <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
           </ul>
@@ -92,7 +92,7 @@
               <h3 class="instructiontext">Enter top three most expensive applications.</h3>
               </div>
               <div class="col-md-6 col-sm-6 rightalgn">
-                  <h3 class="notssub openfont"><span class="requiredclr">*</span>Required fields.</h3>
+                  <h3 class="notssub openfont"><span class="requiredclr">*</span>Required Fields</h3>
               </div>
           </div>
 
@@ -341,7 +341,7 @@
               <div class="col-md-1 col-sm-1"></div>
               <div class="col-md-8 centertext nospace">
                   <label for="finalsubmit" class="openfont whitfnt"><input type="checkbox" class="glyphpointer bigchkbx" id="finalsubmit" value=""><span class="aggrchk glyphpointer">
-                    I allow the collection of my data to be used to the purpose of calculating ROI.
+                    I allow the collection of my data to be used for the purpose of calculating ROI.
                   By proceeding, I also agree with the <!--<a href="terms.html" target="_blank"><u>Terms and Conditions</u></a> of the site.-->
                   <a href="https://www.snowsoftware.com/int/legal/termsofuse" target="_blank"><u>Terms and Conditions</u></a> of this site.</span>
                 </label>

@@ -830,6 +830,7 @@ label span {
   top: 122px;
   left: 140px;
   z-index: 0;
+  opacity: 0.95;
 }
 
 .firstop {
@@ -1485,6 +1486,7 @@ fieldset legend {
   top: 64px;
   left: 219px;
   z-index: 0;
+  opacity: 0.5;
 }
 
 
@@ -1495,6 +1497,7 @@ fieldset legend {
   top: 163px;
   left: 219px;
   z-index: 0;
+  opacity: 0.5;
 }
 
 .industrybd3 {
@@ -1504,6 +1507,7 @@ fieldset legend {
   top: 163px;
   left: 43px;
   z-index: 0;
+  opacity: 0.5;
 }
 
 .industrybd4 {
@@ -1513,6 +1517,7 @@ fieldset legend {
   top: 64px;
   left: 43px;
   z-index: 0;
+  opacity: 0.5;
 }
 
 .industrybd5 {
@@ -1522,6 +1527,7 @@ fieldset legend {
   top: 14px;
   left: 131px;
   z-index: 0;
+  opacity: 0.5;
 }
 
 .industrybd6 {
@@ -1531,6 +1537,7 @@ fieldset legend {
   top: 213px;
   left: 131px;
   z-index: 0;
+  opacity: 0.5;
 }
 
 .actionpointsbuttonpad {
