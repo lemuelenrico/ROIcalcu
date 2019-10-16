@@ -12,7 +12,7 @@
 
 body {
   //background-color: #47c3dc;
-  background-image: url("../images/eng_rec.png");
+  background-image: url("../images/roiback5.jpg");
   //background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
@@ -59,7 +59,7 @@ body {
 }
 
 .blueb {
-  background-color: #47c3dc;
+  background-color: white;
 }
 
 .bluef {
@@ -71,12 +71,12 @@ body {
 }
 
 .whitfnt {
-  color: white;
+  color: black;
   font-size: 1.8rem;
 }
 
 .whitfnt2 {
-  color: white;
+  color: black;
   font-size: 1.8rem;
 }
 .whitfnt2:hover {
@@ -95,7 +95,7 @@ body {
   color: white;
   //color: #47c3dc;
   //line-height: normal;
-  font-family: Geogtq;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #introp {
@@ -110,7 +110,7 @@ body {
 #introc {
   text-align: center;
   font-size: 1.8;
-  font-family: Geogtq;
+  font-family: 'Open Sans', sans-serif;
   //color: #417379;
   color: white;
   // color: #404040;
@@ -120,14 +120,14 @@ body {
   margin-top: 1.4rem;
   text-align: center;
   padding-bottom: 100px;
-  background: rgba(40, 40, 40, 0.8);
-  //background: rgba(71, 195, 220, 0.85);
+  background: rgba(0, 0, 0, 0.6);
+  //background: rgba(71, 195, 220, 0.5);
 }
 
 .jumbotronaddcomp {
   text-align: center;
   padding-bottom: 20px;
-  background: rgba(40, 40, 40, 0.8);
+  background: rgba(0, 0, 0, 0.6);
   //background: rgba(71, 195, 220, 0.85);
 }
 
@@ -138,10 +138,10 @@ body {
   text-align: left;
 }
 .entbutdes {
-  background-color: #ec8c2d;
+  background-color: #cd172d;
   color: white;
   font-size: 22px;
-  //font-weight: bold;
+  font-weight: bold;
   min-height: inherit;
   padding: 1.5rem 6rem;
   border-radius: .5rem;
@@ -927,10 +927,11 @@ label span {
   padding-top: 15px;
   padding-bottom: 10px;
   position: fixed;
+  border-top: 5px solid red;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #47c3dc;
+  background-color: #262626;
   color: white;
   text-align: center;
 }

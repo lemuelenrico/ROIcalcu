@@ -32,7 +32,7 @@
           </button>
           <a class="navbar-brand" href="https://www.snowsoftware.com/int">
           <!--  <a class="navbar-brand" href="#"> -->
-            <img src="images/Snowlogo.png"></a>
+            <img src="images/openit.png"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
