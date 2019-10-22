@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>ROI Calculator</title>
+    <title>Savings Calculator</title>
     <!--charts.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
@@ -21,7 +21,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-    <link href="icon/snowflake.png" rel="shortcut icon">
+    <link href="icon/it.ico" rel="shortcut icon">
   </head>
   <body>
     <nav class="navbar navbar-default nobord navsmallmrgbot">
@@ -34,25 +34,25 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="https://www.snowsoftware.com/int">
+          <a class="navbar-brand nospace leftpad" href="https://openit.com/">
           <!--  <a class="navbar-brand" href="#"> -->
-            <img src="images/Snowlogo.png"></a>
+            <img src="images/openit.png"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-          <li><a href="index.php"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</h></a></li>
-          <li><a href="contact/index.php"><h class="whitfnt2 geofont">Contact Us</h></a></li>
+          <li><a href="index.php"><h class="whitfnt openfont">Open iT Savings Calculator</h></a></li>
+          <li><a href="contact/index.php"><h class="whitfnt2 openfont">Contact Us</h></a></li>
           <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>-->
-          <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
+          <li><a href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/"><h class="whitfnt2 openfont">Help</h></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
   </nav>
 
     <div class="jumbotron jumboadd">
-      <h2 class="headngsprpg nospace centertext">ROI for
+      <h2 class="headngsprpg nospace centertext whitefont">ROI for
         <?php
         echo $companyName;
          ?>
@@ -65,12 +65,12 @@
         <div class="row">
           <div class="col-md-4 col-sm-4"> <!--for app details -->
             <fieldset>
-              <legend class="geofont">Select Optimization Level</legend>
+              <legend class="openfont">Select Optimization Level</legend>
 
                 <div class="row nospace">
                   <div class="col-md-4 col-sm-4 nospace centertext levelpad">
                     <div class="middlelvl">
-                      <img class="lvlnotselect" src="images/snowlevels/level_1.png" width="50px" >
+                      <img class="lvlnotselect" src="images/snowlevels/level_1.png" width="85px" >
                     </div>
                     <form action="roi_1.php" method="POST">
                       <!-- the following hidden input function as transitional variables for reporting-->
@@ -139,7 +139,7 @@
                   </div>
                   <div class="col-md-4 col-sm-4 nospace centertext levelpad">
                     <div class="middlelvl">
-                      <img src="images/snowlevels/level_2.png" width="70px">
+                      <img src="images/snowlevels/level_2.png" width="85px">
                     </div>
                     <button class="levelbutdeselect">Level 2
                     </button>
@@ -221,7 +221,7 @@
 
             <div class="row actionpointsbuttonpad">
               <div class="container-fluid smallspace">
-                <a href="https://www.snowsoftware.com/int/contact" class="btn contactbutdes geofont">Contact Snow</a>
+                <a href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/" class="btn contactbutdes">Contact Open iT</a>
               </div>
             </div>
 
@@ -280,7 +280,7 @@
 
             <br>
             <fieldset class="appfield">
-              <legend class="geofont centertext">Software Details</legend>
+              <legend class="openfont centertext">Software Details</legend>
               <table align="center" class="tablemarg">
                   <tr>
                     <td class="centertext smallpadtbl headperapp1" colspan="4">Application A</td>
@@ -374,7 +374,7 @@
           </div>
           <div class="col-md-8 col-sm-8"> <!-- visuals -->
             <fieldset>
-              <legend class="geofont centertext"><img class="centerlvlimg" src="images/snowlevels/level_2.png" width="40px">&nbsp;Results Details&nbsp;
+              <legend class="openfont centertext"><img class="centerlvlimg" src="images/snowlevels/level_2.png" width="40px">&nbsp;Results Details&nbsp;
                 <!--<img class="centerlvlimg" src="images/snowlevels/level_2.png" width="55px">--></legend>
               <div class="row charttopmarg">
                 <div class="col-md-6 col-sm6">
@@ -411,8 +411,8 @@
                   <div id="analbar">
                     <p><span class="analysishighlight">&#9632;</span> Your most expensive application is <span class="analysishighlight"><?php echo $maxapp; ?></span>. <br>
                       <span class="analysishighlight">&#9632;</span> You can cut down <span class="analysishighlight">$<?php echo number_format($maxappCostReductionLvl_2,2); ?></span> on
-                      <span class="analysishighlight"><?php echo $maxapp; ?></span> alone using Snow for Engineering Level 2.</p>
-                      <a target="_blank" href="https://www.snowsoftware.com/int/contact">Ask a Snow for Engineering expert &raquo;</a><br><br>
+                      <span class="analysishighlight"><?php echo $maxapp; ?></span> alone using Open iT LicenseAnalyzer<i>2019</i>&trade; Level 2.</p>
+                      <a target="_blank" href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/">Ask an Open iT expert &raquo;</a><br><br>
                   </div>
                   <button id="hideanalbar" class="analysisbut" onclick="hideanalbar()">Hide Analysis &uarr;</button>
                 </div>
@@ -423,32 +423,33 @@
                   </div>
                   <button id="showanaldon" class="analysisbut" onclick="showanaldon()">Show Analysis &darr;</button><br>
                   <div id="analdon">
-                    <p><span class="analysishighlight">&#9632;</span> Using Snow for Engineering Level 2, you can have a total of <span class="analysishighlight">$<?php echo number_format($level_2_overallSav,2); ?></span> Savings for 3 years.</p>
-                      <a target="_blank" href="https://www.snowsoftware.com/int/contact">Ask a Snow for Engineering expert &raquo;</a><br><br>
+                    <p><span class="analysishighlight">&#9632;</span> Using Open iT LicenseAnalyzer<i>2019</i>&trade; Level 2, you can have a total of <span class="analysishighlight">$<?php echo number_format($level_2_overallSav,2); ?></span> Savings for 3 years.</p>
+                      <a target="_blank" href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/">Ask an Open iT expert &raquo;</a><br><br>
                   </div>
                   <button id="hideanaldon" class="analysisbut" onclick="hideanaldon()">Hide Analysis &uarr;</button>
                 </div>
               </div>
 
-              <br>
 
+              <!--
                 <div class="container-fluid nospace">
                   <div class="graphcontainter roidiv">
                     <canvas id="roiChartLine"></canvas>
                   </div>
                   <button id="showanalline" class="analysisbut" onclick="showanalline()">Show Analysis &darr;</button>
                 </div>
+              -->
 
                 <div class="container-fluid nospace">
                   <table align="center" class="const">
                       <tr>
-                          <th colspan="4" class="aligncntr">ROI Calculation</th>
+                          <th colspan="4" class="aligncntr">Savings Calculation</th>
                       </tr>
-                      <tr>
+                      <!--<tr>
                           <td width="30%" class="pricebgcol"></td>
                           <td width="20%" class="yearlydatalbl pricebgcol">%</td>
                           <td class="pricebgcol yearlydata">$</td>
-                      </tr>
+                      </tr>-->
                       <tr>
                           <td width="30%" id="firstyrgradient">1st Year</td>
                           <td width="20%" class="yearlydatalbl colorwhite"><?php echo number_format($truVal_2_ROI1,2); ?>%</td>
@@ -466,14 +467,16 @@
                           <td class="colorwhite yearlydata">$<?php echo number_format($truVal_2_Savings3,2); ?></td>
                       </tr>
                     </table>
+                    <br>
+                    <button id="showanalline" class="analysisbut" onclick="showanalline()">Show Analysis &darr;</button>
                 </div>
 
               <div id="analline">
 
                 <div class="leftalgn openfont whitefont"><br>
-                <p> <span class="analysishighlight">&#9632;</span> The ROI is already noticeable in the first year of purchase since a lot of optimization will happen on this period.
+                <p> <span class="analysishighlight">&#9632;</span> The savings are already noticeable in the first year of purchase since a lot of optimization will happen on this period.
                     That's why it is observable that ROI for the following years is much lower than the first year of purchase.</p>
-                    <a target="_blank" href="https://www.snowsoftware.com/int/contact">Ask a Snow for Engineering expert &raquo;</a><br><br>
+                    <a target="_blank" href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/">Ask an Open iT expert &raquo;</a><br><br>
                 </div>
               </div>
                 <button id="hideanalline" class="analysisbut" onclick="hideanalline()">Hide Analysis &uarr;</button>
@@ -498,7 +501,7 @@
             <?php echo round($applicationB_costs); ?>,
             <?php echo round($applicationC_costs); ?>
           ],
-          backgroundColor:['#47c3dc','#47c3dc','#47c3dc'],
+          backgroundColor:['#dcdcdc','#dcdcdc','#dcdcdc'],
           hoverBorderWidth: 3,
           hoverBorderColor: "#F0F0F0"
         }]
@@ -521,7 +524,7 @@
               labelString: 'Applications',
               fontSize: 19,
               fontColor: "white",
-              fontFamily: "Geogtq"
+              fontFamily: "OpenSans"
             },
             ticks: {
                fontColor: 'white'
@@ -558,7 +561,7 @@
             <?php echo round($truVal_2_Savings2); ?>,
             <?php echo round($truVal_2_Savings3); ?>
           ],
-          backgroundColor:['#47c3dc','#417379','#ec8c2d'],
+          backgroundColor:['#cd172d','#dcdcdc','#ffc000'],
           borderWidth: 0,
           hoverBorderWidth: 3,
           hoverBorderColor: '#F0F0F0'
@@ -729,7 +732,7 @@
     <script src="js/bootstrap.min.js"></script>
 
     <div class="footer2">
-      <p class="dfooter geofont">Copyright © <?php echo date('Y'); ?> Snow Software. All rights reserved.</p>
+      <p class="dfooter openfont">Copyright © <?php echo date('Y'); ?> Open iT. All rights reserved.</p>
     </div>
     </body>
 </html>

@@ -10,7 +10,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-    <link href="icon/snowflake.png" rel="shortcut icon">
+    <link href="icon/it.ico" rel="shortcut icon">
 
   </head>
   <body>
@@ -24,7 +24,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="https://www.snowsoftware.com/int">
+          <a class="navbar-brand nospace leftpad" href="https://openit.com/">
           <!--  <a class="navbar-brand" href="#"> -->
             <img src="images/openit.png"></a>
         </div>
@@ -35,14 +35,14 @@
           <li><a href="index.php"><h class="whitfnt openfont">Open iT Savings Calculator</h></a></li>
           <li><a href="contact/index.php"><h class="whitfnt2 openfont">Contact Us</h></a></li>
           <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>-->
-          <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 openfont">Help</h></a></li>
+          <li><a href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/"><h class="whitfnt2 openfont">Help</h></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
   </nav>
 
     <div class="jumbotron jumboadd">
-      <h2 class="headngsprpg nospace centertext">Company Details</h2>
+      <h2 class="headngsprpg nospace centertext openfont whitefont">Company Details</h2>
     </div>
 
     <div class="container">
@@ -50,7 +50,7 @@
         <img class="pointermarg" src="images/pointer1.png">
         <div class="row">
           <div class="col-md-6 col-sm-6 aligncntr">
-            <h2 class="instructiontext">Industry Selection</h2>
+            <h2 class="openfont whitefont leftalgn">Industry Selection</h2>
               <form action="software.php" autocomplete="off" method="POST">
                   <div class="takeawaydiv">
                     <label class="firstop"><input type="radio" id="ind1" name="industry" checked="checked" onclick="lblindstry(1)" value="Engineering"><span title="Engineering" class="eng"></span></label>
@@ -63,15 +63,14 @@
                     <img class="snowlogoind" src="images/industry/snowlogoind.png">
                     <label id="industrytxt"><input id="industryinput" type="text" class="form-control openfont industrybox" placeholder="Industry"
                             name="otherindustry" autocomplete="off"></label>
-                    <img class="industrybd1" src="images/industry/industrybd.png">
-                    <img class="industrybd2" src="images/industry/industrybd.png">
-                    <img class="industrybd3" src="images/industry/industrybd.png">
-                    <img class="industrybd4" src="images/industry/industrybd.png">
-                    <img class="industrybd5" src="images/industry/industrybd.png">
-                    <img class="industrybd6" src="images/industry/industrybd.png">
+                    <!--    <img class="industrybd1" src="images/industry/industrybd.png">
+                            <img class="industrybd2" src="images/industry/industrybd.png">
+                            <img class="industrybd3" src="images/industry/industrybd.png">
+                            <img class="industrybd4" src="images/industry/industrybd.png">
+                            <img class="industrybd5" src="images/industry/industrybd.png">
+                            <img class="industrybd6" src="images/industry/industrybd.png">  -->
                   </div>
-
-                  <div class="row hide">
+                  <div class="row nospace">
                     <div class="custcenterright col-md-8 col-sm-8 centertext industrychanging openfont nospace">
                     See customer stories for <label id="dl-industry" style="font-weight:bold">Engineering </label>:
                       <!--<a href="files/SampleCalculation.pdf" download></a>-->
@@ -111,16 +110,16 @@
                 </div>
                 <div class="notssub openfont"><strong>Note:</strong> All fields are required.</div>
                 <div class="rightalgn">
-                <input type="submit" onclick="valthisform();" name="submit" class="btn vpdfbutdes geofont" value="Next &raquo">
+                  <br><br>
+                <input type="submit" onclick="valthisform();" name="submit" class="btn vpdfbutdes openfont" value="Next &raquo">
                 </div>
           </form>
               <br>
             </div>
           </div>
         </div><!--row-->
-
       </div><!--jumbotron-->
-
+    </div>
       <!--the following contain the modals for form validation -->
 
       <div id="companyval" class="modal">

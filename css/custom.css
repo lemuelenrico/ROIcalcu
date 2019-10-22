@@ -12,7 +12,7 @@
 
 body {
   //background-color: #47c3dc;
-  background-image: url("../images/roiback5.jpg");
+  background-image: url("../images/default_bg_02.png");
   //background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
@@ -120,14 +120,14 @@ body {
   margin-top: 1.4rem;
   text-align: center;
   padding-bottom: 100px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.75);
   //background: rgba(71, 195, 220, 0.5);
 }
 
 .jumbotronaddcomp {
   text-align: center;
   padding-bottom: 20px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.75);
   //background: rgba(71, 195, 220, 0.85);
 }
 
@@ -168,10 +168,9 @@ body {
 .headngsprpg {
   text-align: left;
   font-size: 6.5rem;
-  //font-weight: bold;
-  font-family: Geogtq;
-  //color: #47c3dc;
-  color: white;
+  font-weight: bold;
+  font-family: OpenSans;
+  color: black;
 }
 
 //.leftdiv {
@@ -210,12 +209,22 @@ body {
 }
 
 .vpdfbutdes {
-  background-color: #ec8c2d;
-  color: white;
+  background-color: #FFC000;
+  color: #404040;
   font-size: 19px;
   //font-weight: bold;
   min-height: inherit;
-  padding: 0.5rem 4rem;
+  padding: 0.5rem 3rem;
+  border-radius: .5rem;
+}
+
+.vpdfbutdes:hover {
+  background-color: #FFae00;
+  color: black;
+  font-size: 19px;
+  font-weight: bold;
+  min-height: inherit;
+  padding: 0.5rem 3rem;
   border-radius: .5rem;
 }
 
@@ -227,7 +236,7 @@ body {
 }
 
 .requiredclr {
-  color:#ec8c2d;
+  color:#FFC000;
   font-weight: bold;
   font-size: 1.8rem;
 }
@@ -310,34 +319,34 @@ body {
 }
 
 .roilbl {
-  font-family: Geogtq;
+  font-family: OpenSans;
   //font-size: 2.1rem;
   font-size: 2.3vh;
   font-weight: bold;
   //color: #ec8c2d;
-  color: #417379;
+  color: #404040;
 }
 
 .roiplch {
   font-family: OpenSans;
   //font-size: 2rem;
   font-size: 2.3vh;
-  font-weight: bold;
-  color: #417379;
+  //font-weight: bold;
+  color: #404040;
 }
 
 #roidesign {
   font-family: OpenSans;
   font-size: 6.7rem;
   font-weight: normal;
-  color: #417379;
+  color: #262626;
 }
 
 #roifnllbl {
-  font-family: Geogtq;
+  font-family: OpenSans;
   font-size: 4rem;
   font-weight: bold;
-  color: #ec8c2d;
+  color: #cd172d;
   //color: #417379;
 }
 
@@ -351,14 +360,14 @@ body {
   font-family: OpenSans;
   font-size: 6.7rem;
   font-weight: normal;
-  color: #417379;
+  color: #262626;
 }
 
 #cutlicfnllbl {
-  font-family: Geogtq;
+  font-family: OpenSans;
   font-size: 4rem;
   font-weight: bold;
-  color: #ec8c2d;
+  color: #cd172d;
   //color: #417379;
 }
 .industrychanging {
@@ -396,22 +405,34 @@ body {
 }
 
 .dlbutdes {
-  background-color: #ec8c2d;
-  color: white;
+  background-color: #ffc000;
+  color: #242424;
   font-size: 15px;
-  font-family: Geogtq;
+  font-family: OpenSans;
   min-height: inherit;
   padding: 0.6rem 2.8rem;
   border-radius: .5rem;
 }
 
-.showroibutdes {
-  background-color: #ec8c2d;
-  color: white;
-  font-size: 20px;
-  font-family: Geogtq;
+.dlbutdes:hover {
+  background-color: #FFae00;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: OpenSans;
   min-height: inherit;
-  padding: 1.2rem 3rem;
+  padding: 0.6rem 2.8rem;
+  border-radius: .5rem;
+}
+
+
+.showroibutdes {
+  background-color: #cd172d;
+  color: white;
+  font-size: 17px;
+  font-family: OpenSans;
+  min-height: inherit;
+  padding: 1rem 1rem;
   border-radius: .5rem;
 }
 
@@ -451,9 +472,9 @@ th {
 #firstyrgradient {
   //background: linear-gradient(top, #ffba00 0%, #ffae19 100%);
   //background: -webkit-linear-gradient(top, #ffba00 0%, #ffae19 100%);
-  background-color: #47c3dc;
+  background-color: #cd172d;
   //background-color: gray;
-  font-family: Geogtq;
+  font-family: OpenSans;
   font-size: 4vh;
   color: white;
   border-bottom: 2px solid white;
@@ -462,20 +483,21 @@ th {
 #secondyrgradient {
   //background: linear-gradient(top, #ffae19 0%, #ffa500 100%);
   //background: -webkit-linear-gradient(top, #ffae19 0%, #ffa500 100%);
-  background-color: #417379;
-  font-family: Geogtq;
+  background-color: lightgray;
+  font-family: OpenSans;
   font-size: 4vh;
-  color: white;
+  color: #262626;
   border-bottom:2px solid white;
 }
 
 #thrdyrgradient {
   //background: linear-gradient(top, #ffa500 0%, #ec8c2d 100%);
   //background: -webkit-linear-gradient(top, #ffa500 0%, #ec8c2d 100%);
-  background-color: #ec8c2d;
-  font-family: Geogtq;
+  background-color: #FFC000;
+  font-family: OpenSans;
   font-size: 4vh;
-  color: white;
+  color: #262626;
+  //border-bottom:3px solid white;
 }
 
 .yearlydata {
@@ -487,7 +509,7 @@ th {
 }
 
 .yearlydatalbl {
-  font-family: Geogtq;
+  font-family: OpenSans;
   font-size: 2.5vh;
   //font-size: 3rem;
   font-weight: normal;
@@ -547,7 +569,7 @@ input[type='checkbox'] {
 
 input[type='checkbox']:checked {
     //background: #47c3dc;
-    background: #ec8c2d;
+    background: #ffc000;
 }
 
 input[type='checkbox'].bigchkbx {
@@ -605,7 +627,7 @@ button {
   background: url('../images/industry/Engg_hover.png');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
   transition: 0.3s;
@@ -615,7 +637,7 @@ button {
   background: url('../images/industry/Engg_default.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
   transition: 0.3s;
@@ -631,7 +653,7 @@ input:checked + .eng {
   background: url('../images/industry/Engg_selected.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
 }
@@ -640,7 +662,7 @@ input:checked + .eng {
   background: url('../images/industry/O&G_hover.png');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
   transition: 0.3s;
@@ -650,7 +672,7 @@ input:checked + .eng {
   background: url('../images/industry/O&G_default.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
   transition: 0.3s;
@@ -660,7 +682,7 @@ input:checked + .og {
   background: url('../images/industry/O&G_selected.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
 }
@@ -669,7 +691,7 @@ input:checked + .og {
   background: url('../images/industry/Auto_hover.png');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
   transition: 0.3s;
@@ -679,7 +701,7 @@ input:checked + .og {
   background: url('../images/industry/Auto_default.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
   transition: 0.3s;
@@ -689,7 +711,7 @@ input:checked + .auto {
   background: url('../images/industry/Auto_selected.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
 }
@@ -699,7 +721,7 @@ input:checked + .auto {
   background: url('../images/industry/Mech_hover.png');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
   transition: 0.3s;
@@ -709,7 +731,7 @@ input:checked + .auto {
   background: url('../images/industry/Mech_default.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
   transition: 0.3s;
@@ -719,7 +741,7 @@ input:checked + .mp {
   background: url('../images/industry/Mech_selected.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
 }
@@ -729,7 +751,7 @@ input:checked + .mp {
   background: url('../images/industry/Gov_hover.png');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
   transition: 0.3s;
@@ -739,7 +761,7 @@ input:checked + .mp {
   background: url('../images/industry/Gov_default.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
   transition: 0.3s;
@@ -749,7 +771,7 @@ input:checked + .gov {
   background: url('../images/industry/Gov_selected.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
 }
@@ -759,7 +781,7 @@ input:checked + .gov {
   background: url('../images/industry/Others_hover.png');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
   transition: 0.3s;
@@ -769,7 +791,7 @@ input:checked + .gov {
   background: url('../images/industry/Others_default.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
   transition: 0.3s;
@@ -779,7 +801,7 @@ input:checked + .oth {
   background: url('../images/industry/Others_selected.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
 }
@@ -788,7 +810,7 @@ input:checked + .oth {
   background: url('../images/industry/Aero_hover.png');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
   transition: 0.3s;
@@ -798,7 +820,7 @@ input:checked + .oth {
   background: url('../images/industry/Aero_default.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
   transition: 0.3s;
@@ -808,7 +830,7 @@ input:checked + .aero {
   background: url('../images/industry/Aero_selected.png') repeat-x;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100px;
+  height: 103px;
   width: 120px;
   display: inline-block;
 }
@@ -824,11 +846,11 @@ label span {
 }
 
 .snowlogoind {
-  height: 107px;
-  width: 120px;
+  height: 93px;
+  width: 93px;
   position: absolute;
-  top: 122px;
-  left: 140px;
+  top: 131px;
+  left: 154px;
   z-index: 0;
   opacity: 0.95;
 }
@@ -849,14 +871,14 @@ label span {
 
 .thirdtop {
   position: absolute;
-  top: 171px;
+  top: 173px;
   left: 52px;
   z-index: 1;
 }
 
 .fourthtop {
   position: absolute;
-  top: 171px;
+  top: 173px;
   left: 228px;
   z-index: 1;
 }
@@ -869,7 +891,7 @@ label span {
 
 .sixthtop {
   position: absolute;
-  top: 221px;
+  top: 225px;
   left: 140px;
   z-index: 1;
 }
@@ -953,7 +975,7 @@ label span {
   border-radius: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background: rgba(40, 40, 40, 0.8);
+  background: rgba(0, 0, 0, 0.75);
 }
 
 .whitefont {
@@ -996,8 +1018,8 @@ option {
 
 #AppSelector1, #AppSelector2, #AppSelector3 {
   //background-color: gray;
-  background: rgba(236, 140, 45, 0.1);
-  border: 2px solid #ec8c2d;
+  background: rgba(205, 23, 45, 0.1);
+  border: 2px solid #cd172d;
   padding: 13px 10px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -1131,7 +1153,7 @@ input:checked + .applbl {
     text-align: center;
     border-radius: 10px;
     border-width: 10px;
-    border-color: #47c3dc;
+    border-color: #cd172d;
     font-family: OpenSans;
     font-size: 30px;
     text-align: center;
@@ -1273,31 +1295,31 @@ fieldset legend {
 
 .headperapp1 {
   font-size: 20px;
-  background-color: #47c3dc;
+  background-color: #cd172d;
   //background-color: #ffae19;
   color: white;
 }
 
 .headperapp2 {
   font-size: 20px;
-  background-color: #47c3dc;
+  background-color: #cd172d;
   //background-color: #ffa500;
   color: white;
 }
 
 .headperapp3 {
   font-size: 20px;
-  background-color: #47c3dc;
+  background-color: #cd172d;
   //background-color: #ec8c2d;
   color: white;
 }
 
 .levelbutdes {
-  background-color: #ec8c2d;
-  color: White;
-  border-color: #ec8c2d;
+  background-color: #FFC000;
+  color: black;
+  border-color: #FFC000;
   font-size: 20px;
-  font-family: Geogtq;
+  font-family: OpenSans;
   min-height: inherit;
   width: 100%;
   padding: 0;
@@ -1305,11 +1327,11 @@ fieldset legend {
 }
 
 .levelbutdeselect {
-  background-color: #ec8c2d;
-  color: White;
-  border-color: #ec8c2d;
+  background-color: #FFC000;
+  color: black;
+  border-color: #FFC000;
   font-size: 25px;
-  font-family: Geogtq;
+  font-family: OpenSans;
   height: 40px;
   width: 100%;
   padding: 0;
@@ -1331,12 +1353,13 @@ fieldset legend {
 }
 
 .appfield {
-  background: rgba(236, 140, 45, 0.1);
-  border: 2px solid #ec8c2d;
+  background: rgba(255, 192, 0, 0.1);
+  border: 2px solid #ffc000;
 }
 
 .instructiontext {
-  font-family: Geogtq;
+  font-family: OpenSans;
+  font-size: 2.2rem;
   text-align: left;
   color: white;
   padding: 0;
@@ -1417,12 +1440,12 @@ fieldset legend {
 
 .recalcbutdes {
   background-color: white;
-  color: #ec8c2d;
+  color: #404040;
   border-radius: 4px;
-  border-color: #ec8c2d;
+  border-color: gray;
   border-width: 2px;
   font-size: 20px;
-  font-family: Geogtq;
+  font-family: OpenSans;
   padding: 0.9rem 2.8rem;
   //height: 50px;
   width: 100%;
@@ -1431,13 +1454,13 @@ fieldset legend {
 }
 
 .recalcbutdes:hover {
-  background-color: #ec8c2d;
+  background-color: gray;
   color: white;
   border-radius: 4px;
-  border-color: #ec8c2d;
+  border-color: gray;
   border-width: 2px;
   font-size: 20px;
-  font-family: Geogtq;
+  font-family: OpenSans;
   padding: 0.9rem 2.8rem;
   //height: 50px;
   width: 100%;
@@ -1447,12 +1470,12 @@ fieldset legend {
 
 .contactbutdes {
   background-color: white;
-  color: #47c3dc;
+  color: #cd172d;
   border-radius: 4px;
-  border-color: #47c3dc;
+  border-color: #cd172d;
   border-width: 2px;
   font-size: 20px;
-  font-family: Geogtq;
+  font-family: OpenSans;
   padding: 1rem .8rem;
   //height: 50px;
   width: 100%;
@@ -1461,13 +1484,13 @@ fieldset legend {
 }
 
 .contactbutdes:hover {
-  background-color: #47c4dc;
+  background-color: #cd172d;
   color: white;
   border-radius: 4px;
-  border-color: #47c3dc;
+  border-color: #cd172d;
   border-width: 2px;
   font-size: 20px;
-  font-family: Geogtq;
+  font-family: OpenSans;
   padding: 1rem .8rem;
   //height: 50px;
   width: 100%;
@@ -1546,10 +1569,21 @@ fieldset legend {
 }
 
 .analysisbut {
-    background-color: #ec8c2d;
-    color: White;
+    background-color: lightgray;
+    color: #262626;
     font-size: 20px;
-    font-family: Geogtq;
+    font-family: OpenSans;
+    height: 40px;
+    width: 100%;
+    padding: 0;
+    border: none;
+}
+.analysisbut:hover {
+    background-color: gainsboro;
+    color: #262626;
+    font-size: 20px;
+    font-family: OpenSans;
+    font-weight: bold;
     height: 40px;
     width: 100%;
     padding: 0;
@@ -1557,7 +1591,7 @@ fieldset legend {
 }
 
 .analysishighlight {
-  color: #ec8c2d;
+  color: #ffc000;
   font-style: italic;
 }
 
@@ -1574,7 +1608,8 @@ p {
   padding-top: 15px;
   padding-bottom: 10px;
   width: 100%;
-  background-color: #47c3dc;
+  background-color: #262626;
   color: white;
   text-align: center;
+  border-top: 5px solid red;
 }

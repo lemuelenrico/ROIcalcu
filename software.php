@@ -25,15 +25,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <title>ROI Calculator</title>
+    <title>Savings Calculator</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-    <link href="icon/snowflake.png" rel="shortcut icon">
+    <link href="icon/it.ico" rel="shortcut icon">
     <style>
 
     body {
+    //background-image: url("images/bg/engg_rec.png");
     background-image: url("<?php echo $backgroundURL; ?>");
     }
 
@@ -50,25 +51,25 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="https://www.snowsoftware.com/int">
+          <a class="navbar-brand nospace leftpad" href="https://openit.com/">
           <!--  <a class="navbar-brand" href="#"> -->
-            <img src="images/Snowlogo.png"></a>
+            <img src="images/openit.png"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-          <li><a href="index.php"><h class="whitfnt geofont">Snow for Engineering: ROI Calculator</h></a></li>
-          <li><a href="contact/index.php"><h class="whitfnt2 geofont">Contact Us</h></a></li>
+          <li><a href="index.php"><h class="whitfnt openfont">Open iT Savings Calculator</h></a></li>
+          <li><a href="contact/index.php"><h class="whitfnt2 openfont">Contact Us</h></a></li>
           <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>-->
-          <li><a href="https://www.snowsoftware.com/int/contact"><h class="whitfnt2 geofont">Help</h></a></li>
+          <li><a href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/"><h class="whitfnt2 openfont">Help</h></a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
   </nav>
 
   <div class="jumbotron jumboadd">
-    <h2 class="headngsprpg nospace centertext">Software Details</h2>
+    <h2 class="headngsprpg nospace centertext whitefont">Software Details</h2>
   </div>
     <div class="container">
       <div class="jumbotron jumbotronaddcomp">
@@ -340,7 +341,7 @@
             <div class="row">
               <div class="col-md-1 col-sm-1"></div>
               <div class="col-md-8 centertext nospace">
-                  <label for="finalsubmit" class="openfont whitfnt"><input type="checkbox" class="glyphpointer bigchkbx" id="finalsubmit" value=""><span class="aggrchk glyphpointer">
+                  <label for="finalsubmit" class="openfont whitefont"><input type="checkbox" class="glyphpointer bigchkbx" id="finalsubmit" value=""><span class="aggrchk glyphpointer">
                     I allow the collection of my data to be used for the purpose of calculating ROI.
                   By proceeding, I also agree with the <!--<a href="terms.html" target="_blank"><u>Terms and Conditions</u></a> of the site.-->
                   <a href="https://www.snowsoftware.com/int/legal/termsofuse" target="_blank"><u>Terms and Conditions</u></a> of this site.</span>
@@ -348,7 +349,7 @@
               </div>
               <div class="col-md-2 centertext allspace">
                   <p><input type="submit" name="submittoroi" class="btn showroibutdes alignright geofont"
-                    value="Show ROI Calculation" onClick="valthisform();"></p>
+                    value="Show Savings Calculation" onClick="valthisform();"></p>
               </div>
             </div>
           </form>
@@ -407,7 +408,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <div class="footer">
-      <p class="dfooter geofont">Copyright © <?php echo date('Y'); ?> Snow Software. All rights reserved.</p>
+      <p class="dfooter openfont">Copyright © <?php echo date('Y'); ?> Open iT. All rights reserved.</p>
     </div>
   </body>
 </html>
