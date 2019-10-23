@@ -461,7 +461,7 @@ $maxappCostReductionLvl_3 = $maxappcostmulti * ( 1 - $lvl_3_licReduction);
               values              (NOW(), '$companyName_3', '$applicationName_3', '$agreementType_3', '$imloc_3',
                                   '$noOfLicenses_3','$vendorName_3','$licenseType_3','$renewalDate_3','$costPerLicense_3', $calculatedROI_3, $cutLicenses_3)"; */
 
-    $sqlroi = "INSERT into yearlyroi (EntryDate, Level, ROIyear1, ROIyear2, ROIyear3, SavingsYear1, SavingsYear2, SavingsYear3, Industry, CompanyName)
+    $sqlroi = "INSERT into yearlysavings (EntryDate, Level, ReductionYear1, ReductionYear2, ReductionYear3, SavingsYear1, SavingsYear2, SavingsYear3, Industry, CompanyName)
             values                (NOW(), 'Level_1', '$ROI_1_1', '$ROI_1_2', '$ROI_1_3','$savings_1_1','$savings_1_2','$savings_1_3','$industryTr','$companyName'),
                                   (NOW(), 'Level_2', '$ROI_2_1', '$ROI_2_2', '$ROI_2_3','$savings_2_1','$savings_2_2','$savings_2_3','$industryTr','$companyName'),
                                   (NOW(), 'Level_3', '$ROI_3_1', '$ROI_3_2', '$ROI_3_3','$savings_3_1','$savings_3_2','$savings_3_3','$industryTr','$companyName')";
