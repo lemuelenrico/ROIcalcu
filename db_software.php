@@ -481,7 +481,7 @@ $maxappCostReductionLvl_3 = $maxappcostmulti * ( 1 - $lvl_3_licReduction);
 
   //here are the codes for sending emails both the server and client
 
-  /*  $toServ       ='roiexpel@gmail.com'; //you can add multiple emails, just separate them with comma
+    $toServ       ='jengay@openit.com, lenrico@openit.com'; //you can add multiple emails, just separate them with comma
     $subjectServ  ='ROI Calculator Entry';
     $messageServ  ="Company Name: ".$companyName."\n"."Industry: ".$industryTr."\n"."Company Website: ".
                     $comWebsiteTr."\n"."Company Email: ".$comEmailTr."\n"."Number of Users: ".$noOfUsersTr.
@@ -490,13 +490,12 @@ $maxappCostReductionLvl_3 = $maxappcostmulti * ( 1 - $lvl_3_licReduction);
                     "\n"."Install Location: ".$imloc.
                     "\n"."Renewal Date: ".$renewalDate.
                     "\n"."Number of Licenses: ".$noOfLicenses.",    Cost per License: ".$costPerLicense.
-                    "\n"."Year 1 ROI: ".$truValROI1."%  |  $".$truValSavings1.
-                    "\n"."Year 2 ROI: ".$truValROI2."%  |  $".$truValSavings2.
-                    "\n"."Year 3 ROI: ".$truValROI3."%  |  $".$truValSavings3;
-
+                    "\n"."Year 1 Savings: ".$truValROI1."%  |  $".$truValSavings1.
+                    "\n"."Year 2 Savings:  ".$truValROI2."%  |  $".$truValSavings2.
+                    "\n"."Year 3 Savings: ".$truValROI3."%  |  $".$truValSavings3;
     $headersServ  ="From: lem@lem.com";
 
-    mail($toServ,$subjectServ,$messageServ,$headersServ); */
+    mail($toServ,$subjectServ,$messageServ,$headersServ);
 
 
     /*$toClient='roiexpel@gmail.com';

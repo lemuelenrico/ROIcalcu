@@ -220,7 +220,7 @@
 
             <div class="row actionpointsbuttonpad">
               <div class="container-fluid smallspace">
-                <a href="https://www.snowsoftware.com/int/contact" class="btn contactbutdes geofont">Contact Snow</a>
+                <a href="https://www.snowsoftware.com/int/contact" class="btn contactbutdes geofont">Contact Open iT</a>
               </div>
             </div>
 
@@ -375,7 +375,7 @@
               <div class="row charttopmarg">
                 <div class="col-md-6 col-sm6">
                   <div class="roidiv colorwhite">
-                    <span class="lresult" id="cutlicdesign"><span id=cutlicfnllbl>Savings for Year One: </span><br>$
+                    <span class="lresult" id="cutlicdesign"><span id=cutlicfnllbl>Highest Savings</span><br>$
                       <?php
                         echo number_format($truVal_3_Savings1);
                       ?>
@@ -384,7 +384,7 @@
                 </div>
                 <div class="col-md-6 col-sm6">
                   <div class="roidiv colorwhite">
-                    <span class="lresult" id="roidesign"><span id=roifnllbl> Calculated ROI: </span><br>
+                    <span class="lresult" id="roidesign"><span id=roifnllbl>Reduction</span><br>
                       <?php
                       //echo $calculatedROI;
                       echo number_format($truVal_3_ROI1);
@@ -403,7 +403,7 @@
                     <p><span class="analysishighlight">&#9632;</span> Your most expensive application is <span class="analysishighlight"><?php echo $maxapp; ?></span>.<br>
                       <span class="analysishighlight">&#9632;</span> You can cut down <span class="analysishighlight">$<?php echo number_format($maxappCostReductionLvl_3,2); ?></span> on
                       <span class="analysishighlight"><?php echo $maxapp; ?></span> alone using Open iT LicenseAnalyzer<i>2019</i>&trade; Level 3.</p>
-                      <a target="_blank" href="https://www.snowsoftware.com/int/contact">Ask an Open iT expert &raquo;</a><br><br>
+                      <a class="whitefont" target="_blank" href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/">Ask an Open iT expert &raquo;</a><br><br>
                   </div>
                   <button id="hideanalbar" class="analysisbut" onclick="hideanalbar()">Hide Analysis &uarr;</button>
                 </div>
@@ -415,7 +415,7 @@
                   <button id="showanaldon" class="analysisbut" onclick="showanaldon()">Show Analysis &darr;</button><br>
                   <div id="analdon">
                     <p><span class="analysishighlight">&#9632;</span> Using Open iT LicenseAnalyzer<i>2019</i>&trade; Level 3, you can have a total of <span class="analysishighlight">$<?php echo number_format($level_3_overallSav,2); ?></span> Savings for 3 years.</p>
-                      <a target="_blank" href="https://www.snowsoftware.com/int/contact">Ask an Open iT expert &raquo;</a><br><br>
+                      <a class="whitefont" target="_blank" href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/">Ask an Open iT expert &raquo;</a><br><br>
                   </div>
                   <button id="hideanaldon" class="analysisbut" onclick="hideanaldon()">Hide Analysis &uarr;</button>
                 </div>
@@ -467,7 +467,7 @@
                 <div class="leftalgn openfont whitefont"><br>
                 <p> <span class="analysishighlight">&#9632;</span> The savings are already noticeable in the first year of purchase since a lot of optimization will happen on this period.
                     That's why it is observable that ROI for the following years is much lower than the first year of purchase.</p>
-                    <a target="_blank" href="https://www.snowsoftware.com/int/contact">Ask a Snow for Engineering expert &raquo;</a><br><br>
+                    <a class="whitefont" target="_blank" href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/">Ask an Open iT expert &raquo;</a><br><br>
                 </div>
                 <button id="hideanalline" class="analysisbut" onclick="hideanalline()">Hide Analysis &uarr;</button>
               </div>
@@ -492,7 +492,7 @@
             <?php echo round($applicationB_costs); ?>,
             <?php echo round($applicationC_costs); ?>,
           ],
-          backgroundColor:['#dcdcdc','#dcdcdc','#dcdcdc'],
+          backgroundColor:['#404040','#404040','#404040'],
           hoverBorderWidth: 3,
           hoverBorderColor: "#F0F0F0"
         }]
@@ -503,7 +503,7 @@
           display: true,
           text: 'Software Expenses',
           fontSize: 20,
-          fontColor: "white"
+          fontColor: "#3f3f3f"
         },
         legend:{
           display:false
@@ -514,11 +514,11 @@
               display: true,
               labelString: 'Applications',
               fontSize: 19,
-              fontColor: "white",
+              fontColor: "#3f3f3f",
               fontFamily: "OpenSans"
             },
             ticks: {
-               fontColor: 'white'
+               fontColor: '#3f3f3f'
             }
           }],
           yAxes: [{
@@ -526,12 +526,12 @@
               display: true,
               labelString: 'Cost in USD',
               fontSize: 15,
-              fontColor: "white",
+              fontColor: "#3f3f3f",
               fontFamily: "OpenSans"
             },
             ticks: {
               beginAtZero: true,
-              fontColor: 'white'
+              fontColor: '#3f3f3f'
             }
           }]
         }
@@ -552,7 +552,7 @@
             <?php echo round($truVal_3_Savings2); ?>,
             <?php echo round($truVal_3_Savings3); ?>,
           ],
-          backgroundColor:['#cd172d','#dcdcdc','#ffc000'],
+          backgroundColor:['#cd172d','#404040','#ffc000'],
           borderWidth: 0,
           hoverBorderWidth: 3,
           hoverBorderColor: '#F0F0F0'
@@ -564,11 +564,11 @@
           display: true,
           text: 'Savings for Three Years ($)',
           fontSize: 20,
-          fontColor: "white"
+          fontColor: "#3f3f3f"
         },
         legend:{
             labels:{
-              fontColor: "white"
+              fontColor: "#3f3f3f"
             }
         },
         scales: {
@@ -578,8 +578,8 @@
               display: true,
               labelString: 'Time (Yr)',
               fontSize: 19,
-              fontColor: "white",
-              fontFamily: "Geogtq"
+              fontColor: "#3f3f3f",
+              fontFamily: "OpenSans"
             }
           }],
           yAxes: [{

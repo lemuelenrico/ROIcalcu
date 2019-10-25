@@ -50,7 +50,7 @@
         <img class="pointermarg" src="images/pointer1.png">
         <div class="row">
           <div class="col-md-6 col-sm-6 aligncntr">
-            <h2 class="openfont whitefont leftalgn">Industry Selection</h2>
+            <h2 class="openfont openitred leftalgn"><b><u>Industry Selection<u></b></h2>
               <form action="software.php" autocomplete="off" method="POST">
                   <div class="takeawaydiv">
                     <label class="firstop"><input type="radio" id="ind1" name="industry" checked="checked" onclick="lblindstry(1)" value="Engineering"><span title="Engineering" class="eng"></span></label>
@@ -71,7 +71,7 @@
                             <img class="industrybd6" src="images/industry/industrybd.png">  -->
                   </div>
                   <div class="row nospace">
-                    <div class="custcenterright col-md-8 col-sm-8 centertext industrychanging openfont nospace">
+                    <div class="custcenterright col-md-8 col-sm-8 centertext industrychanging openfont nospace whitefont">
                     See customer stories for <label id="dl-industry" style="font-weight:bold">Engineering </label>:
                       <!--<a href="files/SampleCalculation.pdf" download></a>-->
                     </div>

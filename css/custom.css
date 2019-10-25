@@ -92,7 +92,7 @@ body {
   font-size: 6.5rem;
   font-weight: bold;
   //color: #404040;
-  color: white;
+  color: #3f3f3f;
   //color: #47c3dc;
   //line-height: normal;
   font-family: 'Open Sans', sans-serif;
@@ -103,7 +103,7 @@ body {
   font-size: 1.9rem;
   font-family: 'Open Sans', sans-serif;
   //font-weight: bold;
-  color: white;
+  color: #3f3f3f;
   //color: #404040;
 }
 
@@ -112,7 +112,7 @@ body {
   font-size: 1.8;
   font-family: 'Open Sans', sans-serif;
   //color: #417379;
-  color: white;
+  color: #3f3f3f;
   // color: #404040;
 }
 
@@ -120,14 +120,16 @@ body {
   margin-top: 1.4rem;
   text-align: center;
   padding-bottom: 100px;
-  background: rgba(0, 0, 0, 0.75);
+  //background: rgba(0, 0, 0, 0.75);
+  background: rgba(245, 245, 245, 0.62);
   //background: rgba(71, 195, 220, 0.5);
 }
 
 .jumbotronaddcomp {
   text-align: center;
   padding-bottom: 20px;
-  background: rgba(0, 0, 0, 0.75);
+  //background: rgba(0, 0, 0, 0.75);
+  background: rgba(245, 245, 245, 0.62);
   //background: rgba(71, 195, 220, 0.85);
 }
 
@@ -170,7 +172,10 @@ body {
   font-size: 6.5rem;
   font-weight: bold;
   font-family: OpenSans;
-  color: black;
+}
+
+.white{
+  color: white;
 }
 
 //.leftdiv {
@@ -188,7 +193,7 @@ body {
   font-size: 1.4rem;
   font-family: sans-serif Arial;
   //color: #417379;
-  color: white;
+  color: #3f3f3f;
 }
 
 .nextbutdes {
@@ -262,7 +267,7 @@ body {
   padding-bottom: 7px;
   padding-top: 8px;
   border-width: 0px;
-  color: white;
+  color: #3f3f3f;
   font-style: normal;
 }
 
@@ -546,14 +551,14 @@ th {
 .bigtxtbx {
   height: 58px;
   font-size: 23px;
-  color: white;
+  color: #3f3f3f;
   border-width: 0px 0px 1px 0px;
 }
 
 .midtxtbx {
   height: 45px;
   font-size: 18px;
-  color: white;
+  color: #3f3f3f;
   border-width: 0px 0px 1px 0px;
 }
 
@@ -975,16 +980,24 @@ label span {
   border-radius: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(245, 245, 245, 0.62);
 }
 
 .whitefont {
-  color: white;
+  color: #3f3f3f;
+}
+
+.openitred {
+  color: #cd172d;
+}
+
+.black {
+  color: black;
 }
 
 .form-control {
   background: transparent;
-  border-color: white;
+  border-color: #3f3f3f;
 }
 
 a{
@@ -1018,7 +1031,7 @@ option {
 
 #AppSelector1, #AppSelector2, #AppSelector3 {
   //background-color: gray;
-  background: rgba(205, 23, 45, 0.1);
+  background: rgba(205, 23, 45, 0.025);
   border: 2px solid #cd172d;
   padding: 13px 10px;
   border-bottom-left-radius: 8px;
@@ -1145,7 +1158,7 @@ input:checked + .applbl {
 
 /* Modal Content Box */
 .modal-content {
-    background-color: #fefefe;
+    background-color: #f5f5f5;
     margin: 4% auto 15% auto;
     border: 1px solid #888;
     width: 50%;
@@ -1276,7 +1289,7 @@ input:checked + .lvl3 {
 }
 
 fieldset {
-  border: 2px solid white;
+  border: 2px solid #3f3f3f;
   padding: 0px 10px 10px 10px;
 }
 
@@ -1361,7 +1374,6 @@ fieldset legend {
   font-family: OpenSans;
   font-size: 2.2rem;
   text-align: left;
-  color: white;
   padding: 0;
   margin: 0;
   border: 0;
@@ -1371,7 +1383,7 @@ fieldset legend {
   height: 45px;
   width: 190px;
   font-size: 17px;
-  color: white;
+  color: #3f3f3f;
   border-width: 0px 0px 1px 0px;
 }
 
@@ -1569,7 +1581,7 @@ fieldset legend {
 }
 
 .analysisbut {
-    background-color: lightgray;
+    background-color: white;
     color: #262626;
     font-size: 20px;
     font-family: OpenSans;
@@ -1591,7 +1603,7 @@ fieldset legend {
 }
 
 .analysishighlight {
-  color: #ffc000;
+  color: #cd172d;
   font-style: italic;
 }
 

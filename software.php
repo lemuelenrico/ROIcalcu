@@ -90,7 +90,7 @@
                   <input type="hidden" name="transi5" value="<?php echo $noOfUsers ?>">
                 </div>
                   <br>
-              <h3 class="instructiontext">Enter top three most expensive applications.</h3>
+              <h3 class="instructiontext openitred"><b>Enter top three most expensive applications</b>.</h3>
               </div>
               <div class="col-md-6 col-sm-6 rightalgn">
                   <h3 class="notssub openfont"><span class="requiredclr">*</span>Required Fields</h3>
@@ -344,7 +344,7 @@
                   <label for="finalsubmit" class="openfont whitefont"><input type="checkbox" class="glyphpointer bigchkbx" id="finalsubmit" value=""><span class="aggrchk glyphpointer">
                     I allow the collection of my data to be used for the purpose of calculating ROI.
                   By proceeding, I also agree with the <!--<a href="terms.html" target="_blank"><u>Terms and Conditions</u></a> of the site.-->
-                  <a href="https://www.snowsoftware.com/int/legal/termsofuse" target="_blank"><u>Terms and Conditions</u></a> of this site.</span>
+                  <a href="https://www.snowsoftware.com/int/legal/termsofuse" target="_blank" class="whitefont"><u>Terms and Conditions</u></a> of this site.</span>
                 </label>
               </div>
               <div class="col-md-2 centertext allspace">

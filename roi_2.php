@@ -65,7 +65,7 @@
         <div class="row">
           <div class="col-md-4 col-sm-4"> <!--for app details -->
             <fieldset>
-              <legend class="openfont">Select Optimization Level</legend>
+              <legend class="openfont whitefont">Select Optimization Level</legend>
 
                 <div class="row nospace">
                   <div class="col-md-4 col-sm-4 nospace centertext levelpad">
@@ -280,7 +280,7 @@
 
             <br>
             <fieldset class="appfield">
-              <legend class="openfont centertext">Software Details</legend>
+              <legend class="openfont centertext whitefont">Software Details</legend>
               <table align="center" class="tablemarg">
                   <tr>
                     <td class="centertext smallpadtbl headperapp1" colspan="4">Application A</td>
@@ -374,13 +374,13 @@
           </div>
           <div class="col-md-8 col-sm-8"> <!-- visuals -->
             <fieldset>
-              <legend class="openfont centertext"><img class="centerlvlimg" src="images/snowlevels/level_2.png" width="40px">&nbsp;Results Details&nbsp;
+              <legend class="openfont centertext whitefont"><img class="centerlvlimg" src="images/snowlevels/level_2.png" width="40px">&nbsp;Results Details&nbsp;
                 <!--<img class="centerlvlimg" src="images/snowlevels/level_2.png" width="55px">--></legend>
               <div class="row charttopmarg">
                 <div class="col-md-6 col-sm6">
                   <div class="roidiv colorwhite">
 
-                    <span class="lresult" id="cutlicdesign"><span id=cutlicfnllbl>Highest Savings: </span><br>$
+                    <span class="lresult" id="cutlicdesign"><span id=cutlicfnllbl>Highest Savings</span><br>$
                       <?php
                         echo number_format($truVal_2_Savings1);
                       ?>
@@ -391,7 +391,7 @@
                 <div class="col-md-6 col-sm6">
                   <div class="roidiv colorwhite">
 
-                    <span class="lresult" id="roidesign"><span id=roifnllbl>Highest ROI: </span><br>
+                    <span class="lresult" id="roidesign"><span id=roifnllbl>Reduction</span><br>
                       <?php
                       echo number_format($truVal_2_ROI1);
                       ?>%
@@ -412,7 +412,7 @@
                     <p><span class="analysishighlight">&#9632;</span> Your most expensive application is <span class="analysishighlight"><?php echo $maxapp; ?></span>. <br>
                       <span class="analysishighlight">&#9632;</span> You can cut down <span class="analysishighlight">$<?php echo number_format($maxappCostReductionLvl_2,2); ?></span> on
                       <span class="analysishighlight"><?php echo $maxapp; ?></span> alone using Open iT LicenseAnalyzer<i>2019</i>&trade; Level 2.</p>
-                      <a target="_blank" href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/">Ask an Open iT expert &raquo;</a><br><br>
+                      <a class="whitefont" target="_blank" href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/">Ask an Open iT expert &raquo;</a><br><br>
                   </div>
                   <button id="hideanalbar" class="analysisbut" onclick="hideanalbar()">Hide Analysis &uarr;</button>
                 </div>
@@ -424,7 +424,7 @@
                   <button id="showanaldon" class="analysisbut" onclick="showanaldon()">Show Analysis &darr;</button><br>
                   <div id="analdon">
                     <p><span class="analysishighlight">&#9632;</span> Using Open iT LicenseAnalyzer<i>2019</i>&trade; Level 2, you can have a total of <span class="analysishighlight">$<?php echo number_format($level_2_overallSav,2); ?></span> Savings for 3 years.</p>
-                      <a target="_blank" href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/">Ask an Open iT expert &raquo;</a><br><br>
+                      <a class "whitefont" target="_blank" href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/">Ask an Open iT expert &raquo;</a><br><br>
                   </div>
                   <button id="hideanaldon" class="analysisbut" onclick="hideanaldon()">Hide Analysis &uarr;</button>
                 </div>
@@ -476,7 +476,7 @@
                 <div class="leftalgn openfont whitefont"><br>
                 <p> <span class="analysishighlight">&#9632;</span> The savings are already noticeable in the first year of purchase since a lot of optimization will happen on this period.
                     That's why it is observable that ROI for the following years is much lower than the first year of purchase.</p>
-                    <a target="_blank" href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/">Ask an Open iT expert &raquo;</a><br><br>
+                    <a class="whitefont" target="_blank" href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/">Ask an Open iT expert &raquo;</a><br><br>
                 </div>
               </div>
                 <button id="hideanalline" class="analysisbut" onclick="hideanalline()">Hide Analysis &uarr;</button>
@@ -501,7 +501,7 @@
             <?php echo round($applicationB_costs); ?>,
             <?php echo round($applicationC_costs); ?>
           ],
-          backgroundColor:['#dcdcdc','#dcdcdc','#dcdcdc'],
+          backgroundColor:['#404040','#404040','#404040'],
           hoverBorderWidth: 3,
           hoverBorderColor: "#F0F0F0"
         }]
@@ -512,7 +512,7 @@
           display: true,
           text: 'Software Expenses',
           fontSize: 20,
-          fontColor: "white"
+          fontColor: "#3f3f3f"
         },
         legend:{
           display:false
@@ -523,11 +523,11 @@
               display: true,
               labelString: 'Applications',
               fontSize: 19,
-              fontColor: "white",
+              fontColor: "#3f3f3f",
               fontFamily: "OpenSans"
             },
             ticks: {
-               fontColor: 'white'
+               fontColor: '#3f3f3f'
             }
           }],
           yAxes: [{
@@ -535,12 +535,12 @@
               display: true,
               labelString: 'Cost in USD',
               fontSize: 15,
-              fontColor: "white",
+              fontColor: "#3f3f3f",
               fontFamily: "OpenSans"
             },
             ticks: {
               beginAtZero: true,
-              fontColor: 'white'
+              fontColor: '#3f3f3f'
             }
           }]
         }
@@ -561,7 +561,7 @@
             <?php echo round($truVal_2_Savings2); ?>,
             <?php echo round($truVal_2_Savings3); ?>
           ],
-          backgroundColor:['#cd172d','#dcdcdc','#ffc000'],
+          backgroundColor:['#cd172d','#404040','#ffc000'],
           borderWidth: 0,
           hoverBorderWidth: 3,
           hoverBorderColor: '#F0F0F0'
@@ -573,11 +573,11 @@
           display: true,
           text: 'Savings for Three Years ($)',
           fontSize: 20,
-          fontColor: "white"
+          fontColor: "#3f3f3f"
         },
         legend:{
             labels:{
-              fontColor: "white"
+              fontColor: "#3f3f3f"
             }
         },
         scales: {
@@ -587,8 +587,8 @@
               display: true,
               labelString: 'Time (Yr)',
               fontSize: 19,
-              fontColor: "white",
-              fontFamily: "Geogtq"
+              fontColor: "#3f3f3f",
+              fontFamily: "OpenSans"
             }
           }],
           yAxes: [{
