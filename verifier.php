@@ -38,7 +38,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-          <li><a href="../roicalcu/"><h class="whitfnt openfont">Open iT Savings Calculator</h></a></li>
+          <li><a href="../savingscalc/"><h class="whitfnt openfont">Open iT Savings Calculator</h></a></li>
           <li><a href="contact"><h class="whitfnt2 openfont">Contact Us</h></a></li>
           <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>-->
           <li><a href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/"><h class="whitfnt2 openfont">Help</h></a></li>

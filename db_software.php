@@ -482,18 +482,40 @@ $maxappCostReductionLvl_3 = $maxappcostmulti * ( 1 - $lvl_3_licReduction);
   //here are the codes for sending emails both the server and client
 
     $toServ       ='lenrico@openit.com'; //you can add multiple emails, just separate them with comma
-    $subjectServ  ='ROI Calculator Entry';
+    $subjectServ  ='Savings Calculator Entry';
     $messageServ  ="Company Name: ".$companyName."\n"."Industry: ".$industryTr."\n"."Company Website: ".
                     $comWebsiteTr."\n"."Company Email: ".$comEmailTr."\n"."Number of Users: ".$noOfUsersTr.
-                    "\n"."Application Name: ".$applicationName.", Vendor Name: ".$vendorName.
+                    "\n"."\n"."-----------------------Application A-------------------------".
+                    "\n"."\n"."Application Name: ".$applicationName.", Vendor Name: ".$vendorName.
                     "\n"."Agreement Type: ".$agreementType.", License Type: ".$licenseType.
                     "\n"."Install Location: ".$imloc.
                     "\n"."Renewal Date: ".$renewalDate.
                     "\n"."Number of Licenses: ".$noOfLicenses.",    Cost per License: ".$costPerLicense.
-                    "\n"."Year 1 Savings: ".$truValROI1."%  |  $".$truValSavings1.
-                    "\n"."Year 2 Savings:  ".$truValROI2."%  |  $".$truValSavings2.
-                    "\n"."Year 3 Savings: ".$truValROI3."%  |  $".$truValSavings3;
-    $headersServ  ="From: lem@lem.com";
+                    "\n"."\n"."-----------------------Application B-------------------------".
+                    "\n"."\n"."Application Name: ".$applicationName_2.", Vendor Name: ".$vendorName_2.
+                    "\n"."Agreement Type: ".$agreementType_2.", License Type: ".$licenseType_2.
+                    "\n"."Install Location: ".$imloc_2.
+                    "\n"."Renewal Date: ".$renewalDate_2.
+                    "\n"."Number of Licenses: ".$noOfLicenses_2.",    Cost per License: ".$costPerLicense_2.
+                    "\n"."\n"."-----------------------Application C-------------------------".
+                    "\n"."\n"."Application Name: ".$applicationName_3.", Vendor Name: ".$vendorName_3.
+                    "\n"."Agreement Type: ".$agreementType_3.", License Type: ".$licenseType_3.
+                    "\n"."Install Location: ".$imlo_3c.
+                    "\n"."Renewal Date: ".$renewalDat_3e.
+                    "\n"."Number of Licenses: ".$noOfLicenses_3.",    Cost per License: ".$costPerLicense_3.
+                    "\n"."\n"."___________________Level 1___________________".
+                    "\n"."\n"."Year 1 Savings: ".$ROI_1_1."%  |  $".$savings_1_1.
+                    "\n"."Year 2 Savings:  ".$ROI_1_2."%  |  $".$savings_1_2.
+                    "\n"."Year 3 Savings: ".$ROI_1_3."%  |  $".$savings_1_3.
+                    "\n"."\n"."___________________Level 2___________________".
+                    "\n"."\n"."Year 1 Savings: ".$ROI_2_1."%  |  $".$savings_2_1.
+                    "\n"."Year 2 Savings:  ".$ROI_2_2."%  |  $".$savings_2_2.
+                    "\n"."Year 3 Savings: ".$ROI_2_3."%  |  $".$savings_2_3.
+                    "\n"."\n"."___________________Level 3___________________".
+                    "\n"."\n"."Year 1 Savings: ".$ROI_3_1."%  |  $".$savings_3_1.
+                    "\n"."Year 2 Savings:  ".$ROI_3_2."%  |  $".$savings_3_2.
+                    "\n"."Year 3 Savings: ".$ROI_3_3."%  |  $".$savings_3_3;
+    $headersServ  ="From: openitsavingscalc@gmail.com";
 
     mail($toServ,$subjectServ,$messageServ,$headersServ);
 
@@ -555,25 +577,27 @@ $maxappCostReductionLvl_3 = $maxappcostmulti * ( 1 - $lvl_3_licReduction);
                         <body>
                         <div style="color:#585858; font-family: Helvetica;" padding:0; margin:0;>
                         <div style="width:500px; margin: 0 auto;">
-                        <div style="width:100%; background:#47c3dc; margin: 0; padding-top: 20px; padding-bottom: 16px; text-align:center;">
-                        <img src="https://lh3.googleusercontent.com/-yZaqfNuqddw/W6nbzBUXsfI/AAAAAAAAAAc/_w-fna_L7e8bdXG8rQuzNvDSQKVibIDcACL0BGAs/w530-d-h129-n-rw/Snowlogo.png" width="136px" height: "33px" >
+                        <div style="width:100%; background:#404040; margin: 0; padding-top: 15px; padding-bottom: 14px; text-align:center;">
+                        </div>
+                        <div style="width:100%; background:white; margin: 0; padding-top: 20px; padding-bottom: 16px; text-align:center;">
+                        <img src="https://openit.com/wp-content/themes/caffeine/images/logo.png" width="136px" height: "33px" >
                         </div>
                         <div style="width:100%; text-align:center; background:#E8E8E8; margin:0; padding:0;">
                         <br><h2>Hello ';
       $messageVerify .= $companyName;
       $messageVerify .= '! Here is your verification code for <br>calculated results: <br><br>
-                        <div style="width:200px; background:white; font-size: 30px; font-family: Arial; margin:0 auto; padding: 10px; border-bottom: 6px solid #ec8c2d;">';
+                        <div style="width:200px; background:white; font-size: 30px; font-family: Arial; margin:0 auto; padding: 10px; border-bottom: 6px solid #cd172d;">';
       $messageVerify .= $passcode;
       $messageVerify .='
                         </div><br>
                         <div style="background:#dcdcdc; text-align:center; width:100%; margin: 0; padding-top: 40px; padding-bottom: 50px; color:#f5f5f5; font-size:12px;">
-                        <a href="https://www.snowsoftware.com/int/contact" style="background-color:#ec8c2d; color:white; padding: 15px 20px; text-decoration:none; font-size:16px;">CONTACT SNOW</a>
+                        <a href="https://openit.com/" style="background-color:#cd172d; color:white; padding: 15px 20px; text-decoration:none; font-size:16px;">CONTACT OPENIT</a>
                         </div>
                         <br>
-                        <div style="background:#47c3dc; width:100%; margin: 0; padding-top: 10px; padding-bottom: 12px; color:#f5f5f5; font-size:12px;">';
+                        <div style="background:#404040; width:100%; margin: 0; padding-top: 10px; padding-bottom: 12px; color:#f5f5f5; font-size:12px;">';
       $messageVerify .= 'All rights reserved &copy;';
       $messageVerify .= date('Y');
-      $messageVerify .='. Snow ROI Calculator.
+      $messageVerify .='. Open iT Savings Calculator.
                         </div>
                         </div>
                         </div>
@@ -581,7 +605,7 @@ $maxappCostReductionLvl_3 = $maxappcostmulti * ( 1 - $lvl_3_licReduction);
                         </body>
                       </html>
                       ';
-      $headersVerify  ="From: Snow ROI Calculator <roiexpel@gmail.com>";
+      $headersVerify  ="From: Open iT Savings Calculator <openitsavingscalc@gmail.com>";
       $headersVerify .= "MIME-Version: 1.0"."\r\n";
       $headersVerify .= "Content-type:text/html;charset=iso-8859-1"."\r\n";
 
