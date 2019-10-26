@@ -65,7 +65,7 @@
         <div class="row">
           <div class="col-md-4 col-sm-4"> <!--for app details -->
             <fieldset>
-              <legend class="openfont">Select Optimization Level</legend>
+              <legend class="openfont whitefont">Select Optimization Level</legend>
                 <div class="row nospace">
                   <div class="col-md-4 col-sm-4 nospace centertext levelpad">
                     <div class="middlelvl">
@@ -277,7 +277,7 @@
 
             <br>
             <fieldset class="appfield">
-              <legend class="openfont centertext">Software Details</legend>
+              <legend class="openfont centertext whitefont">Software Details</legend>
               <table align="center" class="tablemarg">
                   <tr>
                     <td class="centertext smallpadtbl headperapp1" colspan="4">Application A</td>
@@ -371,7 +371,7 @@
           </div>
           <div class="col-md-8 col-sm-8"> <!-- visuals -->
             <fieldset>
-              <legend class="openfont centertext"><img class="centerlvlimg" src="images/snowlevels/level_3.png" width="40px">&nbsp;Results Details&nbsp;<!--<img class="centerlvlimg" src="images/snowlevels/level_3.png" width="60px">--></legend>
+              <legend class="openfont centertext whitefont"><img class="centerlvlimg" src="images/snowlevels/level_3.png" width="40px">&nbsp;Results Details&nbsp;<!--<img class="centerlvlimg" src="images/snowlevels/level_3.png" width="60px">--></legend>
               <div class="row charttopmarg">
                 <div class="col-md-6 col-sm6">
                   <div class="roidiv colorwhite">
@@ -706,13 +706,13 @@
                                                  {"":"Application B", "Name":"<?php echo $applicationName_2; ?>", "Agreement Type":"<?php echo $agreementType_2; ?>", "License Type":"<?php echo $licenseType_2; ?>", "Number of Licenses":<?php echo $noOfLicenses_2; ?>, "Cost per License":<?php echo $costPerLicense_2; ?>, "Location":"<?php echo $imloc_2; ?>"},
                                                  {"":"Application C", "Name":"<?php echo $applicationName_3; ?>", "Agreement Type":"<?php echo $agreementType_3; ?>", "License Type":"<?php echo $licenseType_3; ?>", "Number of Licenses":<?php echo $noOfLicenses_3; ?>, "Cost per License":<?php echo $costPerLicense_3; ?>, "Location":"<?php echo $imloc_3; ?>"} ];
 
-                 var roi = [   {"ROI Calculation Level_3":"1st Year","%":<?php echo round($truVal_3_ROI1); ?>, "$":<?php echo round($truVal_3_Savings1); ?>},
-                               {"ROI Calculation Level_3":"2nd Year","%":<?php echo round($truVal_3_ROI2); ?>, "$":<?php echo round($truVal_3_Savings2); ?>},
-                               {"ROI Calculation Level_3":"2nd Year","%":<?php echo round($truVal_3_ROI3); ?>, "$":<?php echo round($truVal_3_Savings3); ?>} ];
+                 var savings = [   {"Savings Calculation Level_3":"1st Year","%":<?php echo round($truVal_3_ROI1); ?>, "$":<?php echo round($truVal_3_Savings1); ?>},
+                               {"Savings Calculation Level_3":"2nd Year","%":<?php echo round($truVal_3_ROI2); ?>, "$":<?php echo round($truVal_3_Savings2); ?>},
+                               {"Savings Calculation Level_3":"2nd Year","%":<?php echo round($truVal_3_ROI3); ?>, "$":<?php echo round($truVal_3_Savings3); ?>} ];
 
-                 var opts = [{sheetid:'Application',header:true},{sheetid:'ROI',header:false}];
-                 var res = alasql('SELECT INTO XLSX("SnowLevel3_ROIreport<?php echo $companyName; ?>.xlsx",?) FROM ?',
-                                  [opts,[applications,roi]]);
+                 var opts = [{sheetid:'Application',header:true},{sheetid:'Savings',header:false}];
+                 var res = alasql('SELECT INTO XLSX("OpeniTLevel3_SavingsReport_<?php echo $companyName; ?>.xlsx",?) FROM ?',
+                                  [opts,[applications,savings]]);
                  }
               }
 

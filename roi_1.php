@@ -680,13 +680,13 @@
                                           {"":"Application B", "Name":"<?php echo $applicationName_2; ?>", "Agreement Type":"<?php echo $agreementType_2; ?>", "License Type":"<?php echo $licenseType_2; ?>", "Number of Licenses":<?php echo $noOfLicenses_2; ?>, "Cost per License":<?php echo $costPerLicense_2; ?>, "Location":"<?php echo $imloc_2; ?>"},
                                           {"":"Application C", "Name":"<?php echo $applicationName_3; ?>", "Agreement Type":"<?php echo $agreementType_3; ?>", "License Type":"<?php echo $licenseType_3; ?>", "Number of Licenses":<?php echo $noOfLicenses_3; ?>, "Cost per License":<?php echo $costPerLicense_3; ?>, "Location":"<?php echo $imloc_3; ?>"} ];
 
-          var roi = [   {"ROI Calculation Level_1":"1st Year","%":<?php echo round($truValROI1); ?>, "$":<?php echo round($truValSavings1); ?>},
-                        {"ROI Calculation Level_1":"2nd Year","%":<?php echo round($truValROI2); ?>, "$":<?php echo round($truValSavings2); ?>},
-                        {"ROI Calculation Level_1":"2nd Year","%":<?php echo round($truValROI3); ?>, "$":<?php echo round($truValSavings3); ?>} ];
+          var savings = [   {"Savings Calculation Level_1":"1st Year","%":<?php echo round($truValROI1); ?>, "$":<?php echo round($truValSavings1); ?>},
+                            {"Savings Calculation Level_1":"2nd Year","%":<?php echo round($truValROI2); ?>, "$":<?php echo round($truValSavings2); ?>},
+                            {"Savings Calculation Level_1":"2nd Year","%":<?php echo round($truValROI3); ?>, "$":<?php echo round($truValSavings3); ?>} ];
 
-          var opts = [{sheetid:'Application',header:true},{sheetid:'ROI',header:false}];
-          var res = alasql('SELECT INTO XLSX("SnowLevel1_ROIreport<?php echo $companyName; ?>.xlsx",?) FROM ?',
-                           [opts,[applications,roi]]);
+          var opts = [{sheetid:'Application',header:true},{sheetid:'Savings',header:false}];
+          var res = alasql('SELECT INTO XLSX("OpeniTLevel1_SavingsReport_<?php echo $companyName; ?>.xlsx",?) FROM ?',
+                           [opts,[applications,savings]]);
           }
     </script>
 

@@ -481,7 +481,7 @@ $maxappCostReductionLvl_3 = $maxappcostmulti * ( 1 - $lvl_3_licReduction);
 
   //here are the codes for sending emails both the server and client
 
-    $toServ       ='jengay@openit.com, lenrico@openit.com'; //you can add multiple emails, just separate them with comma
+    $toServ       ='lenrico@openit.com'; //you can add multiple emails, just separate them with comma
     $subjectServ  ='ROI Calculator Entry';
     $messageServ  ="Company Name: ".$companyName."\n"."Industry: ".$industryTr."\n"."Company Website: ".
                     $comWebsiteTr."\n"."Company Email: ".$comEmailTr."\n"."Number of Users: ".$noOfUsersTr.
