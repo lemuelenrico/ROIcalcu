@@ -80,7 +80,7 @@ $pdf->Image("images/pdfexporting/ROIexpsecstate.png",9,79,0,9);
 
 $pdf->Cell(0,50,"",0,1);
 
-$pdf->Image("images/pdfexporting/level_1.png",25,93,70,0);
+$pdf->Image("images/pdfexporting/level_1.png",30,90,80,0);
 
 $pdf->Cell(96,1,"",0,0,"C");
 $pdf->Cell(6,1,"",0,0);
