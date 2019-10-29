@@ -30,19 +30,19 @@ else  {
 $backgroundURL = "";
 
 if ($industry=='Engineering') {
-  $backgroundURL = "images/bg/engg_bg.png";
+  $backgroundURL = "images/bg/engg_bg.jpg";
 }
 
 elseif ($industry=='Automotive') {
-  $backgroundURL = "images/bg/auto_bg.png";
+  $backgroundURL = "images/bg/auto_bg.jpg";
 }
 
 elseif ($industry=='Oil and Gas') {
-  $backgroundURL = "images/bg/o&g_bg.png";
+  $backgroundURL = "images/bg/o&g_bg.jpg";
 }
 
 elseif ($industry=='Mechanical & Precision') {
-  $backgroundURL = "images/bg/m&p_bg.png";
+  $backgroundURL = "images/bg/m&p_bg.jpg";
 }
 
 elseif ($industry=='Government') {
@@ -50,14 +50,14 @@ elseif ($industry=='Government') {
 }
 
 elseif ($industry=='Others') {
-  $backgroundURL = "images/bg/others_bg.png";
+  $backgroundURL = "images/bg/others_bg.jpg";
 }
 
 elseif ($industry=='Aerospace') {
-  $backgroundURL = "images/bg/aero_bg.png";
+  $backgroundURL = "images/bg/aero_bg.jpg";
 }
 
 else {
-  $backgroundURL = "images/bg/engg_bg.png";
+  $backgroundURL = "images/bg/engg_bg.jpg";
 }
 ?>

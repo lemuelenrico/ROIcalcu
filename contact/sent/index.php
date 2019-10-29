@@ -28,7 +28,7 @@ if(isset($_POST['submit'])) {
     <!-- Bootstrap -->
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/custom.css" rel="stylesheet">
-    <link href="../../icon/snowflake.png" rel="shortcut icon">
+    <link href="../../icon/it.ico" rel="shortcut icon">
   </head>
   <body>
     <nav class="navbar navbar-default nobord navsmallmrgbot">
@@ -63,32 +63,32 @@ if(isset($_POST['submit'])) {
           <form action="index.php" method="POST">
               <div id="contacthead" class="centertext">
                 <img src="../../images/checksent.png" height="50" width="50">
-                <h class="openfont">Your message has been sent!</h>
+                <h class="openfont whitefont">Your message has been sent!</h>
               </div>
               <div class="row">
                 <div class="col-md-6 col-sm-6">
                   <div class="form-group">
-                    <label class="introc" for="name">Name:</label>
+                    <label class="introc whitefont" for="name">Name:</label>
                     <input type="text" class="form-control midtxtbx" name="name" required autocomplete="off">
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6">
                   <div class="form-group">
-                    <label class="introc" for="company">Company:</label>
+                    <label class="introc whitefont" for="company">Company:</label>
                     <input type="text" class="form-control midtxtbx" name="company" required autocomplete="off">
                   </div>
                 </div>
                 </div>
                 <div class="form-group">
-                  <label class="introc" for="email">Email:</label>
+                  <label class="introc whitefont" for="email">Email:</label>
                   <input type="email" class="form-control midtxtbx" name="email" id="email" required autocomplete="off">
                 </div>
                 <div class="form-group">
-                  <label class="introc" for="subject">Subject:</label>
+                  <label class="introc whitefont" for="subject">Subject:</label>
                   <input type="text" class="form-control midtxtbx" name="subject" required autocomplete="off">
                 </div>
                 <div class="form-group">
-                  <label class="introc" for="message">Message:</label>
+                  <label class="introc whitefont" for="message">Message:</label>
                   <textarea class="form-control whitfnt" rows="5" name="message" required></textarea>
                 </div>
               <div class="centertext">

@@ -4,28 +4,28 @@ var modalcomp = document.getElementById('companyval');
   if (val==1){
     document.getElementById('dl-industry').innerHTML = 'Engineering';
     $('#customerstory').attr("href","https://openit.com/customer-stories/chiyoda-philippines-corporation/");
-    $("body").css('backgroundImage', "url('images/bg/engg_bg.png')");
+    $("body").css('backgroundImage', "url('images/bg/engg_bg.jpg')");
     $("#industrytxt").css('display',"none");
     $("#industryinput").attr('required',false);
   }
   else if (val==2){
     document.getElementById('dl-industry').innerHTML = 'Automotive';
     $('#customerstory').attr("href","https://openit.com/customer-stories/nissan-motor-corp-ltd/");
-    $("body").css('backgroundImage', "url('images/bg/auto_bg.png')");
+    $("body").css('backgroundImage', "url('images/bg/auto_bg.jpg')");
     $("#industrytxt").css('display',"none");
     $("#industryinput").attr('required',false);
   }
   else if (val==3){
     document.getElementById('dl-industry').innerHTML = 'O & G';
     $('#customerstory').attr("href","https://openit.com/customer-stories/maersk-oil/");
-    $("body").css('backgroundImage', "url('images/bg/o&g_bg.png')");
+    $("body").css('backgroundImage', "url('images/bg/o&g_bg.jpg')");
     $("#industrytxt").css('display',"none");
     $("#industryinput").attr('required',false);
   }
   else if (val==4){
     document.getElementById('dl-industry').innerHTML = 'M & P';
     $('#customerstory').attr("href","https://openit.com/resources/customer-stories");
-    $("body").css('backgroundImage', "url('images/bg/m&p_bg.png')");
+    $("body").css('backgroundImage', "url('images/bg/m&p_bg.jpg')");
     $("#industrytxt").css('display',"none");
     $("#industryinput").attr('required',false);
   }
@@ -39,14 +39,14 @@ var modalcomp = document.getElementById('companyval');
   else if (val==7){
     document.getElementById('dl-industry').innerHTML = 'Aerospace';
     $('#customerstory').attr("href","https://openit.com/customer-stories/avio-aerospace/");
-    $("body").css('backgroundImage', "url('images/bg/aero_bg.png')");
+    $("body").css('backgroundImage', "url('images/bg/aero_bg.jpg')");
     $("#industrytxt").css('display',"none");
     $("#industryinput").attr('required',false);
   }
   else{
     document.getElementById('dl-industry').innerHTML = 'Others';
     $('#customerstory').attr("href","https://openit.com/customer-stories/avio-aerospace/");
-    $("body").css('backgroundImage', "url('images/bg/others_bg.png')");
+    $("body").css('backgroundImage', "url('images/bg/others_bg.jpg')");
     $("#industrytxt").css('display',"block");
     $("#industryinput").attr('required',true);
   }

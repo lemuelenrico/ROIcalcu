@@ -344,7 +344,7 @@
                   <label for="finalsubmit" class="openfont whitefont"><input type="checkbox" class="glyphpointer bigchkbx" id="finalsubmit" value=""><span class="aggrchk glyphpointer">
                     I allow the collection of my data to be used for the purpose of calculating ROI.
                   By proceeding, I also agree with the <!--<a href="terms.html" target="_blank"><u>Terms and Conditions</u></a> of the site.-->
-                  <a href="https://www.snowsoftware.com/int/legal/termsofuse" target="_blank" class="whitefont"><u>Terms and Conditions</u></a> of this site.</span>
+                  <a href="https://openit.com/open-it-privacy-statement/" target="_blank" class="whitefont"><u>Terms and Conditions</u></a> of this site.</span>
                 </label>
               </div>
               <div class="col-md-2 centertext allspace">

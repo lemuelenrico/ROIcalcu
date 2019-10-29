@@ -10,7 +10,7 @@
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/custom.css" rel="stylesheet">
-    <link href="../icon/snowflake.png" rel="shortcut icon">
+    <link href="../icon/it.ico" rel="shortcut icon">
   </head>
   <body>
     <nav class="navbar navbar-default nobord navsmallmrgbot">
@@ -44,32 +44,32 @@
           <!--<h2 class="headngsprpg">Send us a message</h2>-->
           <form action="sent/index.php" method="POST">
               <div id="contacthead" class="leftalgn">
-                <h class="openfont">Send us a direct message:</h>
+                <h class="openfont whitefont">Send us a direct message:</h>
               </div>
               <div class="row">
                 <div class="col-md-6 col-sm-6">
                   <div class="form-group">
-                    <label class="introc" for="name">Name:</label>
+                    <label class="introc whitefont" for="name">Name:</label>
                     <input type="text" class="form-control midtxtbx" name="name" required autocomplete="off">
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6">
                   <div class="form-group">
-                    <label class="introc" for="company">Company:</label>
+                    <label class="introc whitefont" for="company">Company:</label>
                     <input type="text" class="form-control midtxtbx" name="company" required autocomplete="off">
                   </div>
                 </div>
                 </div>
                 <div class="form-group">
-                  <label class="introc" for="email">Email:</label>
+                  <label class="introc whitefont" for="email">Email:</label>
                   <input type="email" class="form-control midtxtbx" id="sendvalidemail" name="email" required autocomplete="off">
                 </div>
                 <div class="form-group">
-                  <label class="introc" for="subject">Subject:</label>
+                  <label class="introc whitefont" for="subject">Subject:</label>
                   <input type="text" class="form-control midtxtbx" name="subject" required autocomplete="off">
                 </div>
                 <div class="form-group">
-                  <label class="introc" for="message">Message:</label>
+                  <label class="introc whitefont" for="message">Message:</label>
                   <textarea class="form-control whitfnt" rows="5" name="message" required></textarea>
                 </div>
               <div class="centertext">

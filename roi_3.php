@@ -220,7 +220,7 @@
 
             <div class="row actionpointsbuttonpad">
               <div class="container-fluid smallspace">
-                <a href="https://www.snowsoftware.com/int/contact" class="btn contactbutdes geofont">Contact Open iT</a>
+                <a href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/" class="btn contactbutdes geofont">Contact Open iT</a>
               </div>
             </div>
 

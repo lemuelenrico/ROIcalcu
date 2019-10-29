@@ -481,7 +481,7 @@ $maxappCostReductionLvl_3 = $maxappcostmulti * ( 1 - $lvl_3_licReduction);
 
   //here are the codes for sending emails both the server and client
 
-    $toServ       ='lenrico@openit.com'; //you can add multiple emails, just separate them with comma
+    $toServ       ='lenrico@openit.com, jengay@openit.com, mmaano@openit.com'; //you can add multiple emails, just separate them with comma
     $subjectServ  ='Savings Calculator Entry';
     $messageServ  ="Company Name: ".$companyName."\n"."Industry: ".$industryTr."\n"."Company Website: ".
                     $comWebsiteTr."\n"."Company Email: ".$comEmailTr."\n"."Number of Users: ".$noOfUsersTr.
@@ -591,7 +591,7 @@ $maxappCostReductionLvl_3 = $maxappcostmulti * ( 1 - $lvl_3_licReduction);
       $messageVerify .='
                         </div><br>
                         <div style="background:#dcdcdc; text-align:center; width:100%; margin: 0; padding-top: 40px; padding-bottom: 50px; color:#f5f5f5; font-size:12px;">
-                        <a href="https://openit.com/" style="background-color:#cd172d; color:white; padding: 15px 20px; text-decoration:none; font-size:16px;">CONTACT OPENIT</a>
+                        <a href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/" style="background-color:#cd172d; color:white; padding: 15px 20px; text-decoration:none; font-size:16px;">CONTACT OPENIT</a>
                         </div>
                         <br>
                         <div style="background:#404040; width:100%; margin: 0; padding-top: 10px; padding-bottom: 12px; color:#f5f5f5; font-size:12px;">';
