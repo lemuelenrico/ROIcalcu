@@ -2,16 +2,22 @@ version: '3.7'
 
 services:
   app:
-    image: savingscalc
+    image: registry.openit.com/lenrico/calc
     build: .
+    ports:
+      - 8888:8888
+    volumes:
+      - initdb:/app/sql
 
   db:
     image: mariadb
     environment:
       - MYSQL_DATABASE=savingscalc
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
     volumes:
       - dbdata:/var/lib/mysql
-      - ./savingscalc.sql:/docker-entrypoint-initdb.d/init.sql
+      - initdb:/docker-entrypoint-initdb.d:ro
 
 volumes:
   dbdata:
+  initdb:
