@@ -206,9 +206,9 @@ $lvl_1_licCPredicted = $noOfLicenses_predictionC * $costPerLicense_3 ;
 $lvl_1_licAPredictedYear2 = floor(($noOfLicenses - $noOfLicenses_predictionA) * .1)  * $costPerLicense;
 $lvl_1_licBPredictedYear2 = floor(($noOfLicenses_2 - $noOfLicenses_predictionB) * .1)  * $costPerLicense_2;
 $lvl_1_licCPredictedYear2 = floor(($noOfLicenses_3 - $noOfLicenses_predictionC) * .1)  * $costPerLicense_3;
-$lvl_1_licAPredictedYear3 = floor(($noOfLicenses - $noOfLicenses_predictionA - $lvl_1_licAPredictedYear2) * .05)  * $costPerLicense;
-$lvl_1_licBPredictedYear3 = floor(($noOfLicenses_2 - $noOfLicenses_predictionB - $lvl_1_licBPredictedYear2) * .05)  * $costPerLicense_2;
-$lvl_1_licCPredictedYear3 = floor(($noOfLicenses_3 - $noOfLicenses_predictionC - $lvl_1_licCPredictedYear2) * .05)  * $costPerLicense_3;
+$lvl_1_licAPredictedYear3 = floor(($noOfLicenses - $noOfLicenses_predictionA - floor(($noOfLicenses - $noOfLicenses_predictionA) * .1)) * .05)  * $costPerLicense;
+$lvl_1_licBPredictedYear3 = floor(($noOfLicenses_2 - $noOfLicenses_predictionB - floor(($noOfLicenses_2 - $noOfLicenses_predictionB) * .1)) * .05)  * $costPerLicense_2;
+$lvl_1_licCPredictedYear3 = floor(($noOfLicenses_3 - $noOfLicenses_predictionC - floor(($noOfLicenses_3 - $noOfLicenses_predictionC) * .1)) * .05)  * $costPerLicense_3;
 
 $lvl_1_TotalPredicted = $lvl_1_licAPredicted + $lvl_1_licBPredicted + $lvl_1_licCPredicted;
 $lvl_1_TotalPredictedYear2 = $lvl_1_licAPredictedYear2 + $lvl_1_licBPredictedYear2 + $lvl_1_licCPredictedYear2;
@@ -234,9 +234,9 @@ $lvl_2_licCPredicted = $noOfLicenses_predictionCrampedL2 * $costPerLicense_3 ;
 $lvl_2_licAPredictedYear2 = floor(($noOfLicenses - $noOfLicenses_predictionArampedL2) * .1)  * $costPerLicense;
 $lvl_2_licBPredictedYear2 = floor(($noOfLicenses_2 - $noOfLicenses_predictionBrampedL2) * .1)  * $costPerLicense_2;
 $lvl_2_licCPredictedYear2 = floor(($noOfLicenses_3 - $noOfLicenses_predictionCrampedL2) * .1)  * $costPerLicense_3;
-$lvl_2_licAPredictedYear3 = floor(($noOfLicenses - $noOfLicenses_predictionArampedL2 - $lvl_2_licAPredictedYear2) * .06)  * $costPerLicense;
-$lvl_2_licBPredictedYear3 = floor(($noOfLicenses_2 - $noOfLicenses_predictionBrampedL2 - $lvl_2_licBPredictedYear2) * .06)  * $costPerLicense_2;
-$lvl_2_licCPredictedYear3 = floor(($noOfLicenses_3 - $noOfLicenses_predictionCrampedL2 - $lvl_2_licCPredictedYear2) * .06)  * $costPerLicense_3;
+$lvl_2_licAPredictedYear3 = floor(($noOfLicenses - $noOfLicenses_predictionArampedL2 - floor(($noOfLicenses - $noOfLicenses_predictionArampedL2) * .1)) * .06)  * $costPerLicense;
+$lvl_2_licBPredictedYear3 = floor(($noOfLicenses_2 - $noOfLicenses_predictionBrampedL2 - floor(($noOfLicenses_2 - $noOfLicenses_predictionBrampedL2) * .1)) * .06)  * $costPerLicense_2;
+$lvl_2_licCPredictedYear3 = floor(($noOfLicenses_3 - $noOfLicenses_predictionCrampedL2 - floor(($noOfLicenses_3 - $noOfLicenses_predictionCrampedL2) * .1)) * .06)  * $costPerLicense_3;
 
 $lvl_2_TotalPredicted = $lvl_2_licAPredicted + $lvl_2_licBPredicted + $lvl_2_licCPredicted;
 $lvl_2_TotalPredictedYear2 = $lvl_2_licAPredictedYear2 + $lvl_2_licBPredictedYear2 + $lvl_2_licCPredictedYear2;
@@ -259,20 +259,12 @@ $lvl_3_licAPredicted = $noOfLicenses_predictionArampedL3 * $costPerLicense ;
 $lvl_3_licBPredicted = $noOfLicenses_predictionBrampedL3 * $costPerLicense_2 ;
 $lvl_3_licCPredicted = $noOfLicenses_predictionCrampedL3 * $costPerLicense_3 ;
 //Take a small percentage from the remaining for Year2 and Year3
-$lvl_3_licAPredictedYear2 = floor($noOfLicenses_predictionArampedL3 * .1) * $costPerLicense;
-$lvl_3_licBPredictedYear2 = floor($noOfLicenses_predictionBrampedL3 * .1) * $costPerLicense_2;
-$lvl_3_licCPredictedYear2 = floor($noOfLicenses_predictionCrampedL3 * .1) * $costPerLicense_3;
-$lvl_3_licAPredictedYear3 = floor($noOfLicenses_predictionArampedL3 * .07) * $costPerLicense;
-$lvl_3_licBPredictedYear3 = floor($noOfLicenses_predictionBrampedL3 * .07) * $costPerLicense_2;
-$lvl_3_licCPredictedYear3 = floor($noOfLicenses_predictionCrampedL3 * .07) * $costPerLicense_3;
-
-
 $lvl_3_licAPredictedYear2 = floor(($noOfLicenses - $noOfLicenses_predictionArampedL3) * .1)  * $costPerLicense;
 $lvl_3_licBPredictedYear2 = floor(($noOfLicenses_2 - $noOfLicenses_predictionBrampedL3) * .1)  * $costPerLicense_2;
 $lvl_3_licCPredictedYear2 = floor(($noOfLicenses_3 - $noOfLicenses_predictionCrampedL3) * .1)  * $costPerLicense_3;
-$lvl_3_licAPredictedYear3 = floor(($noOfLicenses - $noOfLicenses_predictionArampedL3 - $lvl_3_licAPredictedYear2) * .06)  * $costPerLicense;
-$lvl_3_licBPredictedYear3 = floor(($noOfLicenses_2 - $noOfLicenses_predictionBrampedL3 - $lvl_3_licBPredictedYear2) * .06)  * $costPerLicense_2;
-$lvl_3_licCPredictedYear3 = floor(($noOfLicenses_3 - $noOfLicenses_predictionCrampedL3 - $lvl_3_licCPredictedYear2) * .06)  * $costPerLicense_3;
+$lvl_3_licAPredictedYear3 = floor(($noOfLicenses - $noOfLicenses_predictionArampedL3 - floor(($noOfLicenses - $noOfLicenses_predictionArampedL3) * .1)) * .06)  * $costPerLicense;
+$lvl_3_licBPredictedYear3 = floor(($noOfLicenses_2 - $noOfLicenses_predictionBrampedL3 - floor(($noOfLicenses_2 - $noOfLicenses_predictionBrampedL3) * .1)) * .06)  * $costPerLicense_2;
+$lvl_3_licCPredictedYear3 = floor(($noOfLicenses_3 - $noOfLicenses_predictionCrampedL3 - floor(($noOfLicenses_3 - $noOfLicenses_predictionCrampedL3) * .1)) * .06)  * $costPerLicense_3;
 
 
 $lvl_3_TotalPredicted = $lvl_3_licAPredicted + $lvl_3_licBPredicted + $lvl_3_licCPredicted;
