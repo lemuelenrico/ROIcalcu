@@ -1,6 +1,6 @@
 <?php
 
-      $dbhost   = "db";
+      $dbhost   = "localhost";
       $dbuser  = "root";
       $dbpass   = "";
       $db       = "savingscalc";

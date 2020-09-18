@@ -31,6 +31,9 @@ if ($applicationName_3 == '') {
   $licenseType_3 = '';
 }
 
+
+
+
 /*the following variables are transitional variables*/
 
 $companyName  = $_POST ['transi'];
@@ -39,12 +42,7 @@ $comWebsiteTr = $_POST ['transi3'];
 $comEmailTr   = $_POST ['transi4'];
 $noOfUsersTr  = $_POST ['transi5'];
 
-//initialization of all the variables
 
-$lvl_1_licReduction = 0.8; $lvl_1_licReductionYear2 = 0.05; $lvl_1_licReductionYear3 = 0.05;
-$lvl_2_licReduction = 0.7; $lvl_2_licReductionYear2 = 0.05; $lvl_2_licReductionYear3 = 0.05;
-$lvl_3_licReduction = 0.6; $lvl_3_licReductionYear2 = 0.05; $lvl_3_licReductionYear3 = 0.05;
-$mS = 0.2;
 
 $pricePerUser_1 = 0; $pricePerUser_2 = 0; $pricePerUser_3 = 0;
 $applicationA_costs = 0; $applicationB_costs = 0; $applicationC_costs = 0;
@@ -127,125 +125,227 @@ elseif($noOfUsersTr >= 100000) {
   $pricePerUser_3 = 358;
 }
 
+//retrieve samples from database
+$sql_getsamples = "SELECT * FROM referencedata";
+
+$res = mysqli_query($conn, $sql_getsamples);
+$x_arr = array(); //number of license (data)
+$y_arr = array(); 	//recomended number of license (data)
+$arr_len = mysqli_num_rows($res);
+
+if ($arr_len > 0) {
+    while($row = mysqli_fetch_assoc($res)) {
+        $x_arr[] = $row["maxavailable"];
+		$y_arr[] = $row["maxinuse"];
+    }
+} else {
+    //no data sample
+}
+
+//regression algorithm from reference data
+$x_sum = 0;
+$y_sum = 0;
+for ($i = 0; $i < $arr_len; $i++) {
+    $x_sum = $x_sum + $x_arr[$i];
+	$y_sum = $y_sum + $y_arr[$i];
+}
+
+if($arr_len == 0){$arr_len  = 1;}//error handling for zero division
+$x_ave = $x_sum / $arr_len;
+$y_ave = $y_sum / $arr_len;
+
+$x_deviation = array();
+$x_deviation_squared = array();
+$x_deviation_squared_sum = 0;
+$y_deviation = array();
+$deviation_prod = array();
+$deviation_prod_sum = 0;
+for ($i = 0; $i < $arr_len; $i++) {
+    $x_deviation[] =  $x_arr[$i] - $x_ave;
+	$x_deviation_squared[] = $x_deviation[$i] * $x_deviation[$i];
+	$x_deviation_squared_sum = $x_deviation_squared_sum + $x_deviation_squared[$i];
+	$y_deviation[] = $y_arr[$i] - $y_ave;
+	$deviation_prod[] = $x_deviation[$i] * $y_deviation[$i];
+	$deviation_prod_sum = $deviation_prod_sum + $deviation_prod[$i];
+}
+
+if($x_deviation_squared_sum == 0){$x_deviation_squared_sum  = 1;}//error handling for zero division
+
+$slope = $deviation_prod_sum / $x_deviation_squared_sum;
+$y_intercept = $y_ave - ( $slope * $x_ave);
+
+//pre init calculations
 $applicationA_costs = $noOfLicenses * $costPerLicense;
 $applicationB_costs = $noOfLicenses_2 * $costPerLicense_2;
 $applicationC_costs = $noOfLicenses_3 * $costPerLicense_3;
 
 $applicationTotalCosts = $applicationA_costs + $applicationB_costs + $applicationC_costs;
+//predicted max in use
+$noOfLicenses_predictionA = floor($y_intercept + ( $slope * $noOfLicenses ));
+$noOfLicenses_predictionB = floor($y_intercept + ( $slope * $noOfLicenses_2 ));
+$noOfLicenses_predictionC = floor($y_intercept + ( $slope * $noOfLicenses_3 ));
+
+//truncate at negative reduction
+if($noOfLicenses_predictionA >= $noOfLicenses){$noOfLicenses_predictionA = $noOfLicenses - 1;}
+if($noOfLicenses_predictionB >= $noOfLicenses_2){$noOfLicenses_predictionB = $noOfLicenses_2 - 1;}
+if($noOfLicenses_predictionC >= $noOfLicenses_3){$noOfLicenses_predictionC = $noOfLicenses_3 - 1;}
+if($noOfLicenses_predictionA == 0){$noOfLicenses_predictionA = 1;}
+if($noOfLicenses_predictionB == 0){$noOfLicenses_predictionB = 1;}
+if($noOfLicenses_predictionC == 0){$noOfLicenses_predictionC = 1;}
+
+$y_predictionA = $noOfLicenses_predictionA * $costPerLicense;
+$y_predictionB = $noOfLicenses_predictionB * $costPerLicense_2;
+$y_predictionC = $noOfLicenses_predictionC * $costPerLicense_3;
+$applicationPredictedCosts = $y_predictionA + $y_predictionB + $y_predictionC;
+
+//initialization of all the variables
+$lvl_1_licAPredicted = $noOfLicenses_predictionA * $costPerLicense ;
+$lvl_1_licBPredicted = $noOfLicenses_predictionB * $costPerLicense_2 ;
+$lvl_1_licCPredicted = $noOfLicenses_predictionC * $costPerLicense_3 ;
+//Take a small percentage from the remaining for Year2 and Year3
+$lvl_1_licAPredictedYear2 = floor(($noOfLicenses - $noOfLicenses_predictionA) * .1)  * $costPerLicense;
+$lvl_1_licBPredictedYear2 = floor(($noOfLicenses_2 - $noOfLicenses_predictionB) * .1)  * $costPerLicense_2;
+$lvl_1_licCPredictedYear2 = floor(($noOfLicenses_3 - $noOfLicenses_predictionC) * .1)  * $costPerLicense_3;
+$lvl_1_licAPredictedYear3 = floor(($noOfLicenses - $noOfLicenses_predictionA - floor(($noOfLicenses - $noOfLicenses_predictionA) * .1)) * .05)  * $costPerLicense;
+$lvl_1_licBPredictedYear3 = floor(($noOfLicenses_2 - $noOfLicenses_predictionB - floor(($noOfLicenses_2 - $noOfLicenses_predictionB) * .1)) * .05)  * $costPerLicense_2;
+$lvl_1_licCPredictedYear3 = floor(($noOfLicenses_3 - $noOfLicenses_predictionC - floor(($noOfLicenses_3 - $noOfLicenses_predictionC) * .1)) * .05)  * $costPerLicense_3;
+
+$lvl_1_TotalPredicted = $lvl_1_licAPredicted + $lvl_1_licBPredicted + $lvl_1_licCPredicted;
+$lvl_1_TotalPredictedYear2 = $lvl_1_licAPredictedYear2 + $lvl_1_licBPredictedYear2 + $lvl_1_licCPredictedYear2;
+$lvl_1_TotalPredictedYear3 = $lvl_1_licAPredictedYear3 + $lvl_1_licBPredictedYear3 + $lvl_1_licCPredictedYear3;
+$lvl_1_licA_Predicted = $lvl_1_licAPredicted + $lvl_1_licAPredictedYear2 + $lvl_1_licAPredictedYear3;
+$lvl_1_licB_Predicted = $lvl_1_licBPredicted + $lvl_1_licBPredictedYear2 + $lvl_1_licBPredictedYear3;
+$lvl_1_licC_Predicted = $lvl_1_licCPredicted + $lvl_1_licCPredictedYear2 + $lvl_1_licCPredictedYear3;
+
+$lvl_2_rampupfactor = 1.2;
+//reduce usage prediction count by 20% more reduction
+$noOfLicenses_predictionArampedL2 = floor($noOfLicenses_predictionA / $lvl_2_rampupfactor);
+$noOfLicenses_predictionBrampedL2 = floor($noOfLicenses_predictionB / $lvl_2_rampupfactor);
+$noOfLicenses_predictionCrampedL2 = floor($noOfLicenses_predictionC / $lvl_2_rampupfactor);
+//truncate at negative reduction
+if($noOfLicenses_predictionArampedL2 >= $noOfLicenses){$noOfLicenses_predictionArampedL2 = $noOfLicenses - 1;}
+if($noOfLicenses_predictionBrampedL2 >= $noOfLicenses_2){$noOfLicenses_predictionBrampedL2 = $noOfLicenses_2 - 1;}
+if($noOfLicenses_predictionCrampedL2 >= $noOfLicenses_3){$noOfLicenses_predictionCrampedL2 = $noOfLicenses_3 - 1;}
+
+$lvl_2_licAPredicted = $noOfLicenses_predictionArampedL2 * $costPerLicense ;
+$lvl_2_licBPredicted = $noOfLicenses_predictionBrampedL2 * $costPerLicense_2 ;
+$lvl_2_licCPredicted = $noOfLicenses_predictionCrampedL2 * $costPerLicense_3 ;
+//Take a small percentage from the remaining for Year2 and Year3
+$lvl_2_licAPredictedYear2 = floor(($noOfLicenses - $noOfLicenses_predictionArampedL2) * .1)  * $costPerLicense;
+$lvl_2_licBPredictedYear2 = floor(($noOfLicenses_2 - $noOfLicenses_predictionBrampedL2) * .1)  * $costPerLicense_2;
+$lvl_2_licCPredictedYear2 = floor(($noOfLicenses_3 - $noOfLicenses_predictionCrampedL2) * .1)  * $costPerLicense_3;
+$lvl_2_licAPredictedYear3 = floor(($noOfLicenses - $noOfLicenses_predictionArampedL2 - floor(($noOfLicenses - $noOfLicenses_predictionArampedL2) * .1)) * .06)  * $costPerLicense;
+$lvl_2_licBPredictedYear3 = floor(($noOfLicenses_2 - $noOfLicenses_predictionBrampedL2 - floor(($noOfLicenses_2 - $noOfLicenses_predictionBrampedL2) * .1)) * .06)  * $costPerLicense_2;
+$lvl_2_licCPredictedYear3 = floor(($noOfLicenses_3 - $noOfLicenses_predictionCrampedL2 - floor(($noOfLicenses_3 - $noOfLicenses_predictionCrampedL2) * .1)) * .06)  * $costPerLicense_3;
+
+$lvl_2_TotalPredicted = $lvl_2_licAPredicted + $lvl_2_licBPredicted + $lvl_2_licCPredicted;
+$lvl_2_TotalPredictedYear2 = $lvl_2_licAPredictedYear2 + $lvl_2_licBPredictedYear2 + $lvl_2_licCPredictedYear2;
+$lvl_2_TotalPredictedYear3 = $lvl_2_licAPredictedYear3 + $lvl_2_licBPredictedYear3 + $lvl_2_licCPredictedYear3;
+$lvl_2_licA_Predicted = $lvl_2_licAPredicted + $lvl_2_licAPredictedYear2 + $lvl_2_licAPredictedYear3;
+$lvl_2_licB_Predicted = $lvl_2_licBPredicted + $lvl_2_licBPredictedYear2 + $lvl_2_licBPredictedYear3;
+$lvl_2_licC_Predicted = $lvl_2_licCPredicted + $lvl_2_licCPredictedYear2 + $lvl_2_licCPredictedYear3;
+
+$lvl_3_rampupfactor = 1.4;
+//reduce usage prediction count by 20% and 20%  more reduction
+$noOfLicenses_predictionArampedL3 = floor($noOfLicenses_predictionA / $lvl_3_rampupfactor);
+$noOfLicenses_predictionBrampedL3 = floor($noOfLicenses_predictionB / $lvl_3_rampupfactor);
+$noOfLicenses_predictionCrampedL3 = floor($noOfLicenses_predictionC / $lvl_3_rampupfactor);
+//truncate at negative reduction
+if($noOfLicenses_predictionArampedL3 >= $noOfLicenses){$noOfLicenses_predictionArampedL3 = $noOfLicenses - 1;}
+if($noOfLicenses_predictionBrampedL3 >= $noOfLicenses_2){$noOfLicenses_predictionBrampedL3 = $noOfLicenses_2 - 1;}
+if($noOfLicenses_predictionCrampedL3 >= $noOfLicenses_3){$noOfLicenses_predictionCrampedL3 = $noOfLicenses_3 - 1;}
+
+$lvl_3_licAPredicted = $noOfLicenses_predictionArampedL3 * $costPerLicense ;
+$lvl_3_licBPredicted = $noOfLicenses_predictionBrampedL3 * $costPerLicense_2 ;
+$lvl_3_licCPredicted = $noOfLicenses_predictionCrampedL3 * $costPerLicense_3 ;
+//Take a small percentage from the remaining for Year2 and Year3
+$lvl_3_licAPredictedYear2 = floor(($noOfLicenses - $noOfLicenses_predictionArampedL3) * .1)  * $costPerLicense;
+$lvl_3_licBPredictedYear2 = floor(($noOfLicenses_2 - $noOfLicenses_predictionBrampedL3) * .1)  * $costPerLicense_2;
+$lvl_3_licCPredictedYear2 = floor(($noOfLicenses_3 - $noOfLicenses_predictionCrampedL3) * .1)  * $costPerLicense_3;
+$lvl_3_licAPredictedYear3 = floor(($noOfLicenses - $noOfLicenses_predictionArampedL3 - floor(($noOfLicenses - $noOfLicenses_predictionArampedL3) * .1)) * .06)  * $costPerLicense;
+$lvl_3_licBPredictedYear3 = floor(($noOfLicenses_2 - $noOfLicenses_predictionBrampedL3 - floor(($noOfLicenses_2 - $noOfLicenses_predictionBrampedL3) * .1)) * .06)  * $costPerLicense_2;
+$lvl_3_licCPredictedYear3 = floor(($noOfLicenses_3 - $noOfLicenses_predictionCrampedL3 - floor(($noOfLicenses_3 - $noOfLicenses_predictionCrampedL3) * .1)) * .06)  * $costPerLicense_3;
+
+
+$lvl_3_TotalPredicted = $lvl_3_licAPredicted + $lvl_3_licBPredicted + $lvl_3_licCPredicted;
+$lvl_3_TotalPredictedYear2 = $lvl_3_licAPredictedYear2 + $lvl_3_licBPredictedYear2 + $lvl_3_licCPredictedYear2;
+$lvl_3_TotalPredictedYear3 = $lvl_3_licAPredictedYear3 + $lvl_3_licBPredictedYear3 + $lvl_3_licCPredictedYear3;
+$lvl_3_licA_Predicted = $lvl_3_licAPredicted + $lvl_3_licAPredictedYear2 + $lvl_3_licAPredictedYear3;
+$lvl_3_licB_Predicted = $lvl_3_licBPredicted + $lvl_3_licBPredictedYear2 + $lvl_3_licBPredictedYear3;
+$lvl_3_licC_Predicted = $lvl_3_licCPredicted + $lvl_3_licCPredictedYear2 + $lvl_3_licCPredictedYear3;
+
+
+$mS = 0.2;
+
 
 //level 1-------------
+//purchase calculation
 $purchaseCost_1 = $pricePerUser_1 * $noOfUsersTr;
-
-$applicationTotalCostsReduced_1_1 = $applicationTotalCosts * $lvl_1_licReduction;
-
-$applicationReductionSavings_1_1 = $applicationTotalCosts - $applicationTotalCostsReduced_1_1;
-
-//$savings_1_1 = $applicationReductionSavings_1_1 - $purchaseCost_1;
-$savings_1_1 = $applicationReductionSavings_1_1;
-$ROI_1_1 = ($savings_1_1/$applicationTotalCosts) * 100;
-
-//yr 2 calculation
-$applicationTotalCosts_1_2 = $applicationTotalCostsReduced_1_1;
-$applicationTotalCostsReduced_1_2 = $applicationTotalCosts_1_2 * (1-$lvl_1_licReductionYear2);
-$applicationReductionSavings_1_2 = $applicationTotalCosts_1_2 - $applicationTotalCostsReduced_1_2;
 $mSCost_1 = $purchaseCost_1 * $mS;
-//$savings_1_2 = $applicationReductionSavings_1_2 - $mSCost_1;
-$savings_1_2 = $applicationReductionSavings_1_2;
-$ROI_1_2 = ($savings_1_2/$applicationTotalCosts_1_2) * 100;
-
+//yr 1 calculation
+$savings_1_1 = $applicationTotalCosts - $lvl_1_TotalPredicted;
+$ROI_1_1 = ($savings_1_1 / $applicationTotalCosts) * 100;
+//yr 2 calculation
+$savings_1_2 = $lvl_1_TotalPredictedYear2;
+$ROI_1_2 = ($savings_1_2 / $applicationTotalCosts) * 100;
 //yr 3 calculation
-$applicationTotalCosts_1_3 = $applicationTotalCostsReduced_1_2;
-$applicationTotalCostsReduced_1_3 = $applicationTotalCosts_1_3 * (1-$lvl_1_licReductionYear3);
-$applicationReductionSavings_1_3 = $applicationTotalCosts_1_3 - $applicationTotalCostsReduced_1_3;
-$savings_1_3 = $applicationReductionSavings_1_3;
-//$savings_1_3 = $applicationReductionSavings_1_3 - $mSCost_1;
-$ROI_1_3 = ($savings_1_3/$applicationTotalCosts_1_3) * 100;
-
+$savings_1_3 =  $lvl_1_TotalPredictedYear3;
+$ROI_1_3 = ($savings_1_3 / $applicationTotalCosts) * 100;
 
 //level 2-------------
+//purchase calculation
 $purchaseCost_2 = $pricePerUser_2 * $noOfUsersTr;
-
-$applicationTotalCostsReduced_2_1 = $applicationTotalCosts * $lvl_2_licReduction;
-
-$applicationReductionSavings_2_1 = $applicationTotalCosts - $applicationTotalCostsReduced_2_1;
-
-$savings_2_1 = $applicationReductionSavings_2_1;
-//$savings_2_1 = $applicationReductionSavings_2_1 - $purchaseCost_2;
-$ROI_2_1 = ($savings_2_1/$applicationTotalCosts) * 100;
-
-//yr 2 calculation
-$applicationTotalCosts_2_2 = $applicationTotalCostsReduced_2_1;
-$applicationTotalCostsReduced_2_2 = $applicationTotalCosts_2_2 * (1-$lvl_2_licReductionYear2);
-$applicationReductionSavings_2_2 = $applicationTotalCosts_2_2 - $applicationTotalCostsReduced_2_2;
 $mSCost_2 = $purchaseCost_2 * $mS;
-//$savings_2_2 = $applicationReductionSavings_2_2 - $mSCost_2;
-$savings_2_2 = $applicationReductionSavings_2_2;
-$ROI_2_2 = ($savings_2_2/$applicationTotalCosts_2_2) * 100;
-
+//yr 1 calculation
+$savings_2_1 = $applicationTotalCosts - $lvl_2_TotalPredicted;
+$ROI_2_1 = ($savings_2_1 / $applicationTotalCosts) * 100;
+//yr 2 calculation
+$savings_2_2 = $lvl_2_TotalPredictedYear2;
+$ROI_2_2 = ($savings_2_2 / $applicationTotalCosts) * 100;
 //yr 3 calculation
-$applicationTotalCosts_2_3 = $applicationTotalCostsReduced_2_2;
-$applicationTotalCostsReduced_2_3 = $applicationTotalCosts_2_3 * (1-$lvl_2_licReductionYear3);
-$applicationReductionSavings_2_3 = $applicationTotalCosts_2_3 - $applicationTotalCostsReduced_2_3;
-//$savings_2_3 = $applicationReductionSavings_2_3 - $mSCost_2;
-$savings_2_3 = $applicationReductionSavings_2_3;
-$ROI_2_3 = ($savings_2_3/$applicationTotalCosts_2_3) * 100;
-
+$savings_2_3 = $lvl_2_TotalPredictedYear3;
+$ROI_2_3 = ($savings_2_3 / $applicationTotalCosts) * 100;
 
 //level 3-------------
+//purchase calculation
 $purchaseCost_3 = $pricePerUser_3 * $noOfUsersTr;
-
-$applicationTotalCostsReduced_3_1 = $applicationTotalCosts * $lvl_3_licReduction;
-
-$applicationReductionSavings_3_1 = $applicationTotalCosts - $applicationTotalCostsReduced_3_1;
-
-$savings_3_1 = $applicationReductionSavings_3_1;
-//$savings_3_1 = $applicationReductionSavings_3_1 - $purchaseCost_3;
-$ROI_3_1 = ($savings_3_1/$applicationTotalCosts) * 100;
-
-//yr 2 calculation
-$applicationTotalCosts_3_2 = $applicationTotalCostsReduced_3_1;
-$applicationTotalCostsReduced_3_2 = $applicationTotalCosts_3_2 * (1-$lvl_3_licReductionYear2);
-$applicationReductionSavings_3_2 = $applicationTotalCosts_3_2 - $applicationTotalCostsReduced_3_2;
 $mSCost_3 = $purchaseCost_3 * $mS;
-//$savings_3_2 = $applicationReductionSavings_3_2 - $mSCost_3;
-$savings_3_2 = $applicationReductionSavings_3_2;
-$ROI_3_2 = ($savings_3_2/$applicationTotalCosts_3_2) * 100;
-
+//yr 1 calculation
+$savings_3_1 = $applicationTotalCosts - $lvl_3_TotalPredicted;
+$ROI_3_1 = ($savings_3_1 / $applicationTotalCosts) * 100;
+//yr 2 calculation
+$savings_3_2 = $lvl_3_TotalPredictedYear2;
+$ROI_3_2 = ($savings_3_2 / $applicationTotalCosts) * 100;
 //yr 3 calculation
-$applicationTotalCosts_3_3 = $applicationTotalCostsReduced_3_2;
-$applicationTotalCostsReduced_3_3 = $applicationTotalCosts_3_3 * (1-$lvl_3_licReductionYear3);
-$applicationReductionSavings_3_3 = $applicationTotalCosts_3_3 - $applicationTotalCostsReduced_3_3;
-//$savings_3_3 = $applicationReductionSavings_3_3 - $mSCost_3;
-$savings_3_3 = $applicationReductionSavings_3_3;
-$ROI_3_3 = ($savings_3_3/$applicationTotalCosts_3_3) * 100;
+$savings_3_3 = $lvl_3_TotalPredictedYear3;
+$ROI_3_3 = ($savings_3_3 / $applicationTotalCosts) * 100;
 
 
 /*the following variables are for roi calc analysis*/
 $maxapp = "";
-$maxappcost = 0;
-$maxappcostmulti = 0;
-
 $maxappCostReductionLvl_1 = 0;
 $maxappCostReductionLvl_2 = 0;
 $maxappCostReductionLvl_3 = 0;
-
-$level_1_overallSav = 0;
-$level_2_overallSav = 0;
-$level_3_overallSav = 0;
 
 $maxappcost = max($costPerLicense, $costPerLicense_2, $costPerLicense_3);
 
 if ($maxappcost == $costPerLicense) {
   $maxapp = $applicationName;
-  $maxappcostmulti = $applicationA_costs;
+  $maxappCostReductionLvl_1 = $lvl_1_licA_Predicted;
+  $maxappCostReductionLvl_2 = $lvl_2_licA_Predicted;
+  $maxappCostReductionLvl_3 = $lvl_3_licA_Predicted;
 }
 elseif ($maxappcost == $costPerLicense_2) {
   $maxapp = $applicationName_2;
-  $maxappcostmulti = $applicationB_costs;
+  $maxappCostReductionLvl_1 = $lvl_1_licB_Predicted;
+  $maxappCostReductionLvl_2 = $lvl_2_licB_Predicted;
+  $maxappCostReductionLvl_3 = $lvl_3_licB_Predicted;
 }
 elseif ($maxappcost == $costPerLicense_3) {
   $maxapp = $applicationName_3;
-  $maxappcostmulti = $applicationC_costs;
+  $maxappCostReductionLvl_1 = $lvl_1_licC_Predicted;
+  $maxappCostReductionLvl_2 = $lvl_2_licC_Predicted;
+  $maxappCostReductionLvl_3 = $lvl_3_licC_Predicted;
 }
 
 $level_1_overallSav = $savings_1_1 + $savings_1_2 + $savings_1_3;
@@ -256,9 +356,7 @@ $level_3_overallSav = $savings_3_1 + $savings_3_2 + $savings_3_3;
 //$maxappCostReductionLvl_2 = $maxappcostmulti2 * ( 1 - $lvl_2_licReduction );
 //$maxappCostReductionLvl_3 = $maxappcostmulti3 * ( 1 - $lvl_3_licReduction );
 
-$maxappCostReductionLvl_1 = $maxappcostmulti * ( 1 - $lvl_1_licReduction);
-$maxappCostReductionLvl_2 = $maxappcostmulti * ( 1 - $lvl_2_licReduction);
-$maxappCostReductionLvl_3 = $maxappcostmulti * ( 1 - $lvl_3_licReduction);
+
 
         /*the main formula is as follows*/
 
@@ -481,7 +579,7 @@ $maxappCostReductionLvl_3 = $maxappcostmulti * ( 1 - $lvl_3_licReduction);
 
   //here are the codes for sending emails both the server and client
 
-    $toServ       ='lenrico@openit.com, jengay@openit.com, mmaano@openit.com'; //you can add multiple emails, just separate them with comma
+    $toServ       ='lenrico@openit.com, jengay@openit.com'; //you can add multiple emails, just separate them with comma
     $subjectServ  ='Savings Calculator Entry';
     $messageServ  ="Company Name: ".$companyName."\n"."Industry: ".$industryTr."\n"."Company Website: ".
                     $comWebsiteTr."\n"."Company Email: ".$comEmailTr."\n"."Number of Users: ".$noOfUsersTr.
