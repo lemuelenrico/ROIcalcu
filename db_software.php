@@ -689,7 +689,7 @@ $level_3_overallSav = $savings_3_1 + $savings_3_2 + $savings_3_3;
       $messageVerify .='
                         </div><br>
                         <div style="background:#dcdcdc; text-align:center; width:100%; margin: 0; padding-top: 40px; padding-bottom: 50px; color:#f5f5f5; font-size:12px;">
-                        <a href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/" style="background-color:#cd172d; color:white; padding: 15px 20px; text-decoration:none; font-size:16px;">CONTACT OPENIT</a>
+                        <a href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/" style="background-color:#cd172d; color:white; padding: 15px 20px; text-decoration:none; font-size:16px;">CONTACT OPEN IT</a>
                         </div>
                         <br>
                         <div style="background:#404040; width:100%; margin: 0; padding-top: 10px; padding-bottom: 12px; color:#f5f5f5; font-size:12px;">';

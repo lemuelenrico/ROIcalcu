@@ -16,14 +16,14 @@ var modalcomp = document.getElementById('companyval');
     $("#industryinput").attr('required',false);
   }
   else if (val==3){
-    document.getElementById('dl-industry').innerHTML = 'O & G';
+    document.getElementById('dl-industry').innerHTML = 'Oil & Gas';
     $('#customerstory').attr("href","https://openit.com/customer-stories/maersk-oil/");
     $("body").css('backgroundImage', "url('images/bg/o&g_bg.jpg')");
     $("#industrytxt").css('display',"none");
     $("#industryinput").attr('required',false);
   }
   else if (val==4){
-    document.getElementById('dl-industry').innerHTML = 'M & P';
+    document.getElementById('dl-industry').innerHTML = 'Mechanical & Precision';
     $('#customerstory').attr("href","https://openit.com/resources/customer-stories");
     $("body").css('backgroundImage', "url('images/bg/m&p_bg.jpg')");
     $("#industrytxt").css('display',"none");
@@ -37,7 +37,7 @@ var modalcomp = document.getElementById('companyval');
     $("#industryinput").attr('required',false);
   }
   else if (val==7){
-    document.getElementById('dl-industry').innerHTML = 'Aerospace';
+    document.getElementById('dl-industry').innerHTML = 'Aerospace & Defense';
     $('#customerstory').attr("href","https://openit.com/customer-stories/avio-aerospace/");
     $("body").css('backgroundImage', "url('images/bg/aero_bg.jpg')");
     $("#industrytxt").css('display',"none");

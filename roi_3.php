@@ -401,7 +401,7 @@
                   <button id="showanalbar" class="analysisbut" onclick="showanalbar()">Show Analysis &darr;</button><br>
                   <div id="analbar">
                     <p><span class="analysishighlight">&#9632;</span> Your most expensive application is <span class="analysishighlight"><?php echo $maxapp; ?></span>.<br>
-                      <span class="analysishighlight">&#9632;</span> You can cut down <span class="analysishighlight">$<?php echo number_format($maxappCostReductionLvl_3,2); ?></span> on
+                      <span class="analysishighlight">&#9632;</span> You can reduce <span class="analysishighlight">$<?php echo number_format($maxappCostReductionLvl_3,2); ?></span> on
                       <span class="analysishighlight"><?php echo $maxapp; ?></span> alone using Open iT LicenseAnalyzer<i>2019</i>&trade; Level 3.</p>
                       <a class="whitefont" target="_blank" href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/">Ask an Open iT expert &raquo;</a><br><br>
                   </div>
@@ -414,7 +414,7 @@
                   </div>
                   <button id="showanaldon" class="analysisbut" onclick="showanaldon()">Show Analysis &darr;</button><br>
                   <div id="analdon">
-                    <p><span class="analysishighlight">&#9632;</span> Using Open iT LicenseAnalyzer<i>2019</i>&trade; Level 3, you can have a total of <span class="analysishighlight">$<?php echo number_format($level_3_overallSav,2); ?></span> Savings for 3 years.</p>
+                    <p><span class="analysishighlight">&#9632;</span> Using Open iT LicenseAnalyzer<i>2019</i>&trade; Level 3, you can have a total of <span class="analysishighlight">$<?php echo number_format($level_3_overallSav,2); ?></span> estimated savings for 3 years.</p>
                       <a class="whitefont" target="_blank" href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/">Ask an Open iT expert &raquo;</a><br><br>
                   </div>
                   <button id="hideanaldon" class="analysisbut" onclick="hideanaldon()">Hide Analysis &uarr;</button>
@@ -465,7 +465,7 @@
               <div id="analline">
 
                 <div class="leftalgn openfont whitefont"><br>
-                <p> <span class="analysishighlight">&#9632;</span> The savings are already noticeable in the first year of purchase since a lot of optimization will happen on this period.
+                <p> <span class="analysishighlight">&#9632;</span> The estimated savings are already noticeable in the first year of purchase since a lot of optimization will happen on this period.
                     That's why it is observable that ROI for the following years is much lower than the first year of purchase.</p>
                     <a class="whitefont" target="_blank" href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/">Ask an Open iT expert &raquo;</a><br><br>
                 </div>

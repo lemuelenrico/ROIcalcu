@@ -54,12 +54,12 @@
               <form action="software.php" autocomplete="off" method="POST">
                   <div class="takeawaydiv">
                     <label class="firstop"><input type="radio" id="ind1" name="industry" checked="checked" onclick="lblindstry(1)" value="Engineering"><span title="Engineering" class="eng"></span></label>
-                    <label class="secondtop"><input type="radio" id="ind2" name="industry" onclick="lblindstry(3)" value="Oil and Gas"><span title="Oil and Gas" class="og"></span></label>
+                    <label class="secondtop"><input type="radio" id="ind2" name="industry" onclick="lblindstry(3)" value="Oil & Gas"><span title="Oil & Gas" class="og"></span></label>
                     <label class="thirdtop"><input type="radio" id="ind3" name="industry" onclick="lblindstry(2)" value="Automotive"><span title="Automotive" class="auto"></span></label><br>
                     <label class="fourthtop"><input type="radio" id="ind4" name="industry" onclick="lblindstry(4)" value="Mechanical & Precision"><span title="Mechanical and Precision" class="mp"></span></label>
                     <!--<label class="fifthtop"><input type="radio" id="ind5" name="industry" onclick="lblindstry(5)" value="Government"><span title="Government" class="gov"></span></label>-->
                     <label class="sixthtop"><input type="radio" id="ind6" name="industry" onclick="lblindstry(6)" value="Others"><span title="Others" class="oth"></span></label>
-                    <label class="seventhtop"><input type="radio" id="ind7" name="industry" onclick="lblindstry(7)" value="Aerospace"><span title="Aerospace" class="aero"></span></label>
+                    <label class="seventhtop"><input type="radio" id="ind7" name="industry" onclick="lblindstry(7)" value="Aerospace & Defense"><span title="Aerospace & Defense" class="aero"></span></label>
                     <img class="snowlogoind" src="images/industry/snowlogoind.png">
                     <label id="industrytxt"><input id="industryinput" type="text" class="form-control openfont industrybox" placeholder="Industry"
                             name="otherindustry" autocomplete="off"></label>

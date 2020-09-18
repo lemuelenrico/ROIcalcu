@@ -128,7 +128,7 @@
                   <option value="Lease">Lease</option>
                   <option value="Rent">Rent</option>
                   <option value="Subscription">Subscription</option>
-                  <option value="PPU">PPU</option>
+                  <option value="Pay-per-use">Pay-per-use</option>
                   <option value="Other">Other</option>
                   <option value="Don't Know">Don't Know</option>
                 </select>
@@ -140,6 +140,7 @@
                   <option selected>Concurrent - Local</option>
                   <option value="Concurrent - Global">Concurrent - Global</option>
                   <option value="Named User">Named User</option>
+                  <option value="Token">Token</option>
                   <option value="Host Bound">Host Bound</option>
                   <option value="Elapsed Time">Elapsed Time</option>
                 </select>
