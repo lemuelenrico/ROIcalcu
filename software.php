@@ -150,18 +150,21 @@
             <div class="form-group row openfont">
               <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>Install Location</label>
                 <div class="col-sm-1">
-                  <label><input title="Server" type="checkbox" name="location[]" class="glyphpointer" id="server" value="Server">
-                    <img src="images/iconserv.png" id="servericon" class="glyphpointer" data-toggle="tooltip" title="Server">
+                  <label class="tickbox"><input type="checkbox" name="location[]" id="server" value="Server">
+                    <img src="images/iconserv.png" id="servericon" data-toggle="tooltip" title="Server">
+                    <span class="checkmark" title="Server" ></span>
                 </label></div>
 
-                <div class="col-sm-1 nospace leftpad">
-                  <label><input title="Desktop" type="checkbox" name="location[]" class="glyphpointer" id="desktop" value="Desktop">
+                <div class="col-sm-1 leftpad">
+                  <label class="tickbox"><input type="checkbox" name="location[]" class="glyphpointer" id="desktop" value="Desktop">
                     <img src="images/icondesk.png" id="desktopicon" class="glyphpointer" data-toggle="tooltip" title="Desktop">
+                    <span class="checkmark" title="Desktop" ></span>
                   </label></div>
 
                 <div class="col-sm-2">
-                  <label><input title="Cloud" type="checkbox" name="location[]" class="glyphpointer" id="cloud" value="Cloud">
+                  <label class="tickbox"><input type="checkbox" name="location[]" class="glyphpointer" id="cloud" value="Cloud">
                     <img src="images/iconcloud.png" id="cloudicon" class="glyphpointer" data-toggle="tooltip" title="Cloud">
+                    <span class="checkmark" title="Cloud" ></span>
                   </label></div>
 
               <label for="renDate" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Renewal Date</label>
@@ -227,18 +230,21 @@
             <div class="form-group row openfont">
               <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Install Location</label>
                 <div class="col-sm-1">
-                  <label><input title="Server" type="checkbox" name="location2[]" class="glyphpointer" id="server2" value="Server">
+                  <label class="tickbox"><input type="checkbox" name="location2[]" class="glyphpointer" id="server2" value="Server">
                     <img src="images/iconserv.png" id="servericon" class="glyphpointer" data-toggle="tooltip" title="Server">
+                    <span class="checkmark" title="Server" ></span>
                 </label></div>
 
-                <div class="col-sm-1 nospace leftpad">
-                  <label><input title="Desktop" type="checkbox" name="location2[]" class="glyphpointer" id="desktop2" value="Desktop">
+                <div class="col-sm-1 leftpad">
+                  <label class="tickbox"><input type="checkbox" name="location2[]" class="glyphpointer" id="desktop2" value="Desktop">
                     <img src="images/icondesk.png" id="desktopicon" class="glyphpointer" data-toggle="tooltip" title="Desktop">
+                    <span class="checkmark" title="Desktop" ></span>
                   </label></div>
 
                 <div class="col-sm-2">
-                  <label><input title="Cloud" type="checkbox" name="location2[]" class="glyphpointer" id="cloud2" value="Cloud">
+                  <label class="tickbox"><input type="checkbox" name="location2[]" class="glyphpointer" id="cloud2" value="Cloud">
                     <img src="images/iconcloud.png" id="cloudicon" class="glyphpointer" data-toggle="tooltip" title="Cloud">
+                    <span class="checkmark" title="Cloud" ></span>
                   </label></div>
 
               <label for="renDate2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Renewal Date</label>
@@ -304,18 +310,27 @@
             <div class="form-group row openfont">
               <label for="instLoc" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Install Location</label>
                 <div class="col-sm-1">
-                  <label><input title="Server" type="checkbox" name="location3[]" class="glyphpointer" id="server3" value="Server">
+                  <label class="tickbox"><input type="checkbox" name="location3[]" class="glyphpointer" id="server3" value="Server">
                     <img src="images/iconserv.png" id="servericon" class="glyphpointer" data-toggle="tooltip" title="Server">
+                    <span class="checkmark" title="Server" ></span>
                 </label></div>
-
-                <div class="col-sm-1 nospace leftpad">
-                  <label><input title="Desktop" type="checkbox" name="location3[]" class="glyphpointer" id="desktop3" value="Desktop">
+<!--
+<div class="col-sm-1 leftpad">
+  <label class="tickbox"><input type="checkbox" name="location2[]" class="glyphpointer" id="desktop2" value="Desktop">
+    <img src="images/icondesk.png" id="desktopicon" class="glyphpointer" data-toggle="tooltip" title="Desktop">
+    <span class="checkmark" title="Desktop" ></span>
+  </label></div>
+-->
+                <div class="col-sm-1 leftpad">
+                  <label class="tickbox"><input type="checkbox" name="location3[]" class="glyphpointer" id="desktop3" value="Desktop">
                     <img src="images/icondesk.png" id="desktopicon" class="glyphpointer" data-toggle="tooltip" title="Desktop">
+                    <span class="checkmark" title="Desktop" ></span>
                   </label></div>
 
                 <div class="col-sm-2">
-                  <label><input title="Cloud" type="checkbox" name="location3[]" class="glyphpointer" id="cloud3" value="Cloud">
+                  <label class="tickbox"><input type="checkbox" name="location3[]" class="glyphpointer" id="cloud3" value="Cloud">
                     <img src="images/iconcloud.png" id="cloudicon" class="glyphpointer" data-toggle="tooltip" title="Cloud">
+                    <span class="checkmark" title="Cloud" ></span>
                   </label></div>
 
               <label for="renDate3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Renewal Date</label>
@@ -337,15 +352,15 @@
               </div>
             </div>
           </div>
-
             <br>
             <div class="row">
               <div class="col-md-1 col-sm-1"></div>
               <div class="col-md-8 centertext nospace">
-                  <label for="finalsubmit" class="openfont whitefont"><input type="checkbox" class="glyphpointer bigchkbx" id="finalsubmit" value=""><span class="aggrchk glyphpointer">
+                  <label for="finalsubmit" class="tickbox openfont whitefont leftalgn"><input type="checkbox" class="glyphpointer" id="finalsubmit" value=""><span class="aggrchk glyphpointer">
                     I allow the collection of my data to be used for the purpose of calculating ROI.
                   By proceeding, I also agree with the <!--<a href="terms.html" target="_blank"><u>Terms and Conditions</u></a> of the site.-->
                   <a href="https://openit.com/open-it-privacy-statement/" target="_blank" class="whitefont"><u>Terms and Conditions</u></a> of this site.</span>
+                  <span class="checkmark" title="Desktop" ></span>
                 </label>
               </div>
               <div class="col-md-2 centertext allspace">

@@ -598,8 +598,8 @@ $level_3_overallSav = $savings_3_1 + $savings_3_2 + $savings_3_3;
                     "\n"."\n"."-----------------------Application C-------------------------".
                     "\n"."\n"."Application Name: ".$applicationName_3.", Vendor Name: ".$vendorName_3.
                     "\n"."Agreement Type: ".$agreementType_3.", License Type: ".$licenseType_3.
-                    "\n"."Install Location: ".$imlo_3c.
-                    "\n"."Renewal Date: ".$renewalDat_3e.
+                    "\n"."Install Location: ".$imloc_3.
+                    "\n"."Renewal Date: ".$renewalDate_3.
                     "\n"."Number of Licenses: ".$noOfLicenses_3.",    Cost per License: ".$costPerLicense_3.
                     "\n"."\n"."___________________Level 1___________________".
                     "\n"."\n"."Year 1 Savings: ".$ROI_1_1."%  |  $".$savings_1_1.
