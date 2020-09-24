@@ -19,18 +19,30 @@
     }
 
   </script> -->
-
+  <!-- Datepicker scripts  -->
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!--for tooltip toggle, backdraw is burger menu for mobile view has some decreased functionality-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <title>Savings Calculator</title>
 
+    <title>Savings Calculator</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="icon/it.ico" rel="shortcut icon">
+
+    <script>
+    var dateToday = new Date();
+    $(function() {
+      $( "#renDate" ).datepicker({
+          numberOfMonths: 3,
+          showButtonPanel: true,
+          minDate: dateToday
+      });
+    });
+     </script>
+
     <style>
 
     body {
@@ -169,8 +181,9 @@
 
               <label for="renDate" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Renewal Date</label>
               <div class="col-sm-4">
-                <input type="date" class="form-control midtxtbx" id="renDate" placeholder="mm/dd/yyyy"
+                  <input type="date" class="form-control midtxtbx" id="renDate" placeholder="mm/dd/yyyy" min="<?php echo date("Y-m-d"); ?>"
                         name="rendate">
+                  <!--    <input type="text" id="renDate" name="renDate" placeholder="mm/dd/yyyy" class="form-control midtxtbx" />-->
               </div>
             </div>
             <div class="form-group row openfont">
@@ -181,8 +194,10 @@
               </div>
               <label for="costLicense" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>Cost per License ($)</label>
               <div class="col-sm-4">
-                    <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense" placeholder="0.00"
-                                name="costlicenses" autocomplete="off" required>
+                  <!--  <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$"id="costLicense" placeholder="0.00"
+                                name="costlicenses" autocomplete="off" required> -->
+                <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" id="costLicense" placeholder="0.00"
+                        name="costlicenses" autocomplete="off" required>
               </div>
             </div>
           </div><!--colorsemiwhite-->
@@ -249,7 +264,7 @@
 
               <label for="renDate2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Renewal Date</label>
               <div class="col-sm-4">
-                <input type="date" class="form-control midtxtbx" id="renDate2" placeholder="mm/dd/yyyy"
+                <input type="date" class="form-control midtxtbx" id="renDate2" placeholder="mm/dd/yyyy" min="<?php echo date("Y-m-d"); ?>"
                         name="rendate2">
               </div>
             </div>
@@ -261,7 +276,7 @@
               </div>
               <label for="costLicense2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Cost per License ($)</label>
               <div class="col-sm-4">
-                    <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense2" placeholder="0.00"
+                    <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" id="costLicense2" placeholder="0.00"
                                 name="costlicenses2" autocomplete="off">
               </div>
             </div>
@@ -335,7 +350,7 @@
 
               <label for="renDate3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr"></span>Renewal Date</label>
               <div class="col-sm-4">
-                <input type="date" class="form-control midtxtbx" id="renDate3" placeholder="mm/dd/yyyy"
+                <input type="date" class="form-control midtxtbx" id="renDate3" placeholder="mm/dd/yyyy" min="<?php echo date("Y-m-d"); ?>"
                         name="rendate3">
               </div>
             </div>
@@ -347,7 +362,7 @@
               </div>
               <label for="costLicense3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Cost per License ($)</label>
               <div class="col-sm-4">
-                    <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$" id="costLicense3" placeholder="0.00"
+                    <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" id="costLicense3" placeholder="0.00"
                                 name="costlicenses3" autocomplete="off">
               </div>
             </div>
@@ -416,7 +431,6 @@
                     <p class="center"> Details are missing in Application C.</p>
                   </div>
               </div>
-
 <!-- the followng is the link for the custom js files-->
     <script src="js/software.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

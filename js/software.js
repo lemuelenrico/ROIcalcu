@@ -1,4 +1,3 @@
-
 document.getElementById('softwares').addEventListener('submit', function(verification){
 
 if(document.getElementById('server').checked == false &&
@@ -35,6 +34,7 @@ else if(document.getElementById('finalsubmit').checked == false){
     return false;
     }
   });
+
 /*
   function valthisform() {
     if (document.getElementById("appName").value == '') {
@@ -98,6 +98,7 @@ else if(document.getElementById('finalsubmit').checked == false){
   }
   });
 
+
   function valthisform(){
     if (document.getElementById("appName").value == '' ||
         document.getElementById("numLicenses").value == '' ||
@@ -146,3 +147,16 @@ else if(document.getElementById('finalsubmit').checked == false){
     modal4.style.display = "none";
     modal5.style.display = "none";
   }
+
+      $('#costLicense, #costLicense2, #costLicense3').keyup(function(event) {
+        // skip for arrow keys
+        if(event.which >= 37 && event.which <= 40) return;
+
+        // format number
+        $(this).val(function(index, value) {
+          return value
+          .replace(/\D/g, "")
+          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+          ;
+        });
+      });

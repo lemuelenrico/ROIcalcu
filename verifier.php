@@ -152,6 +152,13 @@
                 document.getElementById('alertwrong').style.display = "none";
               }
     }
+
+//disable white spaces inputs
+    $('input').keypress(function( e ) {
+    if(e.which === 32)
+        return false;
+    });
+
     </script>
 
     <div class="footer">
