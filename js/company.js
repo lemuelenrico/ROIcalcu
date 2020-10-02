@@ -1,4 +1,24 @@
 var modalcomp = document.getElementById('companyval');
+var modalcontact = document.getElementById('contactmodal');
+
+window.onclick = function(event) {
+  if (event.target == modalcomp || event.target == modalcontact)
+    {
+    modalcomp.style.display = "none";
+    modalcontact.style.display = "none";
+    }
+}
+
+function closemodals(){
+  modalcomp.style.display = "none";
+  modalcontact.style.display = "none";
+}
+
+$(document).keydown(function(x) {
+ if (x.key === "Escape") {
+    modalcomp.style.display = "none";
+}
+}); 
 
   function lblindstry(val){
   if (val==1){
@@ -61,19 +81,6 @@ validemail.addEventListener("input", function (event) {
   else {
     validemail.setCustomValidity("");
   }
-});
-
-window.onclick = function(event) {
-  if (event.target == modalcomp)
-    {
-    modalcomp.style.display = "none";
-    }
-}
-
-$(document).keydown(function(e) {
- if (e.key === "Escape") {
-     modalcomp.style.display  = "none";
-}
 });
 
 function valthisform(){

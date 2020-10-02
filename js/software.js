@@ -48,22 +48,45 @@ else if(document.getElementById('finalsubmit').checked == false){
     var modal3 = document.getElementById('modal-wrapper3');
     var modal4 = document.getElementById('modal-wrapper4');
     var modal5 = document.getElementById('modal-wrapper5');
-
+    var modalcontact = document.getElementById('contactmodal');
 
     window.onclick = function(event) {
         if (event.target == modal ||
             event.target == modal2 ||
             event.target == modal3 ||
             event.target == modal4 ||
-            event.target == modal5)
+            event.target == modal5 ||
+            event.target == modalcontact)
               {
                 modal.style.display = "none";
                 modal2.style.display = "none";
                 modal3.style.display = "none";
                 modal4.style.display = "none";
                 modal5.style.display = "none";
+                modalcontact.style.display = "none";
               }
     }
+
+    function closemodals(){
+      modal.style.display  = "none";
+      modal2.style.display = "none";
+      modal3.style.display = "none";
+      modal4.style.display = "none";
+      modal5.style.display = "none";
+      modalcontact.style.display = "none";
+    }
+
+/*
+      $(document).keydown(function(x) {
+       if (x.key === "Escape") {
+           modal.style.display  = "none";
+           modal2.style.display = "none";
+           modal3.style.display = "none";
+           modal4.style.display = "none";
+           modal5.style.display = "none";
+      }
+    });
+*/
 
     //tooltips for install location
   $(document).ready(function(){
@@ -87,17 +110,6 @@ else if(document.getElementById('finalsubmit').checked == false){
       $("#AppSelector3").show();
     }
   }
-
-  $(document).keydown(function(e) {
-   if (e.key === "Escape") {
-       modal.style.display  = "none";
-       modal2.style.display = "none";
-       modal3.style.display = "none";
-       modal4.style.display = "none";
-       modal5.style.display = "none";
-  }
-  });
-
 
   function valthisform(){
     if (document.getElementById("appName").value == '' ||
@@ -140,13 +152,6 @@ else if(document.getElementById('finalsubmit').checked == false){
                   }
   }
 
-  function closemodals(){
-    modal.style.display  = "none";
-    modal2.style.display = "none";
-    modal3.style.display = "none";
-    modal4.style.display = "none";
-    modal5.style.display = "none";
-  }
 
       $('#costLicense, #costLicense2, #costLicense3').keyup(function(event) {
         // skip for arrow keys

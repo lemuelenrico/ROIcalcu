@@ -14,33 +14,7 @@
 
   </head>
   <body>
-    <nav class="navbar navbar-default nobord navsmallmrgbot">
-      <div class="container-fluid blueb navpad">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand nospace leftpad" href="https://openit.com/">
-          <!--  <a class="navbar-brand" href="#"> -->
-            <img src="images/openit.png"></a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-          <li><a href="index.php"><h class="whitfnt openfont">Open iT Savings Calculator</h></a></li>
-          <li><a href="contact/index.php"><h class="whitfnt2 openfont">Contact Us</h></a></li>
-          <!--<li><a href="help.html"><h class="whitfnt2 geofont">Help</h></a></li>-->
-          <li><a href="https://openit.com/contact-us-2/get-a-representative-to-contact-you/"><h class="whitfnt2 openfont">Help</h></a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-  </nav>
-
+    <?php include ("header.php"); ?>
     <div class="jumbotron jumboadd">
       <h2 class="headngsprpg nospace centertext openfont whitefont">Company Details</h2>
     </div>
@@ -125,11 +99,98 @@
       <div id="companyval" class="modal">
         <div class="modal-content animate">
           <img src="images/warning.png" width="100px">
-            <span onclick="document.getElementById('companyval').style.display='none'"
+            <span onclick="closemodals();"
             class="close" title="Close PopUp">&times;</span>
             <p class="centertext">Please complete the details.</p>
         </div>
       </div>
+
+<?php include ('contactform.php'); ?>
+<!-- Modals contact page including script -->
+<!--
+      <div id="contactmodal" class="contactmodal">
+        <div class="modal-content animate">
+            <span onclick="closemodals();" class="close" title="Close PopUp">&times;</span>
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <img src="images/contactus.jpg" width="100%" class="contactimg">
+              </div>
+              <div class="col-md-6 col-sm-6">
+            <p class="leftalgn">Contact Page</p>
+            <form class="navpad" onsubmit="return chk()">
+
+              <div class="form-group">
+                <input type="text" class="form-control midtxtbx" placeholder="Name"
+                        id="comp_contname" autocomplete="off" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control midtxtbx" placeholder="Company"
+                        id="comp_contcompany" autocomplete="off" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control midtxtbx" placeholder="Email"
+                        id="comp_validcontactemail" autocomplete="off" required>
+              </div>
+
+              <div class="form-group">
+                <textarea class="form-control midtxtbx" placeholder="Message" rows="4"
+                        id="comp_contmessage"></textarea>
+              </div>
+              <div class="leftalgn">
+              <input type="submit" value="submit" class="btn contactusbutdes">
+
+              </div>
+
+            </form>
+          </div>
+            </div>
+            <p class="center" id="sent_success">website and sales email</p>
+            <div = class="row">
+              <div class="col-md-3 col-sm-3">
+              </div>
+              <div class="col-md-3 col-sm-3">
+              </div>
+              <div class="col-md-3 col-sm-3">
+              </div>
+              <div class="col-md-3 col-sm-3">
+              </div>
+            </div>
+
+        </div>
+      </div>
+      <script>
+      var formcomp_validcontactemail = document.getElementById("comp_validcontactemail");
+      formcomp_validcontactemail.addEventListener("input", function (event) {
+        if (formcomp_validcontactemail.validity.typeMismatch) {
+          formcomp_validcontactemail.setCustomValidity("Please enter a valid email.");
+        }
+        else {
+          formcomp_validcontactemail.setCustomValidity("");
+        }
+      });
+
+      function chk () {
+        var comp_contname=document.getElementById('comp_contname').value;
+        var comp_contcompany=document.getElementById('comp_contcompany').value;
+        var comp_validcontactemail=document.getElementById('comp_validcontactemail').value;
+        var comp_contmessage=document.getElementById('comp_contmessage').value;
+
+        var dataString='comp_contname=' + comp_contname + '&comp_contcompany=' + comp_contcompany + '&comp_validcontactemail=' + comp_validcontactemail + '&comp_contmessage=' + comp_contmessage;
+        document.getElementById('sent_success').innerHTML = 'Please Wait...';
+
+        $.ajax({
+          type:"post",
+          url:"contactsubmit.php",
+          data:dataString,
+          cache:false,
+          success: function(html){
+            $('#sent_success').html(html);
+          }
+        });
+      return false;
+      }
+       </script> -->
+
 
 <!-- the followng is the link for the custom js files-->
 
@@ -139,10 +200,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script>
-
-
-    </script>
     <div class="footer">
       <p class="dfooter openfont">Copyright © <?php echo date('Y'); ?> Open iT. All rights reserved.</p>
     </div>
