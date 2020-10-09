@@ -13,12 +13,12 @@ function closemodals(){
   modalcomp.style.display = "none";
   modalcontact.style.display = "none";
 }
-
+/*
 $(document).keydown(function(x) {
  if (x.key === "Escape") {
     modalcomp.style.display = "none";
 }
-}); 
+});*/
 
   function lblindstry(val){
   if (val==1){

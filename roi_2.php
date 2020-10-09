@@ -276,7 +276,7 @@
                     <td class="leftalgn roiplch pricebgcol smallpadtbl"><?php echo number_format($noOfLicenses); ?></td>
                   </tr>
                   <tr>
-                    <td width="45%" class="leftalgn roilbl colorwhite smallpadtbl">Cost per License:</td>
+                    <td width="45%" class="leftalgn roilbl colorwhite smallpadtbl">Total Contract Cost:</td>
                     <td class="leftalgn roiplch colorwhite smallpadtbl"><?php echo number_format($costPerLicense,2); ?></td>
                   </tr>
                   <tr>
@@ -306,7 +306,7 @@
                       <td class="leftalgn roiplch pricebgcol smallpadtbl"><?php echo number_format($noOfLicenses_2); ?></td>
                     </tr>
                     <tr>
-                      <td width="45%" class="leftalgn roilbl colorwhite smallpadtbl">Cost per License:</td>
+                      <td width="45%" class="leftalgn roilbl colorwhite smallpadtbl">Total Contract Cost:</td>
                       <td class="leftalgn roiplch colorwhite smallpadtbl"><?php echo number_format($costPerLicense_2,2); ?></td>
                     </tr>
                     <tr>
@@ -336,7 +336,7 @@
                         <td class="leftalgn roiplch pricebgcol smallpadtbl"><?php echo number_format($noOfLicenses_3); ?></td>
                       </tr>
                       <tr>
-                        <td width="45%" class="leftalgn roilbl colorwhite smallpadtbl">Cost per License:</td>
+                        <td width="45%" class="leftalgn roilbl colorwhite smallpadtbl">Total Contract Cost:</td>
                         <td class="leftalgn roiplch colorwhite smallpadtbl"><?php echo number_format($costPerLicense_3,2); ?></td>
                       </tr>
                       <tr>
@@ -649,9 +649,9 @@
                         {"":"Location",         "Application A":"<?php echo $imloc; ?>",           "Application B":"<?php echo $imloc_2; ?>",           "Application C":"<?php echo $imloc_3; ?>"} ]; */
 
         window.saveFile = function saveFile () {
-          var applications = [ {"":"Application A", "Name":"<?php echo $applicationName; ?>", "Agreement Type":"<?php echo $agreementType; ?>", "License Type":"<?php echo $licenseType; ?>", "Number of Licenses":<?php echo $noOfLicenses; ?>, "Cost per License":<?php echo $costPerLicense; ?>, "Location":"<?php echo $imloc; ?>"},
-                                          {"":"Application B", "Name":"<?php echo $applicationName_2; ?>", "Agreement Type":"<?php echo $agreementType_2; ?>", "License Type":"<?php echo $licenseType_2; ?>", "Number of Licenses":<?php echo $noOfLicenses_2; ?>, "Cost per License":<?php echo $costPerLicense_2; ?>, "Location":"<?php echo $imloc_2; ?>"},
-                                          {"":"Application C", "Name":"<?php echo $applicationName_3; ?>", "Agreement Type":"<?php echo $agreementType_3; ?>", "License Type":"<?php echo $licenseType_3; ?>", "Number of Licenses":<?php echo $noOfLicenses_3; ?>, "Cost per License":<?php echo $costPerLicense_3; ?>, "Location":"<?php echo $imloc_3; ?>"} ];
+          var applications = [ {"":"Application A", "Name":"<?php echo $applicationName; ?>", "Agreement Type":"<?php echo $agreementType; ?>", "License Type":"<?php echo $licenseType; ?>", "Number of Licenses":<?php echo $noOfLicenses; ?>, "Total Contract Cost":<?php echo $costPerLicense; ?>, "Location":"<?php echo $imloc; ?>"},
+                                          {"":"Application B", "Name":"<?php echo $applicationName_2; ?>", "Agreement Type":"<?php echo $agreementType_2; ?>", "License Type":"<?php echo $licenseType_2; ?>", "Number of Licenses":<?php echo $noOfLicenses_2; ?>, "Total Contract Cost":<?php echo $costPerLicense_2; ?>, "Location":"<?php echo $imloc_2; ?>"},
+                                          {"":"Application C", "Name":"<?php echo $applicationName_3; ?>", "Agreement Type":"<?php echo $agreementType_3; ?>", "License Type":"<?php echo $licenseType_3; ?>", "Number of Licenses":<?php echo $noOfLicenses_3; ?>, "Total Contract Cost":<?php echo $costPerLicense_3; ?>, "Location":"<?php echo $imloc_3; ?>"} ];
 
           var savings = [   {"Savings Calculation Level_2":"1st Year","%":<?php echo round($truVal_2_ROI1); ?>, "$":<?php echo round($truVal_2_Savings1); ?>},
                         {"Savings Calculation Level_2":"2nd Year","%":<?php echo round($truVal_2_ROI2); ?>, "$":<?php echo round($truVal_2_Savings2); ?>},

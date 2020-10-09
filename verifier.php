@@ -33,21 +33,21 @@
               <input type="hidden" name="veragree" value="<?php echo $agreementType; ?>">
               <input type="hidden" name="verlictype" value="<?php echo $licenseType; ?>">
               <input type="hidden" name="vernooflic" value="<?php echo $noOfLicenses; ?>">
-              <input type="hidden" name="vercost" value="<?php echo $costPerLicense; ?>">
+              <input type="hidden" name="vercost" value="<?php echo $applicationA_costs; ?>">  <!--here is where we change the app cost to total contract(change back to cost per license if necessary includeing the labels in HTML)-->
               <input type="hidden" name="verloc" value="<?php echo $imloc; ?>">
             <!--Additional applications-->
               <input type="hidden" name="verappname2" value="<?php echo $applicationName_2; ?>">
               <input type="hidden" name="veragree2" value="<?php echo $agreementType_2; ?>">
               <input type="hidden" name="verlictype2" value="<?php echo $licenseType_2; ?>">
               <input type="hidden" name="vernooflic2" value="<?php echo $noOfLicenses_2; ?>">
-              <input type="hidden" name="vercost2" value="<?php echo $costPerLicense_2; ?>">
+              <input type="hidden" name="vercost2" value="<?php echo $applicationB_costs; ?>">  <!--here is where we change the app cost to total contract(change back to cost per license if necessary includeing the labels in HTML)-->
               <input type="hidden" name="verloc2" value="<?php echo $imloc_2; ?>">
 
               <input type="hidden" name="verappname3" value="<?php echo $applicationName_3; ?>">
               <input type="hidden" name="veragree3" value="<?php echo $agreementType_3; ?>">
               <input type="hidden" name="verlictype3" value="<?php echo $licenseType_3; ?>">
               <input type="hidden" name="vernooflic3" value="<?php echo $noOfLicenses_3; ?>">
-              <input type="hidden" name="vercost3" value="<?php echo $costPerLicense_3; ?>">
+              <input type="hidden" name="vercost3" value="<?php echo $applicationC_costs; ?>">  <!--here is where we change the app cost to total contract(change back to cost per license if necessary includeing the labels in HTML)-->
               <input type="hidden" name="verloc3" value="<?php echo $imloc_3; ?>">
             <!--subject to change-->
               <input type="hidden" name="verroi" value="<?php echo $ROI_1_1; ?>">

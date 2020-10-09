@@ -4,6 +4,7 @@ $applicationName  = $_POST ['appname'];     $vendorName       = $_POST ['vendnam
 $agreementType    = $_POST ['agreetype'];   $licenseType      = $_POST ['lictype'];
 $location = $_REQUEST ['location'];         $renewalDate      = $_POST ['rendate'];
 $noOfLicenses     = $_POST ['numlicenses']; $costPerLicense   = $_POST ['costlicenses'];
+//$noOfLicenses     = 1; $costPerLicense   = $_POST ['costlicenses'];
 
 $imloc = implode (", ",$location);
 
@@ -11,6 +12,7 @@ $applicationName_2  = $_POST ['appname2'];     $vendorName_2       = $_POST ['ve
 $agreementType_2    = $_POST ['agreetype2'];   $licenseType_2      = $_POST ['lictype2'];
 $location_2 = $_REQUEST ['location2'];         $renewalDate_2      = $_POST ['rendate2'];
 $noOfLicenses_2     = $_POST ['numlicenses2']; $costPerLicense_2   = $_POST ['costlicenses2'];
+//$noOfLicenses_2     = 1; $costPerLicense_2   = $_POST ['costlicenses2'];
 
 $imloc_2 = implode (", ",$location_2);
 
@@ -18,6 +20,7 @@ $applicationName_3  = $_POST ['appname3'];     $vendorName_3       = $_POST ['ve
 $agreementType_3    = $_POST ['agreetype3'];   $licenseType_3      = $_POST ['lictype3'];
 $location_3 = $_REQUEST ['location3'];         $renewalDate_3      = $_POST ['rendate3'];
 $noOfLicenses_3     = $_POST ['numlicenses3']; $costPerLicense_3   = $_POST ['costlicenses3'];
+//$noOfLicenses_3     = 1; $costPerLicense_3   = $_POST ['costlicenses3'];
 
 $imloc_3 = implode (", ",$location_3);
 
@@ -175,9 +178,20 @@ $slope = $deviation_prod_sum / $x_deviation_squared_sum;
 $y_intercept = $y_ave - ( $slope * $x_ave);
 
 //pre init calculations
-$applicationA_costs = $noOfLicenses * $costPerLicense;
-$applicationB_costs = $noOfLicenses_2 * $costPerLicense_2;
-$applicationC_costs = $noOfLicenses_3 * $costPerLicense_3;
+//$applicationA_costs = $noOfLicenses * $costPerLicense;
+//$applicationB_costs = $noOfLicenses_2 * $costPerLicense_2;
+//$applicationC_costs = $noOfLicenses_3 * $costPerLicense_3;
+
+//Cost per license will be total cost as per Linda's suggestion
+$applicationA_costs = $costPerLicense;
+$applicationB_costs = $costPerLicense_2;
+$applicationC_costs = $costPerLicense_3;
+
+//divide again for the formula
+$costPerLicense   = $applicationA_costs / $noOfLicenses;      ////
+$costPerLicense_2 = $applicationB_costs / $noOfLicenses_2;    ////
+$costPerLicense_3 = $applicationC_costs / $noOfLicenses_3;    ////
+//////////////////////////////////////////////////////////////////
 
 $applicationTotalCosts = $applicationA_costs + $applicationB_costs + $applicationC_costs;
 //predicted max in use
@@ -541,13 +555,13 @@ $level_3_overallSav = $savings_3_1 + $savings_3_2 + $savings_3_3;
   }
   else  {
     $sql = "INSERT into software  (EntryDate, CompanyName, ApplicationName, AgreementType, Location,
-                                  NoOfLicenses, VendorName, LicenseType, RenewalDate, CostPerLicense, CalculatedROI, CutLicenses)
+                                  NoOfLicenses, VendorName, LicenseType, RenewalDate, TotalContractCost, CalculatedROI, CutLicenses)
             values                (NOW(), '$companyName', '$applicationName', '$agreementType', '$imloc',
-                                    '$noOfLicenses','$vendorName','$licenseType','$renewalDate','$costPerLicense', $calculatedROI, $cutLicenses),
+                                    '$noOfLicenses','$vendorName','$licenseType','$renewalDate','$applicationA_costs', $calculatedROI, $cutLicenses),
                                   (NOW(), '$companyName', '$applicationName_2', '$agreementType_2', '$imloc_2',
-                                    '$noOfLicenses_2','$vendorName_2','$licenseType_2','$renewalDate_2','$costPerLicense_2', $calculatedROI, $cutLicenses),
+                                    '$noOfLicenses_2','$vendorName_2','$licenseType_2','$renewalDate_2','$applicationB_costs', $calculatedROI, $cutLicenses),
                                   (NOW(), '$companyName', '$applicationName_3', '$agreementType_3', '$imloc_3',
-                                    '$noOfLicenses_3','$vendorName_3','$licenseType_3','$renewalDate_3','$costPerLicense_3', $calculatedROI, $cutLicenses)";
+                                    '$noOfLicenses_3','$vendorName_3','$licenseType_3','$renewalDate_3','$applicationC_costs', $calculatedROI, $cutLicenses)";
 
   /*$sql_2 = "INSERT into software  (EntryDate, CompanyName, ApplicationName, AgreementType, Location,
                                   NoOfLicenses, VendorName, LicenseType, RenewalDate, CostPerLicense, CalculatedROI, CutLicenses)
@@ -588,19 +602,19 @@ $level_3_overallSav = $savings_3_1 + $savings_3_2 + $savings_3_3;
                     "\n"."Agreement Type: ".$agreementType.", License Type: ".$licenseType.
                     "\n"."Install Location: ".$imloc.
                     "\n"."Renewal Date: ".$renewalDate.
-                    "\n"."Number of Licenses: ".$noOfLicenses.",    Cost per License: ".$costPerLicense.
+                    "\n"."Number of Licenses: ".$noOfLicenses.",    Total Contract Cost: ".$applicationA_costs.
                     "\n"."\n"."-----------------------Application B-------------------------".
                     "\n"."\n"."Application Name: ".$applicationName_2.", Vendor Name: ".$vendorName_2.
                     "\n"."Agreement Type: ".$agreementType_2.", License Type: ".$licenseType_2.
                     "\n"."Install Location: ".$imloc_2.
                     "\n"."Renewal Date: ".$renewalDate_2.
-                    "\n"."Number of Licenses: ".$noOfLicenses_2.",    Cost per License: ".$costPerLicense_2.
+                    "\n"."Number of Licenses: ".$noOfLicenses_2.",    Total Contract Cost: ".$applicationB_costs.
                     "\n"."\n"."-----------------------Application C-------------------------".
                     "\n"."\n"."Application Name: ".$applicationName_3.", Vendor Name: ".$vendorName_3.
                     "\n"."Agreement Type: ".$agreementType_3.", License Type: ".$licenseType_3.
                     "\n"."Install Location: ".$imloc_3.
                     "\n"."Renewal Date: ".$renewalDate_3.
-                    "\n"."Number of Licenses: ".$noOfLicenses_3.",    Cost per License: ".$costPerLicense_3.
+                    "\n"."Number of Licenses: ".$noOfLicenses_3.",    Total Contract Cost: ".$applicationC_costs.
                     "\n"."\n"."___________________Level 1___________________".
                     "\n"."\n"."Year 1 Savings: ".$ROI_1_1."%  |  $".$savings_1_1.
                     "\n"."Year 2 Savings:  ".$ROI_1_2."%  |  $".$savings_1_2.

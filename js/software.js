@@ -152,7 +152,8 @@ else if(document.getElementById('finalsubmit').checked == false){
                   }
   }
 
-
+// the section below will have a format redundancy that'ts why it is turned off
+/*
       $('#costLicense, #costLicense2, #costLicense3').keyup(function(event) {
         // skip for arrow keys
         if(event.which >= 37 && event.which <= 40) return;
@@ -165,3 +166,4 @@ else if(document.getElementById('finalsubmit').checked == false){
           ;
         });
       });
+*/

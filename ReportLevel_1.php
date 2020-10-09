@@ -292,7 +292,7 @@ $pdf->SetFillColor(238,238,238);
 $pdf->Cell(1,8,"",0,0, "C", true);
 $pdf->setTextColor(128,128,128);
 $pdf->SetFont("Arial","B",13);
-$pdf->Cell(47,8,"Cost per License",1,0);
+$pdf->Cell(47,8,"Total Contract Cost",1,0);
 $pdf->setTextColor(38,38,38);
 $pdf->Cell(49,8,"$ {$repCost}",0,0);
 $pdf->SetFillColor(255,255,255);
