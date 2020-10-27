@@ -193,6 +193,14 @@ $costPerLicense_2 = $applicationB_costs / $noOfLicenses_2;    ////
 $costPerLicense_3 = $applicationC_costs / $noOfLicenses_3;    ////
 //////////////////////////////////////////////////////////////////
 
+//NAN handler below, if no applications were writter for B and C
+if (is_nan($costPerLicense_2) == 1) {
+ $costPerLicense_2 = 0;
+}
+if (is_nan($costPerLicense_3) == 1) {
+ $costPerLicense_3 = 0;
+}
+
 $applicationTotalCosts = $applicationA_costs + $applicationB_costs + $applicationC_costs;
 //predicted max in use
 $noOfLicenses_predictionA = floor($y_intercept + ( $slope * $noOfLicenses ));
