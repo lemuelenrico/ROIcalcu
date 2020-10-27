@@ -349,21 +349,23 @@ $maxappCostReductionLvl_1 = 0;
 $maxappCostReductionLvl_2 = 0;
 $maxappCostReductionLvl_3 = 0;
 
-$maxappcost = max($costPerLicense, $costPerLicense_2, $costPerLicense_3);
+//$maxappcost = max($costPerLicense, $costPerLicense_2, $costPerLicense_3);
+//changed to below due to max contract cost change in display
+$maxappcost = max($applicationA_costs, $applicationB_costs, $applicationC_costs);
 
-if ($maxappcost == $costPerLicense) {
+if ($maxappcost == $applicationA_costs) {
   $maxapp = $applicationName;
   $maxappCostReductionLvl_1 = $lvl_1_licA_Predicted;
   $maxappCostReductionLvl_2 = $lvl_2_licA_Predicted;
   $maxappCostReductionLvl_3 = $lvl_3_licA_Predicted;
 }
-elseif ($maxappcost == $costPerLicense_2) {
+elseif ($maxappcost == $applicationB_costs) {
   $maxapp = $applicationName_2;
   $maxappCostReductionLvl_1 = $lvl_1_licB_Predicted;
   $maxappCostReductionLvl_2 = $lvl_2_licB_Predicted;
   $maxappCostReductionLvl_3 = $lvl_3_licB_Predicted;
 }
-elseif ($maxappcost == $costPerLicense_3) {
+elseif ($maxappcost == $applicationC_costs) {
   $maxapp = $applicationName_3;
   $maxappCostReductionLvl_1 = $lvl_1_licC_Predicted;
   $maxappCostReductionLvl_2 = $lvl_2_licC_Predicted;
