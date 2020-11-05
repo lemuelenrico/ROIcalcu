@@ -154,11 +154,11 @@
                 <input type="number" min="0" class="form-control midtxtbx" id="numLicenses" placeholder="0"
                         name="numlicenses" autocomplete="off" required>
               </div>
-              <label for="costLicense" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>Total Contract Cost</label>
+              <label for="costLicense" class="col-sm-2 col-form-label softlabel rightalgn openfont" required><span class="requiredclr">*</span>Contract Cost ($)</label>
               <div class="col-sm-4">
-                  <!--  <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$"id="costLicense" placeholder="0.00"
+                  <!--  <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" title="Currency value is either whole number or with two decimal places." pattern="^\d*(\.\d{0,2})?$"id="costLicense" placeholder="0"
                                 name="costlicenses" autocomplete="off" required> -->
-                <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" id="costLicense" placeholder="0.00"
+                <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" id="costLicense" placeholder="0"
                         name="costlicenses" autocomplete="off" required>
               </div>
             </div>
@@ -236,9 +236,9 @@
                 <input type="number" min="0" class="form-control midtxtbx" id="numLicenses2" placeholder="0"
                         name="numlicenses2" autocomplete="off">
               </div>
-              <label for="costLicense2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Total Contract Cost</label>
+              <label for="costLicense2" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Contract Cost ($)</label>
               <div class="col-sm-4">
-                    <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" id="costLicense2" placeholder="0.00"
+                    <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" id="costLicense2" placeholder="0"
                                 name="costlicenses2" autocomplete="off">
               </div>
             </div>
@@ -322,9 +322,9 @@
                 <input type="number" min="0" class="form-control midtxtbx" id="numLicenses3" placeholder="0"
                         name="numlicenses3" autocomplete="off">
               </div>
-              <label for="costLicense3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Total Contract Cost</label>
+              <label for="costLicense3" class="col-sm-2 col-form-label softlabel rightalgn openfont"><span class="requiredclr">*</span>Contract Cost ($)</label>
               <div class="col-sm-4">
-                    <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" id="costLicense3" placeholder="0.00"
+                    <input type="text" class="form-control midtxtbx" data-placement="bottom" data-toggle="tooltip" id="costLicense3" placeholder="0"
                                 name="costlicenses3" autocomplete="off">
               </div>
             </div>
