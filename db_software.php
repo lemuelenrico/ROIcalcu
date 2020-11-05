@@ -35,6 +35,20 @@ if ($applicationName_3 == '') {
 }
 
 
+//the following witll handle string to number with comma sepataion
+
+if(preg_match("/^[0-9,]+$/", $costPerLicense)) {
+$costPerLicense = str_replace(',', '', $costPerLicense);
+}
+
+if(preg_match("/^[0-9,]+$/", $costPerLicense_2)) {
+$costPerLicense_2 = str_replace(',', '', $costPerLicense_2);
+}
+
+if(preg_match("/^[0-9,]+$/", $costPerLicense_3)) {
+$costPerLicense_3 = str_replace(',', '', $costPerLicense_3);
+}
+
 
 
 /*the following variables are transitional variables*/
