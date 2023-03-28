@@ -152,7 +152,7 @@ body {
 
 .dfooter {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding-top: 0px;
   margin-top: 0px;
   text-align: center;
@@ -1741,4 +1741,172 @@ p {
 .contactimg{
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+/* new layout like website----------------*/
+
+.navbigspace {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.ultoppadd {
+  padding-top: 20px;
+  padding-right: 40px;
+}
+
+.logomargleft {
+  margin-left: 50px;
+}
+
+.divblock {
+  width: 100%;
+  background-image: url("../images/bgindex.png");
+}
+.bodynobg {
+  background-image: none;
+}
+
+.entbutdesnew {
+  background-color: #cd172d;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  min-height: inherit;
+  padding: 1.5rem 6rem;
+  border-radius: .5rem;
+  border-width: 0px;
+  box-shadow: 5px 5px 8px #888888;
+}
+
+.jumbotronaddnew {
+  margin: 0px;
+  text-align: center;
+  padding-bottom: 100px;
+  background: none;
+}
+
+.divblocknobg {
+  width: 100%;
+  background: none;
+}
+
+.introy {
+  font-size: 2rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #3f3f3f;
+  font-weight: bold;
+}
+
+.introd {
+  font-size: 1.7rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #3f3f3f;
+}
+
+
+.footernew {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  border-top: 5px solid red;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #262626;
+  color: white;
+  text-align: center;
+}
+
+.divblockcustomer {
+  width: 100%;
+  background-color: #d0cece;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.introcustomer {
+  font-size: 2.5rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #3f3f3f;
+  font-weight: bold;
+}
+
+.customer-content {
+    background-color: white;
+    margin: 0px auto 0px;
+    width: 60%;
+	  padding: 30px;
+    border-radius: 0px;
+    font-family: OpenSans;
+    font-size: 30px;
+    text-align: center;
+}
+
+.customerimg {
+  width: 100%;
+}
+
+.customerimgpadd {
+  object-fit: cover;
+}
+
+.introcustomername {
+  font-size: 2rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #3f3f3f;
+  font-weight: bold;
+  padding-left: 0px;
+  margin: 0px;
+}
+
+.detailscss {
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #3f3f3f;
+}
+
+.learncss {
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #cd172d;
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border-color: #3f3f3f;
+}
+
+.carousel-indicators .active{
+    background-color: #3f3f3f;
+}
+
+.sr-only {
+  background-color: white;
+}
+
+.carousel-control.left, .carousel-control.right {
+   background-image:none !important;
+   filter:none !important;
+}
+
+.companyroll {
+  font-size: 1.75rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #cd172d;
+}
+
+.quotecss {
+  font-size: 1.7rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #3f3f3f;
+  font-style: italic;
+}
+
+.footernewtext {
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-weight: bold;
 }

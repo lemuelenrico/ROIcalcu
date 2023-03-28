@@ -11,7 +11,7 @@ $sql="INSERT INTO `contactform` (`name`, `company`, `email`, `message`)
 VALUES ('$comp_contname', '$comp_contcompany', '$comp_validcontactemail', '$comp_contmessage')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "data inserted";
+    echo "Your message is sent.";
 }
 else
 {

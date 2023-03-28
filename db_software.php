@@ -617,7 +617,7 @@ $level_3_overallSav = $savings_3_1 + $savings_3_2 + $savings_3_3;
 
   //here are the codes for sending emails both the server and client
 
-    $toServ       ='lenrico@openit.com, adecastro@openit.com'; //you can add multiple emails, just separate them with comma
+    $toServ       ='lenrico@openit.com'; //you can add multiple emails, just separate them with comma
     $subjectServ  ='Savings Calculator Entry';
     $messageServ  ="Company Name: ".$companyName."\n"."Industry: ".$industryTr."\n"."Company Website: ".
                     $comWebsiteTr."\n"."Company Email: ".$comEmailTr."\n"."Number of Users: ".$noOfUsersTr.

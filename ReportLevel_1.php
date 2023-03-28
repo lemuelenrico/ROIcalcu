@@ -75,7 +75,7 @@ $pdf->Cell(0,10,"Savings for {$repCom} ",0,1,'L');
 
 
 $pdf->Image("images/pdfexporting/ROIexpfirststate.png",9,45,0,37);
-$pdf->Image("images/pdfexporting/ROIcontactsection.png",152,45,0,43,'PNG','https://www.snowsoftware.com/int/contact');
+$pdf->Image("images/pdfexporting/ROIcontactsection.png",152,45,0,43,'PNG','https://openit.com/contact-us-2/get-a-representative-to-contact-you/');
 $pdf->Image("images/pdfexporting/ROIexpsecstate.png",9,79,0,9);
 
 $pdf->Cell(0,50,"",0,1);

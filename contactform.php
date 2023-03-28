@@ -34,7 +34,7 @@
       </form>
     </div>
       </div>
-      <p class="center" id="sent_success">website and sales email</p>
+    <p class="center" id="sent_success"></p>
       <div = class="row">
         <div class="col-md-3 col-sm-3">
         </div>
